@@ -1,0 +1,7 @@
+id,name,start,end,status,design,research,content,design_eng
+34b7b671-bde4-42f4-a0e1-f3dad2aa246d,Mobile statements usability study,2026-10-01,2026-12-31,stretch,0.2,0.2,0.1,0
+i1,Advisor workspace redesign,2026-10-01,2026-12-31,committed,1.2,0.84,0.5,0.8
+i2,Account opening simplification,2026-10-01,2026-11-13,committed,0.8,0.56,0.5,0.6
+i4,Accessible component library,2026-11-02,2026-12-31,committed,0.5,0,0.2,0.6
+i3,Retirement planning discovery,2026-11-16,2026-12-11,committed,0.4,0.56,0.2,0.2
+i5,Portfolio insights dashboard,2026-11-16,2026-12-31,stretch,0.6,0.3,0.3,0.6

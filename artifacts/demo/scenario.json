@@ -1,0 +1,156 @@
+{
+  "revision": 0,
+  "people": [
+    {
+      "id": "p1",
+      "name": "Maya Chen",
+      "craft": "design",
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p2",
+      "name": "Jordan Ellis",
+      "craft": "design",
+      "fte": 1,
+      "nonProjectPct": 25
+    },
+    {
+      "id": "p3",
+      "name": "Priya Nair",
+      "craft": "design",
+      "fte": 0.8,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p4",
+      "name": "Lucas Reed",
+      "craft": "design",
+      "fte": 1,
+      "nonProjectPct": 10
+    },
+    {
+      "id": "p5",
+      "name": "Sofia Ramirez",
+      "craft": "research",
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p6",
+      "name": "Ethan Park",
+      "craft": "research",
+      "fte": 0.8,
+      "nonProjectPct": 25
+    },
+    {
+      "id": "p7",
+      "name": "Amara Okafor",
+      "craft": "content",
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p8",
+      "name": "Oliver Brooks",
+      "craft": "content",
+      "fte": 0.8,
+      "nonProjectPct": 25
+    },
+    {
+      "id": "p9",
+      "name": "Nina Patel",
+      "craft": "design_eng",
+      "fte": 1,
+      "nonProjectPct": 15
+    },
+    {
+      "id": "p10",
+      "name": "Theo Williams",
+      "craft": "design_eng",
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p11",
+      "name": "Grace Kim",
+      "craft": "design_eng",
+      "fte": 0.8,
+      "nonProjectPct": 25
+    },
+    {
+      "id": "p12",
+      "name": "Mateo Silva",
+      "craft": "design_eng",
+      "fte": 0.5,
+      "nonProjectPct": 20
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "i1",
+      "name": "Advisor workspace redesign",
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "status": "committed",
+      "effort": {
+        "design": 1.2,
+        "research": 0.84,
+        "content": 0.5,
+        "design_eng": 0.8
+      }
+    },
+    {
+      "id": "i2",
+      "name": "Account opening simplification",
+      "start": "2026-10-01",
+      "end": "2026-11-13",
+      "status": "committed",
+      "effort": {
+        "design": 0.8,
+        "research": 0.84,
+        "content": 0.5,
+        "design_eng": 0.6
+      }
+    },
+    {
+      "id": "i3",
+      "name": "Retirement planning discovery",
+      "start": "2026-10-19",
+      "end": "2026-12-11",
+      "status": "proposed",
+      "effort": {
+        "design": 0.4,
+        "research": 0.7,
+        "content": 0.2,
+        "design_eng": 0.2
+      }
+    },
+    {
+      "id": "i4",
+      "name": "Accessible component library",
+      "start": "2026-11-02",
+      "end": "2026-12-31",
+      "status": "committed",
+      "effort": {
+        "design": 0.5,
+        "research": 0,
+        "content": 0.2,
+        "design_eng": 0.6
+      }
+    },
+    {
+      "id": "i5",
+      "name": "Portfolio insights dashboard",
+      "start": "2026-11-16",
+      "end": "2026-12-31",
+      "status": "stretch",
+      "effort": {
+        "design": 0.6,
+        "research": 0.3,
+        "content": 0.3,
+        "design_eng": 0.6
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "startSeconds": 0,
+    "label": "PLATFORM OVERVIEW",
+    "caption": "Projects, priorities and teams"
+  },
+  {
+    "startSeconds": 8.25,
+    "label": "WORK MAP",
+    "caption": "Open the map and explore connections"
+  },
+  {
+    "startSeconds": 14.5,
+    "label": "PROJECT CONNECTIONS",
+    "caption": "Owners, contributors and dependencies"
+  },
+  {
+    "startSeconds": 20.25,
+    "label": "GRID VIEW",
+    "caption": "Review the same work in cards"
+  },
+  {
+    "startSeconds": 26.0,
+    "label": "TEAM PROJECTS",
+    "caption": "Follow a leader\u2019s reporting line"
+  },
+  {
+    "startSeconds": 31.75,
+    "label": "CAPACITY",
+    "caption": "Compare project demand with available time"
+  }
+]

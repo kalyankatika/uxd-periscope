@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:24,676
+01 / WORK MAP
+People, projects and priorities in one interactive graph.
+
+2
+00:00:24,676 --> 00:00:45,992
+02 / PROJECT CONNECTIONS
+Inspect owners, contributors, priorities and dependencies.
+
+3
+00:00:45,992 --> 00:01:07,016
+03 / TEAMS AND REPORTING
+Review every project across a leader’s reporting structure.
+
+4
+00:01:07,016 --> 00:01:25,247
+04 / PRIORITIES AND DECISIONS
+Focus on top priorities and projects that need attention.
+
+5
+00:01:25,247 --> 00:01:42,687
+05 / LEADERSHIP OVERVIEW
+Review project health, priorities and seven leadership teams.
+
+6
+00:01:42,687 --> 00:02:02,726
+06 / PROJECT COMPARISON
+Filter by team and status, then sort projects for review.
+
+7
+00:02:02,726 --> 00:02:22,797
+07 / CAPACITY AND PROJECT PLAN
+Compare weekly demand with capacity, including proposed work.
+
+8
+00:02:22,797 --> 00:02:45,867
+08 / ENTERPRISE DATA MAPPING
+Review column mappings, labels and relationships before import.
+
+9
+00:02:45,867 --> 00:03:02,190
+09 / CONNECTED WORKSPACE
+Explore relationships. Review priorities. Plan capacity.

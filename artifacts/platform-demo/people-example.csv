@@ -1,0 +1,27 @@
+Record ID,Name,Discipline,Job title,Team,Manager ID,Leader,Working time (FTE),Non-project time (%)
+uxd-head,Avery Morgan,Product Design,Head of UXD,User experience,,Yes,0,100
+elena,Elena Brooks,Product Design,Head of Product Design,Product Design,uxd-head,Yes,0.4,50
+marcus,Marcus Reed,UX Research,Head of Research,Research & insights,uxd-head,Yes,0.4,50
+priya,Priya Shah,Content Design,Head of Content Design,Content design,uxd-head,Yes,0.4,50
+daniel,Daniel Kim,Design Engineering,Head of Design Systems,Design systems,uxd-head,Yes,0.4,50
+maya,Maya Chen,Product Design,Principal Product Designer,Product Design,elena,No,1,20
+jordan,Jordan Ellis,Product Design,Senior Product Designer,Product Design,elena,No,1,20
+nina,Nina Patel,Product Design,Product Designer,Product Design,elena,No,1,15
+sofia,Sofia Ramirez,UX Research,Lead Researcher,Research & insights,marcus,No,1,20
+ethan,Ethan Park,UX Research,Senior Researcher,Research & insights,marcus,No,0.8,20
+amara,Amara Nwosu,UX Research,Researcher,Research & insights,marcus,No,1,25
+leo,Leo Martinez,Content Design,Lead Content Designer,Content design,priya,No,1,20
+grace,Grace Liu,Content Design,Senior Content Designer,Content design,priya,No,1,20
+theo,Theo Reed,Content Design,Content Designer,Content design,priya,No,0.8,20
+oliver,Oliver Grant,Design Engineering,Lead Design Engineer,Design systems,daniel,No,1,20
+isabel,Isabel Costa,Design Engineering,Design Engineer,Design systems,daniel,No,1,20
+noah,Noah Bennett,Design Engineering,Design Engineer,Design systems,daniel,No,1,15
+sana,Sana Ahmed,Product Design,Head of Design Strategy,Design Strategy,uxd-head,Yes,0.4,50
+victor,Victor Alvarez,Product Design,Head of Innovation,Innovation,uxd-head,Yes,0.4,50
+riley,Riley Thompson,Design Engineering,Head of UX AI,UX AI,uxd-head,Yes,0.4,50
+tessa,Tessa Wu,Product Design,Principal Design Strategist,Design Strategy,sana,No,1,20
+owen,Owen Hughes,Product Design,Service Designer,Design Strategy,sana,No,1,20
+leila,Leila Haddad,Product Design,Innovation Lead,Innovation,victor,No,1,20
+ben,Ben Carter,Design Engineering,Prototyping Engineer,Innovation,victor,No,1,20
+aisha,Aisha Patel,Product Design,AI Experience Designer,UX AI,riley,No,1,20
+sam,Sam Okafor,Design Engineering,AI Design Engineer,UX AI,riley,No,1,20

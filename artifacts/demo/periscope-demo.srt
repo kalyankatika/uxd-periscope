@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:10,300
+01  /  SEE THE REAL CAPACITY
+12 fictional people. 8.54 available FTE. Research is already at 120%.
+
+2
+00:00:10,300 --> 00:00:23,300
+02  /  BRING YOUR TEAM DATA
+Import a CSV. Part-time availability and non-project time shape capacity.
+
+3
+00:00:23,300 --> 00:00:41,400
+03  /  RESOLVE THE BASELINE OVERLOAD
+Rescope account-opening research from 0.84 to 0.56 FTE per week.
+
+4
+00:00:41,400 --> 00:00:52,200
+04  /  TEST THE NEXT REQUEST
+Include proposed work: research rises to 150%. The baseline is unchanged.
+
+5
+00:00:52,200 --> 00:01:13,000
+05  /  FIND A PLAN THAT FITS
+Start retirement discovery on Nov 16 at 0.56 research FTE. No overloads remain.
+
+6
+00:01:13,000 --> 00:01:30,800
+06  /  MAKE THE COMMITMENT
+Promote the feasible proposal to committed. The saved baseline now has four initiatives.
+
+7
+00:01:30,800 --> 00:01:44,700
+07  /  CAPTURE THE NEXT IDEA
+Add a usability study as stretch work. It stays below the commitment cutline.
+
+8
+00:01:44,700 --> 00:02:11,500
+08  /  SHARE THE PLANNING DECISION
+Review committed versus stretch work, then export capacity and initiative CSVs.

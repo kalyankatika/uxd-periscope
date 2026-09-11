@@ -1,0 +1,58 @@
+[
+  {
+    "name": "01-overview",
+    "title": "01  /  SEE THE REAL CAPACITY",
+    "caption": "12 fictional people. 8.54 available FTE. Research is already at 120%.",
+    "startSeconds": 0,
+    "durationSeconds": 10.3
+  },
+  {
+    "name": "02-people",
+    "title": "02  /  BRING YOUR TEAM DATA",
+    "caption": "Import a CSV. Part-time availability and non-project time shape capacity.",
+    "startSeconds": 10.3,
+    "durationSeconds": 13.0
+  },
+  {
+    "name": "03-baseline",
+    "title": "03  /  RESOLVE THE BASELINE OVERLOAD",
+    "caption": "Rescope account-opening research from 0.84 to 0.56 FTE per week.",
+    "startSeconds": 23.3,
+    "durationSeconds": 18.1
+  },
+  {
+    "name": "04-what-if",
+    "title": "04  /  TEST THE NEXT REQUEST",
+    "caption": "Include proposed work: research rises to 150%. The baseline is unchanged.",
+    "startSeconds": 41.4,
+    "durationSeconds": 10.8
+  },
+  {
+    "name": "05-schedule",
+    "title": "05  /  FIND A PLAN THAT FITS",
+    "caption": "Start retirement discovery on Nov 16 at 0.56 research FTE. No overloads remain.",
+    "startSeconds": 52.2,
+    "durationSeconds": 20.8
+  },
+  {
+    "name": "06-commit",
+    "title": "06  /  MAKE THE COMMITMENT",
+    "caption": "Promote the feasible proposal to committed. The saved baseline now has four initiatives.",
+    "startSeconds": 73.0,
+    "durationSeconds": 17.8
+  },
+  {
+    "name": "07-create",
+    "title": "07  /  CAPTURE THE NEXT IDEA",
+    "caption": "Add a usability study as stretch work. It stays below the commitment cutline.",
+    "startSeconds": 90.8,
+    "durationSeconds": 13.9
+  },
+  {
+    "name": "08-share",
+    "title": "08  /  SHARE THE PLANNING DECISION",
+    "caption": "Review committed versus stretch work, then export capacity and initiative CSVs.",
+    "startSeconds": 104.7,
+    "durationSeconds": 26.8
+  }
+]
