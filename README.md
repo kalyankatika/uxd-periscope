@@ -61,6 +61,8 @@ npm run build
 
 Tests cover capacity calculations, CSV and mapping behavior, graph identities and layout, reporting rollups, relationship validation, schema migration, SQLite transactions, and stale writes. See [AGENTS.md](AGENTS.md) for the project's agentic development workflow and [leadership experience notes](docs/leadership-experience.md) for the interaction model.
 
+For substantial builds, use the [Periscope Manager Loop](docs/manager-loop.md) with its copyable launch and resume prompts. [BUILD_STATE.md](BUILD_STATE.md) records the current objective, verified outcomes, and next action.
+
 ## Demo
 
 The current [40-second silent demo](artifacts/platform-demo/periscope-overview-demo.mp4) starts with the platform overview before drilling into the map, project connections, grid, team projects, and capacity. The longer narrated recording, captions, and reusable example files are also in `artifacts/platform-demo`. The earlier capacity-only recording remains in `artifacts/demo`.

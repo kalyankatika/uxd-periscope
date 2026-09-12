@@ -10,6 +10,10 @@ Develop this project agentically within the user's requested scope: inspect, imp
 - Maintain the import contract in `docs/enterprise-data-mapping.md`. Live enterprise data collection requires the actual source and agreed mappings; do not manufacture company data or claim synchronization exists.
 - Report completed behavior, validation, the working preview or artifact, and any material limitation. Continue authorized work to completion rather than stopping with a plan.
 
+## Manager Loop for substantial builds
+
+For multi-phase feature work or an explicit Manager Loop request, follow [docs/manager-loop.md](docs/manager-loop.md). The primary agent owns sequencing, acceptance, and integration; delegate bounded implementation through available agent tools. Maintain [BUILD_STATE.md](BUILD_STATE.md) as the current handoff. Routine fixes do not require orchestration. Project constraints above remain applicable to every agent.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
