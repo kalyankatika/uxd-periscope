@@ -1,0 +1,43 @@
+- heading "Add person" [level=2, ref=e1]
+- button "Close person editor" [ref=e2]
+- textbox "Name" [required, ref=e6]: Taylor Stone
+- textbox "Role / title" [ref=e7]: UX Researcher
+- combobox "Team" [ref=e8]: Research & insights
+- combobox "Reports to" [expanded=false, ref=e9]: Marcus Reed · Research & insights (marcus)
+  - option "No manager in this workspace" [ref=e13]
+  - option "Aisha Patel · UX AI (aisha)" [ref=e14]
+  - option "Amara Nwosu · Research & insights (amara)" [ref=e15]
+  - option "Avery Morgan · User experience (uxd-head)" [ref=e16]
+  - option "Ben Carter · Innovation (ben)" [ref=e17]
+  - option "Daniel Kim · Design systems (daniel)" [ref=e18]
+  - option "Elena Brooks · Product Design (elena)" [ref=e19]
+  - option "Ethan Park · Research & insights (ethan)" [ref=e20]
+  - option "Grace Liu · Content design (grace)" [ref=e21]
+  - option "Isabel Costa · Design systems (isabel)" [ref=e22]
+  - option "Jordan Ellis · Product Design (jordan)" [ref=e23]
+  - option "Leila Haddad · Innovation (leila)" [ref=e24]
+  - option "Leo Martinez · Content design (leo)" [ref=e25]
+  - option "Marcus Reed · Research & insights (marcus)" [selected, ref=e26]
+  - option "Maya Chen · Product Design (maya)" [ref=e27]
+  - option "Nina Patel · Product Design (nina)" [ref=e28]
+  - option "Noah Bennett · Design systems (noah)" [ref=e29]
+  - option "Oliver Grant · Design systems (oliver)" [ref=e30]
+  - option "Owen Hughes · Design Strategy (owen)" [ref=e31]
+  - option "Priya Shah · Content design (priya)" [ref=e32]
+  - option "Riley Thompson · UX AI (riley)" [ref=e33]
+  - option "Sam Okafor · UX AI (sam)" [ref=e34]
+  - option "Sana Ahmed · Design Strategy (sana)" [ref=e35]
+  - option "Sofia Ramirez · Research & insights (sofia)" [ref=e36]
+  - option "Tessa Wu · Design Strategy (tessa)" [ref=e37]
+  - option "Theo Reed · Content design (theo)" [ref=e38]
+  - option "Victor Alvarez · Innovation (victor)" [ref=e39]
+- checkbox "Show as a leader" [checked=false, ref=e5]
+- combobox "Discipline" [expanded=false, ref=e10]: Research
+  - option "Design" [ref=e40]
+  - option "Research" [selected, ref=e41]
+  - option "Content" [ref=e42]
+  - option "Design engineering" [ref=e43]
+- spinbutton "Working time (1 = full time)" [required, ref=e11]: 1
+- spinbutton "Time reserved for other work (%)" [required, ref=e12]: 20
+- button "Cancel" [ref=e3]
+- button "Save person" [ref=e4]

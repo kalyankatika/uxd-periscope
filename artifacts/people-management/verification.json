@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "tests": 57,
+  "peopleAfterScenario": 25,
+  "projectsRetained": 13,
+  "revision": 7,
+  "graphNodes": 45,
+  "createWithDecimalAvailability": true,
+  "pointerDragOpensReview": true,
+  "moveWithReportsAndTeamLabels": true,
+  "keyboardMoveToTopLevel": true,
+  "removeLeaderReparentsReports": true,
+  "removeOwnerReassignsProjectAndRemovesContributorLinks": true,
+  "cancelLeavesDataUnchanged": true,
+  "staleSaveRejected": true,
+  "reloadRetainsAllRecords": true,
+  "serverRestartRetainsAllRecords": true,
+  "exampleEditsDoNotWriteSavedPlan": true,
+  "mobileViewportWidth": 390,
+  "mobileContentWidth": 390,
+  "runtimeErrors": 0
+}

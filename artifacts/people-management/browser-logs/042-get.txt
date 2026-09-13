@@ -1,0 +1,197 @@
+◉
+periscope
+UXD
+WORKSPACE
+⌘
+Work map
+◫
+Overview
+♧
+Teams & reporting
+▦
+Projects
+◷
+Capacity
+☷
+Project plan
+⚙
+People & imports
+ Leadership workspace
+
+UXD · 27 people
+
+Saved workspace
+Saved workspace · Changes apply to all local sessions
+Use example data
+Teams & reporting
+
+Reporting structure and team projects.
+
+＋ Add project
+Planning period
+Plan saved.
+← All teams
+＋ Add person
+RT
+
+UX AI
+
+Riley Thompson
+
+Head of UX AI · Reports to Avery Morgan
+
+Edit person
+Move
+7 people in team
+9 related projects
+4 to review
+Riley’s team projects
+
+Includes projects owned by their reports and projects with team contributors. Shared projects appear once.
+
+Compare projects →
+Advisor productivity
+Advisor workspace
+↗
+
+Bring the right client information into one place before every advisor meeting.
+
+Jordan Ellis
+Due Dec 4
+Top priority
+On track
+Product experience alignment
+UXD product design strategy
+↗
+
+Define shared experience principles and a prioritized roadmap across onboarding, advice, and retirement products.
+
+Tessa Wu
+Due Nov 6
+Top priority
+On track
+Client onboarding
+Account opening redesign
+↗
+
+Help new clients open an account without getting stuck or starting over.
+
+Maya Chen
+Due Nov 20
+Top priority
+Decision required
+Responsible AI experiences
+UX AI interaction standards
+↗
+
+Define reusable interaction patterns for AI disclosures, source references, user feedback, and error recovery.
+
+Aisha Patel
+Due Nov 13
+Top priority
+On track
+Shared experience capabilities
+Research repository
+↗
+
+Make existing client research easy to find before teams start new work.
+
+Ethan Park
+Due Nov 27
+On track
+Client financial planning
+Retirement guidance
+↗
+
+Make retirement choices easier to understand, so clients know what to do next.
+
+Leo Martinez
+Due Dec 11
+Top priority
+At risk
+New product opportunities
+Conversational planning prototype
+↗
+
+Evaluate a conversational planning concept with clear handoffs to human support.
+
+Ben Carter
+Due Dec 18
+Decision required
+Shared experience capabilities
+AI-assisted research synthesis
+↗
+
+Pilot AI-assisted research summaries with source citations and researcher review before publication.
+
+Sam Okafor
+Due Dec 18
+At risk
+Client financial planning
+Planning assistant discovery
+↗
+
+Explore whether guided prompts can help clients take their next planning step.
+
+Amara Nwosu
+Due Dec 31
+Not reported
+Direct reports
+AP
+Aisha Patel
+AI Experience Designer
+Edit
+MR
+Marcus Reed
+Head of Research
+Edit
+SO
+Sam Okafor
+AI Design Engineer
+Edit
+＋ Add direct report
+Remove person
+✕
+Marcus Reed
+
+Remove this person from the workspace and its capacity totals.
+
+Review affected records
+
+4 direct reports · 0 owned projects · 0 contributor assignments
+
+Direct reports
+Amara Nwosu
+Ethan Park
+Sofia Ramirez
+Taylor Stone
+Move direct reports to
+No manager in this workspace
+Aisha Patel · UX AI (aisha)
+Avery Morgan · User experience (uxd-head)
+Ben Carter · Innovation (ben)
+Daniel Kim · Design systems (daniel)
+Elena Brooks · Product Design (elena)
+Grace Liu · Content design (grace)
+Isabel Costa · Design systems (isabel)
+Jordan Ellis · Product Design (jordan)
+Leila Haddad · Innovation (leila)
+Leo Martinez · Content design (leo)
+Maya Chen · Product Design (maya)
+Nina Patel · Product Design (nina)
+Noah Bennett · Design systems (noah)
+Oliver Grant · Design systems (oliver)
+Owen Hughes · Design Strategy (owen)
+Priya Shah · Content design (priya)
+Riley Thompson · UX AI (riley)
+Sam Okafor · UX AI (sam)
+Sana Ahmed · Design Strategy (sana)
+Tessa Wu · Design Strategy (tessa)
+Theo Reed · Content design (theo)
+Victor Alvarez · Innovation (victor)
+
+Projects, effort and dependencies remain. This person’s contributor assignments are removed. Reports keep their team labels and their own reports.
+
+Cancel
+Remove person
+Periscope · UXD workspace

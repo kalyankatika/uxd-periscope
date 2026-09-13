@@ -52,3 +52,14 @@ Recognized value conversions include Product Design → `design`, Content Design
 For an update to only one dataset, use **Import or export one file** below the organization form. Choose People or Projects and **Upload CSV**. A single-file import validates against the other dataset already in the workspace. Import new people before projects that reference them. Use the combined organization import when replacing both connected datasets, to avoid invalid intermediate references to the previous roster or projects.
 
 The saved-workspace API checks revisions to prevent a stale session from overwriting a newer save. Example mode updates only the current session. Automated enterprise synchronization, authentication, and source connectors are separate work requiring the actual source and its data contract.
+
+## Manual people and hierarchy changes
+
+Open **Teams & reporting** (also linked from **People & imports → Manage people & reporting**).
+
+- **Add person** creates a new local record with a generated stable ID. **＋ Report** on a person, or **Add direct report** in their team view, preselects that manager and team. Imported IDs stay unchanged when editing existing people.
+- **Edit** updates a person's name, role, team, reporting relationship, discipline and availability. Names are labels; changes do not re-key projects or reporting lines.
+- **Move** selects a new manager or **No manager in this workspace**. You can also drag the handle onto a manager, or the top-level drop area, to open the same review. Save explicitly to apply the move. A person's own reports stay with them; project assignments stay intact. The optional team checkbox updates the moved person and every descendant to the destination manager's team label. By default, team labels are preserved. Self-reporting and moves under descendants are blocked.
+- **Edit → Remove person** shows direct reports, owned projects and contributor assignments. Choose a surviving manager for the direct reports, or place them at the top level. Choose a replacement owner for owned projects, or leave their owners unassigned. Only the selected person is deleted; their contributor IDs are removed and their capacity is removed from totals. All projects, effort, dependencies and remaining people are retained. Unassigned projects have their old legacy owner text cleared so the removed person is not displayed as their owner.
+
+Manual updates use the same complete-plan validation and revision-checked save as imports. Saved-workspace changes survive reload; example edits remain session-only. A later source import can replace manually edited records with the imported values. Source precedence, edit history and automatic reconciliation are not implemented.

@@ -1,0 +1,756 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "@vocab": "urn:periscope:vocab:"
+  },
+  "revision": 7,
+  "@graph": [
+    {
+      "@id": "urn:periscope:person:0c2a95ad-7fbb-40dc-b968-0560c6ef8eca",
+      "@type": "schema:Person",
+      "schema:name": "Taylor Stone",
+      "schema:jobTitle": "UX Researcher",
+      "team": "UX AI"
+    },
+    {
+      "@id": "urn:periscope:person:aisha",
+      "@type": "schema:Person",
+      "schema:name": "Aisha Patel",
+      "schema:jobTitle": "AI Experience Designer",
+      "team": "UX AI",
+      "reportsTo": {
+        "@id": "urn:periscope:person:riley"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:amara",
+      "@type": "schema:Person",
+      "schema:name": "Amara Nwosu",
+      "schema:jobTitle": "Researcher",
+      "team": "UX AI",
+      "reportsTo": {
+        "@id": "urn:periscope:person:riley"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:ben",
+      "@type": "schema:Person",
+      "schema:name": "Ben Carter",
+      "schema:jobTitle": "Prototyping Engineer",
+      "team": "Innovation",
+      "reportsTo": {
+        "@id": "urn:periscope:person:victor"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:daniel",
+      "@type": "schema:Person",
+      "schema:name": "Daniel Kim",
+      "schema:jobTitle": "Head of Design Systems",
+      "team": "Design systems",
+      "reportsTo": {
+        "@id": "urn:periscope:person:uxd-head"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:elena",
+      "@type": "schema:Person",
+      "schema:name": "Elena Brooks",
+      "schema:jobTitle": "Head of Product Design",
+      "team": "Product Design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:uxd-head"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:grace",
+      "@type": "schema:Person",
+      "schema:name": "Grace Liu",
+      "schema:jobTitle": "Senior Content Designer",
+      "team": "Content design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:priya"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:isabel",
+      "@type": "schema:Person",
+      "schema:name": "Isabel Costa",
+      "schema:jobTitle": "Design Engineer",
+      "team": "Design systems",
+      "reportsTo": {
+        "@id": "urn:periscope:person:daniel"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:jordan",
+      "@type": "schema:Person",
+      "schema:name": "Jordan Ellis",
+      "schema:jobTitle": "Senior Product Designer",
+      "team": "Product Design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:elena"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:leila",
+      "@type": "schema:Person",
+      "schema:name": "Leila Haddad",
+      "schema:jobTitle": "Innovation Lead",
+      "team": "Innovation",
+      "reportsTo": {
+        "@id": "urn:periscope:person:victor"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:leo",
+      "@type": "schema:Person",
+      "schema:name": "Leo Martinez",
+      "schema:jobTitle": "Lead Content Designer",
+      "team": "Content design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:priya"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:maya",
+      "@type": "schema:Person",
+      "schema:name": "Maya Chen",
+      "schema:jobTitle": "Principal Product Designer",
+      "team": "Product Design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:elena"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:nina",
+      "@type": "schema:Person",
+      "schema:name": "Nina Patel",
+      "schema:jobTitle": "Product Designer",
+      "team": "Product Design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:elena"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:noah",
+      "@type": "schema:Person",
+      "schema:name": "Noah Bennett",
+      "schema:jobTitle": "Design Engineer",
+      "team": "Design systems",
+      "reportsTo": {
+        "@id": "urn:periscope:person:daniel"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:oliver",
+      "@type": "schema:Person",
+      "schema:name": "Oliver Grant",
+      "schema:jobTitle": "Lead Design Engineer",
+      "team": "Design systems",
+      "reportsTo": {
+        "@id": "urn:periscope:person:daniel"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:owen",
+      "@type": "schema:Person",
+      "schema:name": "Owen Hughes",
+      "schema:jobTitle": "Service Designer",
+      "team": "Design Strategy",
+      "reportsTo": {
+        "@id": "urn:periscope:person:sana"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:priya",
+      "@type": "schema:Person",
+      "schema:name": "Priya Shah",
+      "schema:jobTitle": "Head of Content Design",
+      "team": "Content design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:uxd-head"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:riley",
+      "@type": "schema:Person",
+      "schema:name": "Riley Thompson",
+      "schema:jobTitle": "Head of UX AI",
+      "team": "UX AI",
+      "reportsTo": {
+        "@id": "urn:periscope:person:uxd-head"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:sam",
+      "@type": "schema:Person",
+      "schema:name": "Sam Okafor",
+      "schema:jobTitle": "AI Design Engineer",
+      "team": "UX AI",
+      "reportsTo": {
+        "@id": "urn:periscope:person:riley"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:sana",
+      "@type": "schema:Person",
+      "schema:name": "Sana Ahmed",
+      "schema:jobTitle": "Head of Design Strategy",
+      "team": "Design Strategy",
+      "reportsTo": {
+        "@id": "urn:periscope:person:uxd-head"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:sofia",
+      "@type": "schema:Person",
+      "schema:name": "Sofia Ramirez",
+      "schema:jobTitle": "Lead Researcher",
+      "team": "UX AI",
+      "reportsTo": {
+        "@id": "urn:periscope:person:riley"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:tessa",
+      "@type": "schema:Person",
+      "schema:name": "Tessa Wu",
+      "schema:jobTitle": "Principal Design Strategist",
+      "team": "Design Strategy",
+      "reportsTo": {
+        "@id": "urn:periscope:person:sana"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:theo",
+      "@type": "schema:Person",
+      "schema:name": "Theo Reed",
+      "schema:jobTitle": "Content Designer",
+      "team": "Content design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:priya"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:uxd-head",
+      "@type": "schema:Person",
+      "schema:name": "Avery Morgan",
+      "schema:jobTitle": "Head of UXD",
+      "team": "User experience"
+    },
+    {
+      "@id": "urn:periscope:person:victor",
+      "@type": "schema:Person",
+      "schema:name": "Victor Alvarez",
+      "schema:jobTitle": "Head of Innovation",
+      "team": "Innovation",
+      "reportsTo": {
+        "@id": "urn:periscope:person:uxd-head"
+      }
+    },
+    {
+      "@id": "urn:periscope:priority:Advisor%20productivity",
+      "@type": "Priority",
+      "schema:name": "Advisor productivity"
+    },
+    {
+      "@id": "urn:periscope:priority:Shared%20experience%20capabilities",
+      "@type": "Priority",
+      "schema:name": "Shared experience capabilities"
+    },
+    {
+      "@id": "urn:periscope:priority:Product%20experience%20alignment",
+      "@type": "Priority",
+      "schema:name": "Product experience alignment"
+    },
+    {
+      "@id": "urn:periscope:priority:Client%20onboarding",
+      "@type": "Priority",
+      "schema:name": "Client onboarding"
+    },
+    {
+      "@id": "urn:periscope:priority:Client%20financial%20planning",
+      "@type": "Priority",
+      "schema:name": "Client financial planning"
+    },
+    {
+      "@id": "urn:periscope:priority:Responsible%20AI%20experiences",
+      "@type": "Priority",
+      "schema:name": "Responsible AI experiences"
+    },
+    {
+      "@id": "urn:periscope:priority:New%20product%20opportunities",
+      "@type": "Priority",
+      "schema:name": "New product opportunities"
+    },
+    {
+      "@id": "urn:periscope:project:advisor",
+      "@type": "schema:Project",
+      "schema:name": "Advisor workspace",
+      "schema:description": "Bring the right client information into one place before every advisor meeting.",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-12-04",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "top",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.8,
+        "research": 0.4,
+        "content": 0.3,
+        "design_eng": 0.3
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:jordan"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:sofia"
+        },
+        {
+          "@id": "urn:periscope:person:grace"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Advisor%20productivity"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:components",
+      "@type": "schema:Project",
+      "schema:name": "Accessible component library",
+      "schema:description": "Give every team accessible, reusable components for the journeys clients use most.",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-12-18",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.3,
+        "research": 0.1,
+        "content": 0.2,
+        "design_eng": 1
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:oliver"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:isabel"
+        },
+        {
+          "@id": "urn:periscope:person:grace"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Shared%20experience%20capabilities"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:experience-strategy",
+      "@type": "schema:Project",
+      "schema:name": "UXD product design strategy",
+      "schema:description": "Define shared experience principles and a prioritized roadmap across onboarding, advice, and retirement products.",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-11-06",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "top",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.5,
+        "research": 0.2,
+        "content": 0.1,
+        "design_eng": 0
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:tessa"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:owen"
+        },
+        {
+          "@id": "urn:periscope:person:maya"
+        },
+        {
+          "@id": "urn:periscope:person:sofia"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Product%20experience%20alignment"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:opening",
+      "@type": "schema:Project",
+      "schema:name": "Account opening redesign",
+      "schema:description": "Help new clients open an account without getting stuck or starting over.",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-11-20",
+      "deliveryStatus": "in_progress",
+      "health": "needs_decision",
+      "importance": "top",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 1,
+        "research": 0.5,
+        "content": 0.4,
+        "design_eng": 0.5
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:maya"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:sofia"
+        },
+        {
+          "@id": "urn:periscope:person:leo"
+        },
+        {
+          "@id": "urn:periscope:person:oliver"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:components"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:Client%20onboarding"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:statements",
+      "@type": "schema:Project",
+      "schema:name": "Statement content redesign",
+      "schema:description": "Replace confusing statement terminology with language clients can understand.",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-10-09",
+      "deliveryStatus": "completed",
+      "health": "on_track",
+      "importance": "normal",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.1,
+        "research": 0,
+        "content": 0.5,
+        "design_eng": 0
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:grace"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:theo"
+        },
+        {
+          "@id": "urn:periscope:person:maya"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Client%20financial%20planning"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:ai-standards",
+      "@type": "schema:Project",
+      "schema:name": "UX AI interaction standards",
+      "schema:description": "Define reusable interaction patterns for AI disclosures, source references, user feedback, and error recovery.",
+      "schema:startDate": "2026-10-05",
+      "schema:endDate": "2026-11-13",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "top",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.4,
+        "research": 0.1,
+        "content": 0.3,
+        "design_eng": 0.4
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:aisha"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:sam"
+        },
+        {
+          "@id": "urn:periscope:person:grace"
+        },
+        {
+          "@id": "urn:periscope:person:oliver"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:components"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:Responsible%20AI%20experiences"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:insights",
+      "@type": "schema:Project",
+      "schema:name": "Research repository",
+      "schema:description": "Make existing client research easy to find before teams start new work.",
+      "schema:startDate": "2026-10-05",
+      "schema:endDate": "2026-11-27",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.2,
+        "research": 0.5,
+        "content": 0.1,
+        "design_eng": 0.2
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:amara"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:amara"
+        },
+        {
+          "@id": "urn:periscope:person:jordan"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Shared%20experience%20capabilities"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:innovation-lab",
+      "@type": "schema:Project",
+      "schema:name": "Service concept pilots",
+      "schema:description": "Test two service concepts with clients before committing to product development.",
+      "schema:startDate": "2026-10-12",
+      "schema:endDate": "2026-12-11",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.5,
+        "research": 0.2,
+        "content": 0.1,
+        "design_eng": 0.4
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:leila"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:ben"
+        },
+        {
+          "@id": "urn:periscope:person:owen"
+        },
+        {
+          "@id": "urn:periscope:person:nina"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:experience-strategy"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:New%20product%20opportunities"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:retirement",
+      "@type": "schema:Project",
+      "schema:name": "Retirement guidance",
+      "schema:description": "Make retirement choices easier to understand, so clients know what to do next.",
+      "schema:startDate": "2026-10-12",
+      "schema:endDate": "2026-12-11",
+      "deliveryStatus": "in_progress",
+      "health": "at_risk",
+      "importance": "top",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.3,
+        "research": 0.5,
+        "content": 0.6,
+        "design_eng": 0.1
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:leo"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:maya"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Client%20financial%20planning"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:mobile",
+      "@type": "schema:Project",
+      "schema:name": "Mobile portfolio overview",
+      "schema:description": "Help clients understand portfolio performance at a glance on their phone.",
+      "schema:startDate": "2026-10-19",
+      "schema:endDate": "2026-12-18",
+      "deliveryStatus": "in_progress",
+      "health": "at_risk",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.7,
+        "research": 0.2,
+        "content": 0.2,
+        "design_eng": 0.6
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:nina"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:noah"
+        },
+        {
+          "@id": "urn:periscope:person:leo"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:components"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:Client%20financial%20planning"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:conversational-prototype",
+      "@type": "schema:Project",
+      "schema:name": "Conversational planning prototype",
+      "schema:description": "Evaluate a conversational planning concept with clear handoffs to human support.",
+      "schema:startDate": "2026-10-26",
+      "schema:endDate": "2026-12-18",
+      "deliveryStatus": "in_progress",
+      "health": "needs_decision",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.3,
+        "research": 0.2,
+        "content": 0.2,
+        "design_eng": 0.6
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:ben"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:aisha"
+        },
+        {
+          "@id": "urn:periscope:person:amara"
+        },
+        {
+          "@id": "urn:periscope:person:leo"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:ai-standards"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:New%20product%20opportunities"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:ai-research",
+      "@type": "schema:Project",
+      "schema:name": "AI-assisted research synthesis",
+      "schema:description": "Pilot AI-assisted research summaries with source citations and researcher review before publication.",
+      "schema:startDate": "2026-11-02",
+      "schema:endDate": "2026-12-18",
+      "deliveryStatus": "in_progress",
+      "health": "at_risk",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.2,
+        "research": 0.4,
+        "content": 0.1,
+        "design_eng": 0.7
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:sam"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:amara"
+        },
+        {
+          "@id": "urn:periscope:person:tessa"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:insights"
+        },
+        {
+          "@id": "urn:periscope:project:ai-standards"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:Shared%20experience%20capabilities"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:coaching",
+      "@type": "schema:Project",
+      "schema:name": "Planning assistant discovery",
+      "schema:description": "Explore whether guided prompts can help clients take their next planning step.",
+      "schema:startDate": "2026-11-16",
+      "schema:endDate": "2026-12-31",
+      "deliveryStatus": "planned",
+      "health": "not_reported",
+      "importance": "normal",
+      "commitment": "proposed",
+      "weeklyEffort": {
+        "design": 0.4,
+        "research": 0.4,
+        "content": 0.2,
+        "design_eng": 0.3
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:amara"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:nina"
+        },
+        {
+          "@id": "urn:periscope:person:isabel"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Client%20financial%20planning"
+      }
+    }
+  ]
+}

@@ -657,6 +657,9 @@ export default function Planner({ initial }: { initial: Plan }) {
               <section className="panel">
                 <div className="panel-head">
                   <h2>Team capacity</h2>
+                  <button onClick={() => setView("teams")}>
+                    Manage people & reporting
+                  </button>
                   <span>{plan.people.length} people</span>
                 </div>
                 <div className="table-scroll">

@@ -1,0 +1,5 @@
+{
+  "copy": "/var/folders/jf/sc1kq7kj5ql3yshn_hxcblnr0000gn/T/periscope-people-2i70880s",
+  "database": "./data/hierarchy-demo.sqlite",
+  "port": 3024
+}

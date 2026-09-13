@@ -4,10 +4,8 @@ import {
   type Plan,
   type Person,
   type Initiative,
-  crafts,
   labels,
-  personSchema,
-  planSchema,
+  crafts,
 } from "@/lib/domain";
 import {
   teamIds,
@@ -22,6 +20,7 @@ import {
 } from "@/lib/work-graph";
 import { exportCsv } from "@/lib/csv";
 import WorkMap from "./work-map";
+import PeopleDialog, { type PeopleRequest } from "./people-dialog";
 type Mode = "overview" | "teams" | "compare" | "connections";
 const initials = (name: string) =>
   name
@@ -107,10 +106,10 @@ export default function Leadership({
     >("importance"),
     [ascending, setAscending] = useState(true),
     [connectionId, setConnectionId] = useState(""),
-    [personDraft, setPersonDraft] = useState<Person | null>(null),
-    [personError, setPersonError] = useState("");
-  const projectDialog = useRef<HTMLDialogElement>(null),
-    personDialog = useRef<HTMLDialogElement>(null);
+    [peopleRequest, setPeopleRequest] = useState<PeopleRequest | null>(null),
+    [draggedId, setDraggedId] = useState<string | null>(null),
+    [dropTarget, setDropTarget] = useState<string | null>(null);
+  const projectDialog = useRef<HTMLDialogElement>(null);
   const peopleById = useMemo(
     () => new Map(plan.people.map((p) => [p.id, p])),
     [plan.people],
@@ -184,24 +183,26 @@ export default function Leadership({
     onMode("teams");
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-  function openPerson(p?: Person) {
-    setPersonError("");
-    setPersonDraft(
-      p
-        ? structuredClone(p)
-        : {
-            id: crypto.randomUUID(),
-            name: "",
-            craft: "design",
-            fte: 1,
-            nonProjectPct: 20,
-            title: "",
-            team: "",
-            managerId: null,
-            isLeader: false,
-          },
+  function openPerson(p?: Person, managerId?: string) {
+    setPeopleRequest(
+      p ? { kind: "edit", personId: p.id } : { kind: "add", managerId },
     );
-    personDialog.current?.showModal();
+  }
+  function canDrop(managerId: string | null) {
+    return (
+      !!draggedId &&
+      !busy &&
+      managerId !== peopleById.get(draggedId)?.managerId &&
+      (managerId === null || !teamIds(plan.people, draggedId).has(managerId))
+    );
+  }
+  function dropPerson(event: React.DragEvent, managerId: string | null) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (canDrop(managerId) && draggedId)
+      setPeopleRequest({ kind: "move", personId: draggedId, managerId });
+    setDraggedId(null);
+    setDropTarget(null);
   }
   function setSortColumn(value: typeof sort) {
     if (sort === value) setAscending(!ascending);
@@ -504,7 +505,13 @@ export default function Leadership({
             <button onClick={() => setLeaderId(null)} className="quiet-link">
               {leader ? "← All teams" : "Reporting structure"}
             </button>
-            <button onClick={() => openPerson()}>＋ Add person</button>
+            <button
+              className="primary"
+              disabled={busy}
+              onClick={() => openPerson()}
+            >
+              ＋ Add person
+            </button>
           </div>
           {leader ? (
             <>
@@ -521,8 +528,14 @@ export default function Leadership({
                       ` · Reports to ${peopleById.get(leader.managerId)?.name || "unassigned"}`}
                   </p>
                 </div>
-                <button onClick={() => openPerson(leader)}>
-                  Edit reporting details
+                <button onClick={() => openPerson(leader)}>Edit person</button>
+                <button
+                  disabled={busy}
+                  onClick={() =>
+                    setPeopleRequest({ kind: "move", personId: leader.id })
+                  }
+                >
+                  Move
                 </button>
                 <div className="leader-profile-stats">
                   <span>
@@ -579,7 +592,12 @@ export default function Leadership({
                   {!plan.people.some((p) => p.managerId === leader.id) && (
                     <p className="muted">No direct reports recorded.</p>
                   )}
-                  <button onClick={() => openPerson()}>＋ Add person</button>
+                  <button
+                    disabled={busy}
+                    onClick={() => openPerson(undefined, leader.id)}
+                  >
+                    ＋ Add direct report
+                  </button>
                 </aside>
               </div>
             </>
@@ -589,11 +607,28 @@ export default function Leadership({
                 <div>
                   <h2>Reporting structure</h2>
                   <p>
-                    Open any person to see their work. Use Edit to update a
-                    reporting relationship.
+                    Open a person to see their work. Use Move or drag the handle
+                    onto a new manager. Moves are reviewed before saving.
                   </p>
                 </div>
                 <span>{plan.people.length} people</span>
+              </div>
+              <div
+                className={
+                  "reporting-root-drop" +
+                  (dropTarget === "root" ? " drop-ready" : "")
+                }
+                onDragOver={(event) => {
+                  if (canDrop(null)) {
+                    event.preventDefault();
+                    setDropTarget("root");
+                  }
+                }}
+                onDragLeave={() => setDropTarget(null)}
+                onDrop={(event) => dropPerson(event, null)}
+              >
+                No manager in this workspace{" "}
+                <span>Drop here to move to the top level</span>
               </div>
               {renderTree(null, new Set())}
               {!plan.people.length && (
@@ -963,200 +998,15 @@ export default function Leadership({
           </div>
         )}
       </dialog>
-      <dialog
-        ref={personDialog}
-        className="drawer"
-        aria-labelledby="person-editor-title"
-        onClose={() => setPersonDraft(null)}
-      >
-        {personDraft && (
-          <form
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const parsed = personSchema.safeParse(personDraft);
-              if (!parsed.success) {
-                setPersonError(
-                  parsed.error.issues.map((i) => i.message).join("; "),
-                );
-                return;
-              }
-              const next = {
-                ...plan,
-                people: plan.people.some((p) => p.id === parsed.data.id)
-                  ? plan.people.map((p) =>
-                      p.id === parsed.data.id ? parsed.data : p,
-                    )
-                  : [...plan.people, parsed.data],
-              };
-              const checked = planSchema.safeParse(next);
-              if (!checked.success) {
-                setPersonError(
-                  checked.error.issues.map((i) => i.message).join("; "),
-                );
-                return;
-              }
-              if (await onSave(checked.data)) personDialog.current?.close();
-              else
-                setPersonError(
-                  "Could not save. Reload the workspace if another session has changed it.",
-                );
-            }}
-          >
-            <div className="panel-head">
-              <h2 id="person-editor-title">
-                {plan.people.some((p) => p.id === personDraft.id)
-                  ? "Edit reporting details"
-                  : "Add person"}
-              </h2>
-              <button
-                type="button"
-                disabled={busy}
-                onClick={() => personDialog.current?.close()}
-                aria-label="Close person editor"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="drawer-body">
-              <label>
-                Name
-                <input
-                  required
-                  value={personDraft.name}
-                  onChange={(e) =>
-                    setPersonDraft({ ...personDraft, name: e.target.value })
-                  }
-                />
-              </label>
-              <label>
-                Role / title
-                <input
-                  value={personDraft.title}
-                  onChange={(e) =>
-                    setPersonDraft({ ...personDraft, title: e.target.value })
-                  }
-                />
-              </label>
-              <label>
-                Team
-                <input
-                  value={personDraft.team}
-                  onChange={(e) =>
-                    setPersonDraft({ ...personDraft, team: e.target.value })
-                  }
-                />
-              </label>
-              <label>
-                Reports to
-                <select
-                  value={personDraft.managerId || ""}
-                  onChange={(e) =>
-                    setPersonDraft({
-                      ...personDraft,
-                      managerId: e.target.value || null,
-                    })
-                  }
-                >
-                  <option value="">No manager in this workspace</option>
-                  {plan.people
-                    .filter(
-                      (p) => !teamIds(plan.people, personDraft.id).has(p.id),
-                    )
-                    .map((p) => (
-                      <option key={p.id} value={p.id}>
-                        {p.name}
-                      </option>
-                    ))}
-                </select>
-              </label>
-              <label className="inline-check">
-                <input
-                  type="checkbox"
-                  checked={personDraft.isLeader}
-                  onChange={(e) =>
-                    setPersonDraft({
-                      ...personDraft,
-                      isLeader: e.target.checked,
-                    })
-                  }
-                />{" "}
-                Show as a leader
-              </label>
-              <label>
-                Discipline
-                <select
-                  value={personDraft.craft}
-                  onChange={(e) =>
-                    setPersonDraft({
-                      ...personDraft,
-                      craft: e.target.value as Person["craft"],
-                    })
-                  }
-                >
-                  {crafts.map((c) => (
-                    <option key={c} value={c}>
-                      {labels[c]}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <details className="effort-details">
-                <summary>Weekly availability</summary>
-                <label>
-                  Working time (1 = full time)
-                  <input
-                    type="number"
-                    min="0"
-                    max="1"
-                    step=".05"
-                    required
-                    value={personDraft.fte}
-                    onChange={(e) =>
-                      setPersonDraft({
-                        ...personDraft,
-                        fte: Number(e.target.value),
-                      })
-                    }
-                  />
-                </label>
-                <label>
-                  Time reserved for other work (%)
-                  <input
-                    type="number"
-                    min="0"
-                    max="100"
-                    required
-                    value={personDraft.nonProjectPct}
-                    onChange={(e) =>
-                      setPersonDraft({
-                        ...personDraft,
-                        nonProjectPct: Number(e.target.value),
-                      })
-                    }
-                  />
-                </label>
-              </details>
-              {personError && (
-                <p className="message error" role="alert">
-                  {personError}
-                </p>
-              )}
-            </div>
-            <div className="drawer-footer">
-              <button
-                type="button"
-                disabled={busy}
-                onClick={() => personDialog.current?.close()}
-              >
-                Cancel
-              </button>
-              <button type="submit" className="primary" disabled={busy}>
-                {busy ? "Saving…" : "Save person"}
-              </button>
-            </div>
-          </form>
-        )}
-      </dialog>
+      {peopleRequest && (
+        <PeopleDialog
+          plan={plan}
+          request={peopleRequest}
+          busy={busy}
+          onSave={onSave}
+          onClose={() => setPeopleRequest(null)}
+        />
+      )}
     </div>
   );
   function renderTree(
@@ -1171,7 +1021,48 @@ export default function Leadership({
             const children = plan.people.filter((r) => r.managerId === p.id);
             return (
               <li key={p.id}>
-                <div className="tree-person">
+                <div
+                  className={
+                    "tree-person" + (dropTarget === p.id ? " drop-ready" : "")
+                  }
+                  onDragOver={(event) => {
+                    if (canDrop(p.id)) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      setDropTarget(p.id);
+                    }
+                  }}
+                  onDragLeave={(event) => {
+                    if (
+                      !event.currentTarget.contains(
+                        event.relatedTarget as Node | null,
+                      )
+                    )
+                      setDropTarget(null);
+                  }}
+                  onDrop={(event) => dropPerson(event, p.id)}
+                >
+                  <button
+                    className="quiet-link drag-person"
+                    disabled={busy}
+                    draggable={!busy}
+                    aria-label={"Move " + p.name}
+                    title="Drag onto a manager, or select to move"
+                    onClick={() =>
+                      setPeopleRequest({ kind: "move", personId: p.id })
+                    }
+                    onDragStart={(event) => {
+                      event.dataTransfer.setData("text/plain", p.id);
+                      event.dataTransfer.effectAllowed = "move";
+                      setDraggedId(p.id);
+                    }}
+                    onDragEnd={() => {
+                      setDraggedId(null);
+                      setDropTarget(null);
+                    }}
+                  >
+                    ⠿
+                  </button>
                   <span
                     className={
                       "person-avatar " +
@@ -1194,9 +1085,34 @@ export default function Leadership({
                     }{" "}
                     projects
                   </span>
-                  <button className="quiet-link" onClick={() => openPerson(p)}>
-                    Edit
-                  </button>
+                  <div className="tree-actions">
+                    <button
+                      className="quiet-link"
+                      disabled={busy}
+                      aria-label={"Add direct report to " + p.name}
+                      onClick={() => openPerson(undefined, p.id)}
+                    >
+                      ＋ Report
+                    </button>
+                    <button
+                      className="quiet-link"
+                      disabled={busy}
+                      aria-label={"Edit " + p.name}
+                      onClick={() => openPerson(p)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="quiet-link"
+                      disabled={busy}
+                      aria-label={"Change manager for " + p.name}
+                      onClick={() =>
+                        setPeopleRequest({ kind: "move", personId: p.id })
+                      }
+                    >
+                      Move
+                    </button>
+                  </div>
                 </div>
                 {children.length > 0 && (
                   <details open={managerId === null}>

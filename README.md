@@ -25,7 +25,7 @@ The app binds to `127.0.0.1:3000`. It uses Next.js App Router, React, TypeScript
 
 - **Work map:** switch between an interactive graph and a card grid of people, leaders, projects, and priorities. Both views share filters, selection, connection focus, and the detail panel. Sort grid cards by type, name, or connections; return to the map to explore relationships. Pan, zoom, drag nodes, search, and export JSON-LD.
 - **Overview:** top-priority projects, reported issues, and team summaries.
-- **Teams & reporting:** reporting tree, direct reports, and deduplicated project rollups across each leader's team.
+- **Teams & reporting:** add and edit people, add direct reports, move reporting groups with drag-and-drop or Move, and remove people with report/project reassignment. Each leader shows deduplicated project rollups. See [manual hierarchy controls](docs/enterprise-data-mapping.md#manual-people-and-hierarchy-changes).
 - **Projects:** searchable comparison grid with team/status filters, sorting, and CSV export.
 - **Capacity:** weekly effort against available time by discipline, with optional proposed work.
 - **Project plan:** committed, proposed, and backlog projects.

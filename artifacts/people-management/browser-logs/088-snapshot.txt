@@ -1,0 +1,16 @@
+- heading "Edit person" [level=2, ref=e1]
+- button "Close person editor" [ref=e2]
+- textbox "Name" [required, ref=e7]: Avery Morgan
+- textbox "Role / title" [ref=e8]: Head of UXD
+- combobox "Team" [ref=e9]: User experience
+- combobox "Reports to" [expanded=false, ref=e10]: No manager in this workspace
+  - option "No manager in this workspace" [selected, ref=e12]
+- checkbox "Show as a leader" [checked=true, ref=e6]
+- combobox "Discipline" [expanded=false, ref=e11]: Design
+  - option "Design" [selected, ref=e13]
+  - option "Research" [ref=e14]
+  - option "Content" [ref=e15]
+  - option "Design engineering" [ref=e16]
+- button "Remove person" [ref=e3]
+- button "Cancel" [ref=e4]
+- button "Save person" [ref=e5]

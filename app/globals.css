@@ -2505,3 +2505,136 @@ footer {
     flex-direction: column;
   }
 }
+
+/* People and reporting controls */
+.people-fields {
+  min-width: 0;
+  margin: 0;
+  border: 0;
+}
+.people-fields > label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 21px;
+  font-size: 0.875rem;
+}
+.people-fields > label.inline-check {
+  flex-direction: row;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.people-fields input[type="checkbox"] {
+  flex-shrink: 0;
+}
+.people-context {
+  margin-bottom: 24px;
+}
+.people-context > strong {
+  font-size: 1.2rem;
+}
+.people-context p,
+.people-impact p {
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+.people-impact {
+  padding: 18px;
+  margin: 20px 0;
+  background: #f4f7f1;
+  border: 1px solid #dfe7d8;
+  border-radius: 12px;
+}
+.people-impact h3 {
+  font-size: 0.95rem;
+  margin: 0 0 12px;
+}
+.people-impact summary {
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 0.875rem;
+}
+.people-impact li {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.people-dialog select {
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.people-dialog .danger-action {
+  background: #a72d25;
+  border-color: #a72d25;
+  color: white;
+}
+.people-dialog .danger-action:hover {
+  background: #86221c;
+}
+.tree-person > button:not(.quiet-link) {
+  min-width: 0;
+}
+.tree-person > button:not(.quiet-link) > strong,
+.tree-person > button:not(.quiet-link) > span {
+  overflow-wrap: anywhere;
+}
+.tree-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+}
+.tree-actions .quiet-link {
+  font-size: 0.78rem;
+  padding: 7px 9px;
+}
+.tree-person .drag-person {
+  padding: 7px 3px;
+  cursor: grab;
+  font-size: 1.4rem;
+  color: #6b775f;
+}
+.tree-person .drag-person:active {
+  cursor: grabbing;
+}
+.reporting-root-drop {
+  margin: 0 24px 12px;
+  padding: 14px 16px;
+  border: 1px dashed #acbaa1;
+  border-radius: 10px;
+  color: #405237;
+  font-size: 0.85rem;
+}
+.reporting-root-drop span {
+  margin-left: 12px;
+  color: #65745c;
+  font-size: 0.78rem;
+}
+.tree-person.drop-ready,
+.reporting-root-drop.drop-ready {
+  background: #eaf5e5;
+  outline: 2px solid #368727;
+  outline-offset: 2px;
+}
+@media (max-width: 760px) {
+  .tree-person {
+    flex-wrap: wrap;
+  }
+  .tree-person > button:not(.quiet-link) {
+    flex-basis: 50%;
+  }
+  .tree-actions {
+    width: 100%;
+    padding-left: 30px;
+  }
+  .reporting-root-drop {
+    margin: 0 12px 10px;
+  }
+  .reporting-root-drop span {
+    display: block;
+    margin: 6px 0 0;
+  }
+  .people-dialog .drawer-footer {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+}
