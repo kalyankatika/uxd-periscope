@@ -2,7 +2,7 @@
 
 **Entirely fictional.** These files describe the same organization as Periscope's built-in example. They contain no company exports, employee records, credentials or live API responses. They are intended to travel with the repository for a repeatable enterprise showcase.
 
-The dataset contains **26 people, seven functional teams plus the head of UXD, 13 projects, seven priorities and seven project dependencies**. It includes Product Design, Design Research, Content & Conversation Design, Design Systems & Engineering, Experience Strategy, Emerging Experiences and AI Product Design; shared contributors; decision requests; delivery concerns; and one proposed project for capacity comparison.
+The dataset contains **27 people, eight functional teams plus the head of UXD, 13 projects, seven priorities and seven project dependencies**. It includes Product Design, Design Research, Content & Conversation Design, Design Systems & Engineering, Experience Strategy, Emerging Experiences, AI Product Design and UXD Operations; shared contributors; decision requests; delivery concerns; and one proposed project for capacity comparison.
 
 ## Files
 
@@ -49,7 +49,7 @@ Open [http://127.0.0.1:3001](http://127.0.0.1:3001). Keep the terminal running. 
 1. On a fresh demo database, choose **Open workspace**. The initial saved starter has 12 people and five projects; the larger built-in example is separate and session-only.
 2. Open **People & imports → Import organization**. Choose this directory's `people.csv` and `projects.csv`.
 3. Choose **Replace people and projects** in this isolated demo workspace. It replaces the starter records with the complete connected fixture. Do not use replace against a real workspace for this demonstration.
-4. Select **Review organization**. Expect **26 people and 13 projects after import**. A fresh starter gives 26 new/12 removed people and 13 new/5 removed projects; none updated. Re-importing the same pack instead shows matched IDs as updated. Inspect column and label mappings; no columns should be excluded and all relationship references should be valid.
+4. Select **Review organization**. Expect **27 people and 13 projects after import**. A fresh starter gives 27 new/12 removed people and 13 new/5 removed projects; none updated. Re-importing the same pack instead shows matched IDs as updated. Inspect column and label mappings; no columns should be excluded and all relationship references should be valid.
 5. Confirm **Import organization**. Reload and confirm the same counts and relationships remain. These imports are persisted only in `data/uxd-demo.sqlite`. If the banner still says **Example data**, the import is session-only; switch to the saved workspace and repeat there.
 6. Set the planning-period month to **October 2026** to review **Q4 2026**. Dates are intentionally fixed for reproducibility, so a later calendar date does not mean the fixture is broken.
 7. To repeat from the same baseline, re-import the CSV pair into the demo database. No database deletion is required. Stop this demo with Ctrl+C. The normal workspace remains at its separately configured database path.
@@ -87,3 +87,5 @@ Keep the fictional pack in source control. Real source exports, saved databases,
 The fictional fixture includes four levels: Avery Morgan → Elena Brooks → Maya Chen → Nina Patel. Relationships use `managerId` values `uxd-head` → `elena` → `maya` → `nina` (each child references the preceding manager). In Work map, choose **Reporting lines**, select a person and use **Show reporting group** to see every descendant. The inspector separates direct and indirect reports; selecting either opens that person's scope. Project totals include nested reports and deduplicate shared projects by ID. Map and Grid use the same reporting filter.
 
 Role titles and naming rationale: [example organization](../../docs/example-role-titles.md).
+
+Rowan Blake is the fictional VP of UXD Operations, reporting directly to the Head of Design. Their full-time role is recorded as 100% non-project work, so adding this leader does not increase delivery capacity. No reports or project assignments have been invented for this role.

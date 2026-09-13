@@ -10,7 +10,7 @@ Completed an actual live-browser head-of-UXD cognitive walkthrough across report
 
 Corrected dimmed grandchildren, compressed reporting levels and misleading node-type filtering. 61 tests, TypeScript and both production builds passed. Actual CSV import matched all records by ID; reload/restart preserved the isolated saved workspace. Full graph export preserved the reporting chain. Original SQLite hashes unchanged.
 
-Main preview runs at http://127.0.0.1:3000/ (production session 98622). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
+Main preview runs at http://127.0.0.1:3000/ (production session 95409). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
 
 ## Roles and preserved context
 
@@ -29,3 +29,7 @@ Leadership-level adjustment: the head is now SVP of Design, AI & Digital Product
 SVP/VP title adjustment verified in the running browser; production build passed.
 
 Latest title preference: Avery is Head of Design; the seven direct-report leaders remain VPs of Design.
+
+Latest organization update: added fictional Rowan Blake, VP of UXD Operations, as the eighth direct-report leader under Head of Design. 27 people, eight functional teams, 13 unchanged projects. The operations role has 100% non-project time and contributes no delivery capacity.
+
+Operations VP update: 62 tests and production build passed; browser confirmed the new leader. Preview refreshed; saved workspace unchanged.

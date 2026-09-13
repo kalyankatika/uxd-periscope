@@ -33,7 +33,7 @@ The app binds to `127.0.0.1:3000`. It uses Next.js App Router, React, TypeScript
 
 ## Example and saved data
 
-The example includes 26 fictional people, seven teams, and 13 connected projects. Teams include Product Design, Research & insights, Content design, Design systems, Design Strategy, Innovation, and UX AI. Example edits stay in memory for the current session. **Open workspace** switches to persisted records; **Use example data** switches back.
+The example includes 27 fictional people, eight teams, and 13 connected projects. Teams include Product Design, Design Research, Content & Conversation Design, Design Systems & Engineering, Experience Strategy, Emerging Experiences, AI Product Design, and UXD Operations. Example edits stay in memory for the current session. **Open workspace** switches to persisted records; **Use example data** switches back.
 
 SQLite stores the saved workspace at `data/planner.sqlite`. Set `DATABASE_PATH` to use another location. Back up with SQLite tooling, or stop the server before copying database and WAL files. Existing databases migrate while preserving records and revision checks. The older 12-person, five-project starter remains the initial saved dataset; it is separate from the leadership example.
 

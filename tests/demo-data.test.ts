@@ -69,17 +69,17 @@ test("Demo counts and the cross-team Research rollup retain the documented showc
   assert.equal(manifest.datasetVersion, 1);
   assert.equal(manifest.period.selectMonth, "2026-10");
   assert.deepEqual(manifest.counts, {
-    people: 26,
+    people: 27,
     projects: 13,
     headOfUxd: 1,
-    functionalLeaders: 7,
-    functionalTeams: 7,
+    functionalLeaders: 8,
+    functionalTeams: 8,
     priorities: 7,
     dependencies: 7,
     topPriorityProjects: 5,
     projectsNeedingAttention: 5,
   });
-  assert.equal(plan.people.length, 26);
+  assert.equal(plan.people.length, 27);
   assert.equal(plan.initiatives.length, 13);
   assert.equal(
     new Set(plan.initiatives.map((project) => project.priority)).size,
@@ -97,7 +97,7 @@ test("Demo counts and the cross-team Research rollup retain the documented showc
       .filter((person) => person.managerId === "uxd-head")
       .map((person) => person.id)
       .sort(),
-    ["daniel", "elena", "marcus", "priya", "riley", "sana", "victor"],
+    ["daniel", "elena", "marcus", "priya", "riley", "sana", "uxd-ops", "victor"],
   );
 
   // Independent ID traversal checks the fixture, without using product rollup helpers.
@@ -130,4 +130,12 @@ test("Demo counts and the cross-team Research rollup retain the documented showc
     "opening",
     "retirement",
   ]);
+});
+
+
+test("Operations VP reports to the head without adding delivery capacity", () => {
+  const ops = workspace().people.find(person => person.id === "uxd-ops")!;
+  assert.equal(ops.managerId, "uxd-head");
+  assert.equal(ops.isLeader, true);
+  assert.equal(ops.fte * (1 - ops.nonProjectPct / 100), 0);
 });

@@ -12,6 +12,17 @@
       "nonProjectPct": 100
     },
     {
+      "id": "uxd-ops",
+      "name": "Rowan Blake",
+      "craft": "design",
+      "title": "VP of UXD Operations",
+      "team": "UXD Operations",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 1,
+      "nonProjectPct": 100
+    },
+    {
       "id": "elena",
       "name": "Elena Brooks",
       "craft": "design",

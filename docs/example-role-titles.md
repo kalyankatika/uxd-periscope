@@ -13,7 +13,7 @@ Use recognizable Product Designer, Design Researcher, Content Designer and Desig
 - [Figma: Product Designer, AI Models](https://job-boards.greenhouse.io/figma/jobs/5711913004) — describes connecting AI research and design principles.
 - [Airbnb: Staff Service Designer](https://careers.airbnb.com/positions/7514027/) — distinguishes Staff individual contributors from design managers/directors.
 
-The exact seven-team grouping is a Periscope design choice. At the user’s request, the head is Head of Design and the seven direct-report leaders are VPs of Design; these levels are not attributed to the reference companies.
+The exact eight-team grouping is a Periscope design choice. At the user’s request, the head is Head of Design and the design leaders are VPs of Design, alongside a VP of UXD Operations; these levels are not attributed to the reference companies.
 
 ## Fictional roster
 
@@ -45,3 +45,7 @@ The exact seven-team grouping is a Periscope design choice. At the user’s requ
 | Ben Carter | Design Engineer, Creative Technology | Emerging Experiences |
 | Aisha Patel | Staff Product Designer, AI Experiences | AI Product Design |
 | Sam Okafor | Design Engineer, AI Prototyping | AI Product Design |
+
+| Rowan Blake | VP of UXD Operations | UXD Operations |
+
+The Operations VP reports to the Head of Design. The existing Design discipline classification is retained for schema compatibility; 100% non-project time keeps operations work out of delivery capacity.

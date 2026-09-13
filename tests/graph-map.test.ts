@@ -182,8 +182,8 @@ test("Zoom preserves the location under the pointer and clamps extreme input", (
 test("Reporting view includes every descendant and excludes project connections and ancestors", () => {
   const before = JSON.stringify(graph);
   const full = reportingGraph(graph);
-  assert.equal(full.nodes.length, 26);
-  assert.equal(full.links.length, 25);
+  assert.equal(full.nodes.length, 27);
+  assert.equal(full.links.length, 26);
   const root = graphId("person", "elena");
   const subtree = reportingGraph(graph, root);
   assert.deepEqual(subtree.nodes.map((n) => n.recordId).sort(), [
@@ -202,7 +202,7 @@ test("Reporting view includes every descendant and excludes project connections 
   );
   assert.equal(
     reportingGraph(graph, graphId("person", "uxd-head")).nodes.length,
-    26,
+    27,
   );
   assert.equal(reportingGraph(graph, "missing").nodes.length, 0);
   const filtered = filterGraph(graph, {

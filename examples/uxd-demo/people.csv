@@ -1,5 +1,6 @@
 Record ID,Name,Discipline,Job title,Team,Manager ID,Leader,Working time (FTE),Non-project time (%)
 uxd-head,Avery Morgan,Design,Head of Design,UXD,,Yes,0,100
+uxd-ops,Rowan Blake,Design,VP of UXD Operations,UXD Operations,uxd-head,Yes,1,100
 elena,Elena Brooks,Design,"VP of Design, Digital Products",Product Design,uxd-head,Yes,0.4,50
 marcus,Marcus Reed,Research,"VP of Design, Research",Design Research,uxd-head,Yes,0.4,50
 priya,Priya Shah,Content,"VP of Design, Content & Conversation",Content & Conversation Design,uxd-head,Yes,0.4,50

@@ -13,6 +13,17 @@ export function leadershipDemo(): Plan {
       100,
     ],
     [
+      "uxd-ops",
+      "Rowan Blake",
+      "design",
+      "uxd-head",
+      "VP of UXD Operations",
+      "UXD Operations",
+      true,
+      1,
+      100,
+    ],
+    [
       "elena",
       "Elena Brooks",
       "design",

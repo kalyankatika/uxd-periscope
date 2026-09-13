@@ -11,11 +11,11 @@
     "selectMonth": "2026-10"
   },
   "counts": {
-    "people": 26,
+    "people": 27,
     "projects": 13,
     "headOfUxd": 1,
-    "functionalLeaders": 7,
-    "functionalTeams": 7,
+    "functionalLeaders": 8,
+    "functionalTeams": 8,
     "priorities": 7,
     "dependencies": 7,
     "topPriorityProjects": 5,
