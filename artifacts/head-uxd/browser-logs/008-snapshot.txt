@@ -1,0 +1,294 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "Work map" [ref=e7]
+      - StaticText "Work map"
+    - button "Overview" [ref=e8]
+      - StaticText "Overview"
+    - button "Teams & reporting" [ref=e9]
+      - StaticText "Teams & reporting"
+    - button "Projects" [ref=e10]
+      - StaticText "Projects"
+    - button "Capacity" [ref=e11]
+      - StaticText "Capacity"
+    - button "Project plan" [ref=e12]
+      - StaticText "Project plan"
+    - button "People & imports" [ref=e13]
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 26 people"
+  - StaticText "Example data · Session only"
+- main
+  - StaticText "Example data · Fictional organization · Changes are temporary"
+  - button "Open workspace" [ref=e3]
+  - heading "Work map" [level=1, ref=e4]
+  - paragraph
+    - StaticText "People, projects, priorities, and their relationships."
+  - button "＋ Add project" [ref=e5]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e64]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e65]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e19]
+  - region "Interactive work map" [ref=e6]
+    - paragraph
+      - StaticText "RELATIONSHIPS"
+    - heading "Reporting hierarchy" [level=2, ref=e14]
+    - paragraph
+      - StaticText "13 projects ·26 people·7 priorities"
+    - group "Work view"
+      - button "Map" [ref=e20]
+      - button "Grid" [ref=e21]
+    - button "Compare projects " [ref=e15]
+    - button "Export connected data" [ref=e16]
+      - StaticText "↓"
+    - button "Expand map" [ref=e17]
+      - StaticText "⤢"
+    - textbox "Search people, projects or priorities" [ref=e22]
+    - group "Map filter"
+      - button "All work" [ref=e23]
+      - button "Reporting lines" [ref=e24]
+      - button "Top priorities 5" [ref=e25]
+        - StaticText "Top priorities 5"
+      - button "Needs attention 5" [ref=e26]
+        - StaticText "Needs attention 5"
+    - generic
+      - group "Show or hide node types"
+      - group "Knowledge graph. Select an item to view its connections." [ref=e27] focusable [tabindex]
+        - graphics-symbol "Elena Brooks — reports to — Avery Morgan"
+        - graphics-symbol "Marcus Reed — reports to — Avery Morgan"
+        - graphics-symbol "Priya Shah — reports to — Avery Morgan"
+        - graphics-symbol "Daniel Kim — reports to — Avery Morgan"
+        - graphics-symbol "Maya Chen — reports to — Elena Brooks"
+        - graphics-symbol "Jordan Ellis — reports to — Elena Brooks"
+        - graphics-symbol "Nina Patel — reports to — Maya Chen"
+        - graphics-symbol "Sofia Ramirez — reports to — Marcus Reed"
+        - graphics-symbol "Ethan Park — reports to — Marcus Reed"
+        - graphics-symbol "Amara Nwosu — reports to — Marcus Reed"
+        - graphics-symbol "Leo Martinez — reports to — Priya Shah"
+        - graphics-symbol "Grace Liu — reports to — Priya Shah"
+        - graphics-symbol "Theo Reed — reports to — Priya Shah"
+        - graphics-symbol "Oliver Grant — reports to — Daniel Kim"
+        - graphics-symbol "Isabel Costa — reports to — Daniel Kim"
+        - graphics-symbol "Noah Bennett — reports to — Daniel Kim"
+        - graphics-symbol "Sana Ahmed — reports to — Avery Morgan"
+        - graphics-symbol "Victor Alvarez — reports to — Avery Morgan"
+        - graphics-symbol "Riley Thompson — reports to — Avery Morgan"
+        - graphics-symbol "Tessa Wu — reports to — Sana Ahmed"
+        - graphics-symbol "Owen Hughes — reports to — Sana Ahmed"
+        - graphics-symbol "Leila Haddad — reports to — Victor Alvarez"
+        - graphics-symbol "Ben Carter — reports to — Victor Alvarez"
+        - graphics-symbol "Aisha Patel — reports to — Riley Thompson"
+        - graphics-symbol "Sam Okafor — reports to — Riley Thompson"
+        - button "Team member: Aisha Patel. Show connections." [ref=e66]
+        - button "Team member: Amara Nwosu. Show connections." [ref=e67]
+        - button "Team member: Ben Carter. Show connections." [ref=e68]
+        - button "Leader: Daniel Kim. Show connections." [ref=e69]
+          - StaticText "DK"
+          - StaticText "Daniel Kim"
+        - button "Leader: Elena Brooks. Show connections." [ref=e70]
+          - StaticText "EB"
+          - StaticText "Elena Brooks"
+        - button "Team member: Ethan Park. Show connections." [ref=e71]
+        - button "Team member: Grace Liu. Show connections." [ref=e72]
+        - button "Team member: Isabel Costa. Show connections." [ref=e73]
+        - button "Team member: Jordan Ellis. Show connections." [ref=e74]
+        - button "Team member: Leila Haddad. Show connections." [ref=e75]
+        - button "Team member: Leo Martinez. Show connections." [ref=e76]
+        - button "Leader: Marcus Reed. Show connections." [ref=e77]
+          - StaticText "MR"
+          - StaticText "Marcus Reed"
+        - button "Leader: Maya Chen. Show connections." [ref=e78]
+          - StaticText "MC"
+          - StaticText "Maya Chen"
+        - button "Team member: Nina Patel. Show connections." [ref=e79]
+        - button "Team member: Noah Bennett. Show connections." [ref=e80]
+        - button "Team member: Oliver Grant. Show connections." [ref=e81]
+        - button "Team member: Owen Hughes. Show connections." [ref=e82]
+        - button "Leader: Priya Shah. Show connections." [ref=e83]
+          - StaticText "PS"
+          - StaticText "Priya Shah"
+        - button "Leader: Riley Thompson. Show connections." [ref=e84]
+          - StaticText "RT"
+          - StaticText "Riley Thompson"
+        - button "Team member: Sam Okafor. Show connections." [ref=e85]
+        - button "Leader: Sana Ahmed. Show connections." [ref=e86]
+          - StaticText "SA"
+          - StaticText "Sana Ahmed"
+        - button "Team member: Sofia Ramirez. Show connections." [ref=e87]
+        - button "Team member: Tessa Wu. Show connections." [ref=e88]
+        - button "Team member: Theo Reed. Show connections." [ref=e89]
+        - button "Leader: Avery Morgan. Show connections." [ref=e90]
+          - StaticText "AM"
+          - StaticText "Avery Morgan"
+        - button "Leader: Victor Alvarez. Show connections." [ref=e91]
+          - StaticText "VA"
+          - StaticText "Victor Alvarez"
+      - generic
+        - StaticText "Reporting lines · Select a leader to inspect their reports"
+        - button "Show all work ×" [ref=e92]
+      - generic
+        - button "Zoom in" [ref=e93]
+          - StaticText "+"
+        - button "Zoom out" [ref=e94]
+          - StaticText "−"
+        - button "Fit" [ref=e95]
+        - StaticText "19"
+        - StaticText "%"
+        - button "All labels" [ref=e96]
+        - button "Browse list" [expanded=false, ref=e97]
+      - paragraph
+        - StaticText "Drag to pan · Scroll to zoom · Select an item for details"
+    - complementary "Selected item details"
+      - StaticText "LEADER"
+      - button "Clear selected item" [ref=e28]
+        - StaticText "×"
+      - heading "Avery Morgan" [level=3, ref=e29]
+      - paragraph
+        - StaticText "Head of UXD"
+      - strong
+        - StaticText "7"
+      - StaticText "direct reports"
+      - strong
+        - StaticText "18"
+      - StaticText "indirect reports"
+      - strong
+        - StaticText "13"
+      - StaticText "related projects"
+      - heading "Reports to" [level=4, ref=e30]
+      - paragraph
+        - StaticText "No manager in this workspace."
+      - button "Show reporting group" [ref=e31]
+      - heading "Direct reports 7" [level=4, ref=e32]
+        - StaticText "Direct reports 7"
+      - button "Elena Brooks 2 direct reports · Head of Product Design" [ref=e33]
+        - strong
+          - StaticText "Elena Brooks"
+        - StaticText "2 direct reports · Head of Product Design"
+      - button "Marcus Reed 3 direct reports · Head of Research" [ref=e34]
+        - strong
+          - StaticText "Marcus Reed"
+        - StaticText "3 direct reports · Head of Research"
+      - button "Priya Shah 3 direct reports · Head of Content Design" [ref=e35]
+        - strong
+          - StaticText "Priya Shah"
+        - StaticText "3 direct reports · Head of Content Design"
+      - button "Daniel Kim 3 direct reports · Head of Design Systems" [ref=e36]
+        - strong
+          - StaticText "Daniel Kim"
+        - StaticText "3 direct reports · Head of Design Systems"
+      - button "Sana Ahmed 2 direct reports · Head of Design Strategy" [ref=e37]
+        - strong
+          - StaticText "Sana Ahmed"
+        - StaticText "2 direct reports · Head of Design Strategy"
+      - button "Victor Alvarez 2 direct reports · Head of Innovation" [ref=e38]
+        - strong
+          - StaticText "Victor Alvarez"
+        - StaticText "2 direct reports · Head of Innovation"
+      - button "Riley Thompson 2 direct reports · Head of UX AI" [ref=e39]
+        - strong
+          - StaticText "Riley Thompson"
+        - StaticText "2 direct reports · Head of UX AI"
+      - group
+        - DisclosureTriangle "Indirect reports (18)" [expanded=false]
+          - StaticText "Indirect reports (18)"
+      - button "View team projects " [ref=e40]
+      - button "Focus reporting group" [ref=e41]
+      - heading "Team projects" [level=4, ref=e42]
+      - button "Account opening redesign In progress" [ref=e43]
+        - strong
+          - StaticText "Account opening redesign"
+        - StaticText "In progress"
+      - button "Advisor workspace In progress" [ref=e44]
+        - strong
+          - StaticText "Advisor workspace"
+        - StaticText "In progress"
+      - button "Retirement guidance In progress" [ref=e45]
+        - strong
+          - StaticText "Retirement guidance"
+        - StaticText "In progress"
+      - button "Accessible component library In progress" [ref=e46]
+        - strong
+          - StaticText "Accessible component library"
+        - StaticText "In progress"
+      - button "Research repository In progress" [ref=e47]
+        - strong
+          - StaticText "Research repository"
+        - StaticText "In progress"
+      - button "Mobile portfolio overview In progress" [ref=e48]
+        - strong
+          - StaticText "Mobile portfolio overview"
+        - StaticText "In progress"
+      - button "Statement content redesign Completed" [ref=e49]
+        - strong
+          - StaticText "Statement content redesign"
+        - StaticText "Completed"
+      - button "Planning assistant discovery Planned" [ref=e50]
+        - strong
+          - StaticText "Planning assistant discovery"
+        - StaticText "Planned"
+      - button "UXD product design strategy In progress" [ref=e51]
+        - strong
+          - StaticText "UXD product design strategy"
+        - StaticText "In progress"
+      - button "Service concept pilots In progress" [ref=e52]
+        - strong
+          - StaticText "Service concept pilots"
+        - StaticText "In progress"
+      - button "Conversational planning prototype In progress" [ref=e53]
+        - strong
+          - StaticText "Conversational planning prototype"
+        - StaticText "In progress"
+      - button "UX AI interaction standards In progress" [ref=e54]
+        - strong
+          - StaticText "UX AI interaction standards"
+        - StaticText "In progress"
+      - button "AI-assisted research synthesis In progress" [ref=e55]
+        - strong
+          - StaticText "AI-assisted research synthesis"
+        - StaticText "In progress"
+      - heading "Direct connections 7" [level=4, ref=e56]
+        - StaticText "Direct connections 7"
+      - button "Elena Brooks Direct report" [ref=e57]
+        - strong
+          - StaticText "Elena Brooks"
+        - StaticText "Direct report"
+      - button "Marcus Reed Direct report" [ref=e58]
+        - strong
+          - StaticText "Marcus Reed"
+        - StaticText "Direct report"
+      - button "Priya Shah Direct report" [ref=e59]
+        - strong
+          - StaticText "Priya Shah"
+        - StaticText "Direct report"
+      - button "Daniel Kim Direct report" [ref=e60]
+        - strong
+          - StaticText "Daniel Kim"
+        - StaticText "Direct report"
+      - button "Sana Ahmed Direct report" [ref=e61]
+        - strong
+          - StaticText "Sana Ahmed"
+        - StaticText "Direct report"
+      - button "Victor Alvarez Direct report" [ref=e62]
+        - strong
+          - StaticText "Victor Alvarez"
+        - StaticText "Direct report"
+      - button "Riley Thompson Direct report" [ref=e63]
+        - strong
+          - StaticText "Riley Thompson"
+        - StaticText "Direct report"
+    - StaticText "26 items · 25 connections in view"
+    - StaticText "Node size: direct connections · Dragged positions are not saved"
+    - button "Reset view" [ref=e18]
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

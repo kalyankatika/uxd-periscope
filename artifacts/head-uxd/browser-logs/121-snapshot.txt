@@ -1,0 +1,5 @@
+- textbox "Search people, projects or priorities" [ref=e22]
+- button "All work" [ref=e23]
+- button "Reporting lines" [ref=e24]
+- button "Top priorities 5" [ref=e25]
+- button "Needs attention 5" [ref=e26]

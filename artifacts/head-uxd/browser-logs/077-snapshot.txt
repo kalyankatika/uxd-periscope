@@ -1,0 +1,8 @@
+- navigation "Main navigation" [ref=e2]
+  - button "Work map" [ref=e7]
+  - button "Overview" [ref=e8]
+  - button "Teams & reporting" [ref=e9]
+  - button "Projects" [ref=e10]
+  - button "Capacity" [ref=e11]
+  - button "Project plan" [ref=e12]
+  - button "People & imports" [ref=e13]

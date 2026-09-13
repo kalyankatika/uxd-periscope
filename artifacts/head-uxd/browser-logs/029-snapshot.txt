@@ -1,0 +1,19 @@
+- region "Quarter summary" [ref=e7]
+  - article
+    - paragraph
+      - StaticText "Available capacity"
+    - strong
+      - StaticText "15.53 FTE / week"
+    - StaticText "After non-project commitments"
+  - article
+    - paragraph
+      - StaticText "Committed projects"
+    - strong
+      - StaticText "12"
+    - StaticText "1 proposed · 0 in backlog"
+  - article
+    - paragraph
+      - StaticText "Weeks above capacity"
+    - strong
+      - StaticText "07 of 14"
+    - StaticText "3 disciplines over capacity"

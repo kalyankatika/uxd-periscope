@@ -1,0 +1,1 @@
+"[{\"id\":\"urn:periscope:person:elena\",\"opacity\":\"1\"},{\"id\":\"urn:periscope:person:jordan\",\"opacity\":\"1\"},{\"id\":\"urn:periscope:person:maya\",\"opacity\":\"1\"},{\"id\":\"urn:periscope:person:nina\",\"opacity\":\"1\"}]"

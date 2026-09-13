@@ -4,9 +4,9 @@ elena,Elena Brooks,Design,Head of Product Design,Product Design,uxd-head,Yes,0.4
 marcus,Marcus Reed,Research,Head of Research,Research & insights,uxd-head,Yes,0.4,50
 priya,Priya Shah,Content,Head of Content Design,Content design,uxd-head,Yes,0.4,50
 daniel,Daniel Kim,Design engineering,Head of Design Systems,Design systems,uxd-head,Yes,0.4,50
-maya,Maya Chen,Design,Principal Product Designer,Product Design,elena,No,1,20
+maya,Maya Chen,Design,Product Design Manager,Product Design,elena,Yes,1,20
 jordan,Jordan Ellis,Design,Senior Product Designer,Product Design,elena,No,1,20
-nina,Nina Patel,Design,Product Designer,Product Design,elena,No,1,15
+nina,Nina Patel,Design,Product Designer,Product Design,maya,No,1,15
 sofia,Sofia Ramirez,Research,Lead Researcher,Research & insights,marcus,No,1,20
 ethan,Ethan Park,Research,Senior Researcher,Research & insights,marcus,No,0.8,20
 amara,Amara Nwosu,Research,Researcher,Research & insights,marcus,No,1,25

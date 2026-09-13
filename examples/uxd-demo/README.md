@@ -81,3 +81,7 @@ npm run demo:check
 The generator rewrites only the four data/metadata files in this directory. It never reads or writes SQLite and never exports the user's saved workspace. Review and commit the resulting files together with their source change. `npm test` also includes the demo-data checks, so CSV/JSON/example drift is caught by normal verification.
 
 Keep the fictional pack in source control. Real source exports, saved databases, environment files and credentials belong outside the repository. Automatic enterprise API ingestion is future work; this pack provides a reproducible mapping and demonstration baseline.
+
+## Nested reporting example
+
+The fictional fixture includes four levels: Avery Morgan → Elena Brooks → Maya Chen → Nina Patel. Relationships use `managerId` values `uxd-head` → `elena` → `maya` → `nina` (each child references the preceding manager). In Work map, choose **Reporting lines**, select a person and use **Show reporting group** to see every descendant. The inspector separates direct and indirect reports; selecting either opens that person's scope. Project totals include nested reports and deduplicate shared projects by ID. Map and Grid use the same reporting filter.

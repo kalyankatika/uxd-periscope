@@ -1,0 +1,155 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "Work map" [ref=e7]
+      - StaticText "Work map"
+    - button "Overview" [ref=e8]
+      - StaticText "Overview"
+    - button "Teams & reporting" [ref=e9]
+      - StaticText "Teams & reporting"
+    - button "Projects" [ref=e10]
+      - StaticText "Projects"
+    - button "Capacity" [ref=e11]
+      - StaticText "Capacity"
+    - button "Project plan" [ref=e12]
+      - StaticText "Project plan"
+    - button "People & imports" [ref=e13]
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 26 people"
+  - StaticText "Example data · Session only"
+- main
+  - StaticText "Example data · Fictional organization · Changes are temporary"
+  - button "Open workspace" [ref=e3]
+  - heading "Work map" [level=1, ref=e4]
+  - paragraph
+    - StaticText "People, projects, priorities, and their relationships."
+  - button "＋ Add project" [ref=e5]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e46]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e47]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e19]
+  - region "Interactive work map" [ref=e6]
+    - paragraph
+      - StaticText "RELATIONSHIPS"
+    - heading "Reporting hierarchy" [level=2, ref=e14]
+    - paragraph
+      - StaticText "13 projects ·26 people·7 priorities"
+    - group "Work view"
+      - button "Map" [ref=e20]
+      - button "Grid" [ref=e21]
+    - button "Compare projects " [ref=e15]
+    - button "Export connected data" [ref=e16]
+      - StaticText "↓"
+    - button "Expand grid" [ref=e17]
+      - StaticText "⤢"
+    - textbox "Search people, projects or priorities" [ref=e22]
+    - group "Map filter"
+      - button "All work" [ref=e23]
+      - button "Reporting lines" [ref=e24]
+      - button "Top priorities 5" [ref=e25]
+        - StaticText "Top priorities 5"
+      - button "Needs attention 5" [ref=e26]
+        - StaticText "Needs attention 5"
+    - generic
+      - group "Show or hide node types"
+      - status
+        - StaticText "1 of 1 items"
+      - LabelText
+        - StaticText "Sort by"
+        - combobox "Sort grid" [expanded=false, ref=e48]: Type
+          - MenuListPopup
+            - option "Type" [selected, ref=e49]
+            - option "Name A–Z" [ref=e50]
+            - option "Most connections" [ref=e51]
+      - region "Work grid" [ref=e27] focusable [tabindex]
+        - list
+          - listitem [level=1]
+            - button "Team member: Nina Patel. View details." [ref=e52]
+              - StaticText "TEAM MEMBER"
+              - strong
+                - StaticText "Nina Patel"
+              - StaticText "Team"
+              - StaticText "Product Design"
+              - StaticText "Product Designer"
+              - StaticText "3 related projects"
+              - StaticText "0"
+              - StaticText " "
+              - StaticText "connections"
+              - StaticText " in view"
+    - complementary "Selected item details"
+      - StaticText "TEAM MEMBER"
+      - button "Clear selected item" [ref=e28]
+        - StaticText "×"
+      - heading "Nina Patel" [level=3, ref=e29]
+      - paragraph
+        - StaticText "Product Designer"
+      - button "View on map " [ref=e30]
+      - strong
+        - StaticText "0"
+      - StaticText "direct reports"
+      - strong
+        - StaticText "0"
+      - StaticText "indirect reports"
+      - strong
+        - StaticText "3"
+      - StaticText "related projects"
+      - heading "Reports to" [level=4, ref=e31]
+      - button "Maya Chen Product Design Manager" [ref=e32]
+        - strong
+          - StaticText "Maya Chen"
+        - StaticText "Product Design Manager"
+      - button "Show reporting group" [ref=e33]
+      - heading "Direct reports 0" [level=4, ref=e34]
+        - StaticText "Direct reports 0"
+      - paragraph
+        - StaticText "No direct reports recorded."
+      - button "View team projects " [ref=e35]
+      - button "Show entire organization" [ref=e36]
+      - heading "Team projects" [level=4, ref=e37]
+      - button "Mobile portfolio overview In progress" [ref=e38]
+        - strong
+          - StaticText "Mobile portfolio overview"
+        - StaticText "In progress"
+      - button "Planning assistant discovery Planned" [ref=e39]
+        - strong
+          - StaticText "Planning assistant discovery"
+        - StaticText "Planned"
+      - button "Service concept pilots In progress" [ref=e40]
+        - strong
+          - StaticText "Service concept pilots"
+        - StaticText "In progress"
+      - heading "Direct connections 4" [level=4, ref=e41]
+        - StaticText "Direct connections 4"
+      - button "Maya Chen Reports to" [ref=e42]
+        - strong
+          - StaticText "Maya Chen"
+        - StaticText "Reports to"
+      - button "Mobile portfolio overview Owns project" [ref=e43]
+        - strong
+          - StaticText "Mobile portfolio overview"
+        - StaticText "Owns project"
+      - button "Planning assistant discovery Contributes to" [ref=e44]
+        - strong
+          - StaticText "Planning assistant discovery"
+        - StaticText "Contributes to"
+      - button "Service concept pilots Contributes to" [ref=e45]
+        - strong
+          - StaticText "Service concept pilots"
+        - StaticText "Contributes to"
+    - StaticText "1 of 1 items"
+    - StaticText "Select a card to view details and connections"
+    - button "Reset view" [ref=e18]
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

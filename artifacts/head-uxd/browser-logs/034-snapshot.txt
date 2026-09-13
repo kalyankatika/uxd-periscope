@@ -1,0 +1,64 @@
+- heading "Edit project" [level=2, ref=e1]
+- button "Close project" [ref=e2]
+- textbox "Name" [required, ref=e6]: Accessible component library
+- textbox "Business priority" [ref=e7]: Shared experience capabilities
+- combobox "Project owner" [expanded=false, ref=e8]: Oliver Grant — Design systems
+  - option "Not assigned" [ref=e18]
+  - option "Avery Morgan — User experience" [ref=e19]
+  - option "Elena Brooks — Product Design" [ref=e20]
+  - option "Marcus Reed — Research & insights" [ref=e21]
+  - option "Priya Shah — Content design" [ref=e22]
+  - option "Daniel Kim — Design systems" [ref=e23]
+  - option "Maya Chen — Product Design" [ref=e24]
+  - option "Jordan Ellis — Product Design" [ref=e25]
+  - option "Nina Patel — Product Design" [ref=e26]
+  - option "Sofia Ramirez — Research & insights" [ref=e27]
+  - option "Ethan Park — Research & insights" [ref=e28]
+  - option "Amara Nwosu — Research & insights" [ref=e29]
+  - option "Leo Martinez — Content design" [ref=e30]
+  - option "Grace Liu — Content design" [ref=e31]
+  - option "Theo Reed — Content design" [ref=e32]
+  - option "Oliver Grant — Design systems" [selected, ref=e33]
+  - option "Isabel Costa — Design systems" [ref=e34]
+  - option "Noah Bennett — Design systems" [ref=e35]
+  - option "Sana Ahmed — Design Strategy" [ref=e36]
+  - option "Victor Alvarez — Innovation" [ref=e37]
+  - option "Riley Thompson — UX AI" [ref=e38]
+  - option "Tessa Wu — Design Strategy" [ref=e39]
+  - option "Owen Hughes — Design Strategy" [ref=e40]
+  - option "Leila Haddad — Innovation" [ref=e41]
+  - option "Ben Carter — Innovation" [ref=e42]
+  - option "Aisha Patel — UX AI" [ref=e43]
+  - option "Sam Okafor — UX AI" [ref=e44]
+- combobox "Importance" [expanded=false, ref=e9]: High priority
+  - option "Top priority" [ref=e45]
+  - option "High priority" [selected, ref=e46]
+  - option "Standard" [ref=e47]
+- combobox "Project health" [expanded=false, ref=e10]: On track
+  - option "Not reported" [ref=e48]
+  - option "On track" [selected, ref=e49]
+  - option "At risk" [ref=e50]
+  - option "Decision required" [ref=e51]
+- textbox "Latest update" [ref=e11]: Forms and navigation are ready for adoption. Account opening and mobile teams are coordinating the rollout.
+- textbox "Action required" [ref=e12]
+- textbox "Expected outcome" [ref=e13]: Give every team accessible, reusable components for the journeys clients use most.
+- combobox "Delivery status" [expanded=false, ref=e14]: In progress
+  - option "Planned" [ref=e52]
+  - option "In progress" [selected, ref=e53]
+  - option "Blocked" [ref=e54]
+  - option "Completed" [ref=e55]
+- spinbutton "Month Month" [ref=e56]: 10
+- spinbutton "Day Day" [ref=e57]: 1
+- spinbutton "Year Year" [ref=e58]: 2026
+- button "Show date picker Show date picker" [ref=e16]
+- spinbutton "Month Month" [ref=e59]: 12
+- spinbutton "Day Day" [ref=e60]: 18
+- spinbutton "Year Year" [ref=e61]: 2026
+- button "Show date picker Show date picker" [ref=e17]
+- combobox "Commitment" [expanded=false, ref=e15]: Committed
+  - option "Proposed" [ref=e62]
+  - option "Committed" [selected, ref=e63]
+  - option "Backlog" [ref=e64]
+- button "Delete" [ref=e3]
+- button "Cancel" [ref=e4]
+- button "Save project" [ref=e5]

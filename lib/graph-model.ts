@@ -104,7 +104,42 @@ export function neighborhood(
   return found;
 }
 
-export type GraphPreset = "all" | "top" | "attention";
+/** Reporting focus follows descendants only, never shared projects or siblings. */
+export function reportingGraph(
+  graph: GraphModel,
+  rootId?: string | null,
+): GraphModel {
+  const people = graph.nodes.filter(
+    (n) => n.kind === "person" || n.kind === "leader",
+  );
+  const personIds = new Set(people.map((n) => n.id));
+  const links = graph.links.filter(
+    (e) =>
+      e.kind === "reports" &&
+      personIds.has(e.source) &&
+      personIds.has(e.target),
+  );
+  let ids = personIds;
+  if (rootId) {
+    ids = new Set<string>();
+    const children = new Map<string, string[]>();
+    for (const e of links)
+      children.set(e.target, [...(children.get(e.target) || []), e.source]);
+    const pending = personIds.has(rootId) ? [rootId] : [];
+    while (pending.length) {
+      const id = pending.pop()!;
+      if (ids.has(id)) continue;
+      ids.add(id);
+      pending.push(...(children.get(id) || []));
+    }
+  }
+  return {
+    nodes: people.filter((n) => ids.has(n.id)),
+    links: links.filter((e) => ids.has(e.source) && ids.has(e.target)),
+  };
+}
+
+export type GraphPreset = "all" | "top" | "attention" | "reporting";
 export function filterGraph(
   graph: GraphModel,
   options: {
@@ -114,6 +149,17 @@ export function filterGraph(
     depth?: number;
   },
 ): GraphModel {
+  if (options.preset === "reporting") {
+    const reporting = reportingGraph(graph, options.focusId);
+    const nodes = reporting.nodes.filter((n) => options.kinds.includes(n.kind));
+    const ids = new Set(nodes.map((n) => n.id));
+    return {
+      nodes,
+      links: reporting.links.filter(
+        (e) => ids.has(e.source) && ids.has(e.target),
+      ),
+    };
+  }
   let ids = new Set(graph.nodes.map((n) => n.id));
   if (options.preset !== "all") {
     const projects = graph.nodes.filter(

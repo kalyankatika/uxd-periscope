@@ -10,6 +10,7 @@ import {
 } from "react";
 import type { Initiative, Plan } from "@/lib/domain";
 import WorkGrid from "./work-grid";
+import { layoutReportingGraph } from "@/lib/reporting-layout";
 import UiIcon from "./ui-icon";
 import { graphGridItems, type GridSort } from "@/lib/graph-grid";
 import {
@@ -143,7 +144,11 @@ export default function WorkMap({
       }),
     [graph, preset, visibleKinds, local, selected, depth],
   );
-  const layout = useMemo(() => layoutGraph(graph), [graph]);
+  const workLayout = useMemo(() => layoutGraph(graph), [graph]);
+  const layout = useMemo(
+    () => (preset === "reporting" ? layoutReportingGraph(visible) : workLayout),
+    [preset, visible, workLayout],
+  );
   const visibleIds = useMemo(
     () => new Set(visible.nodes.map((n) => n.id)),
     [visible.nodes],
@@ -195,6 +200,23 @@ export default function WorkMap({
     selected && (selected.kind === "person" || selected.kind === "leader")
       ? plan.people.find((p) => p.id === selected.recordId)
       : undefined;
+  const directReports = person
+    ? plan.people.filter((p) => p.managerId === person.id)
+    : [];
+  const reportIds = person
+    ? teamIds(plan.people, person.id)
+    : new Set<string>();
+  const indirectReports = person
+    ? plan.people.filter(
+        (p) =>
+          p.id !== person.id &&
+          reportIds.has(p.id) &&
+          p.managerId !== person.id,
+      )
+    : [];
+  const manager = person
+    ? plan.people.find((p) => p.id === person.managerId)
+    : undefined;
   const periodPlan = useMemo(
     () => ({
       ...plan,
@@ -275,10 +297,17 @@ export default function WorkMap({
     if (!local) setDepth(allNodeMap.get(id)?.kind === "leader" ? 2 : 1);
     if (reveal) {
       setQuery("");
-      setPreset("all");
+      const reportingPerson =
+        preset === "reporting" &&
+        ["person", "leader"].includes(allNodeMap.get(id)?.kind || "");
+      if (!reportingPerson) {
+        setPreset("all");
+        if (preset === "reporting") setLocal(false);
+      }
       setVisibleKinds(kinds);
     }
     if (local || reveal) setCamera(null);
+    if (preset === "reporting") setPositions({});
   }
   function reset() {
     setSelectedId(null);
@@ -292,6 +321,8 @@ export default function WorkMap({
   }
   function changePreset(value: GraphPreset) {
     setPreset(value);
+    setVisibleKinds(kinds);
+    setPositions({});
     setLocal(false);
     setSelectedId(null);
     setHoveredId(null);
@@ -410,7 +441,11 @@ export default function WorkMap({
         <div>
           <p className="section-kicker">RELATIONSHIPS</p>
           <h2>
-            {viewMode === "map" ? "Organization graph" : "Organization grid"}
+            {preset === "reporting"
+              ? "Reporting hierarchy"
+              : viewMode === "map"
+                ? "Organization graph"
+                : "Organization grid"}
           </h2>
           <p>
             {projectCount} projects <span>·</span> {plan.people.length} people{" "}
@@ -491,12 +526,18 @@ export default function WorkMap({
             </div>
           )}
         </div>
-        <div className="map-presets" role="group" aria-label="Project filter">
+        <div className="map-presets" role="group" aria-label="Map filter">
           <button
             aria-pressed={preset === "all"}
             onClick={() => changePreset("all")}
           >
             All work
+          </button>
+          <button
+            aria-pressed={preset === "reporting"}
+            onClick={() => changePreset("reporting")}
+          >
+            Reporting lines
           </button>
           <button
             aria-pressed={preset === "top"}
@@ -522,7 +563,7 @@ export default function WorkMap({
             role="group"
             aria-label="Show or hide node types"
           >
-            {kinds.map((kind) => (
+            {(preset === "reporting" ? [] : kinds).map((kind) => (
               <button
                 key={kind}
                 aria-pressed={visibleKinds.includes(kind)}
@@ -645,15 +686,21 @@ export default function WorkMap({
                     const active =
                       highlighted === edge.source ||
                       highlighted === edge.target;
-                    const opacity = highlighted
-                      ? active
-                        ? 0.9
-                        : 0.08
-                      : query.trim()
-                        ? matchIds.has(edge.source) || matchIds.has(edge.target)
-                          ? 0.85
-                          : 0.08
-                        : 0.4;
+                    const opacity =
+                      preset === "reporting"
+                        ? active
+                          ? 0.95
+                          : 0.65
+                        : highlighted
+                          ? active
+                            ? 0.9
+                            : 0.08
+                          : query.trim()
+                            ? matchIds.has(edge.source) ||
+                              matchIds.has(edge.target)
+                              ? 0.85
+                              : 0.08
+                            : 0.4;
                     return (
                       <line
                         key={edge.id}
@@ -677,7 +724,9 @@ export default function WorkMap({
                         }
                         strokeDasharray={
                           edge.kind === "reports"
-                            ? "3 5"
+                            ? preset === "reporting"
+                              ? undefined
+                              : "3 5"
                             : edge.kind === "depends"
                               ? "7 4"
                               : undefined
@@ -689,13 +738,27 @@ export default function WorkMap({
                       </line>
                     );
                   })}
-                  {nodes.map((node) => {
+                  {nodes.map((positionedNode) => {
+                    const node =
+                      preset === "reporting"
+                        ? {
+                            ...positionedNode,
+                            radius: Math.max(
+                              positionedNode.radius,
+                              6 / camera.k,
+                            ),
+                          }
+                        : positionedNode;
                     const active = highlighted === node.id;
                     const connected = neighbors?.has(node.id);
-                    const dim = highlighted
-                      ? !connected
-                      : !!query.trim() && !matchIds.has(node.id);
+                    const dim =
+                      preset === "reporting"
+                        ? false
+                        : highlighted
+                          ? !connected
+                          : !!query.trim() && !matchIds.has(node.id);
                     const showLabel =
+                      (preset === "reporting" && nodes.length <= 12) ||
                       labels ||
                       active ||
                       connected ||
@@ -852,13 +915,17 @@ export default function WorkMap({
               )}
               <div className="map-canvas-topline">
                 <span>
-                  {local && selected
-                    ? `Around ${selected.label}`
-                    : preset === "top"
-                      ? "Top-priority projects"
-                      : preset === "attention"
-                        ? "Projects requiring attention"
-                        : "All relationships"}
+                  {preset === "reporting"
+                    ? local && selected
+                      ? `Reporting group: ${selected.label}`
+                      : "Reporting lines · Select a leader to inspect their reports"
+                    : local && selected
+                      ? `Around ${selected.label}`
+                      : preset === "top"
+                        ? "Top-priority projects"
+                        : preset === "attention"
+                          ? "Projects requiring attention"
+                          : "All relationships"}
                 </span>
                 {(local || preset !== "all") && (
                   <button onClick={reset}>Show all work ×</button>
@@ -984,17 +1051,72 @@ export default function WorkMap({
               )}
               {person && (
                 <>
-                  <div className="map-person-stats">
+                  <div className="map-person-stats reporting-stats">
+                    <div>
+                      <strong>{directReports.length}</strong>
+                      <span>direct reports</span>
+                    </div>
+                    <div>
+                      <strong>{indirectReports.length}</strong>
+                      <span>indirect reports</span>
+                    </div>
                     <div>
                       <strong>{selectedProjects.length}</strong>
                       <span>related projects</span>
                     </div>
-                    <div>
-                      <strong>
-                        {teamIds(plan.people, person.id).size - 1}
-                      </strong>
-                      <span>people in their team</span>
-                    </div>
+                  </div>
+                  <div className="map-detail-section reporting-details">
+                    <h4>Reports to</h4>
+                    {manager ? (
+                      nodeButton(
+                        allNodeMap.get(graphId("person", manager.id))!,
+                        manager.title || "Manager",
+                      )
+                    ) : (
+                      <p className="map-inspector-description">
+                        No manager in this workspace.
+                      </p>
+                    )}
+                    <button
+                      className="map-open-button"
+                      onClick={() => {
+                        setPreset("reporting");
+                        setVisibleKinds(kinds);
+                        setLocal(true);
+                        setQuery("");
+                        setCamera(null);
+                        setPositions({});
+                      }}
+                    >
+                      Show reporting group
+                    </button>
+                    <h4>
+                      Direct reports <span>{directReports.length}</span>
+                    </h4>
+                    {directReports.map((report) =>
+                      nodeButton(
+                        allNodeMap.get(graphId("person", report.id))!,
+                        `${plan.people.filter((p) => p.managerId === report.id).length} direct ${plan.people.filter((p) => p.managerId === report.id).length === 1 ? "report" : "reports"} · ${report.title || report.team}`,
+                      ),
+                    )}
+                    {!directReports.length && (
+                      <p className="map-inspector-description">
+                        No direct reports recorded.
+                      </p>
+                    )}
+                    {indirectReports.length > 0 && (
+                      <details>
+                        <summary>
+                          Indirect reports ({indirectReports.length})
+                        </summary>
+                        {indirectReports.map((report) =>
+                          nodeButton(
+                            allNodeMap.get(graphId("person", report.id))!,
+                            `Reports to ${plan.people.find((p) => p.id === report.managerId)?.name || "unassigned"}`,
+                          ),
+                        )}
+                      </details>
+                    )}
                   </div>
                   <button
                     className="primary map-open-button"
@@ -1034,14 +1156,17 @@ export default function WorkMap({
                     setHoveredId(null);
                   }}
                 >
-                  ◎{" "}
-                  {local
-                    ? viewMode === "grid"
-                      ? "Show all items"
-                      : "Show whole map"
-                    : "Focus connections"}
+                  {preset === "reporting"
+                    ? local
+                      ? "Show entire organization"
+                      : "Focus reporting group"
+                    : local
+                      ? viewMode === "grid"
+                        ? "Show all items"
+                        : "Show whole map"
+                      : "Focus connections"}
                 </button>
-                {local && (
+                {local && preset !== "reporting" && (
                   <label>
                     Distance{" "}
                     <select

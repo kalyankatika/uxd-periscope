@@ -1,0 +1,91 @@
+- dialog "Remove person"
+  - form
+    - heading "Remove person" [level=2, ref=e1]
+    - button "Close person editor" [ref=e2]
+      - StaticText "✕"
+    - group
+      - strong
+        - StaticText "Maya Chen"
+      - paragraph
+        - StaticText "Remove this person from the workspace and its capacity totals."
+      - heading "Review affected records" [level=3, ref=e5]
+      - paragraph
+        - StaticText "1 direct reports · 1 owned projects · 3 contributor assignments"
+      - group
+        - DisclosureTriangle "Direct reports" [expanded=true]
+          - StaticText "Direct reports"
+        - list
+          - listitem [level=1]
+            - StaticText "Nina Patel"
+      - group
+        - DisclosureTriangle "Owned projects" [expanded=true]
+          - StaticText "Owned projects"
+        - list
+          - listitem [level=1]
+            - StaticText "Account opening redesign"
+      - group
+        - DisclosureTriangle "Contributor assignments to remove" [expanded=false]
+          - StaticText "Contributor assignments to remove"
+      - LabelText
+        - StaticText "Move direct reports to"
+        - combobox "Move direct reports to" [expanded=false, ref=e6]: Marcus Reed · Research & insights (marcus)
+          - MenuListPopup
+            - option "No manager in this workspace" [ref=e8]
+            - option "Aisha Patel · UX AI (aisha)" [ref=e9]
+            - option "Amara Nwosu · Research & insights (amara)" [ref=e10]
+            - option "Avery Morgan · User experience (uxd-head)" [ref=e11]
+            - option "Ben Carter · Innovation (ben)" [ref=e12]
+            - option "Daniel Kim · Design systems (daniel)" [ref=e13]
+            - option "Elena Brooks · Product Design (elena)" [ref=e14]
+            - option "Ethan Park · Research & insights (ethan)" [ref=e15]
+            - option "Grace Liu · Content design (grace)" [ref=e16]
+            - option "Isabel Costa · Design systems (isabel)" [ref=e17]
+            - option "Jordan Ellis · Product Design (jordan)" [ref=e18]
+            - option "Leila Haddad · Innovation (leila)" [ref=e19]
+            - option "Leo Martinez · Content design (leo)" [ref=e20]
+            - option "Marcus Reed · Research & insights (marcus)" [selected, ref=e21]
+            - option "Noah Bennett · Design systems (noah)" [ref=e22]
+            - option "Oliver Grant · Design systems (oliver)" [ref=e23]
+            - option "Owen Hughes · Design Strategy (owen)" [ref=e24]
+            - option "Priya Shah · Content design (priya)" [ref=e25]
+            - option "Riley Thompson · UX AI (riley)" [ref=e26]
+            - option "Sam Okafor · UX AI (sam)" [ref=e27]
+            - option "Sana Ahmed · Design Strategy (sana)" [ref=e28]
+            - option "Sofia Ramirez · Research & insights (sofia)" [ref=e29]
+            - option "Tessa Wu · Design Strategy (tessa)" [ref=e30]
+            - option "Theo Reed · Content design (theo)" [ref=e31]
+            - option "Victor Alvarez · Innovation (victor)" [ref=e32]
+      - LabelText
+        - StaticText "Reassign owned projects to"
+        - combobox "Reassign owned projects to" [expanded=false, ref=e7]: Leave project owner unassigned
+          - MenuListPopup
+            - option "Leave project owner unassigned" [selected, ref=e33]
+            - option "Avery Morgan · User experience (uxd-head)" [ref=e34]
+            - option "Elena Brooks · Product Design (elena)" [ref=e35]
+            - option "Marcus Reed · Research & insights (marcus)" [ref=e36]
+            - option "Priya Shah · Content design (priya)" [ref=e37]
+            - option "Daniel Kim · Design systems (daniel)" [ref=e38]
+            - option "Jordan Ellis · Product Design (jordan)" [ref=e39]
+            - option "Nina Patel · Product Design (nina)" [ref=e40]
+            - option "Sofia Ramirez · Research & insights (sofia)" [ref=e41]
+            - option "Ethan Park · Research & insights (ethan)" [ref=e42]
+            - option "Amara Nwosu · Research & insights (amara)" [ref=e43]
+            - option "Leo Martinez · Content design (leo)" [ref=e44]
+            - option "Grace Liu · Content design (grace)" [ref=e45]
+            - option "Theo Reed · Content design (theo)" [ref=e46]
+            - option "Oliver Grant · Design systems (oliver)" [ref=e47]
+            - option "Isabel Costa · Design systems (isabel)" [ref=e48]
+            - option "Noah Bennett · Design systems (noah)" [ref=e49]
+            - option "Sana Ahmed · Design Strategy (sana)" [ref=e50]
+            - option "Victor Alvarez · Innovation (victor)" [ref=e51]
+            - option "Riley Thompson · UX AI (riley)" [ref=e52]
+            - option "Tessa Wu · Design Strategy (tessa)" [ref=e53]
+            - option "Owen Hughes · Design Strategy (owen)" [ref=e54]
+            - option "Leila Haddad · Innovation (leila)" [ref=e55]
+            - option "Ben Carter · Innovation (ben)" [ref=e56]
+            - option "Aisha Patel · UX AI (aisha)" [ref=e57]
+            - option "Sam Okafor · UX AI (sam)" [ref=e58]
+      - paragraph
+        - StaticText "Projects, effort and dependencies remain. This person’s contributor assignments are removed. Reports keep their team labels and their own reports."
+    - button "Cancel" [ref=e3]
+    - button "Remove person" [ref=e4]

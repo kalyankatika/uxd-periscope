@@ -1191,3 +1191,25 @@ button.map-open-button {
     padding: 0 12px 12px;
   }
 }
+
+.reporting-stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.reporting-stats > div {
+  flex: 1;
+  min-width: 0;
+}
+.reporting-details h4 {
+  margin-top: 18px;
+}
+.reporting-details summary {
+  cursor: pointer;
+  padding: 16px 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3f5e30;
+}
+.map-presets {
+  flex-wrap: wrap;
+}

@@ -63,3 +63,7 @@ Open **Teams & reporting** (also linked from **People & imports → Manage peopl
 - **Edit → Remove person** shows direct reports, owned projects and contributor assignments. Choose a surviving manager for the direct reports, or place them at the top level. Choose a replacement owner for owned projects, or leave their owners unassigned. Only the selected person is deleted; their contributor IDs are removed and their capacity is removed from totals. All projects, effort, dependencies and remaining people are retained. Unassigned projects have their old legacy owner text cleared so the removed person is not displayed as their owner.
 
 Manual updates use the same complete-plan validation and revision-checked save as imports. Saved-workspace changes survive reload; example edits remain session-only. A later source import can replace manually edited records with the imported values. Source precedence, edit history and automatic reconciliation are not implemented.
+
+## Nested reporting example
+
+The fictional fixture includes four levels: Avery Morgan → Elena Brooks → Maya Chen → Nina Patel. Relationships use `managerId` values `uxd-head` → `elena` → `maya` → `nina` (each child references the preceding manager). In Work map, choose **Reporting lines**, select a person and use **Show reporting group** to see every descendant. The inspector separates direct and indirect reports; selecting either opens that person's scope. Project totals include nested reports and deduplicate shared projects by ID. Map and Grid use the same reporting filter.

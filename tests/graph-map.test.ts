@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { leadershipDemo } from "../lib/leadership-demo";
 import {
+  reportingGraph,
   buildGraph,
   filterGraph,
   graphId,
@@ -176,4 +177,50 @@ test("Zoom preserves the location under the pointer and clamps extreme input", (
       ) < 0.000001,
     );
   }
+});
+
+test("Reporting view includes every descendant and excludes project connections and ancestors", () => {
+  const before = JSON.stringify(graph);
+  const full = reportingGraph(graph);
+  assert.equal(full.nodes.length, 26);
+  assert.equal(full.links.length, 25);
+  const root = graphId("person", "elena");
+  const subtree = reportingGraph(graph, root);
+  assert.deepEqual(subtree.nodes.map((n) => n.recordId).sort(), [
+    "elena",
+    "jordan",
+    "maya",
+    "nina",
+  ]);
+  assert.equal(subtree.links.length, 3);
+  assert.ok(
+    subtree.links.some(
+      (e) =>
+        e.source === graphId("person", "nina") &&
+        e.target === graphId("person", "maya"),
+    ),
+  );
+  assert.equal(
+    reportingGraph(graph, graphId("person", "uxd-head")).nodes.length,
+    26,
+  );
+  assert.equal(reportingGraph(graph, "missing").nodes.length, 0);
+  const filtered = filterGraph(graph, {
+    preset: "reporting",
+    kinds: allKinds,
+    focusId: root,
+    depth: 1,
+  });
+  assert.deepEqual(
+    filtered,
+    subtree,
+    "Reporting focus must not truncate grandchildren at generic connection depth",
+  );
+  const leaders = filterGraph(graph, {
+    preset: "reporting",
+    kinds: ["leader"],
+  });
+  const ids = new Set(leaders.nodes.map((n) => n.id));
+  assert.ok(leaders.links.every((e) => ids.has(e.source) && ids.has(e.target)));
+  assert.equal(JSON.stringify(graph), before);
 });

@@ -1,0 +1,47 @@
+- dialog "Move person"
+  - form
+    - heading "Move person" [level=2, ref=e1]
+    - button "Close person editor" [ref=e2]
+      - StaticText "✕"
+    - group
+      - strong
+        - StaticText "Maya Chen"
+      - paragraph
+        - StaticText "Currently reports to Elena Brooks."
+      - LabelText
+        - StaticText "New manager"
+        - combobox "New manager" [expanded=false, ref=e7]: Elena Brooks · Product Design (elena)
+          - MenuListPopup
+            - option "No manager in this workspace" [ref=e8]
+            - option "Aisha Patel · UX AI (aisha)" [ref=e9]
+            - option "Amara Nwosu · Research & insights (amara)" [ref=e10]
+            - option "Avery Morgan · User experience (uxd-head)" [ref=e11]
+            - option "Ben Carter · Innovation (ben)" [ref=e12]
+            - option "Daniel Kim · Design systems (daniel)" [ref=e13]
+            - option "Elena Brooks · Product Design (elena)" [selected, ref=e14]
+            - option "Ethan Park · Research & insights (ethan)" [ref=e15]
+            - option "Grace Liu · Content design (grace)" [ref=e16]
+            - option "Isabel Costa · Design systems (isabel)" [ref=e17]
+            - option "Jordan Ellis · Product Design (jordan)" [ref=e18]
+            - option "Leila Haddad · Innovation (leila)" [ref=e19]
+            - option "Leo Martinez · Content design (leo)" [ref=e20]
+            - option "Marcus Reed · Research & insights (marcus)" [ref=e21]
+            - option "Noah Bennett · Design systems (noah)" [ref=e22]
+            - option "Oliver Grant · Design systems (oliver)" [ref=e23]
+            - option "Owen Hughes · Design Strategy (owen)" [ref=e24]
+            - option "Priya Shah · Content design (priya)" [ref=e25]
+            - option "Riley Thompson · UX AI (riley)" [ref=e26]
+            - option "Sam Okafor · UX AI (sam)" [ref=e27]
+            - option "Sana Ahmed · Design Strategy (sana)" [ref=e28]
+            - option "Sofia Ramirez · Research & insights (sofia)" [ref=e29]
+            - option "Tessa Wu · Design Strategy (tessa)" [ref=e30]
+            - option "Theo Reed · Content design (theo)" [ref=e31]
+            - option "Victor Alvarez · Innovation (victor)" [ref=e32]
+      - checkbox "Use the Product Design team for this person and their reports" [checked=false, ref=e5]
+      - heading "Move summary" [level=3, ref=e6]
+      - paragraph
+        - StaticText "1 people continue reporting through Maya Chen. Project owners and contributors stay assigned."
+      - paragraph
+        - StaticText "Existing team labels stay the same."
+    - button "Cancel" [ref=e3]
+    - button "Move person" [ref=e4]

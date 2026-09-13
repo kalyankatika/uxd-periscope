@@ -1,0 +1,5 @@
+- heading "Remove person" [level=2, ref=e1]
+- button "Close person editor" [ref=e2]
+- heading "Review affected records" [level=3, ref=e5]
+- button "Cancel" [ref=e3]
+- button "Remove person" [ref=e4]

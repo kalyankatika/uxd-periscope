@@ -1,0 +1,5 @@
+- region "Work grid" [ref=e27] focusable [tabindex]
+  - button "Leader: Elena Brooks. View details." [ref=e60]
+  - button "Leader: Maya Chen. View details." [ref=e61]
+  - button "Team member: Jordan Ellis. View details." [ref=e62]
+  - button "Team member: Nina Patel. View details." [ref=e63]

@@ -59,10 +59,10 @@
       "id": "maya",
       "name": "Maya Chen",
       "craft": "design",
-      "title": "Principal Product Designer",
+      "title": "Product Design Manager",
       "team": "Product Design",
       "managerId": "elena",
-      "isLeader": false,
+      "isLeader": true,
       "fte": 1,
       "nonProjectPct": 20
     },
@@ -83,7 +83,7 @@
       "craft": "design",
       "title": "Product Designer",
       "team": "Product Design",
-      "managerId": "elena",
+      "managerId": "maya",
       "isLeader": false,
       "fte": 1,
       "nonProjectPct": 15

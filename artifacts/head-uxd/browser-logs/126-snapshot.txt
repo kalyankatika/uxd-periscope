@@ -1,0 +1,7 @@
+- textbox "Search people, projects or priorities" [ref=e22]: Nina
+- button "Clear map search" [ref=e23]
+- button "Nina Patel Team member" [ref=e36]
+- button "All work" [ref=e24]
+- button "Reporting lines" [ref=e25]
+- button "Top priorities 5" [ref=e26]
+- button "Needs attention 5" [ref=e27]
