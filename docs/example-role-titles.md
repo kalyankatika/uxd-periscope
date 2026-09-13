@@ -13,17 +13,17 @@ Use recognizable Product Designer, Design Researcher, Content Designer and Desig
 - [Figma: Product Designer, AI Models](https://job-boards.greenhouse.io/figma/jobs/5711913004) — describes connecting AI research and design principles.
 - [Airbnb: Staff Service Designer](https://careers.airbnb.com/positions/7514027/) — distinguishes Staff individual contributors from design managers/directors.
 
-The exact seven-team grouping and leadership titles below are a Periscope design choice, not titles attributed to those companies.
+The exact seven-team grouping is a Periscope design choice. At the user’s request, the head is an SVP of Design and the seven direct-report leaders are VPs of Design; these levels are not attributed to the reference companies.
 
 ## Fictional roster
 
 | Person | Role | Team |
 | --- | --- | --- |
-| Avery Morgan | Head of Design, AI & Digital Products | UXD |
-| Elena Brooks | Design Director, Digital Products | Product Design |
-| Marcus Reed | Director, Design Research | Design Research |
-| Priya Shah | Design Director, Content & Conversation | Content & Conversation Design |
-| Daniel Kim | Director, Design Systems & Engineering | Design Systems & Engineering |
+| Avery Morgan | SVP of Design, AI & Digital Products | UXD |
+| Elena Brooks | VP of Design, Digital Products | Product Design |
+| Marcus Reed | VP of Design, Research | Design Research |
+| Priya Shah | VP of Design, Content & Conversation | Content & Conversation Design |
+| Daniel Kim | VP of Design, Systems & Engineering | Design Systems & Engineering |
 | Maya Chen | Product Design Manager | Product Design |
 | Jordan Ellis | Staff Product Designer | Product Design |
 | Nina Patel | Product Designer | Product Design |
@@ -36,9 +36,9 @@ The exact seven-team grouping and leadership titles below are a Periscope design
 | Oliver Grant | Staff Design Engineer | Design Systems & Engineering |
 | Isabel Costa | Design Engineer, Accessibility | Design Systems & Engineering |
 | Noah Bennett | Design Engineer, Prototyping | Design Systems & Engineering |
-| Sana Ahmed | Director, Experience Strategy | Experience Strategy |
-| Victor Alvarez | Design Director, Emerging Experiences | Emerging Experiences |
-| Riley Thompson | Design Director, AI Products | AI Product Design |
+| Sana Ahmed | VP of Design, Experience Strategy | Experience Strategy |
+| Victor Alvarez | VP of Design, Emerging Experiences | Emerging Experiences |
+| Riley Thompson | VP of Design, AI Products | AI Product Design |
 | Tessa Wu | Principal Experience Strategist | Experience Strategy |
 | Owen Hughes | Senior Service Designer | Experience Strategy |
 | Leila Haddad | Staff Product Designer, Emerging Experiences | Emerging Experiences |

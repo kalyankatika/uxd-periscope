@@ -1,9 +1,9 @@
 Record ID,Name,Discipline,Job title,Team,Manager ID,Leader,Working time (FTE),Non-project time (%)
-uxd-head,Avery Morgan,Design,"Head of Design, AI & Digital Products",UXD,,Yes,0,100
-elena,Elena Brooks,Design,"Design Director, Digital Products",Product Design,uxd-head,Yes,0.4,50
-marcus,Marcus Reed,Research,"Director, Design Research",Design Research,uxd-head,Yes,0.4,50
-priya,Priya Shah,Content,"Design Director, Content & Conversation",Content & Conversation Design,uxd-head,Yes,0.4,50
-daniel,Daniel Kim,Design engineering,"Director, Design Systems & Engineering",Design Systems & Engineering,uxd-head,Yes,0.4,50
+uxd-head,Avery Morgan,Design,"SVP of Design, AI & Digital Products",UXD,,Yes,0,100
+elena,Elena Brooks,Design,"VP of Design, Digital Products",Product Design,uxd-head,Yes,0.4,50
+marcus,Marcus Reed,Research,"VP of Design, Research",Design Research,uxd-head,Yes,0.4,50
+priya,Priya Shah,Content,"VP of Design, Content & Conversation",Content & Conversation Design,uxd-head,Yes,0.4,50
+daniel,Daniel Kim,Design engineering,"VP of Design, Systems & Engineering",Design Systems & Engineering,uxd-head,Yes,0.4,50
 maya,Maya Chen,Design,Product Design Manager,Product Design,elena,Yes,1,20
 jordan,Jordan Ellis,Design,Staff Product Designer,Product Design,elena,No,1,20
 nina,Nina Patel,Design,Product Designer,Product Design,maya,No,1,15
@@ -16,9 +16,9 @@ theo,Theo Reed,Content,Conversation Designer,Content & Conversation Design,priya
 oliver,Oliver Grant,Design engineering,Staff Design Engineer,Design Systems & Engineering,daniel,No,1,20
 isabel,Isabel Costa,Design engineering,"Design Engineer, Accessibility",Design Systems & Engineering,daniel,No,1,20
 noah,Noah Bennett,Design engineering,"Design Engineer, Prototyping",Design Systems & Engineering,daniel,No,1,15
-sana,Sana Ahmed,Design,"Director, Experience Strategy",Experience Strategy,uxd-head,Yes,0.4,50
-victor,Victor Alvarez,Design,"Design Director, Emerging Experiences",Emerging Experiences,uxd-head,Yes,0.4,50
-riley,Riley Thompson,Design engineering,"Design Director, AI Products",AI Product Design,uxd-head,Yes,0.4,50
+sana,Sana Ahmed,Design,"VP of Design, Experience Strategy",Experience Strategy,uxd-head,Yes,0.4,50
+victor,Victor Alvarez,Design,"VP of Design, Emerging Experiences",Emerging Experiences,uxd-head,Yes,0.4,50
+riley,Riley Thompson,Design engineering,"VP of Design, AI Products",AI Product Design,uxd-head,Yes,0.4,50
 tessa,Tessa Wu,Design,Principal Experience Strategist,Experience Strategy,sana,No,1,20
 owen,Owen Hughes,Design,Senior Service Designer,Experience Strategy,sana,No,1,20
 leila,Leila Haddad,Design,"Staff Product Designer, Emerging Experiences",Emerging Experiences,victor,No,1,20
