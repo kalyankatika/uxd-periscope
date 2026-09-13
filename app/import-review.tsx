@@ -1,4 +1,5 @@
 "use client";
+import UiIcon from "./ui-icon";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CsvInspection, ImportKind } from "@/lib/csv";
 import ImportMapping from "./import-mapping";
@@ -53,7 +54,7 @@ export default function ImportReview({
           disabled={busy}
           onClick={onCancel}
         >
-          ×
+          <UiIcon name="close" className="action-icon" />
         </button>
       </div>
       <div className="drawer-body">

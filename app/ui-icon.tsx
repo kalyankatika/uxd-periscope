@@ -1,4 +1,101 @@
 const icons = {
+  arrowRight: (
+    <>
+      <path d="M4 12h16m-6-6 6 6-6 6" />
+    </>
+  ),
+  arrowLeft: (
+    <>
+      <path d="M20 12H4m6-6-6 6 6 6" />
+    </>
+  ),
+  arrowUpRight: (
+    <>
+      <path d="M6 18 18 6M6 6h12v12" />
+    </>
+  ),
+  arrowUp: (
+    <>
+      <path d="M12 20V4m-6 6 6-6 6 6" />
+    </>
+  ),
+  arrowDown: (
+    <>
+      <path d="M12 4v16m-6-6 6 6 6-6" />
+    </>
+  ),
+  sort: (
+    <>
+      <path d="M8 20V4m-4 4 4-4 4 4m4-4v16m-4-4 4 4 4-4" />
+    </>
+  ),
+  download: (
+    <>
+      <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+    </>
+  ),
+  upload: (
+    <>
+      <path d="M12 16V3m-5 5 5-5 5 5M4 16v5h16v-5" />
+    </>
+  ),
+  plus: (
+    <>
+      <path d="M12 5v14M5 12h14" />
+    </>
+  ),
+  minus: (
+    <>
+      <path d="M5 12h14" />
+    </>
+  ),
+  close: (
+    <>
+      <path d="m6 6 12 12M6 18 18 6" />
+    </>
+  ),
+  expand: (
+    <>
+      <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" />
+    </>
+  ),
+  collapse: (
+    <>
+      <path d="M3 8h5V3m8 0v5h5M8 21v-5H3m18 0h-5v5" />
+    </>
+  ),
+  check: (
+    <>
+      <path d="m5 12 4 4L19 6" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="M21 21l-5-5" />
+    </>
+  ),
+  diamond: (
+    <>
+      <path d="m12 3 9 9-9 9-9-9Z" />
+    </>
+  ),
+  grip: (
+    <>
+      <path d="M8 5h.01M16 5h.01M8 12h.01M16 12h.01M8 19h.01M16 19h.01" />
+    </>
+  ),
+  alert: (
+    <>
+      <path d="M12 8v5m0 4h.01M12 3 2 21h20Z" />
+    </>
+  ),
+  target: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="4" />
+    </>
+  ),
   connections: (
     <>
       <path d="m7 7 10 3M7 7l3 10m7-7-7 7" />

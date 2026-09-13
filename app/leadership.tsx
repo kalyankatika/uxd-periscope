@@ -1,4 +1,5 @@
 "use client";
+import UiIcon from "./ui-icon";
 import { useMemo, useRef, useState } from "react";
 import {
   type Plan,
@@ -255,7 +256,9 @@ export default function Leadership({
                 onClick={() => openProject(p)}
               >
                 {p.name}
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true">
+                  <UiIcon name="arrowUpRight" className="action-icon" />
+                </span>
               </button>
               <p>{p.summary || "No outcome recorded."}</p>
               <div className="project-row-meta">
@@ -302,7 +305,10 @@ export default function Leadership({
             >
               <strong>{attention.length}</strong>
               <span>
-                need attention <span aria-hidden="true">↗</span>
+                need attention{" "}
+                <span aria-hidden="true">
+                  <UiIcon name="arrowUpRight" className="action-icon" />
+                </span>
               </span>
             </button>
             <div>
@@ -324,7 +330,8 @@ export default function Leadership({
                     onMode("compare");
                   }}
                 >
-                  View top-priority projects →
+                  View top-priority projects{" "}
+                  <UiIcon name="arrowRight" className="action-icon" />
                 </button>
               </div>
               {tops.slice(0, 4).map((p, index) => (
@@ -341,7 +348,9 @@ export default function Leadership({
                       onClick={() => openProject(p)}
                     >
                       {p.name}
-                      <span aria-hidden="true">↗</span>
+                      <span aria-hidden="true">
+                        <UiIcon name="arrowUpRight" className="action-icon" />
+                      </span>
                     </button>
                     <p>{p.summary || "No outcome recorded."}</p>
                     <div className="story-foot">
@@ -364,7 +373,8 @@ export default function Leadership({
                     here.
                   </p>
                   <button onClick={() => onMode("compare")}>
-                    View projects →
+                    View projects{" "}
+                    <UiIcon name="arrowRight" className="action-icon" />
                   </button>
                 </div>
               )}
@@ -396,7 +406,10 @@ export default function Leadership({
                       p.update ||
                       "Open project details for the latest status."}
                   </p>
-                  <span className="attention-action">View project →</span>
+                  <span className="attention-action">
+                    View project{" "}
+                    <UiIcon name="arrowRight" className="action-icon" />
+                  </span>
                 </button>
               ))}
               {!attention.length && (
@@ -428,7 +441,8 @@ export default function Leadership({
                   onMode("teams");
                 }}
               >
-                View reporting structure →
+                View reporting structure{" "}
+                <UiIcon name="arrowRight" className="action-icon" />
               </button>
             </div>
             <div className="leader-cards">
@@ -455,7 +469,9 @@ export default function Leadership({
                       onClick={() => openLeader(p.id)}
                     >
                       {p.name}
-                      <span aria-hidden="true">↗</span>
+                      <span aria-hidden="true">
+                        <UiIcon name="arrowUpRight" className="action-icon" />
+                      </span>
                     </button>
                     <p>{p.team || p.title || "Team leader"}</p>
                     <div className="leader-card-focus">
@@ -503,14 +519,20 @@ export default function Leadership({
         <>
           <div className="leader-view-toolbar">
             <button onClick={() => setLeaderId(null)} className="quiet-link">
-              {leader ? "← All teams" : "Reporting structure"}
+              {leader ? (
+                <>
+                  <UiIcon name="arrowLeft" className="action-icon" /> All teams
+                </>
+              ) : (
+                "Reporting structure"
+              )}
             </button>
             <button
               className="primary"
               disabled={busy}
               onClick={() => openPerson()}
             >
-              ＋ Add person
+              <UiIcon name="plus" className="action-icon" /> Add person
             </button>
           </div>
           {leader ? (
@@ -564,7 +586,8 @@ export default function Leadership({
                       className="quiet-link"
                       onClick={() => onMode("compare")}
                     >
-                      Compare projects →
+                      Compare projects{" "}
+                      <UiIcon name="arrowRight" className="action-icon" />
                     </button>
                   </div>
                   {projectRows(group)}
@@ -596,7 +619,8 @@ export default function Leadership({
                     disabled={busy}
                     onClick={() => openPerson(undefined, leader.id)}
                   >
-                    ＋ Add direct report
+                    <UiIcon name="plus" className="action-icon" /> Add direct
+                    report
                   </button>
                 </aside>
               </div>
@@ -649,7 +673,10 @@ export default function Leadership({
               <h2>Project comparison</h2>
               <p>Select a column heading to sort projects.</p>
             </div>
-            <button onClick={compareExport}>↓ Export this view</button>
+            <button onClick={compareExport}>
+              <UiIcon name="download" className="action-icon" /> Export this
+              view
+            </button>
           </div>
           <div className="comparison-controls">
             <label className="comparison-search">
@@ -720,7 +747,17 @@ export default function Leadership({
                       <button
                         onClick={() => setSortColumn(value as typeof sort)}
                       >
-                        {label} {sort === value ? (ascending ? "↑" : "↓") : "↕"}
+                        {label}{" "}
+                        <UiIcon
+                          name={
+                            sort === value
+                              ? ascending
+                                ? "arrowUp"
+                                : "arrowDown"
+                              : "sort"
+                          }
+                          className="action-icon"
+                        />
                       </button>
                     </th>
                   ))}
@@ -735,7 +772,8 @@ export default function Leadership({
                         className="project-title-button"
                         onClick={() => openProject(p)}
                       >
-                        {p.name} ↗
+                        {p.name}{" "}
+                        <UiIcon name="arrowUpRight" className="action-icon" />
                       </button>
                       <p>{p.summary || "No outcome recorded"}</p>
                       <span>{p.priority || "No business priority"}</span>
@@ -841,7 +879,7 @@ export default function Leadership({
                 aria-label="Close project"
                 onClick={() => projectDialog.current?.close()}
               >
-                ✕
+                <UiIcon name="close" className="action-icon" />
               </button>
             </div>
             <div className="drawer-body">
@@ -883,7 +921,8 @@ export default function Leadership({
                           openLeader(selected.leadId!);
                         }}
                       >
-                        {leadName(selected)} →
+                        {leadName(selected)}{" "}
+                        <UiIcon name="arrowRight" className="action-icon" />
                       </button>
                     ) : (
                       leadName(selected)
@@ -968,7 +1007,10 @@ export default function Leadership({
                   key={project.id}
                   onClick={() => setProjectId(project.id)}
                 >
-                  <strong>{project.name} →</strong>
+                  <strong>
+                    {project.name}{" "}
+                    <UiIcon name="arrowRight" className="action-icon" />
+                  </strong>
                   <small>{reasons.join(" · ")}</small>
                 </button>
               ))}
@@ -1061,7 +1103,7 @@ export default function Leadership({
                       setDropTarget(null);
                     }}
                   >
-                    ⠿
+                    <UiIcon name="grip" className="action-icon" />
                   </button>
                   <span
                     className={
@@ -1092,7 +1134,7 @@ export default function Leadership({
                       aria-label={"Add direct report to " + p.name}
                       onClick={() => openPerson(undefined, p.id)}
                     >
-                      ＋ Report
+                      <UiIcon name="plus" className="action-icon" /> Report
                     </button>
                     <button
                       className="quiet-link"

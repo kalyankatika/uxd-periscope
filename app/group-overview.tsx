@@ -1,4 +1,5 @@
 "use client";
+import UiIcon from "./ui-icon";
 import { useRef, useState } from "react";
 import { crafts, labels, type Initiative, type Plan } from "@/lib/domain";
 import { capacity, level, utilization, weeks } from "@/lib/capacity";
@@ -136,7 +137,10 @@ export default function GroupOverview({
             return (
               <button key={c} className="craft-card" onClick={onCapacity}>
                 <span>
-                  {labels[c]} <span aria-hidden="true">↗</span>
+                  {labels[c]}{" "}
+                  <span aria-hidden="true">
+                    <UiIcon name="arrowUpRight" className="action-icon" />
+                  </span>
                 </span>
                 <strong>
                   {number(total)} <small>FTE-weeks</small>
@@ -253,7 +257,13 @@ export default function GroupOverview({
                             className="text-button"
                             onClick={() => open(i)}
                           >
-                            {i.name} <span aria-hidden="true">↗</span>
+                            {i.name}{" "}
+                            <span aria-hidden="true">
+                              <UiIcon
+                                name="arrowUpRight"
+                                className="action-icon"
+                              />
+                            </span>
                           </button>
                           <small>
                             {i.summary || "No outcome or current focus added"}
@@ -321,7 +331,7 @@ export default function GroupOverview({
                 aria-label="Close project details"
                 onClick={() => details.current?.close()}
               >
-                ✕
+                <UiIcon name="close" className="action-icon" />
               </button>
             </div>
             <div className="drawer-body">
@@ -389,7 +399,8 @@ export default function GroupOverview({
                   onCapacity();
                 }}
               >
-                View group capacity →
+                View group capacity{" "}
+                <UiIcon name="arrowRight" className="action-icon" />
               </button>
             </div>
             <div className="drawer-footer">

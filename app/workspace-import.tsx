@@ -1,4 +1,5 @@
 "use client";
+import UiIcon from "./ui-icon";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { inspectCsv, type CsvInspection, type ImportKind } from "@/lib/csv";
@@ -240,7 +241,7 @@ function WorkspaceReview({
           disabled={locked}
           onClick={onClose}
         >
-          ×
+          <UiIcon name="close" className="action-icon" />
         </button>
       </div>
       <div className="drawer-body">

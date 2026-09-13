@@ -399,17 +399,21 @@ export default function WorkMap({
         onClick={() => selectNode(node.id, true)}
       >
         <span className={`map-mini-node ${node.kind}`} aria-hidden="true">
-          {node.kind === "project"
-            ? "◇"
-            : node.kind === "priority"
-              ? "◎"
-              : letters(node.label)}
+          {node.kind === "project" ? (
+            <UiIcon name="diamond" className="action-icon" />
+          ) : node.kind === "priority" ? (
+            <UiIcon name="target" className="action-icon" />
+          ) : (
+            letters(node.label)
+          )}
         </span>
         <span>
           <strong>{node.label}</strong>
           <small>{caption || singular[node.kind]}</small>
         </span>
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">
+          <UiIcon name="arrowUpRight" className="action-icon" />
+        </span>
       </button>
     );
   }
@@ -469,14 +473,17 @@ export default function WorkMap({
             </button>
           </div>
           <button onClick={onCompare}>
-            Compare projects <span aria-hidden="true">↗</span>
+            Compare projects{" "}
+            <span aria-hidden="true">
+              <UiIcon name="arrowUpRight" className="action-icon" />
+            </span>
           </button>
           <button
             aria-label="Export connected data"
             title="Export connected data"
             onClick={onExport}
           >
-            ↓
+            <UiIcon name="download" className="action-icon" />
           </button>
           <button
             onClick={() => setExpanded(!expanded)}
@@ -487,13 +494,18 @@ export default function WorkMap({
               expanded ? `Exit expanded ${viewMode}` : `Expand ${viewMode}`
             }
           >
-            {expanded ? "↙" : "⤢"}
+            <UiIcon
+              name={expanded ? "collapse" : "expand"}
+              className="action-icon"
+            />
           </button>
         </div>
       </div>
       <div className="map-toolbar">
         <div className="map-search">
-          <span aria-hidden="true">⌕</span>
+          <span aria-hidden="true">
+            <UiIcon name="search" className="action-icon" />
+          </span>
           <input
             aria-label="Search people, projects or priorities"
             placeholder="Search people, projects or priorities…"
@@ -509,7 +521,7 @@ export default function WorkMap({
           />
           {query && (
             <button aria-label="Clear map search" onClick={() => setQuery("")}>
-              ×
+              <UiIcon name="close" className="action-icon" />
             </button>
           )}
           {query.trim() && viewMode === "map" && (
@@ -899,7 +911,9 @@ export default function WorkMap({
               </svg>
               {!nodes.length && (
                 <div className="map-empty">
-                  <span aria-hidden="true">◎</span>
+                  <span aria-hidden="true">
+                    <UiIcon name="target" className="action-icon" />
+                  </span>
                   <h3>
                     {projectCount
                       ? "No items in this view"
@@ -928,7 +942,10 @@ export default function WorkMap({
                           : "All relationships"}
                 </span>
                 {(local || preset !== "all") && (
-                  <button onClick={reset}>Show all work ×</button>
+                  <button onClick={reset}>
+                    Show all work{" "}
+                    <UiIcon name="close" className="action-icon" />
+                  </button>
                 )}
               </div>
               <div className="map-canvas-bottom">
@@ -938,14 +955,14 @@ export default function WorkMap({
                     aria-label="Zoom in"
                     onClick={() => zoom(1.2)}
                   >
-                    +
+                    <UiIcon name="plus" className="action-icon" />
                   </button>
                   <button
                     title="Zoom out (-)"
                     aria-label="Zoom out"
                     onClick={() => zoom(1 / 1.2)}
                   >
-                    −
+                    <UiIcon name="minus" className="action-icon" />
                   </button>
                   <button title="Fit map (0)" onClick={() => setCamera(null)}>
                     Fit
@@ -993,7 +1010,7 @@ export default function WorkMap({
                     setCamera(null);
                   }}
                 >
-                  ×
+                  <UiIcon name="close" className="action-icon" />
                 </button>
               </div>
               <h3>{selected.label}</h3>
@@ -1003,7 +1020,10 @@ export default function WorkMap({
                   className="map-open-button"
                   onClick={() => changeView("map")}
                 >
-                  View on map <span aria-hidden="true">↗</span>
+                  View on map{" "}
+                  <span aria-hidden="true">
+                    <UiIcon name="arrowUpRight" className="action-icon" />
+                  </span>
                 </button>
               )}
               {!visibleIds.has(selected.id) && (
@@ -1045,7 +1065,10 @@ export default function WorkMap({
                       onProject(project);
                     }}
                   >
-                    Open project details <span aria-hidden="true">↗</span>
+                    Open project details{" "}
+                    <span aria-hidden="true">
+                      <UiIcon name="arrowUpRight" className="action-icon" />
+                    </span>
                   </button>
                 </>
               )}
@@ -1125,7 +1148,10 @@ export default function WorkMap({
                       onPerson(person.id);
                     }}
                   >
-                    View team projects <span aria-hidden="true">↗</span>
+                    View team projects{" "}
+                    <span aria-hidden="true">
+                      <UiIcon name="arrowUpRight" className="action-icon" />
+                    </span>
                   </button>
                 </>
               )}
@@ -1220,7 +1246,7 @@ export default function WorkMap({
           ) : (
             <>
               <span className="map-guide-icon" aria-hidden="true">
-                ◎
+                <UiIcon name="target" className="action-icon" />
               </span>
               <p className="section-kicker">
                 {viewMode === "grid" ? "ITEM DETAILS" : "MAP DETAILS"}

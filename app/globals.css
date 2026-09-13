@@ -2794,3 +2794,22 @@ html {
 .shell {
   overflow-x: clip;
 }
+
+/* Shared outline icons align optically with adjacent labels. */
+.action-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  vertical-align: -0.22em;
+}
+button > .action-icon:not(:only-child):first-child {
+  margin-right: 6px;
+}
+button > .action-icon:not(:only-child):last-child {
+  margin-left: 6px;
+}
+.map-mini-node .action-icon {
+  width: 16px;
+  height: 16px;
+}

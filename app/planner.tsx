@@ -361,11 +361,12 @@ export default function Planner({ initial }: { initial: Plan }) {
                     )
                   }
                 >
-                  ↓ Export review
+                  <UiIcon name="download" className="action-icon" /> Export
+                  review
                 </button>
               )}
               <button className="primary" onClick={() => edit()}>
-                ＋ Add project
+                <UiIcon name="plus" className="action-icon" /> Add project
               </button>
             </div>
           </div>
@@ -534,7 +535,10 @@ export default function Planner({ initial }: { initial: Plan }) {
               </section>
               <div className={overloaded.length ? "insight danger" : "insight"}>
                 <div className="insight-icon">
-                  {overloaded.length ? "!" : "✓"}
+                  <UiIcon
+                    name={overloaded.length ? "alert" : "check"}
+                    className="action-icon"
+                  />
                 </div>
                 <div>
                   <strong>
@@ -549,7 +553,8 @@ export default function Planner({ initial }: { initial: Plan }) {
                   </p>
                 </div>
                 <button onClick={() => setView("cutline")}>
-                  View project plan →
+                  View project plan{" "}
+                  <UiIcon name="arrowRight" className="action-icon" />
                 </button>
               </div>
               <section className="panel">
@@ -638,7 +643,7 @@ export default function Planner({ initial }: { initial: Plan }) {
                     {importKind === "people" ? "people" : "projects"}
                   </label>
                   <button disabled={busy} onClick={() => file.current?.click()}>
-                    ↑ Upload CSV
+                    <UiIcon name="upload" className="action-icon" /> Upload CSV
                   </button>
                   <button
                     onClick={() =>
@@ -654,7 +659,8 @@ export default function Planner({ initial }: { initial: Plan }) {
                       )
                     }
                   >
-                    ↓ Sample CSV
+                    <UiIcon name="download" className="action-icon" /> Sample
+                    CSV
                   </button>
                   <button
                     onClick={() =>
@@ -671,7 +677,8 @@ export default function Planner({ initial }: { initial: Plan }) {
                       )
                     }
                   >
-                    ↓ Export {importKind === "people" ? "people" : "projects"}
+                    <UiIcon name="download" className="action-icon" /> Export{" "}
+                    {importKind === "people" ? "people" : "projects"}
                   </button>
                 </div>
                 <input
@@ -782,7 +789,7 @@ export default function Planner({ initial }: { initial: Plan }) {
                 aria-label="Close project"
                 onClick={() => dialog.current?.close()}
               >
-                ✕
+                <UiIcon name="close" className="action-icon" />
               </button>
             </div>
             <div className="drawer-body">
@@ -1132,7 +1139,7 @@ export default function Planner({ initial }: { initial: Plan }) {
                 </td>
                 <td>
                   <button aria-label={"Edit " + i.name} onClick={() => edit(i)}>
-                    ↗
+                    <UiIcon name="arrowUpRight" className="action-icon" />
                   </button>
                 </td>
               </tr>

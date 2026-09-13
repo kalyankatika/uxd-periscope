@@ -1,3 +1,4 @@
+import UiIcon from "./ui-icon";
 import type { GraphGridItem, GridSort } from "@/lib/graph-grid";
 
 const types = {
@@ -102,7 +103,10 @@ export default function WorkGrid({
                         view
                       </span>
                       <span aria-hidden="true">
-                        {selectedId === node.id ? "✓" : "→"}
+                        <UiIcon
+                          name={selectedId === node.id ? "check" : "arrowRight"}
+                          className="action-icon"
+                        />
                       </span>
                     </span>
                   </button>

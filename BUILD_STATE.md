@@ -10,7 +10,7 @@ Completed an actual live-browser head-of-UXD cognitive walkthrough across report
 
 Corrected dimmed grandchildren, compressed reporting levels and misleading node-type filtering. 61 tests, TypeScript and both production builds passed. Actual CSV import matched all records by ID; reload/restart preserved the isolated saved workspace. Full graph export preserved the reporting chain. Original SQLite hashes unchanged.
 
-Main preview runs at http://127.0.0.1:3000/ (production session 79329). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
+Main preview runs at http://127.0.0.1:3000/ (production session 72094). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
 
 ## Roles and preserved context
 
@@ -51,3 +51,7 @@ Translated the user-supplied Anthropic Design lessons into [Periscope principles
 ## Header refinement — September 13, 2026
 
 Only the example/saved-workspace status bar is sticky. Page title, subtitle, actions and planning controls scroll normally, leaving more room for Work map. Left navigation remains persistent. TypeScript and production build passed; browser confirmed header/rail top=0 while the page title scrolled out of view.
+
+## Consistent control iconography — September 13, 2026
+
+Replaced text-symbol icons with shared outline SVGs matching the left navigation across arrows, downloads/uploads, add/close, sorting, zoom, map controls and status indicators. Preserved accessible control labels and sort state. Desktop and mobile browser checks confirmed alignment and visibility; all 62 tests, TypeScript and production build passed. Preview is running on port 3000 with the current build. Saved workspace unchanged.

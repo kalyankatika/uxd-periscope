@@ -1,4 +1,5 @@
 "use client";
+import UiIcon from "./ui-icon";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { crafts, labels, type Person, type Plan } from "@/lib/domain";
@@ -138,7 +139,7 @@ export default function PeopleDialog({
             onClick={() => dialog.current?.close()}
             aria-label="Close person editor"
           >
-            ✕
+            <UiIcon name="close" className="action-icon" />
           </button>
         </div>
         <fieldset disabled={locked} className="drawer-body people-fields">
