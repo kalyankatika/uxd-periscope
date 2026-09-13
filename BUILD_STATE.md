@@ -10,7 +10,7 @@ Completed an actual live-browser head-of-UXD cognitive walkthrough across report
 
 Corrected dimmed grandchildren, compressed reporting levels and misleading node-type filtering. 61 tests, TypeScript and both production builds passed. Actual CSV import matched all records by ID; reload/restart preserved the isolated saved workspace. Full graph export preserved the reporting chain. Original SQLite hashes unchanged.
 
-Main preview runs at http://127.0.0.1:3000/ (production session 72094). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
+Main preview runs at http://127.0.0.1:3000/ (production session 2581). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
 
 ## Roles and preserved context
 
@@ -55,3 +55,7 @@ Only the example/saved-workspace status bar is sticky. Page title, subtitle, act
 ## Consistent control iconography — September 13, 2026
 
 Replaced text-symbol icons with shared outline SVGs matching the left navigation across arrows, downloads/uploads, add/close, sorting, zoom, map controls and status indicators. Preserved accessible control labels and sort state. Desktop and mobile browser checks confirmed alignment and visibility; all 62 tests, TypeScript and production build passed. Preview is running on port 3000 with the current build. Saved workspace unchanged.
+
+## Compact planning controls — September 13, 2026
+
+Moved Planning period and its calendar input immediately left of Add project in the title action row. Removed the separate empty toolbar on views without scenario controls, recovering vertical space for Work map. Narrow screens wrap the controls without clipping. Production build passed; desktop/mobile browser checks passed with no runtime errors. Current preview runs on port 3000; saved workspace unchanged.

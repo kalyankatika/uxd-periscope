@@ -365,29 +365,29 @@ export default function Planner({ initial }: { initial: Plan }) {
                   review
                 </button>
               )}
+              <label className="planning-period">
+                Planning period{" "}
+                <input
+                  aria-label="Planning quarter"
+                  type="month"
+                  value={quarter.slice(0, 7)}
+                  onChange={(e) => {
+                    if (e.target.value) {
+                      const [y, m] = e.target.value.split("-").map(Number);
+                      setQuarter(
+                        `${y}-${String(Math.floor((m - 1) / 3) * 3 + 1).padStart(2, "0")}-01`,
+                      );
+                    }
+                  }}
+                />
+              </label>
               <button className="primary" onClick={() => edit()}>
                 <UiIcon name="plus" className="action-icon" /> Add project
               </button>
             </div>
           </div>
-          <div className="toolbar">
-            <label>
-              Planning period{" "}
-              <input
-                aria-label="Planning quarter"
-                type="month"
-                value={quarter.slice(0, 7)}
-                onChange={(e) => {
-                  if (e.target.value) {
-                    const [y, m] = e.target.value.split("-").map(Number);
-                    setQuarter(
-                      `${y}-${String(Math.floor((m - 1) / 3) * 3 + 1).padStart(2, "0")}-01`,
-                    );
-                  }
-                }}
-              />
-            </label>
-            {["capacity", "cutline"].includes(view) && (
+          {["capacity", "cutline"].includes(view) && (
+            <div className="toolbar">
               <label className="toggle">
                 <input
                   type="checkbox"
@@ -397,8 +397,8 @@ export default function Planner({ initial }: { initial: Plan }) {
                 <span>Include proposed</span>
                 <small>What-if scenario</small>
               </label>
-            )}
-          </div>
+            </div>
+          )}
           {error && !draft && (
             <div className="message error" role="alert">
               {error}

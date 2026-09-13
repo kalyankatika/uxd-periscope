@@ -2813,3 +2813,15 @@ button > .action-icon:not(:only-child):last-child {
   width: 16px;
   height: 16px;
 }
+
+.planning-period {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #526075;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+.planning-period input {
+  border-color: #dce4d7;
+}
