@@ -1,27 +1,27 @@
 Record ID,Name,Discipline,Job title,Team,Manager ID,Leader,Working time (FTE),Non-project time (%)
-uxd-head,Avery Morgan,Design,Head of UXD,User experience,,Yes,0,100
-elena,Elena Brooks,Design,Head of Product Design,Product Design,uxd-head,Yes,0.4,50
-marcus,Marcus Reed,Research,Head of Research,Research & insights,uxd-head,Yes,0.4,50
-priya,Priya Shah,Content,Head of Content Design,Content design,uxd-head,Yes,0.4,50
-daniel,Daniel Kim,Design engineering,Head of Design Systems,Design systems,uxd-head,Yes,0.4,50
+uxd-head,Avery Morgan,Design,"Head of Design, AI & Digital Products",UXD,,Yes,0,100
+elena,Elena Brooks,Design,"Design Director, Digital Products",Product Design,uxd-head,Yes,0.4,50
+marcus,Marcus Reed,Research,"Director, Design Research",Design Research,uxd-head,Yes,0.4,50
+priya,Priya Shah,Content,"Design Director, Content & Conversation",Content & Conversation Design,uxd-head,Yes,0.4,50
+daniel,Daniel Kim,Design engineering,"Director, Design Systems & Engineering",Design Systems & Engineering,uxd-head,Yes,0.4,50
 maya,Maya Chen,Design,Product Design Manager,Product Design,elena,Yes,1,20
-jordan,Jordan Ellis,Design,Senior Product Designer,Product Design,elena,No,1,20
+jordan,Jordan Ellis,Design,Staff Product Designer,Product Design,elena,No,1,20
 nina,Nina Patel,Design,Product Designer,Product Design,maya,No,1,15
-sofia,Sofia Ramirez,Research,Lead Researcher,Research & insights,marcus,No,1,20
-ethan,Ethan Park,Research,Senior Researcher,Research & insights,marcus,No,0.8,20
-amara,Amara Nwosu,Research,Researcher,Research & insights,marcus,No,1,25
-leo,Leo Martinez,Content,Lead Content Designer,Content design,priya,No,1,20
-grace,Grace Liu,Content,Senior Content Designer,Content design,priya,No,1,20
-theo,Theo Reed,Content,Content Designer,Content design,priya,No,0.8,20
-oliver,Oliver Grant,Design engineering,Lead Design Engineer,Design systems,daniel,No,1,20
-isabel,Isabel Costa,Design engineering,Design Engineer,Design systems,daniel,No,1,20
-noah,Noah Bennett,Design engineering,Design Engineer,Design systems,daniel,No,1,15
-sana,Sana Ahmed,Design,Head of Design Strategy,Design Strategy,uxd-head,Yes,0.4,50
-victor,Victor Alvarez,Design,Head of Innovation,Innovation,uxd-head,Yes,0.4,50
-riley,Riley Thompson,Design engineering,Head of UX AI,UX AI,uxd-head,Yes,0.4,50
-tessa,Tessa Wu,Design,Principal Design Strategist,Design Strategy,sana,No,1,20
-owen,Owen Hughes,Design,Service Designer,Design Strategy,sana,No,1,20
-leila,Leila Haddad,Design,Innovation Lead,Innovation,victor,No,1,20
-ben,Ben Carter,Design engineering,Prototyping Engineer,Innovation,victor,No,1,20
-aisha,Aisha Patel,Design,AI Experience Designer,UX AI,riley,No,1,20
-sam,Sam Okafor,Design engineering,AI Design Engineer,UX AI,riley,No,1,20
+sofia,Sofia Ramirez,Research,Staff Design Researcher,Design Research,marcus,No,1,20
+ethan,Ethan Park,Research,"Senior Design Researcher, Research Platforms",Design Research,marcus,No,0.8,20
+amara,Amara Nwosu,Research,"Design Researcher, AI Experiences",Design Research,marcus,No,1,25
+leo,Leo Martinez,Content,Staff Content Designer,Content & Conversation Design,priya,No,1,20
+grace,Grace Liu,Content,"Senior Content Designer, Design Systems",Content & Conversation Design,priya,No,1,20
+theo,Theo Reed,Content,Conversation Designer,Content & Conversation Design,priya,No,0.8,20
+oliver,Oliver Grant,Design engineering,Staff Design Engineer,Design Systems & Engineering,daniel,No,1,20
+isabel,Isabel Costa,Design engineering,"Design Engineer, Accessibility",Design Systems & Engineering,daniel,No,1,20
+noah,Noah Bennett,Design engineering,"Design Engineer, Prototyping",Design Systems & Engineering,daniel,No,1,15
+sana,Sana Ahmed,Design,"Director, Experience Strategy",Experience Strategy,uxd-head,Yes,0.4,50
+victor,Victor Alvarez,Design,"Design Director, Emerging Experiences",Emerging Experiences,uxd-head,Yes,0.4,50
+riley,Riley Thompson,Design engineering,"Design Director, AI Products",AI Product Design,uxd-head,Yes,0.4,50
+tessa,Tessa Wu,Design,Principal Experience Strategist,Experience Strategy,sana,No,1,20
+owen,Owen Hughes,Design,Senior Service Designer,Experience Strategy,sana,No,1,20
+leila,Leila Haddad,Design,"Staff Product Designer, Emerging Experiences",Emerging Experiences,victor,No,1,20
+ben,Ben Carter,Design engineering,"Design Engineer, Creative Technology",Emerging Experiences,victor,No,1,20
+aisha,Aisha Patel,Design,"Staff Product Designer, AI Experiences",AI Product Design,riley,No,1,20
+sam,Sam Okafor,Design engineering,"Design Engineer, AI Prototyping",AI Product Design,riley,No,1,20

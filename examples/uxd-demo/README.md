@@ -2,7 +2,7 @@
 
 **Entirely fictional.** These files describe the same organization as Periscope's built-in example. They contain no company exports, employee records, credentials or live API responses. They are intended to travel with the repository for a repeatable enterprise showcase.
 
-The dataset contains **26 people, seven functional teams plus the head of UXD, 13 projects, seven priorities and seven project dependencies**. It includes Product Design, Research & insights, Content design, Design systems, Design Strategy, Innovation and UX AI; shared contributors; decision requests; delivery concerns; and one proposed project for capacity comparison.
+The dataset contains **26 people, seven functional teams plus the head of UXD, 13 projects, seven priorities and seven project dependencies**. It includes Product Design, Design Research, Content & Conversation Design, Design Systems & Engineering, Experience Strategy, Emerging Experiences and AI Product Design; shared contributors; decision requests; delivery concerns; and one proposed project for capacity comparison.
 
 ## Files
 
@@ -85,3 +85,5 @@ Keep the fictional pack in source control. Real source exports, saved databases,
 ## Nested reporting example
 
 The fictional fixture includes four levels: Avery Morgan → Elena Brooks → Maya Chen → Nina Patel. Relationships use `managerId` values `uxd-head` → `elena` → `maya` → `nina` (each child references the preceding manager). In Work map, choose **Reporting lines**, select a person and use **Show reporting group** to see every descendant. The inspector separates direct and indirect reports; selecting either opens that person's scope. Project totals include nested reports and deduplicate shared projects by ID. Map and Grid use the same reporting filter.
+
+Role titles and naming rationale: [example organization](../../docs/example-role-titles.md).
