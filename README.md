@@ -4,6 +4,10 @@ A local workspace for projects, reporting relationships, business priorities, an
 
 The active scope is **UXD**: give ELT, the head of UXD and design leaders a clear view of priorities, projects, people and allocation, with enterprise sources and governed manual planning. Keep integration contracts extensible; portfolio-manager use cases are a future possibility. See the [enterprise handoff](docs/enterprise-handoff.md) for the [market and product assessment](docs/enterprise-product-assessment.md), [architecture decision](docs/enterprise-architecture.md), [connector contracts](docs/enterprise-connectors.md), and [build audit](docs/enterprise-build-audit.md). Live connectors, enterprise access controls and time/financial tracking are future work.
 
+## Design direction
+
+[AI-native design principles](docs/ai-native-design-principles.md) describe how Periscope should support human direction, contextual work artifacts and focused decision-making. Proposed AI experiments remain future work.
+
 ## Planned operations work
 
 The [UXD Operations implementation backlog](docs/uxd-operations-backlog.md) captures prioritized staffing, update freshness, decision tracking, enterprise integration and financial work, with dependencies and completion criteria. These are proposed capabilities, not shipped features.

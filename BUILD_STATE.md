@@ -43,3 +43,7 @@ Operations VP update: 62 tests and production build passed; browser confirmed th
 Left navigation stays at the viewport edge while content scrolls. The right-pane page header keeps the view title, workspace mode and actions visible. Narrow screens retain a compact left icon rail with accessible names and tooltips. Header height is measured for scroll clearance; nav changes return to the top.
 
 Validated desktop scrolling (rail/header top=0 at scrollY=600), mobile scrolling (top=0 at scrollY=500, document width=390), visible mobile icons, page switching and modal layering. TypeScript, 62 tests and production build passed; browser reported no runtime errors. Saved data unchanged; preview running on port 3000.
+
+## AI-native design direction — captured
+
+Translated the user-supplied Anthropic Design lessons into [Periscope principles](docs/ai-native-design-principles.md) and four candidate experiments with dependencies and validation criteria. Linked to the Operations backlog. This is design guidance; no AI runtime, agent execution or new application feature was implemented. Existing preview and saved data unchanged.

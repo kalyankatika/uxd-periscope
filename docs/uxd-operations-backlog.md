@@ -14,6 +14,10 @@ Implemented: reporting hierarchy with nested reports; Work map and Grid; dedupli
 
 Important distinction: contributor membership is not a person's allocated time. Capacity is a forecast by discipline, not individual bookings or actual utilization. Current project updates have no per-update date or author. Historical screenshots and walkthrough results retain the fixture and labels used at the time.
 
+## Design direction
+
+Apply the [AI-native design principles](ai-native-design-principles.md): contextual editable artifacts, explicit human intent, focused views and evidence-led prototype evaluation. Candidate experiments AI-01–04 are captured there with dependencies. They do not replace P0 staffing/data foundations or imply shipped AI functionality.
+
 ## Recommended implementation sequence
 
 ### Phase 1 — Trustworthy updates and person-level staffing
