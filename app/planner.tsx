@@ -1,6 +1,6 @@
 "use client";
 import UiIcon from "./ui-icon";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Leadership from "./leadership";
 import { leadershipDemo, isStarterPlan } from "@/lib/leadership-demo";
 import { planSchema } from "@/lib/domain";
@@ -89,6 +89,23 @@ export default function Planner({ initial }: { initial: Plan }) {
     } | null>(null);
   const plan = useExample ? example : workspace;
   const navigation = useRef<HTMLElement>(null);
+  const pageHeader = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const header = pageHeader.current;
+    if (!header) return;
+    const observer = new ResizeObserver(() => {
+      document.documentElement.style.setProperty(
+        "--page-header-height",
+        `${header.getBoundingClientRect().height + 12}px`,
+      );
+    });
+    observer.observe(header);
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.removeProperty("--page-header-height");
+    };
+  }, []);
+
   const dialog = useRef<HTMLDialogElement>(null),
     [replaceImport, setReplaceImport] = useState(false),
     [importKind, setImportKind] = useState<"people" | "initiatives">("people"),
@@ -270,7 +287,11 @@ export default function Planner({ initial }: { initial: Plan }) {
           ).map((v) => (
             <button
               key={v}
-              onClick={() => setView(v)}
+              onClick={() => {
+                setView(v);
+                window.scrollTo({ top: 0, behavior: "auto" });
+              }}
+              title={viewLabels[v]}
               className={view === v ? "nav active" : "nav"}
               aria-current={view === v ? "page" : undefined}
             >
@@ -289,59 +310,65 @@ export default function Planner({ initial }: { initial: Plan }) {
       </aside>
       <main>
         <div className="content">
-          <div className="example-banner">
-            <span>
-              {useExample
-                ? "Example data · Fictional organization · Changes are temporary"
-                : "Saved workspace · Changes apply to all local sessions"}
-            </span>
-            <button
-              onClick={() => {
-                setUseExample(!useExample);
-                setNotice("");
-                setError("");
-              }}
-            >
-              {useExample ? "Open workspace" : "Use example data"}
-            </button>
-          </div>
-          <div className="title-row">
-            <div>
-              <h1>{viewLabels[view]}</h1>
-              <p className="subtitle">{viewDescriptions[view]}</p>
-            </div>
-            <div className="actions">
-              {(view === "capacity" ||
-                view === "cutline" ||
-                view === "people") && (
-                <button
-                  onClick={() =>
-                    download(
-                      "capacity-review.csv",
-                      exportCsv(
-                        cells.map((c) => ({
-                          scenario: whatIf
-                            ? "Committed + proposed"
-                            : "Committed",
-                          craft: c.craft,
-                          weekStart: c.weekStart,
-                          availableFte: c.availableFte,
-                          allocatedFte: c.demand,
-                          utilization: pct(c.ratio),
-                          status: level(c.ratio),
-                        })),
-                      ),
-                    )
-                  }
-                >
-                  ↓ Export review
-                </button>
-              )}
-              <button className="primary" onClick={() => edit()}>
-                ＋ Add project
+          <header
+            className="page-header"
+            ref={pageHeader}
+            aria-label="Page header"
+          >
+            <div className="example-banner">
+              <span>
+                {useExample
+                  ? "Example data · Fictional organization · Changes are temporary"
+                  : "Saved workspace · Changes apply to all local sessions"}
+              </span>
+              <button
+                onClick={() => {
+                  setUseExample(!useExample);
+                  setNotice("");
+                  setError("");
+                }}
+              >
+                {useExample ? "Open workspace" : "Use example data"}
               </button>
             </div>
-          </div>
+            <div className="title-row">
+              <div>
+                <h1>{viewLabels[view]}</h1>
+                <p className="subtitle">{viewDescriptions[view]}</p>
+              </div>
+              <div className="actions">
+                {(view === "capacity" ||
+                  view === "cutline" ||
+                  view === "people") && (
+                  <button
+                    onClick={() =>
+                      download(
+                        "capacity-review.csv",
+                        exportCsv(
+                          cells.map((c) => ({
+                            scenario: whatIf
+                              ? "Committed + proposed"
+                              : "Committed",
+                            craft: c.craft,
+                            weekStart: c.weekStart,
+                            availableFte: c.availableFte,
+                            allocatedFte: c.demand,
+                            utilization: pct(c.ratio),
+                            status: level(c.ratio),
+                          })),
+                        ),
+                      )
+                    }
+                  >
+                    ↓ Export review
+                  </button>
+                )}
+                <button className="primary" onClick={() => edit()}>
+                  ＋ Add project
+                </button>
+              </div>
+            </div>
+          </header>
           <div className="toolbar">
             <label>
               Planning period{" "}

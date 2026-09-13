@@ -10,7 +10,7 @@ Completed an actual live-browser head-of-UXD cognitive walkthrough across report
 
 Corrected dimmed grandchildren, compressed reporting levels and misleading node-type filtering. 61 tests, TypeScript and both production builds passed. Actual CSV import matched all records by ID; reload/restart preserved the isolated saved workspace. Full graph export preserved the reporting chain. Original SQLite hashes unchanged.
 
-Main preview runs at http://127.0.0.1:3000/ (production session 95409). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
+Main preview runs at http://127.0.0.1:3000/ (production session 36827). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
 
 ## Roles and preserved context
 
@@ -37,3 +37,9 @@ Operations VP update: 62 tests and production build passed; browser confirmed th
 ## Operations recommendations — captured
 
 [Implementation backlog](docs/uxd-operations-backlog.md) records the operations review and related enterprise work, prioritized with dependencies and acceptance criteria. Recommended next slice: dated project updates and person-level allocation/availability, followed by the Operations overview and decision follow-up. Feature implementation has not started under this capture request. Current application behavior and saved data remain unchanged.
+
+## Persistent application layout — complete
+
+Left navigation stays at the viewport edge while content scrolls. The right-pane page header keeps the view title, workspace mode and actions visible. Narrow screens retain a compact left icon rail with accessible names and tooltips. Header height is measured for scroll clearance; nav changes return to the top.
+
+Validated desktop scrolling (rail/header top=0 at scrollY=600), mobile scrolling (top=0 at scrollY=500, document width=390), visible mobile icons, page switching and modal layering. TypeScript, 62 tests and production build passed; browser reported no runtime errors. Saved data unchanged; preview running on port 3000.
