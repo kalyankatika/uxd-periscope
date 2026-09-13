@@ -4,6 +4,10 @@ A local workspace for projects, reporting relationships, business priorities, an
 
 The active scope is **UXD**: give ELT, the head of UXD and design leaders a clear view of priorities, projects, people and allocation, with enterprise sources and governed manual planning. Keep integration contracts extensible; portfolio-manager use cases are a future possibility. See the [enterprise handoff](docs/enterprise-handoff.md) for the [market and product assessment](docs/enterprise-product-assessment.md), [architecture decision](docs/enterprise-architecture.md), [connector contracts](docs/enterprise-connectors.md), and [build audit](docs/enterprise-build-audit.md). Live connectors, enterprise access controls and time/financial tracking are future work.
 
+## Planned operations work
+
+The [UXD Operations implementation backlog](docs/uxd-operations-backlog.md) captures prioritized staffing, update freshness, decision tracking, enterprise integration and financial work, with dependencies and completion criteria. These are proposed capabilities, not shipped features.
+
 ## Install and run
 
 Requires Git and Node.js 22.13 or later, with npm. Validated with Node.js 22.23.2 and npm 10.9.8; `.nvmrc` pins that tested Node version. If using nvm, run `nvm install` and `nvm use` after cloning.

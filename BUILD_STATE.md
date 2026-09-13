@@ -33,3 +33,7 @@ Latest title preference: Avery is Head of Design; the seven direct-report leader
 Latest organization update: added fictional Rowan Blake, VP of UXD Operations, as the eighth direct-report leader under Head of Design. 27 people, eight functional teams, 13 unchanged projects. The operations role has 100% non-project time and contributes no delivery capacity.
 
 Operations VP update: 62 tests and production build passed; browser confirmed the new leader. Preview refreshed; saved workspace unchanged.
+
+## Operations recommendations — captured
+
+[Implementation backlog](docs/uxd-operations-backlog.md) records the operations review and related enterprise work, prioritized with dependencies and acceptance criteria. Recommended next slice: dated project updates and person-level allocation/availability, followed by the Operations overview and decision follow-up. Feature implementation has not started under this capture request. Current application behavior and saved data remain unchanged.
