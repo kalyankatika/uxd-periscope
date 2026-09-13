@@ -10,7 +10,7 @@ Completed an actual live-browser head-of-UXD cognitive walkthrough across report
 
 Corrected dimmed grandchildren, compressed reporting levels and misleading node-type filtering. 61 tests, TypeScript and both production builds passed. Actual CSV import matched all records by ID; reload/restart preserved the isolated saved workspace. Full graph export preserved the reporting chain. Original SQLite hashes unchanged.
 
-Main preview runs at http://127.0.0.1:3000/ (production session 71204). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
+Main preview runs at http://127.0.0.1:3000/ (production session 98622). Fictional edits remain session-only; saved data preserved. Source and evidence are ready for the authorized GitHub handoff.
 
 ## Roles and preserved context
 
@@ -27,3 +27,5 @@ Title update verification: production build passed; browser confirmed the new le
 Leadership-level adjustment: the head is now SVP of Design, AI & Digital Products; all seven direct-report leaders are VPs of Design with their respective specializations. Manager and individual-contributor titles remain unchanged. CSV/JSON regenerated and all three fixture checks pass.
 
 SVP/VP title adjustment verified in the running browser; production build passed.
+
+Latest title preference: Avery is Head of Design; the seven direct-report leaders remain VPs of Design.

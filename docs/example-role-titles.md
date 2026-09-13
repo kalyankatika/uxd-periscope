@@ -13,13 +13,13 @@ Use recognizable Product Designer, Design Researcher, Content Designer and Desig
 - [Figma: Product Designer, AI Models](https://job-boards.greenhouse.io/figma/jobs/5711913004) — describes connecting AI research and design principles.
 - [Airbnb: Staff Service Designer](https://careers.airbnb.com/positions/7514027/) — distinguishes Staff individual contributors from design managers/directors.
 
-The exact seven-team grouping is a Periscope design choice. At the user’s request, the head is an SVP of Design and the seven direct-report leaders are VPs of Design; these levels are not attributed to the reference companies.
+The exact seven-team grouping is a Periscope design choice. At the user’s request, the head is Head of Design and the seven direct-report leaders are VPs of Design; these levels are not attributed to the reference companies.
 
 ## Fictional roster
 
 | Person | Role | Team |
 | --- | --- | --- |
-| Avery Morgan | SVP of Design, AI & Digital Products | UXD |
+| Avery Morgan | Head of Design | UXD |
 | Elena Brooks | VP of Design, Digital Products | Product Design |
 | Marcus Reed | VP of Design, Research | Design Research |
 | Priya Shah | VP of Design, Content & Conversation | Content & Conversation Design |

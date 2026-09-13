@@ -6,7 +6,7 @@ export function leadershipDemo(): Plan {
       "Avery Morgan",
       "design",
       null,
-      "SVP of Design, AI & Digital Products",
+      "Head of Design",
       "UXD",
       true,
       0,
