@@ -331,44 +331,44 @@ export default function Planner({ initial }: { initial: Plan }) {
                 {useExample ? "Open workspace" : "Use example data"}
               </button>
             </div>
-            <div className="title-row">
-              <div>
-                <h1>{viewLabels[view]}</h1>
-                <p className="subtitle">{viewDescriptions[view]}</p>
-              </div>
-              <div className="actions">
-                {(view === "capacity" ||
-                  view === "cutline" ||
-                  view === "people") && (
-                  <button
-                    onClick={() =>
-                      download(
-                        "capacity-review.csv",
-                        exportCsv(
-                          cells.map((c) => ({
-                            scenario: whatIf
-                              ? "Committed + proposed"
-                              : "Committed",
-                            craft: c.craft,
-                            weekStart: c.weekStart,
-                            availableFte: c.availableFte,
-                            allocatedFte: c.demand,
-                            utilization: pct(c.ratio),
-                            status: level(c.ratio),
-                          })),
-                        ),
-                      )
-                    }
-                  >
-                    ↓ Export review
-                  </button>
-                )}
-                <button className="primary" onClick={() => edit()}>
-                  ＋ Add project
-                </button>
-              </div>
-            </div>
           </header>
+          <div className="title-row">
+            <div>
+              <h1>{viewLabels[view]}</h1>
+              <p className="subtitle">{viewDescriptions[view]}</p>
+            </div>
+            <div className="actions">
+              {(view === "capacity" ||
+                view === "cutline" ||
+                view === "people") && (
+                <button
+                  onClick={() =>
+                    download(
+                      "capacity-review.csv",
+                      exportCsv(
+                        cells.map((c) => ({
+                          scenario: whatIf
+                            ? "Committed + proposed"
+                            : "Committed",
+                          craft: c.craft,
+                          weekStart: c.weekStart,
+                          availableFte: c.availableFte,
+                          allocatedFte: c.demand,
+                          utilization: pct(c.ratio),
+                          status: level(c.ratio),
+                        })),
+                      ),
+                    )
+                  }
+                >
+                  ↓ Export review
+                </button>
+              )}
+              <button className="primary" onClick={() => edit()}>
+                ＋ Add project
+              </button>
+            </div>
+          </div>
           <div className="toolbar">
             <label>
               Planning period{" "}

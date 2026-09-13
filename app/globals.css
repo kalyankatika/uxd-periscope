@@ -2709,16 +2709,17 @@ html {
   border-bottom: 1px solid #e0e7dc;
 }
 .page-header .example-banner {
-  padding-bottom: 8px;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
-.page-header .title-row {
+.content > .title-row {
   margin: 14px 0 0;
 }
-.page-header h1 {
+.content > .title-row h1 {
   font-size: 1.8rem;
   margin: 0;
 }
-.page-header .subtitle {
+.content > .title-row .subtitle {
   margin: 6px 0 0;
 }
 @media (max-width: 800px) {
@@ -2770,22 +2771,26 @@ html {
     flex-wrap: wrap;
     gap: 4px;
   }
-  .page-header .title-row {
+  .content > .title-row {
     gap: 10px;
   }
-  .page-header h1 {
+  .content > .title-row h1 {
     font-size: 1.5rem;
   }
-  .page-header .subtitle {
+  .content > .title-row .subtitle {
     display: none;
   }
-  .page-header .actions {
+  .content > .title-row .actions {
     flex-wrap: wrap;
     gap: 6px;
   }
 }
 
 @media (max-width: 800px) {
-  .rail .nav-icon { display: block; }
+  .rail .nav-icon {
+    display: block;
+  }
 }
-.shell { overflow-x: clip; }
+.shell {
+  overflow-x: clip;
+}
