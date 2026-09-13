@@ -1,0 +1,309 @@
+{
+  "date": "2026-09-12T21:08:52.003366+00:00",
+  "sourceRevision": "4b2c9b79ec67761dd9b7a5a24509a1d124570afd",
+  "sourceBranch": "main",
+  "initialDirtyState": [
+    " M BUILD_STATE.md",
+    " M README.md",
+    " M app/globals.css",
+    " M app/import-review.tsx",
+    " M app/planner.tsx",
+    " M docs/enterprise-data-mapping.md",
+    " M docs/installation.md",
+    " M docs/leadership-experience.md",
+    " M lib/import-preview.ts",
+    "?? app/import-mapping.tsx",
+    "?? app/workspace-import.tsx",
+    "?? artifacts/organization-import/",
+    "?? tests/workspace-import-api.test.ts",
+    "?? tests/workspace-import.test.ts"
+  ],
+  "sourceCopyExcludes": [
+    "*.tsbuildinfo",
+    ".agents",
+    ".codex",
+    ".env* (except .env.example)",
+    ".git",
+    ".next",
+    "artifacts",
+    "data",
+    "node_modules"
+  ],
+  "verifiedRuntime": {
+    "node": "v22.23.2",
+    "npm": "10.9.8",
+    "platform": "Darwin arm64"
+  },
+  "changesMadeByAudit": [
+    "package.json scripts.verify",
+    ".nvmrc",
+    ".github/workflows/verify.yml",
+    "docs/enterprise-build-audit.md",
+    "artifacts/enterprise-handoff/"
+  ],
+  "dependencyChanges": false,
+  "cleanInstall": {
+    "command": "npm ci --cache /tmp/periscope-enterprise-npm-cache --no-audit --no-fund",
+    "result": "passed",
+    "installedPackages": 62
+  },
+  "verification": {
+    "command": "NEXT_TELEMETRY_DISABLED=1 DATABASE_PATH=/tmp/periscope-enterprise-audit-20260912/verification-data/planner.sqlite npm run verify",
+    "result": "passed",
+    "tests": 36,
+    "failedTests": 0,
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "dependencyAdvisories": {
+    "command": "npm audit --omit=dev --json --cache /tmp/periscope-enterprise-npm-cache",
+    "result": "passed",
+    "knownVulnerabilities": 0,
+    "scope": "npm advisory response for production dependency graph; not a security certification"
+  },
+  "ci": {
+    "definition": "added and YAML parsed locally",
+    "remoteRun": "not run",
+    "platformVerification": "macOS arm64 local only; Linux workflow not executed"
+  },
+  "environmentRetries": [
+    "Initial sandboxed npm install failed DNS lookups; its owned process was stopped and network-enabled install succeeded.",
+    "Initial sandboxed Turbopack build stalled; its owned processes were stopped and normal-permission verification succeeded."
+  ],
+  "approvalRejections": false,
+  "savedWorkspaceAccess": "Not copied, opened, or written during this audit.",
+  "testedSourceFiles": [
+    {
+      "path": ".env.example",
+      "sha256": "32e1efbbb904cc3e7f2c95795acfba5e12f84fd7105967dcc7ba1ad73647df23"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b518c4d4dd04ff5dd49a1ed773fc450d10fcaa4c56313f2c7f65c660417010f2"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "8dce8b0176e0adf44250ae5eb008466b6e9bfcb77ec58e3e1494f4cdae2fdf2f"
+    },
+    {
+      "path": "BUILD_STATE.md",
+      "sha256": "23f32a3e99fe8c9270ad18c8dd610544bb3e1fbd88ef818ea31faa0122391c77"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2db46ff84f316859dab0b6455062ff69af037dae6bb70e04ffb043421d9223bc"
+    },
+    {
+      "path": "app/api/graph/route.ts",
+      "sha256": "e2ea6bac2e035f9959327184e7bec1b2464fc0135ba22584d8eb133639d1f9af"
+    },
+    {
+      "path": "app/api/plan/route.ts",
+      "sha256": "73e4da70767248670d9a44a7224ffa0f8cfaed6e3d821f1723e826a85770f5f8"
+    },
+    {
+      "path": "app/fonts/FidelitySans-Bold.woff",
+      "sha256": "92ea6d26d5ee6c1cf58a25d4c6d743d46b08b96c1b037750c1b29ac3ae51a3ac"
+    },
+    {
+      "path": "app/fonts/FidelitySans-Light.woff",
+      "sha256": "87764cf2de53fe063f413bbbe2f22f217198367a5512f851270796d17e7b5b56"
+    },
+    {
+      "path": "app/fonts/FidelitySans-Regular.woff",
+      "sha256": "c79b53a4c184b6aa42a77baa110706393290f7ae82ea209ce6f11407ace48b24"
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "0d3a32b82b4c5260b8d1f39da2b321e89fa0f71d63bda392869b62b374023b66"
+    },
+    {
+      "path": "app/group-overview.tsx",
+      "sha256": "7694c26dce390cab59d25c96f289d574ba21e28ffd837237607c205f778e2c8d"
+    },
+    {
+      "path": "app/import-mapping.tsx",
+      "sha256": "48d75e843f1c4b54c5d751eeca4fe371e085d5f74f6db285a9e7b641a9b37f15"
+    },
+    {
+      "path": "app/import-review.tsx",
+      "sha256": "e6126a5e6354922ecb048ba3dfd7c5cfcf452028b6c4bd0d89d87f74a25a1180"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "5c739130244dae460c65c5bcd6b2b5deb370a219cc8b8f5a6dcfd1b6e776f862"
+    },
+    {
+      "path": "app/leadership.tsx",
+      "sha256": "c78aab67377dfb0c1494616c137d801f73b5e7f730d66e8a3464ce11a73c680b"
+    },
+    {
+      "path": "app/page.tsx",
+      "sha256": "2415cb9d4c4f33da94700b959c3ead79a8036cda86460a9436c7a08feacd00ab"
+    },
+    {
+      "path": "app/planner.tsx",
+      "sha256": "74e80cdc53637444ae257426bdd8693dbc806148a8839c02d3b3b3fe62b68a7c"
+    },
+    {
+      "path": "app/work-grid.tsx",
+      "sha256": "de93c826dc858dc428b5a560ba1c9c010fc8f717b1c78a7d80602b086404f71a"
+    },
+    {
+      "path": "app/work-map.css",
+      "sha256": "262be0f7cd503c815167e788b1c992911040c4b513c60a4d7083661f5555a568"
+    },
+    {
+      "path": "app/work-map.tsx",
+      "sha256": "f75314dfce23cbd01ad3588ffb8e973274936231a3d0fea4ab65d188338cdfe6"
+    },
+    {
+      "path": "app/workspace-import.tsx",
+      "sha256": "eed46508da04368767a59ab931f6c5b1d4fed4d94432aef2dd6fc24021f3ac65"
+    },
+    {
+      "path": "docs/enterprise-data-mapping.md",
+      "sha256": "d1bec2cbfb615a8328bc7133b71b81465c91a0e85264e9757468125d1110b613"
+    },
+    {
+      "path": "docs/installation.md",
+      "sha256": "b6e33afb7aaad21aa597967081bd344d6724a1eb03cece1c8774537d18cc3a40"
+    },
+    {
+      "path": "docs/leadership-experience.md",
+      "sha256": "3064857d95f05985e4f21ed75f61ce1afdef7b4d8cf4637cc3c4ee2bb1279a25"
+    },
+    {
+      "path": "docs/manager-loop.md",
+      "sha256": "99395337eb04d907b9101dc9342e46bea140ad7752ab88084f8f4f37a6578ab3"
+    },
+    {
+      "path": "lib/allocate.ts",
+      "sha256": "b89216edd67d40ccde2d4b393ce345304a52a2e4d205dd06b03eec648bebde70"
+    },
+    {
+      "path": "lib/capacity.ts",
+      "sha256": "ca24bc32fed26361ce2c05435f55a0e5b0283cc4af46cb9ee83818e1ae072c07"
+    },
+    {
+      "path": "lib/csv.ts",
+      "sha256": "28107b10da522f3b6fdf80cd062f717f1ba47211b99ad8e0208c13830833c477"
+    },
+    {
+      "path": "lib/db.ts",
+      "sha256": "c5cc78126e3f145ec8f6dfab237fc80ce25c697cd819c64d6e4a661a0963c5c2"
+    },
+    {
+      "path": "lib/domain.ts",
+      "sha256": "4f5dc28951dfaa3b449b7157d74075b2b5d139237051d1d3ea3eb833c835ccb2"
+    },
+    {
+      "path": "lib/graph-grid.ts",
+      "sha256": "7c5db2f93a375e8b9b1ba9217f6ec36f93d418b8223138b25999c7474469f933"
+    },
+    {
+      "path": "lib/graph-layout.ts",
+      "sha256": "c0150fbdd260e4d8ea2931b2387e6a129f085c8eaa650b35f1500abafac3fddd"
+    },
+    {
+      "path": "lib/graph-model.ts",
+      "sha256": "00b7ec074951000633fe76ddbdfe34b59d62738b3378fe1cbb98da0f7d4f683d"
+    },
+    {
+      "path": "lib/import-preview.ts",
+      "sha256": "851523c9965278b9fe05d05c56905c0a944c626d0375547b284b351304ba902d"
+    },
+    {
+      "path": "lib/leadership-demo.ts",
+      "sha256": "662b3d54e1ecfec0241a0b6e793159eac8d95a5876e8c138368972c45e188afb"
+    },
+    {
+      "path": "lib/seed.ts",
+      "sha256": "c052ac3bea65fd4064a1b6bf61f6ef9730f9112f8f4414b96b7408f61dc63708"
+    },
+    {
+      "path": "lib/work-graph.ts",
+      "sha256": "b844f4361938d2206f4059a8e6a484269bf9abc7ea699850188d532d1c107b27"
+    },
+    {
+      "path": "next-env.d.ts",
+      "sha256": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "cefe9df1547da8e70af89f2be64c0e30f3edafe6cf746ef93a9a7f39d410dda2"
+    },
+    {
+      "path": "package.json",
+      "sha256": "44b7dd7f4e6a4a9311235a262741b8b8cea1b668b8eff1a24b8e6fb97fa60743"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "a1a188221f064d964dd9958c3d48b0c23252fabbeb6099d95ee8e15c764718b0"
+    },
+    {
+      "path": "scripts/make-short-demo.py",
+      "sha256": "de3b969b1bb8dc79fd46376fc1ade8fcd3ce4b43cbd4fa3ea1f1da5de08fcb02"
+    },
+    {
+      "path": "scripts/record-platform-demo.py",
+      "sha256": "970a6379ee88c0d256e45be3209996945b115901272e6d796059375506fea33a"
+    },
+    {
+      "path": "scripts/render-platform-demo.py",
+      "sha256": "69d1862fe619c7b1463a87abce3f26451284bc87fc915d6fd60968b463214f1d"
+    },
+    {
+      "path": "tests/api.test.ts",
+      "sha256": "b5683ed5eff9d155b2062c11419b814697d504ac348c8aff03b44c4d17153227"
+    },
+    {
+      "path": "tests/capacity.test.ts",
+      "sha256": "bfb3d4e4e5b90d8695036007d13a9cb3bf2fb83ec7ad46cf101bb86af824cb13"
+    },
+    {
+      "path": "tests/graph-grid.test.ts",
+      "sha256": "78bbacba6da78d48727847810755ed9f11b386261cf8169a76d1dbd71d649d87"
+    },
+    {
+      "path": "tests/graph-map.test.ts",
+      "sha256": "ec54c9b9a8c6a2a6fcef7e07bc464d8deb230bc16da78d403b5901c2d729b4f5"
+    },
+    {
+      "path": "tests/import-preview.test.ts",
+      "sha256": "fd0de8f78b04f833caee23d1912c8b262311681912dbc715ccc2180b12ae1bd1"
+    },
+    {
+      "path": "tests/migration.test.ts",
+      "sha256": "77aa5340eed8583742d676da7d191cb7dfaef14a27d0c3da849f4ad0176fb623"
+    },
+    {
+      "path": "tests/persistence.test.ts",
+      "sha256": "296fd6388bae082108a0c7bd7684938143bfb7c4f3ceb20550651b9c9c692f26"
+    },
+    {
+      "path": "tests/work-graph.test.ts",
+      "sha256": "cce36dc48ea58f81042cea7177b38f11ac6553df29b127f08cb875b95801dc12"
+    },
+    {
+      "path": "tests/workspace-import-api.test.ts",
+      "sha256": "c3d1eafb0a2f1e21d8f3e751e5fd3b93f7f3ebc5d10c2ab3b68841301374e22b"
+    },
+    {
+      "path": "tests/workspace-import.test.ts",
+      "sha256": "6e46fb3e92217863ea23aa9d638031464b1a20eb7b652053e46769c8e7b1c1b2"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "d07c7d477d8493c526e814cf448001d8fd2f7e8594fd044fcbb9bfdcba8fcde0"
+    },
+    {
+      "path": ".nvmrc",
+      "sha256": "08062faf0d7a2d22f5d7933c50e975dd1527034275597be7c1b3b9fd2b9d079a"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "e00ffdeee83ed127772e10a641b5b62165cfe7f7478726a7dd87f2e214b88ceb"
+    }
+  ]
+}

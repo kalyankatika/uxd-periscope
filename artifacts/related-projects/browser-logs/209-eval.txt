@@ -1,0 +1,37 @@
+{
+  "connections": [
+    {
+      "name": "Conversational planning prototype",
+      "reason": "Needed by"
+    },
+    {
+      "name": "Aisha Patel",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Sam Okafor",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Grace Liu",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Oliver Grant",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Responsible AI experiences",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "Accessible component library",
+      "reason": "Depends on"
+    },
+    {
+      "name": "AI-assisted research synthesis",
+      "reason": "Needed by"
+    }
+  ],
+  "title": "UX AI interaction standards"
+}

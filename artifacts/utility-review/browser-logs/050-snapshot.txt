@@ -1,0 +1,203 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "⌘ Work map" [ref=e6]
+      - StaticText "⌘"
+      - StaticText "Work map"
+    - button "◫ Overview" [ref=e7]
+      - StaticText "◫"
+      - StaticText "Overview"
+    - button "♧ Teams & reporting" [ref=e8]
+      - StaticText "♧"
+      - StaticText "Teams & reporting"
+    - button "▦ Projects" [ref=e9]
+      - StaticText "▦"
+      - StaticText "Projects"
+    - button "◷ Capacity" [ref=e10]
+      - StaticText "◷"
+      - StaticText "Capacity"
+    - button "☷ Project plan" [ref=e11]
+      - StaticText "☷"
+      - StaticText "Project plan"
+    - button "⚙ People & imports" [ref=e12]
+      - StaticText "⚙"
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 26 people"
+  - StaticText "Example data · Session only"
+- main
+  - StaticText "Example data · Fictional organization · Changes are temporary"
+  - button "Open workspace" [ref=e3]
+  - heading "Projects" [level=1, ref=e4]
+  - paragraph
+    - StaticText "Filter, sort, and compare projects."
+  - button "＋ Add project" [ref=e5]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e19]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e20]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e15]
+  - generic
+    - paragraph
+      - StaticText "PROJECT REVIEW"
+    - heading "Project comparison" [level=2, ref=e13]
+    - paragraph
+      - StaticText "Select a column heading to sort projects."
+    - button "↓ Export this view" [ref=e14]
+    - LabelText
+      - StaticText "Search projects"
+      - searchbox "Search projects" [ref=e16]
+    - LabelText
+      - StaticText "Team"
+      - combobox "Team" [expanded=false, ref=e17]: All teams
+        - MenuListPopup
+          - option "All teams" [selected, ref=e56]
+          - option "Avery Morgan · User experience" [ref=e57]
+          - option "Elena Brooks · Product Design" [ref=e58]
+          - option "Marcus Reed · Research & insights" [ref=e59]
+          - option "Priya Shah · Content design" [ref=e60]
+          - option "Daniel Kim · Design systems" [ref=e61]
+          - option "Sana Ahmed · Design Strategy" [ref=e62]
+          - option "Victor Alvarez · Innovation" [ref=e63]
+          - option "Riley Thompson · UX AI" [ref=e64]
+    - LabelText
+      - StaticText "Filter"
+      - combobox "Filter" [expanded=false, ref=e18]: Needs attention
+        - MenuListPopup
+          - option "All projects" [ref=e65]
+          - option "Top priorities" [ref=e66]
+          - option "Needs attention" [selected, ref=e67]
+          - option "In progress" [ref=e68]
+          - option "Unassigned owner" [ref=e69]
+    - StaticText "5"
+    - StaticText " projects"
+    - table
+      - rowgroup
+        - row
+          - columnheader "Project / outcome ↕" [ref=e70]
+            - button "Project / outcome ↕" [ref=e82]
+              - StaticText "Project / outcome ↕"
+          - columnheader "Importance ↑" [ref=e71]
+            - button "Importance ↑" [ref=e83]
+              - StaticText "Importance ↑"
+          - columnheader "Project owner ↕" [ref=e72]
+            - button "Project owner ↕" [ref=e84]
+              - StaticText "Project owner ↕"
+          - columnheader "Project health ↕" [ref=e73]
+            - button "Project health ↕" [ref=e85]
+              - StaticText "Project health ↕"
+          - columnheader "Due ↕" [ref=e74]
+            - button "Due ↕" [ref=e86]
+              - StaticText "Due ↕"
+          - columnheader "Weekly effort ↕" [ref=e75]
+            - button "Weekly effort ↕" [ref=e87]
+              - StaticText "Weekly effort ↕"
+          - columnheader "Action required" [ref=e76]
+      - row
+        - cell "Account opening redesign ↗ Help new clients open an account without getting stuck or starting over. Client onboarding" [ref=e21]
+          - button "Account opening redesign ↗" [ref=e77]
+            - StaticText "Account opening redesign ↗"
+          - paragraph
+            - StaticText "Help new clients open an account without getting stuck or starting over."
+          - StaticText "Client onboarding"
+        - cell "Top priority" [ref=e22]
+        - cell "Maya Chen Product Design" [ref=e23]
+          - StaticText "Maya Chen"
+          - StaticText "Product Design"
+        - cell "Decision required In progress" [ref=e24]
+          - StaticText "Decision required"
+          - StaticText "In progress"
+        - cell "Nov 20" [ref=e25]
+        - cell "2.4 FTE combined weekly effort" [ref=e26]
+          - StaticText "2.4 FTE"
+          - StaticText "combined weekly effort"
+        - cell "Decide whether the new identity check belongs in this release or the next one." [ref=e27]
+      - row
+        - cell "Retirement guidance ↗ Make retirement choices easier to understand, so clients know what to do next. Client financial planning" [ref=e28]
+          - button "Retirement guidance ↗" [ref=e78]
+            - StaticText "Retirement guidance ↗"
+          - paragraph
+            - StaticText "Make retirement choices easier to understand, so clients know what to do next."
+          - StaticText "Client financial planning"
+        - cell "Top priority" [ref=e29]
+        - cell "Leo Martinez Content design" [ref=e30]
+          - StaticText "Leo Martinez"
+          - StaticText "Content design"
+        - cell "At risk In progress" [ref=e31]
+          - StaticText "At risk"
+          - StaticText "In progress"
+        - cell "Dec 11" [ref=e32]
+        - cell "1.5 FTE combined weekly effort" [ref=e33]
+          - StaticText "1.5 FTE"
+          - StaticText "combined weekly effort"
+        - cell "Participant recruitment is slower than expected. The research lead is adjusting the interview plan." [ref=e34]
+      - row
+        - cell "AI-assisted research synthesis ↗ Pilot AI-assisted research summaries with source citations and researcher review before publication. Shared experience capabilities" [ref=e35]
+          - button "AI-assisted research synthesis ↗" [ref=e79]
+            - StaticText "AI-assisted research synthesis ↗"
+          - paragraph
+            - StaticText "Pilot AI-assisted research summaries with source citations and researcher review before publication."
+          - StaticText "Shared experience capabilities"
+        - cell "High priority" [ref=e36]
+        - cell "Sam Okafor UX AI" [ref=e37]
+          - StaticText "Sam Okafor"
+          - StaticText "UX AI"
+        - cell "At risk In progress" [ref=e38]
+          - StaticText "At risk"
+          - StaticText "In progress"
+        - cell "Dec 18" [ref=e39]
+        - cell "1.4 FTE combined weekly effort" [ref=e40]
+          - StaticText "1.4 FTE"
+          - StaticText "combined weekly effort"
+        - cell "Confirm researcher availability for dataset review before the pilot starts." [ref=e41]
+      - row
+        - cell "Conversational planning prototype ↗ Evaluate a conversational planning concept with clear handoffs to human support. New product opportunities" [ref=e42]
+          - button "Conversational planning prototype ↗" [ref=e80]
+            - StaticText "Conversational planning prototype ↗"
+          - paragraph
+            - StaticText "Evaluate a conversational planning concept with clear handoffs to human support."
+          - StaticText "New product opportunities"
+        - cell "High priority" [ref=e43]
+        - cell "Ben Carter Innovation" [ref=e44]
+          - StaticText "Ben Carter"
+          - StaticText "Innovation"
+        - cell "Decision required In progress" [ref=e45]
+          - StaticText "Decision required"
+          - StaticText "In progress"
+        - cell "Dec 18" [ref=e46]
+        - cell "1.3 FTE combined weekly effort" [ref=e47]
+          - StaticText "1.3 FTE"
+          - StaticText "combined weekly effort"
+        - cell "Select one concept and approve the client-testing scope for the next pilot." [ref=e48]
+      - row
+        - cell "Mobile portfolio overview ↗ Help clients understand portfolio performance at a glance on their phone. Client financial planning" [ref=e49]
+          - button "Mobile portfolio overview ↗" [ref=e81]
+            - StaticText "Mobile portfolio overview ↗"
+          - paragraph
+            - StaticText "Help clients understand portfolio performance at a glance on their phone."
+          - StaticText "Client financial planning"
+        - cell "High priority" [ref=e50]
+        - cell "Nina Patel Product Design" [ref=e51]
+          - StaticText "Nina Patel"
+          - StaticText "Product Design"
+        - cell "At risk In progress" [ref=e52]
+          - StaticText "At risk"
+          - StaticText "In progress"
+        - cell "Dec 18" [ref=e53]
+        - cell "1.7 FTE combined weekly effort" [ref=e54]
+          - StaticText "1.7 FTE"
+          - StaticText "combined weekly effort"
+        - cell "The design is progressing, but delivery depends on shared chart and accessibility components." [ref=e55]
+    - StaticText "FTE means full-time equivalent: 1.0 is one person's full working week. Effort is the combined time requested, not the number of assigned people. Proposed projects are included; commitment is shown in project details."
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

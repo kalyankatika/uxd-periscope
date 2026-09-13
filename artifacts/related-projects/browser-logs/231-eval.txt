@@ -1,0 +1,53 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (7)",
+  "rows": [
+    {
+      "name": "Research repository",
+      "reasons": [
+        "Needed by this project",
+        "Same business priority",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "UX AI interaction standards",
+      "reasons": [
+        "Needed by this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Retirement guidance",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Accessible component library",
+      "reasons": [
+        "Same business priority"
+      ]
+    },
+    {
+      "name": "Planning assistant discovery",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "UXD product design strategy",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Conversational planning prototype",
+      "reasons": [
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "AI-assisted research synthesis"
+}

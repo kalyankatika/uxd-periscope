@@ -1,0 +1,52 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (7)",
+  "rows": [
+    {
+      "name": "Accessible component library",
+      "reasons": [
+        "Needed by this project"
+      ]
+    },
+    {
+      "name": "Account opening redesign",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Retirement guidance",
+      "reasons": [
+        "Same business priority",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Statement content redesign",
+      "reasons": [
+        "Same business priority"
+      ]
+    },
+    {
+      "name": "Planning assistant discovery",
+      "reasons": [
+        "Same business priority",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Service concept pilots",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Conversational planning prototype",
+      "reasons": [
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "Mobile portfolio overview"
+}

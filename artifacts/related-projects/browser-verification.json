@@ -1,0 +1,1423 @@
+{
+  "status": "pass",
+  "projectCount": 13,
+  "dependencyEdgeCount": 7,
+  "isolatedSavedPlanUnchanged": true,
+  "browserErrors": "",
+  "browserConsole": "",
+  "method": "Real DOM and native keyboard/click interaction through agent-browser; expected rows independently derived from fictional raw records, no product helpers. Map and grid selected-item panels compared for all projects; full detail rows and downloaded graph checked.",
+  "projects": {
+    "opening": {
+      "map": {
+        "connections": [
+          {
+            "name": "Maya Chen",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Sofia Ramirez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Leo Martinez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Oliver Grant",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client onboarding",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Accessible component library",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Account opening redesign"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Maya Chen",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Sofia Ramirez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Leo Martinez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Oliver Grant",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client onboarding",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Accessible component library",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Account opening redesign"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (8)",
+        "rows": [
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Needed by this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Advisor workspace",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "UXD product design strategy",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Account opening redesign"
+      },
+      "status": "pass"
+    },
+    "advisor": {
+      "map": {
+        "connections": [
+          {
+            "name": "Jordan Ellis",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Sofia Ramirez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Grace Liu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Advisor productivity",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Advisor workspace"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Jordan Ellis",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Sofia Ramirez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Grace Liu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Advisor productivity",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Advisor workspace"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (6)",
+        "rows": [
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Research repository",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "UXD product design strategy",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Advisor workspace"
+      },
+      "status": "pass"
+    },
+    "retirement": {
+      "map": {
+        "connections": [
+          {
+            "name": "Leo Martinez",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Ethan Park",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Maya Chen",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Retirement guidance"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Leo Martinez",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Ethan Park",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Maya Chen",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Retirement guidance"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (8)",
+        "rows": [
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Research repository",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "UXD product design strategy",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Retirement guidance"
+      },
+      "status": "pass"
+    },
+    "components": {
+      "map": {
+        "connections": [
+          {
+            "name": "Account opening redesign",
+            "reason": "Needed by"
+          },
+          {
+            "name": "Oliver Grant",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Isabel Costa",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Grace Liu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Shared experience capabilities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reason": "Needed by"
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "Accessible component library"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Account opening redesign",
+            "reason": "Needed by"
+          },
+          {
+            "name": "Oliver Grant",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Isabel Costa",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Grace Liu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Shared experience capabilities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reason": "Needed by"
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "Accessible component library"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (8)",
+        "rows": [
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Depends on this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reasons": [
+              "Depends on this project"
+            ]
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reasons": [
+              "Depends on this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Advisor workspace",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Research repository",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reasons": [
+              "Same business priority"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Accessible component library"
+      },
+      "status": "pass"
+    },
+    "insights": {
+      "map": {
+        "connections": [
+          {
+            "name": "Ethan Park",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Amara Nwosu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Jordan Ellis",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Shared experience capabilities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "Research repository"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Ethan Park",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Amara Nwosu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Jordan Ellis",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Shared experience capabilities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "Research repository"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (6)",
+        "rows": [
+          {
+            "name": "AI-assisted research synthesis",
+            "reasons": [
+              "Depends on this project",
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Advisor workspace",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Research repository"
+      },
+      "status": "pass"
+    },
+    "mobile": {
+      "map": {
+        "connections": [
+          {
+            "name": "Nina Patel",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Noah Bennett",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Leo Martinez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Accessible component library",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Mobile portfolio overview"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Nina Patel",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Noah Bennett",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Leo Martinez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Accessible component library",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Mobile portfolio overview"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (7)",
+        "rows": [
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Needed by this project"
+            ]
+          },
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Service concept pilots",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Mobile portfolio overview"
+      },
+      "status": "pass"
+    },
+    "statements": {
+      "map": {
+        "connections": [
+          {
+            "name": "Grace Liu",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Theo Reed",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Maya Chen",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Statement content redesign"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Grace Liu",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Theo Reed",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Maya Chen",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Statement content redesign"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (8)",
+        "rows": [
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Advisor workspace",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "UXD product design strategy",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Statement content redesign"
+      },
+      "status": "pass"
+    },
+    "coaching": {
+      "map": {
+        "connections": [
+          {
+            "name": "Amara Nwosu",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Nina Patel",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Isabel Costa",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Planning assistant discovery"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Amara Nwosu",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Nina Patel",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Isabel Costa",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Client financial planning",
+            "reason": "Supports this priority"
+          }
+        ],
+        "title": "Planning assistant discovery"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (8)",
+        "rows": [
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Research repository",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "Service concept pilots",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Planning assistant discovery"
+      },
+      "status": "pass"
+    },
+    "experience-strategy": {
+      "map": {
+        "connections": [
+          {
+            "name": "Tessa Wu",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Owen Hughes",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Maya Chen",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Sofia Ramirez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Product experience alignment",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Service concept pilots",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "UXD product design strategy"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Tessa Wu",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Owen Hughes",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Maya Chen",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Sofia Ramirez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Product experience alignment",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Service concept pilots",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "UXD product design strategy"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (6)",
+        "rows": [
+          {
+            "name": "Service concept pilots",
+            "reasons": [
+              "Depends on this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Advisor workspace",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "UXD product design strategy"
+      },
+      "status": "pass"
+    },
+    "innovation-lab": {
+      "map": {
+        "connections": [
+          {
+            "name": "Leila Haddad",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Ben Carter",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Owen Hughes",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Nina Patel",
+            "reason": "Contributor"
+          },
+          {
+            "name": "New product opportunities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "UXD product design strategy",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Service concept pilots"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Leila Haddad",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Ben Carter",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Owen Hughes",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Nina Patel",
+            "reason": "Contributor"
+          },
+          {
+            "name": "New product opportunities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "UXD product design strategy",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Service concept pilots"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (4)",
+        "rows": [
+          {
+            "name": "UXD product design strategy",
+            "reasons": [
+              "Needed by this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Service concept pilots"
+      },
+      "status": "pass"
+    },
+    "conversational-prototype": {
+      "map": {
+        "connections": [
+          {
+            "name": "Ben Carter",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Aisha Patel",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Amara Nwosu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Leo Martinez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "New product opportunities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Conversational planning prototype"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Ben Carter",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Aisha Patel",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Amara Nwosu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Leo Martinez",
+            "reason": "Contributor"
+          },
+          {
+            "name": "New product opportunities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "Conversational planning prototype"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (8)",
+        "rows": [
+          {
+            "name": "UX AI interaction standards",
+            "reasons": [
+              "Needed by this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Research repository",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Mobile portfolio overview",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Service concept pilots",
+            "reasons": [
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "Conversational planning prototype"
+      },
+      "status": "pass"
+    },
+    "ai-standards": {
+      "map": {
+        "connections": [
+          {
+            "name": "Conversational planning prototype",
+            "reason": "Needed by"
+          },
+          {
+            "name": "Aisha Patel",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Sam Okafor",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Grace Liu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Oliver Grant",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Responsible AI experiences",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Accessible component library",
+            "reason": "Depends on"
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "UX AI interaction standards"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Conversational planning prototype",
+            "reason": "Needed by"
+          },
+          {
+            "name": "Aisha Patel",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Sam Okafor",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Grace Liu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Oliver Grant",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Responsible AI experiences",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Accessible component library",
+            "reason": "Depends on"
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reason": "Needed by"
+          }
+        ],
+        "title": "UX AI interaction standards"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (6)",
+        "rows": [
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Needed by this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Depends on this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "AI-assisted research synthesis",
+            "reasons": [
+              "Depends on this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Account opening redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Advisor workspace",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Statement content redesign",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "UX AI interaction standards"
+      },
+      "status": "pass"
+    },
+    "ai-research": {
+      "map": {
+        "connections": [
+          {
+            "name": "Sam Okafor",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Ethan Park",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Amara Nwosu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Tessa Wu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Shared experience capabilities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Research repository",
+            "reason": "Depends on"
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "AI-assisted research synthesis"
+      },
+      "grid": {
+        "connections": [
+          {
+            "name": "Sam Okafor",
+            "reason": "Project owner"
+          },
+          {
+            "name": "Ethan Park",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Amara Nwosu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Tessa Wu",
+            "reason": "Contributor"
+          },
+          {
+            "name": "Shared experience capabilities",
+            "reason": "Supports this priority"
+          },
+          {
+            "name": "Research repository",
+            "reason": "Depends on"
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reason": "Depends on"
+          }
+        ],
+        "title": "AI-assisted research synthesis"
+      },
+      "detail": {
+        "focused": "lead-project-title",
+        "heading": "Related projects (7)",
+        "rows": [
+          {
+            "name": "Research repository",
+            "reasons": [
+              "Needed by this project",
+              "Same business priority",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "UX AI interaction standards",
+            "reasons": [
+              "Needed by this project",
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Retirement guidance",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Accessible component library",
+            "reasons": [
+              "Same business priority"
+            ]
+          },
+          {
+            "name": "Planning assistant discovery",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "UXD product design strategy",
+            "reasons": [
+              "Shared people"
+            ]
+          },
+          {
+            "name": "Conversational planning prototype",
+            "reasons": [
+              "Shared people"
+            ]
+          }
+        ],
+        "scrollTop": 0,
+        "title": "AI-assisted research synthesis"
+      },
+      "status": "pass"
+    }
+  },
+  "fullExampleGraphMatchesPreFixExport": true
+}

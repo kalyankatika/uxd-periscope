@@ -1,0 +1,29 @@
+{
+  "connections": [
+    {
+      "name": "Tessa Wu",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Owen Hughes",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Maya Chen",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Sofia Ramirez",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Product experience alignment",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "Service concept pilots",
+      "reason": "Needed by"
+    }
+  ],
+  "title": "UXD product design strategy"
+}

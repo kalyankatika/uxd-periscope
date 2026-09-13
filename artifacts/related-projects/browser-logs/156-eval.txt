@@ -1,0 +1,57 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (8)",
+  "rows": [
+    {
+      "name": "Retirement guidance",
+      "reasons": [
+        "Same business priority"
+      ]
+    },
+    {
+      "name": "Accessible component library",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Research repository",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Mobile portfolio overview",
+      "reasons": [
+        "Same business priority",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Statement content redesign",
+      "reasons": [
+        "Same business priority"
+      ]
+    },
+    {
+      "name": "Service concept pilots",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Conversational planning prototype",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "AI-assisted research synthesis",
+      "reasons": [
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "Planning assistant discovery"
+}

@@ -1,0 +1,47 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (6)",
+  "rows": [
+    {
+      "name": "Accessible component library",
+      "reasons": [
+        "Needed by this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Conversational planning prototype",
+      "reasons": [
+        "Depends on this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "AI-assisted research synthesis",
+      "reasons": [
+        "Depends on this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Account opening redesign",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Advisor workspace",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Statement content redesign",
+      "reasons": [
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "UX AI interaction standards"
+}

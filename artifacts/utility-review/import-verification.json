@@ -1,0 +1,202 @@
+{
+  "result": "pass",
+  "method": "File-only independent Python verification against fictional baseline/update CSVs and previously stated expected-results.md. No app helpers, API calls, browser operations or SQLite access.",
+  "input_sha256": {
+    "import-baseline-persisted.json": "5b7039a1fc9fd2b2e2e74119a10366cc02f5f7608c16ec51b72b3835a867d394",
+    "import-after-save.json": "5ec6ab1cd8e5275433e2054f1bb43b94a64ad236e59dbd763c540a0ad30c737e",
+    "import-fixtures/baseline-people.csv": "41cc4e72763ae55eca85684f7b8627fb03b9047d71195affbe98b01623705ca9",
+    "import-fixtures/baseline-projects.csv": "f3880c6ad78102e09137254bd0ac242d6838dc27ff75d55ed5c9d44c88bf09b0",
+    "import-fixtures/update-people.csv": "71c6cae337d0c2658615c9ce97ff0f5ba7a3c625a2a561fbbb54b8e570bde6e0",
+    "import-fixtures/update-projects.csv": "4fa3bbd7920875ae0ffe2e4f02790d1384d6fc9cb62b7fd1a343a216645a29a1",
+    "import-review-unsaved.json": "5b7039a1fc9fd2b2e2e74119a10366cc02f5f7608c16ec51b72b3835a867d394",
+    "import-invalid-manager-unsaved.json": "5b7039a1fc9fd2b2e2e74119a10366cc02f5f7608c16ec51b72b3835a867d394",
+    "import-invalid-status-unsaved.json": "5b7039a1fc9fd2b2e2e74119a10366cc02f5f7608c16ec51b72b3835a867d394",
+    "imported-graph.jsonld": "cef37059f2c57c5fbeae845b7ebc400e46d35417054f94ed44b38ad321841c47",
+    "import-api-graph.jsonld": "30cbcd35c4a59c9672dcebc8ee76fd6dbad066a1e5f8f3dd9378deda98053c21"
+  },
+  "summary": {
+    "checks": 39,
+    "passed": 39,
+    "failed": 0,
+    "before": {
+      "revision": 1,
+      "people": 5,
+      "projects": 3
+    },
+    "after": {
+      "revision": 2,
+      "people": 6,
+      "projects": 4
+    },
+    "graph_nodes": 13,
+    "graph_relationships": {
+      "reportsTo": 5,
+      "ledBy": 4,
+      "contributors": 6,
+      "dependsOn": 2,
+      "supports": 4
+    }
+  },
+  "checks": [
+    {
+      "check": "Baseline revision is 1",
+      "passed": true
+    },
+    {
+      "check": "Baseline people exactly match CSV fields",
+      "passed": true
+    },
+    {
+      "check": "Baseline projects exactly match CSV fields",
+      "passed": true
+    },
+    {
+      "check": "import-review-unsaved.json exactly preserves baseline records and revision",
+      "passed": true
+    },
+    {
+      "check": "import-invalid-manager-unsaved.json exactly preserves baseline records and revision",
+      "passed": true
+    },
+    {
+      "check": "import-invalid-status-unsaved.json exactly preserves baseline records and revision",
+      "passed": true
+    },
+    {
+      "check": "Saved revision advances exactly once from 1 to 2",
+      "passed": true
+    },
+    {
+      "check": "Saved people count",
+      "passed": true
+    },
+    {
+      "check": "Saved projects count",
+      "passed": true
+    },
+    {
+      "check": "Saved people exactly match expected merge with no extra or defaulted fields",
+      "passed": true
+    },
+    {
+      "check": "Saved projects exactly match expected merge with no extra or defaulted fields",
+      "passed": true
+    },
+    {
+      "check": "Person IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "Project IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "People new record IDs",
+      "passed": true
+    },
+    {
+      "check": "People changed existing record IDs",
+      "passed": true
+    },
+    {
+      "check": "People removed record IDs",
+      "passed": true
+    },
+    {
+      "check": "Projects new record IDs",
+      "passed": true
+    },
+    {
+      "check": "Projects changed existing record IDs",
+      "passed": true
+    },
+    {
+      "check": "Projects removed record IDs",
+      "passed": true
+    },
+    {
+      "check": "Omitted person 0001 retained unchanged",
+      "passed": true
+    },
+    {
+      "check": "Omitted person 0011 retained unchanged",
+      "passed": true
+    },
+    {
+      "check": "Omitted person 0020 retained unchanged",
+      "passed": true
+    },
+    {
+      "check": "Omitted person 0021 retained unchanged",
+      "passed": true
+    },
+    {
+      "check": "Omitted project UX-002 retained unchanged",
+      "passed": true
+    },
+    {
+      "check": "Omitted project UX-003 retained unchanged",
+      "passed": true
+    },
+    {
+      "check": "Leader ID 0010 retains leading zeros and gains new name",
+      "passed": true
+    },
+    {
+      "check": "New report ID 0030 retains leading zeros and correct manager",
+      "passed": true
+    },
+    {
+      "check": "Existing project owner retains ID despite rename",
+      "passed": true
+    },
+    {
+      "check": "Downloaded UI graph exactly matches API graph",
+      "passed": true
+    },
+    {
+      "check": "Graph revision matches saved workspace",
+      "passed": true
+    },
+    {
+      "check": "Graph node count (6 people + 4 projects + 3 priorities)",
+      "passed": true
+    },
+    {
+      "check": "Graph IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "Every graph field and relationship matches independent CSV-derived expectation",
+      "passed": true
+    },
+    {
+      "check": "All reportsTo references resolve to graph IDs",
+      "passed": true
+    },
+    {
+      "check": "All ledBy references resolve to graph IDs",
+      "passed": true
+    },
+    {
+      "check": "All contributors references resolve to graph IDs",
+      "passed": true
+    },
+    {
+      "check": "All dependsOn references resolve to graph IDs",
+      "passed": true
+    },
+    {
+      "check": "All supports references resolve to graph IDs",
+      "passed": true
+    },
+    {
+      "check": "Relationship totals",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Snapshots prove state at their capture times; this file-only verification does not independently observe browser clicks, errors, mapping labels or cancel actions.",
+    "UI graph export and API graph content parity is verified; rendered map/grid/detail usability must be established from the manager browser evidence."
+  ]
+}

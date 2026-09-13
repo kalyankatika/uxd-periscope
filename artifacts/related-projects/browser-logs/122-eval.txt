@@ -1,0 +1,25 @@
+{
+  "connections": [
+    {
+      "name": "Nina Patel",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Noah Bennett",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Leo Martinez",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Client financial planning",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "Accessible component library",
+      "reason": "Depends on"
+    }
+  ],
+  "title": "Mobile portfolio overview"
+}

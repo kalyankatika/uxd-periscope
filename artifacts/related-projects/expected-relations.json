@@ -1,0 +1,872 @@
+{
+  "opening": {
+    "name": "Account opening redesign",
+    "related": [
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Needed by this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "advisor",
+        "name": "Advisor workspace",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile portfolio overview",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "experience-strategy",
+        "name": "UXD product design strategy",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-standards",
+        "name": "UX AI interaction standards",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 8,
+    "dependsOn": [
+      "components"
+    ],
+    "neededBy": []
+  },
+  "advisor": {
+    "name": "Advisor workspace",
+    "related": [
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "insights",
+        "name": "Research repository",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "experience-strategy",
+        "name": "UXD product design strategy",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-standards",
+        "name": "UX AI interaction standards",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 6,
+    "dependsOn": [],
+    "neededBy": []
+  },
+  "retirement": {
+    "name": "Retirement guidance",
+    "related": [
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "insights",
+        "name": "Research repository",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile portfolio overview",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "experience-strategy",
+        "name": "UXD product design strategy",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-research",
+        "name": "AI-assisted research synthesis",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 8,
+    "dependsOn": [],
+    "neededBy": []
+  },
+  "components": {
+    "name": "Accessible component library",
+    "related": [
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Depends on this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile portfolio overview",
+        "reasons": [
+          "Depends on this project"
+        ],
+        "direct": true
+      },
+      {
+        "id": "ai-standards",
+        "name": "UX AI interaction standards",
+        "reasons": [
+          "Depends on this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "advisor",
+        "name": "Advisor workspace",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "insights",
+        "name": "Research repository",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-research",
+        "name": "AI-assisted research synthesis",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 8,
+    "dependsOn": [],
+    "neededBy": [
+      "opening",
+      "mobile",
+      "ai-standards"
+    ]
+  },
+  "insights": {
+    "name": "Research repository",
+    "related": [
+      {
+        "id": "ai-research",
+        "name": "AI-assisted research synthesis",
+        "reasons": [
+          "Depends on this project",
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "advisor",
+        "name": "Advisor workspace",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 6,
+    "dependsOn": [],
+    "neededBy": [
+      "ai-research"
+    ]
+  },
+  "mobile": {
+    "name": "Mobile portfolio overview",
+    "related": [
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Needed by this project"
+        ],
+        "direct": true
+      },
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "innovation-lab",
+        "name": "Service concept pilots",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 7,
+    "dependsOn": [
+      "components"
+    ],
+    "neededBy": []
+  },
+  "statements": {
+    "name": "Statement content redesign",
+    "related": [
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "advisor",
+        "name": "Advisor workspace",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile portfolio overview",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "experience-strategy",
+        "name": "UXD product design strategy",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-standards",
+        "name": "UX AI interaction standards",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 8,
+    "dependsOn": [],
+    "neededBy": []
+  },
+  "coaching": {
+    "name": "Planning assistant discovery",
+    "related": [
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "insights",
+        "name": "Research repository",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile portfolio overview",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "innovation-lab",
+        "name": "Service concept pilots",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-research",
+        "name": "AI-assisted research synthesis",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 8,
+    "dependsOn": [],
+    "neededBy": []
+  },
+  "experience-strategy": {
+    "name": "UXD product design strategy",
+    "related": [
+      {
+        "id": "innovation-lab",
+        "name": "Service concept pilots",
+        "reasons": [
+          "Depends on this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "advisor",
+        "name": "Advisor workspace",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-research",
+        "name": "AI-assisted research synthesis",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 6,
+    "dependsOn": [],
+    "neededBy": [
+      "innovation-lab"
+    ]
+  },
+  "innovation-lab": {
+    "name": "Service concept pilots",
+    "related": [
+      {
+        "id": "experience-strategy",
+        "name": "UXD product design strategy",
+        "reasons": [
+          "Needed by this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile portfolio overview",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 4,
+    "dependsOn": [
+      "experience-strategy"
+    ],
+    "neededBy": []
+  },
+  "conversational-prototype": {
+    "name": "Conversational planning prototype",
+    "related": [
+      {
+        "id": "ai-standards",
+        "name": "UX AI interaction standards",
+        "reasons": [
+          "Needed by this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "insights",
+        "name": "Research repository",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile portfolio overview",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "innovation-lab",
+        "name": "Service concept pilots",
+        "reasons": [
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "ai-research",
+        "name": "AI-assisted research synthesis",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 8,
+    "dependsOn": [
+      "ai-standards"
+    ],
+    "neededBy": []
+  },
+  "ai-standards": {
+    "name": "UX AI interaction standards",
+    "related": [
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Needed by this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Depends on this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "ai-research",
+        "name": "AI-assisted research synthesis",
+        "reasons": [
+          "Depends on this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "opening",
+        "name": "Account opening redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "advisor",
+        "name": "Advisor workspace",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "statements",
+        "name": "Statement content redesign",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 6,
+    "dependsOn": [
+      "components"
+    ],
+    "neededBy": [
+      "conversational-prototype",
+      "ai-research"
+    ]
+  },
+  "ai-research": {
+    "name": "AI-assisted research synthesis",
+    "related": [
+      {
+        "id": "insights",
+        "name": "Research repository",
+        "reasons": [
+          "Needed by this project",
+          "Same business priority",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "ai-standards",
+        "name": "UX AI interaction standards",
+        "reasons": [
+          "Needed by this project",
+          "Shared people"
+        ],
+        "direct": true
+      },
+      {
+        "id": "retirement",
+        "name": "Retirement guidance",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "components",
+        "name": "Accessible component library",
+        "reasons": [
+          "Same business priority"
+        ],
+        "direct": false
+      },
+      {
+        "id": "coaching",
+        "name": "Planning assistant discovery",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "experience-strategy",
+        "name": "UXD product design strategy",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      },
+      {
+        "id": "conversational-prototype",
+        "name": "Conversational planning prototype",
+        "reasons": [
+          "Shared people"
+        ],
+        "direct": false
+      }
+    ],
+    "count": 7,
+    "dependsOn": [
+      "insights",
+      "ai-standards"
+    ],
+    "neededBy": []
+  }
+}

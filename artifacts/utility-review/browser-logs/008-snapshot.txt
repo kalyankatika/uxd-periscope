@@ -1,0 +1,223 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "⌘ Work map" [ref=e6]
+      - StaticText "⌘"
+      - StaticText "Work map"
+    - button "◫ Overview" [ref=e7]
+      - StaticText "◫"
+      - StaticText "Overview"
+    - button "♧ Teams & reporting" [ref=e8]
+      - StaticText "♧"
+      - StaticText "Teams & reporting"
+    - button "▦ Projects" [ref=e9]
+      - StaticText "▦"
+      - StaticText "Projects"
+    - button "◷ Capacity" [ref=e10]
+      - StaticText "◷"
+      - StaticText "Capacity"
+    - button "☷ Project plan" [ref=e11]
+      - StaticText "☷"
+      - StaticText "Project plan"
+    - button "⚙ People & imports" [ref=e12]
+      - StaticText "⚙"
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 26 people"
+  - StaticText "Example data · Session only"
+- main
+  - StaticText "Example data · Fictional organization · Changes are temporary"
+  - button "Open workspace" [ref=e3]
+  - heading "Overview" [level=1, ref=e4]
+  - paragraph
+    - StaticText "Project status, top priorities, and items requiring attention."
+  - button "＋ Add project" [ref=e5]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e34]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e35]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e22]
+  - generic "Leadership snapshot"
+    - strong
+      - StaticText "13"
+    - StaticText "projects in view"
+    - strong
+      - StaticText "11"
+    - StaticText "in progress"
+    - button "5 need attention " [ref=e13]
+      - strong
+        - StaticText "5"
+      - StaticText "need attention "
+    - strong
+      - StaticText "7"
+    - StaticText "leadership teams"
+  - generic
+    - paragraph
+      - StaticText "PRIORITIES"
+    - heading "Top-priority projects" [level=2, ref=e14]
+    - button "View top-priority projects →" [ref=e15]
+    - article
+      - StaticText "01"
+      - StaticText "Product experience alignment"
+      - button "UXD product design strategy" [ref=e23]
+      - paragraph
+        - StaticText "Define shared experience principles and a prioritized roadmap across onboarding, advice, and retirement products."
+      - StaticText "TW"
+      - StaticText "Tessa Wu"
+      - StaticText "On track"
+    - article
+      - StaticText "02"
+      - StaticText "Responsible AI experiences"
+      - button "UX AI interaction standards" [ref=e24]
+      - paragraph
+        - StaticText "Define reusable interaction patterns for AI disclosures, source references, user feedback, and error recovery."
+      - StaticText "AP"
+      - StaticText "Aisha Patel"
+      - StaticText "On track"
+    - article
+      - StaticText "03"
+      - StaticText "Client onboarding"
+      - button "Account opening redesign" [ref=e25]
+      - paragraph
+        - StaticText "Help new clients open an account without getting stuck or starting over."
+      - StaticText "MC"
+      - StaticText "Maya Chen"
+      - StaticText "Decision required"
+    - article
+      - StaticText "04"
+      - StaticText "Advisor productivity"
+      - button "Advisor workspace" [ref=e26]
+      - paragraph
+        - StaticText "Bring the right client information into one place before every advisor meeting."
+      - StaticText "JE"
+      - StaticText "Jordan Ellis"
+      - StaticText "On track"
+  - complementary
+    - paragraph
+      - StaticText "PROJECT HEALTH"
+    - heading "Items requiring attention" [level=2, ref=e16]
+    - StaticText "5"
+    - button "Decision required Account opening redesign Decide whether the new identity check belongs in this release or the next one. View project →" [ref=e17]
+      - StaticText "Decision required"
+      - strong
+        - StaticText "Account opening redesign"
+      - paragraph
+        - StaticText "Decide whether the new identity check belongs in this release or the next one."
+      - StaticText "View project →"
+    - button "At risk Retirement guidance Participant recruitment is slower than expected. The research lead is adjusting the interview plan. View project →" [ref=e18]
+      - StaticText "At risk"
+      - strong
+        - StaticText "Retirement guidance"
+      - paragraph
+        - StaticText "Participant recruitment is slower than expected. The research lead is adjusting the interview plan."
+      - StaticText "View project →"
+    - button "At risk Mobile portfolio overview The design is progressing, but delivery depends on shared chart and accessibility components. View project →" [ref=e19]
+      - StaticText "At risk"
+      - strong
+        - StaticText "Mobile portfolio overview"
+      - paragraph
+        - StaticText "The design is progressing, but delivery depends on shared chart and accessibility components."
+      - StaticText "View project →"
+  - generic
+    - paragraph
+      - StaticText "ORGANIZATION"
+    - heading "Teams" [level=2, ref=e20]
+    - paragraph
+      - StaticText "Select a leader to see their team’s projects, including work led by their reports."
+    - button "View reporting structure →" [ref=e21]
+    - article
+      - StaticText "EB"
+      - StaticText "3"
+      - StaticText " people in team"
+      - button "Elena Brooks" [ref=e27]
+      - paragraph
+        - StaticText "Product Design"
+      - StaticText "Client onboarding · Advisor productivity"
+      - strong
+        - StaticText "9"
+      - StaticText " projects"
+      - StaticText "3 to review"
+    - article
+      - StaticText "MR"
+      - StaticText "3"
+      - StaticText " people in team"
+      - button "Marcus Reed" [ref=e28]
+      - paragraph
+        - StaticText "Research & insights"
+      - StaticText "Client onboarding · Advisor productivity"
+      - strong
+        - StaticText "8"
+      - StaticText " projects"
+      - StaticText "4 to review"
+    - article
+      - StaticText "PS"
+      - StaticText "3"
+      - StaticText " people in team"
+      - button "Priya Shah" [ref=e29]
+      - paragraph
+        - StaticText "Content design"
+      - StaticText "Client onboarding · Advisor productivity"
+      - strong
+        - StaticText "8"
+      - StaticText " projects"
+      - StaticText "4 to review"
+    - article
+      - StaticText "DK"
+      - StaticText "3"
+      - StaticText " people in team"
+      - button "Daniel Kim" [ref=e30]
+      - paragraph
+        - StaticText "Design systems"
+      - StaticText "Client onboarding · Responsible AI experiences"
+      - strong
+        - StaticText "5"
+      - StaticText " projects"
+      - StaticText "2 to review"
+    - article
+      - StaticText "SA"
+      - StaticText "2"
+      - StaticText " people in team"
+      - button "Sana Ahmed" [ref=e31]
+      - paragraph
+        - StaticText "Design Strategy"
+      - StaticText "Product experience alignment"
+      - strong
+        - StaticText "3"
+      - StaticText " projects"
+      - StaticText "1 to review"
+    - article
+      - StaticText "VA"
+      - StaticText "2"
+      - StaticText " people in team"
+      - button "Victor Alvarez" [ref=e32]
+      - paragraph
+        - StaticText "Innovation"
+      - StaticText "No top priority assigned"
+      - strong
+        - StaticText "2"
+      - StaticText " projects"
+      - StaticText "1 to review"
+    - article
+      - StaticText "RT"
+      - StaticText "2"
+      - StaticText " people in team"
+      - button "Riley Thompson" [ref=e33]
+      - paragraph
+        - StaticText "UX AI"
+      - StaticText "Responsible AI experiences"
+      - strong
+        - StaticText "3"
+      - StaticText " projects"
+      - StaticText "2 to review"
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

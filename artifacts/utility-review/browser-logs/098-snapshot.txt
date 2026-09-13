@@ -1,0 +1,453 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "⌘ Work map" [ref=e9]
+      - StaticText "⌘"
+      - StaticText "Work map"
+    - button "◫ Overview" [ref=e10]
+      - StaticText "◫"
+      - StaticText "Overview"
+    - button "♧ Teams & reporting" [ref=e11]
+      - StaticText "♧"
+      - StaticText "Teams & reporting"
+    - button "▦ Projects" [ref=e12]
+      - StaticText "▦"
+      - StaticText "Projects"
+    - button "◷ Capacity" [ref=e13]
+      - StaticText "◷"
+      - StaticText "Capacity"
+    - button "☷ Project plan" [ref=e14]
+      - StaticText "☷"
+      - StaticText "Project plan"
+    - button "⚙ People & imports" [ref=e15]
+      - StaticText "⚙"
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 26 people"
+  - StaticText "Example data · Session only"
+- main
+  - StaticText "Example data · Fictional organization · Changes are temporary"
+  - button "Open workspace" [ref=e3]
+  - heading "Capacity" [level=1, ref=e4]
+  - paragraph
+    - StaticText "Weekly project demand and available team capacity."
+  - button "↓ Export review" [ref=e5]
+  - button "＋ Add project" [ref=e6]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e20]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e21]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e19]
+  - LabelText
+    - checkbox "Include proposed What-if scenario" [checked=false, ref=e16]
+    - StaticText "Include proposed"
+    - StaticText "What-if scenario"
+  - region "Quarter summary" [ref=e7]
+    - article
+      - paragraph
+        - StaticText "Available capacity"
+      - strong
+        - StaticText "15.53 FTE / week"
+      - StaticText "After non-project commitments"
+    - article
+      - paragraph
+        - StaticText "Committed projects"
+      - strong
+        - StaticText "12"
+      - StaticText "1 proposed · 0 in backlog"
+    - article
+      - paragraph
+        - StaticText "Weeks above capacity"
+      - strong
+        - StaticText "07 of 14"
+      - StaticText "3 disciplines over capacity"
+  - generic
+    - heading "Allocation by discipline" [level=2, ref=e17]
+    - paragraph
+      - StaticText "Weekly demand as a share of available capacity"
+    - StaticText "≤80%"
+    - StaticText "81–100%"
+    - StaticText ">100%"
+    - table
+      - rowgroup
+        - row
+          - columnheader "DISCIPLINE / AVAILABLE" [ref=e147]
+          - columnheader "Sep 28" [ref=e148]
+          - columnheader "Oct 5" [ref=e149]
+          - columnheader "Oct 12" [ref=e150]
+          - columnheader "Oct 19" [ref=e151]
+          - columnheader "Oct 26" [ref=e152]
+          - columnheader "Nov 2" [ref=e153]
+          - columnheader "Nov 9" [ref=e154]
+          - columnheader "Nov 16" [ref=e155]
+          - columnheader "Nov 23" [ref=e156]
+          - columnheader "Nov 30" [ref=e157]
+          - columnheader "Dec 7" [ref=e158]
+          - columnheader "Dec 14" [ref=e159]
+          - columnheader "Dec 21" [ref=e160]
+          - columnheader "Dec 28" [ref=e161]
+      - row
+        - rowheader "Design 6.25 FTE / week" [ref=e22]
+          - StaticText "Design"
+          - generic
+            - StaticText "6.25 FTE / week"
+        - cell "Design, week of Sep 28: 17%, 1.08 allocated of 6.25 FTE" [ref=e23]
+          - generic "Design, week of Sep 28: 17%, 1.08 allocated of 6.25 FTE" [ref=e162] focusable [tabindex]
+            - StaticText "17%"
+        - cell "Design, week of Oct 5: 53%, 3.3 allocated of 6.25 FTE" [ref=e24]
+          - generic "Design, week of Oct 5: 53%, 3.3 allocated of 6.25 FTE" [ref=e163] focusable [tabindex]
+            - StaticText "53%"
+        - cell "Design, week of Oct 12: 64%, 4.0 allocated of 6.25 FTE" [ref=e25]
+          - generic "Design, week of Oct 12: 64%, 4.0 allocated of 6.25 FTE" [ref=e164] focusable [tabindex]
+            - StaticText "64%"
+        - cell "Design, week of Oct 19: 75%, 4.7 allocated of 6.25 FTE" [ref=e26]
+          - generic "Design, week of Oct 19: 75%, 4.7 allocated of 6.25 FTE" [ref=e165] focusable [tabindex]
+            - StaticText "75%"
+        - cell "Design, week of Oct 26: 80%, 5.0 allocated of 6.25 FTE" [ref=e27]
+          - generic "Design, week of Oct 26: 80%, 5.0 allocated of 6.25 FTE" [ref=e166] focusable [tabindex]
+            - StaticText "80%"
+        - cell "Design, week of Nov 2: 83%, 5.2 allocated of 6.25 FTE" [ref=e28]
+          - generic "Design, week of Nov 2: 83%, 5.2 allocated of 6.25 FTE" [ref=e167] focusable [tabindex]
+            - StaticText "83%"
+        - cell "Design, week of Nov 9: 75%, 4.7 allocated of 6.25 FTE" [ref=e29]
+          - generic "Design, week of Nov 9: 75%, 4.7 allocated of 6.25 FTE" [ref=e168] focusable [tabindex]
+            - StaticText "75%"
+        - cell "Design, week of Nov 16: 69%, 4.3 allocated of 6.25 FTE" [ref=e30]
+          - generic "Design, week of Nov 16: 69%, 4.3 allocated of 6.25 FTE" [ref=e169] focusable [tabindex]
+            - StaticText "69%"
+        - cell "Design, week of Nov 23: 53%, 3.3 allocated of 6.25 FTE" [ref=e31]
+          - generic "Design, week of Nov 23: 53%, 3.3 allocated of 6.25 FTE" [ref=e170] focusable [tabindex]
+            - StaticText "53%"
+        - cell "Design, week of Nov 30: 50%, 3.1 allocated of 6.25 FTE" [ref=e32]
+          - generic "Design, week of Nov 30: 50%, 3.1 allocated of 6.25 FTE" [ref=e171] focusable [tabindex]
+            - StaticText "50%"
+        - cell "Design, week of Dec 7: 37%, 2.3 allocated of 6.25 FTE" [ref=e33]
+          - generic "Design, week of Dec 7: 37%, 2.3 allocated of 6.25 FTE" [ref=e172] focusable [tabindex]
+            - StaticText "37%"
+        - cell "Design, week of Dec 14: 24%, 1.5 allocated of 6.25 FTE" [ref=e34]
+          - generic "Design, week of Dec 14: 24%, 1.5 allocated of 6.25 FTE" [ref=e173] focusable [tabindex]
+            - StaticText "24%"
+        - cell "Design, week of Dec 21: 0%, 0.0 allocated of 6.25 FTE" [ref=e35]
+          - generic "Design, week of Dec 21: 0%, 0.0 allocated of 6.25 FTE" [ref=e174] focusable [tabindex]
+            - StaticText "0%"
+        - cell "Design, week of Dec 28: 0%, 0.0 allocated of 6.25 FTE" [ref=e36]
+          - generic "Design, week of Dec 28: 0%, 0.0 allocated of 6.25 FTE" [ref=e175] focusable [tabindex]
+            - StaticText "0%"
+      - row
+        - rowheader "Research 2.39 FTE / week" [ref=e37]
+          - StaticText "Research"
+          - generic
+            - StaticText "2.39 FTE / week"
+        - cell "Research, week of Sep 28: 20%, 0.48 allocated of 2.39 FTE" [ref=e38]
+          - generic "Research, week of Sep 28: 20%, 0.48 allocated of 2.39 FTE" [ref=e176] focusable [tabindex]
+            - StaticText "20%"
+        - cell "Research, week of Oct 5: 75%, 1.8 allocated of 2.39 FTE" [ref=e39]
+          - generic "Research, week of Oct 5: 75%, 1.8 allocated of 2.39 FTE" [ref=e177] focusable [tabindex]
+            - StaticText "75%"
+        - cell "Research, week of Oct 12: 105%, 2.5 allocated of 2.39 FTE, over capacity" [ref=e40]
+          - generic "Research, week of Oct 12: 105%, 2.5 allocated of 2.39 FTE, over capacity" [ref=e178] focusable [tabindex]
+            - StaticText "105%"
+        - cell "Research, week of Oct 19: 113%, 2.7 allocated of 2.39 FTE, over capacity" [ref=e41]
+          - generic "Research, week of Oct 19: 113%, 2.7 allocated of 2.39 FTE, over capacity" [ref=e179] focusable [tabindex]
+            - StaticText "113%"
+        - cell "Research, week of Oct 26: 121%, 2.9 allocated of 2.39 FTE, over capacity" [ref=e42]
+          - generic "Research, week of Oct 26: 121%, 2.9 allocated of 2.39 FTE, over capacity" [ref=e180] focusable [tabindex]
+            - StaticText "121%"
+        - cell "Research, week of Nov 2: 138%, 3.3 allocated of 2.39 FTE, over capacity" [ref=e43]
+          - generic "Research, week of Nov 2: 138%, 3.3 allocated of 2.39 FTE, over capacity" [ref=e181] focusable [tabindex]
+            - StaticText "138%"
+        - cell "Research, week of Nov 9: 130%, 3.1 allocated of 2.39 FTE, over capacity" [ref=e44]
+          - generic "Research, week of Nov 9: 130%, 3.1 allocated of 2.39 FTE, over capacity" [ref=e182] focusable [tabindex]
+            - StaticText "130%"
+        - cell "Research, week of Nov 16: 126%, 3.0 allocated of 2.39 FTE, over capacity" [ref=e45]
+          - generic "Research, week of Nov 16: 126%, 3.0 allocated of 2.39 FTE, over capacity" [ref=e183] focusable [tabindex]
+            - StaticText "126%"
+        - cell "Research, week of Nov 23: 105%, 2.5 allocated of 2.39 FTE, over capacity" [ref=e46]
+          - generic "Research, week of Nov 23: 105%, 2.5 allocated of 2.39 FTE, over capacity" [ref=e184] focusable [tabindex]
+            - StaticText "105%"
+        - cell "Research, week of Nov 30: 84%, 2.0 allocated of 2.39 FTE" [ref=e47]
+          - generic "Research, week of Nov 30: 84%, 2.0 allocated of 2.39 FTE" [ref=e185] focusable [tabindex]
+            - StaticText "84%"
+        - cell "Research, week of Dec 7: 67%, 1.6 allocated of 2.39 FTE" [ref=e48]
+          - generic "Research, week of Dec 7: 67%, 1.6 allocated of 2.39 FTE" [ref=e186] focusable [tabindex]
+            - StaticText "67%"
+        - cell "Research, week of Dec 14: 38%, 0.9 allocated of 2.39 FTE" [ref=e49]
+          - generic "Research, week of Dec 14: 38%, 0.9 allocated of 2.39 FTE" [ref=e187] focusable [tabindex]
+            - StaticText "38%"
+        - cell "Research, week of Dec 21: 0%, 0.0 allocated of 2.39 FTE" [ref=e50]
+          - generic "Research, week of Dec 21: 0%, 0.0 allocated of 2.39 FTE" [ref=e188] focusable [tabindex]
+            - StaticText "0%"
+        - cell "Research, week of Dec 28: 0%, 0.0 allocated of 2.39 FTE" [ref=e51]
+          - generic "Research, week of Dec 28: 0%, 0.0 allocated of 2.39 FTE" [ref=e189] focusable [tabindex]
+            - StaticText "0%"
+      - row
+        - rowheader "Content 2.44 FTE / week" [ref=e52]
+          - StaticText "Content"
+          - generic
+            - StaticText "2.44 FTE / week"
+        - cell "Content, week of Sep 28: 25%, 0.6 allocated of 2.44 FTE" [ref=e53]
+          - generic "Content, week of Sep 28: 25%, 0.6 allocated of 2.44 FTE" [ref=e190] focusable [tabindex]
+            - StaticText "25%"
+        - cell "Content, week of Oct 5: 78%, 1.9 allocated of 2.44 FTE" [ref=e54]
+          - generic "Content, week of Oct 5: 78%, 1.9 allocated of 2.44 FTE" [ref=e191] focusable [tabindex]
+            - StaticText "78%"
+        - cell "Content, week of Oct 12: 86%, 2.1 allocated of 2.44 FTE" [ref=e55]
+          - generic "Content, week of Oct 12: 86%, 2.1 allocated of 2.44 FTE" [ref=e192] focusable [tabindex]
+            - StaticText "86%"
+        - cell "Content, week of Oct 19: 94%, 2.3 allocated of 2.44 FTE" [ref=e56]
+          - generic "Content, week of Oct 19: 94%, 2.3 allocated of 2.44 FTE" [ref=e193] focusable [tabindex]
+            - StaticText "94%"
+        - cell "Content, week of Oct 26: 102%, 2.5 allocated of 2.44 FTE, over capacity" [ref=e57]
+          - generic "Content, week of Oct 26: 102%, 2.5 allocated of 2.44 FTE, over capacity" [ref=e194] focusable [tabindex]
+            - StaticText "102%"
+        - cell "Content, week of Nov 2: 107%, 2.6 allocated of 2.44 FTE, over capacity" [ref=e58]
+          - generic "Content, week of Nov 2: 107%, 2.6 allocated of 2.44 FTE, over capacity" [ref=e195] focusable [tabindex]
+            - StaticText "107%"
+        - cell "Content, week of Nov 9: 102%, 2.5 allocated of 2.44 FTE, over capacity" [ref=e59]
+          - generic "Content, week of Nov 9: 102%, 2.5 allocated of 2.44 FTE, over capacity" [ref=e196] focusable [tabindex]
+            - StaticText "102%"
+        - cell "Content, week of Nov 16: 90%, 2.2 allocated of 2.44 FTE" [ref=e60]
+          - generic "Content, week of Nov 16: 90%, 2.2 allocated of 2.44 FTE" [ref=e197] focusable [tabindex]
+            - StaticText "90%"
+        - cell "Content, week of Nov 23: 74%, 1.8 allocated of 2.44 FTE" [ref=e61]
+          - generic "Content, week of Nov 23: 74%, 1.8 allocated of 2.44 FTE" [ref=e198] focusable [tabindex]
+            - StaticText "74%"
+        - cell "Content, week of Nov 30: 70%, 1.7 allocated of 2.44 FTE" [ref=e62]
+          - generic "Content, week of Nov 30: 70%, 1.7 allocated of 2.44 FTE" [ref=e199] focusable [tabindex]
+            - StaticText "70%"
+        - cell "Content, week of Dec 7: 57%, 1.4 allocated of 2.44 FTE" [ref=e63]
+          - generic "Content, week of Dec 7: 57%, 1.4 allocated of 2.44 FTE" [ref=e200] focusable [tabindex]
+            - StaticText "57%"
+        - cell "Content, week of Dec 14: 29%, 0.7 allocated of 2.44 FTE" [ref=e64]
+          - generic "Content, week of Dec 14: 29%, 0.7 allocated of 2.44 FTE" [ref=e201] focusable [tabindex]
+            - StaticText "29%"
+        - cell "Content, week of Dec 21: 0%, 0.0 allocated of 2.44 FTE" [ref=e65]
+          - generic "Content, week of Dec 21: 0%, 0.0 allocated of 2.44 FTE" [ref=e202] focusable [tabindex]
+            - StaticText "0%"
+        - cell "Content, week of Dec 28: 0%, 0.0 allocated of 2.44 FTE" [ref=e66]
+          - generic "Content, week of Dec 28: 0%, 0.0 allocated of 2.44 FTE" [ref=e203] focusable [tabindex]
+            - StaticText "0%"
+      - row
+        - rowheader "Design engineering 4.45 FTE / week" [ref=e67]
+          - StaticText "Design engineering"
+          - generic
+            - StaticText "4.45 FTE / week"
+        - cell "Design engineering, week of Sep 28: 16%, 0.72 allocated of 4.45 FTE" [ref=e68]
+          - generic "Design engineering, week of Sep 28: 16%, 0.72 allocated of 4.45 FTE" [ref=e204] focusable [tabindex]
+            - StaticText "16%"
+        - cell "Design engineering, week of Oct 5: 54%, 2.4 allocated of 4.45 FTE" [ref=e69]
+          - generic "Design engineering, week of Oct 5: 54%, 2.4 allocated of 4.45 FTE" [ref=e205] focusable [tabindex]
+            - StaticText "54%"
+        - cell "Design engineering, week of Oct 12: 65%, 2.9 allocated of 4.45 FTE" [ref=e70]
+          - generic "Design engineering, week of Oct 12: 65%, 2.9 allocated of 4.45 FTE" [ref=e206] focusable [tabindex]
+            - StaticText "65%"
+        - cell "Design engineering, week of Oct 19: 79%, 3.5 allocated of 4.45 FTE" [ref=e71]
+          - generic "Design engineering, week of Oct 19: 79%, 3.5 allocated of 4.45 FTE" [ref=e207] focusable [tabindex]
+            - StaticText "79%"
+        - cell "Design engineering, week of Oct 26: 92%, 4.1 allocated of 4.45 FTE" [ref=e72]
+          - generic "Design engineering, week of Oct 26: 92%, 4.1 allocated of 4.45 FTE" [ref=e208] focusable [tabindex]
+            - StaticText "92%"
+        - cell "Design engineering, week of Nov 2: 108%, 4.8 allocated of 4.45 FTE, over capacity" [ref=e73]
+          - generic "Design engineering, week of Nov 2: 108%, 4.8 allocated of 4.45 FTE, over capacity" [ref=e209] focusable [tabindex]
+            - StaticText "108%"
+        - cell "Design engineering, week of Nov 9: 108%, 4.8 allocated of 4.45 FTE, over capacity" [ref=e74]
+          - generic "Design engineering, week of Nov 9: 108%, 4.8 allocated of 4.45 FTE, over capacity" [ref=e210] focusable [tabindex]
+            - StaticText "108%"
+        - cell "Design engineering, week of Nov 16: 99%, 4.4 allocated of 4.45 FTE" [ref=e75]
+          - generic "Design engineering, week of Nov 16: 99%, 4.4 allocated of 4.45 FTE" [ref=e211] focusable [tabindex]
+            - StaticText "99%"
+        - cell "Design engineering, week of Nov 23: 88%, 3.9 allocated of 4.45 FTE" [ref=e76]
+          - generic "Design engineering, week of Nov 23: 88%, 3.9 allocated of 4.45 FTE" [ref=e212] focusable [tabindex]
+            - StaticText "88%"
+        - cell "Design engineering, week of Nov 30: 83%, 3.7 allocated of 4.45 FTE" [ref=e77]
+          - generic "Design engineering, week of Nov 30: 83%, 3.7 allocated of 4.45 FTE" [ref=e213] focusable [tabindex]
+            - StaticText "83%"
+        - cell "Design engineering, week of Dec 7: 76%, 3.4 allocated of 4.45 FTE" [ref=e78]
+          - generic "Design engineering, week of Dec 7: 76%, 3.4 allocated of 4.45 FTE" [ref=e214] focusable [tabindex]
+            - StaticText "76%"
+        - cell "Design engineering, week of Dec 14: 65%, 2.9 allocated of 4.45 FTE" [ref=e79]
+          - generic "Design engineering, week of Dec 14: 65%, 2.9 allocated of 4.45 FTE" [ref=e215] focusable [tabindex]
+            - StaticText "65%"
+        - cell "Design engineering, week of Dec 21: 0%, 0.0 allocated of 4.45 FTE" [ref=e80]
+          - generic "Design engineering, week of Dec 21: 0%, 0.0 allocated of 4.45 FTE" [ref=e216] focusable [tabindex]
+            - StaticText "0%"
+        - cell "Design engineering, week of Dec 28: 0%, 0.0 allocated of 4.45 FTE" [ref=e81]
+          - generic "Design engineering, week of Dec 28: 0%, 0.0 allocated of 4.45 FTE" [ref=e217] focusable [tabindex]
+            - StaticText "0%"
+    - generic
+      - StaticText "Showing committed projects only. Backlog projects are excluded. Partial weeks use working days."
+  - StaticText "!"
+  - strong
+    - StaticText "Research reaches 138% of capacity"
+  - paragraph
+    - StaticText "Peak week: Nov 2. Reduce effort, move dates, or add capacity before taking on more work."
+  - button "View project plan →" [ref=e8]
+  - generic
+    - heading "Projects this quarter 13" [level=2, ref=e18]
+      - StaticText "Projects this quarter13"
+    - paragraph
+      - StaticText "Select a project to view its allocation."
+    - table
+      - rowgroup
+        - row
+          - columnheader "Project" [ref=e218]
+          - columnheader "Status" [ref=e219]
+          - columnheader "Dates" [ref=e220]
+          - columnheader "Weekly effort" [ref=e221]
+          - columnheader "Actions" [ref=e222]
+            - StaticText "Actions"
+      - row
+        - cell "Account opening redesign" [ref=e82]
+          - button "Account opening redesign" [ref=e223]
+        - cell "Committed" [ref=e83]
+        - cell "Oct 1 — Nov 20" [ref=e84]
+          - StaticText "Oct 1 — Nov 20"
+        - cell "2.4 FTE" [ref=e85]
+          - StaticText "2.4 FTE"
+        - cell "Edit Account opening redesign" [ref=e86]
+          - button "Edit Account opening redesign" [ref=e224]
+            - StaticText "↗"
+      - row
+        - cell "Advisor workspace" [ref=e87]
+          - button "Advisor workspace" [ref=e225]
+        - cell "Committed" [ref=e88]
+        - cell "Oct 1 — Dec 4" [ref=e89]
+          - StaticText "Oct 1 — Dec 4"
+        - cell "1.8 FTE" [ref=e90]
+          - StaticText "1.8 FTE"
+        - cell "Edit Advisor workspace" [ref=e91]
+          - button "Edit Advisor workspace" [ref=e226]
+            - StaticText "↗"
+      - row
+        - cell "Retirement guidance" [ref=e92]
+          - button "Retirement guidance" [ref=e227]
+        - cell "Committed" [ref=e93]
+        - cell "Oct 12 — Dec 11" [ref=e94]
+          - StaticText "Oct 12 — Dec 11"
+        - cell "1.5 FTE" [ref=e95]
+          - StaticText "1.5 FTE"
+        - cell "Edit Retirement guidance" [ref=e96]
+          - button "Edit Retirement guidance" [ref=e228]
+            - StaticText "↗"
+      - row
+        - cell "Accessible component library" [ref=e97]
+          - button "Accessible component library" [ref=e229]
+        - cell "Committed" [ref=e98]
+        - cell "Oct 1 — Dec 18" [ref=e99]
+          - StaticText "Oct 1 — Dec 18"
+        - cell "1.6 FTE" [ref=e100]
+          - StaticText "1.6 FTE"
+        - cell "Edit Accessible component library" [ref=e101]
+          - button "Edit Accessible component library" [ref=e230]
+            - StaticText "↗"
+      - row
+        - cell "Research repository" [ref=e102]
+          - button "Research repository" [ref=e231]
+        - cell "Committed" [ref=e103]
+        - cell "Oct 5 — Nov 27" [ref=e104]
+          - StaticText "Oct 5 — Nov 27"
+        - cell "1.0 FTE" [ref=e105]
+          - StaticText "1.0 FTE"
+        - cell "Edit Research repository" [ref=e106]
+          - button "Edit Research repository" [ref=e232]
+            - StaticText "↗"
+      - row
+        - cell "Mobile portfolio overview" [ref=e107]
+          - button "Mobile portfolio overview" [ref=e233]
+        - cell "Committed" [ref=e108]
+        - cell "Oct 19 — Dec 18" [ref=e109]
+          - StaticText "Oct 19 — Dec 18"
+        - cell "1.7 FTE" [ref=e110]
+          - StaticText "1.7 FTE"
+        - cell "Edit Mobile portfolio overview" [ref=e111]
+          - button "Edit Mobile portfolio overview" [ref=e234]
+            - StaticText "↗"
+      - row
+        - cell "Statement content redesign" [ref=e112]
+          - button "Statement content redesign" [ref=e235]
+        - cell "Committed" [ref=e113]
+        - cell "Oct 1 — Oct 9" [ref=e114]
+          - StaticText "Oct 1 — Oct 9"
+        - cell "0.6 FTE" [ref=e115]
+          - StaticText "0.6 FTE"
+        - cell "Edit Statement content redesign" [ref=e116]
+          - button "Edit Statement content redesign" [ref=e236]
+            - StaticText "↗"
+      - row
+        - cell "Planning assistant discovery" [ref=e117]
+          - button "Planning assistant discovery" [ref=e237]
+        - cell "Proposed" [ref=e118]
+        - cell "Nov 16 — Dec 31" [ref=e119]
+          - StaticText "Nov 16 — Dec 31"
+        - cell "1.3 FTE" [ref=e120]
+          - StaticText "1.3 FTE"
+        - cell "Edit Planning assistant discovery" [ref=e121]
+          - button "Edit Planning assistant discovery" [ref=e238]
+            - StaticText "↗"
+      - row
+        - cell "UXD product design strategy" [ref=e122]
+          - button "UXD product design strategy" [ref=e239]
+        - cell "Committed" [ref=e123]
+        - cell "Oct 1 — Nov 6" [ref=e124]
+          - StaticText "Oct 1 — Nov 6"
+        - cell "0.8 FTE" [ref=e125]
+          - StaticText "0.8 FTE"
+        - cell "Edit UXD product design strategy" [ref=e126]
+          - button "Edit UXD product design strategy" [ref=e240]
+            - StaticText "↗"
+      - row
+        - cell "Service concept pilots" [ref=e127]
+          - button "Service concept pilots" [ref=e241]
+        - cell "Committed" [ref=e128]
+        - cell "Oct 12 — Dec 11" [ref=e129]
+          - StaticText "Oct 12 — Dec 11"
+        - cell "1.2 FTE" [ref=e130]
+          - StaticText "1.2 FTE"
+        - cell "Edit Service concept pilots" [ref=e131]
+          - button "Edit Service concept pilots" [ref=e242]
+            - StaticText "↗"
+      - row
+        - cell "Conversational planning prototype" [ref=e132]
+          - button "Conversational planning prototype" [ref=e243]
+        - cell "Committed" [ref=e133]
+        - cell "Oct 26 — Dec 18" [ref=e134]
+          - StaticText "Oct 26 — Dec 18"
+        - cell "1.3 FTE" [ref=e135]
+          - StaticText "1.3 FTE"
+        - cell "Edit Conversational planning prototype" [ref=e136]
+          - button "Edit Conversational planning prototype" [ref=e244]
+            - StaticText "↗"
+      - row
+        - cell "UX AI interaction standards" [ref=e137]
+          - button "UX AI interaction standards" [ref=e245]
+        - cell "Committed" [ref=e138]
+        - cell "Oct 5 — Nov 13" [ref=e139]
+          - StaticText "Oct 5 — Nov 13"
+        - cell "1.2 FTE" [ref=e140]
+          - StaticText "1.2 FTE"
+        - cell "Edit UX AI interaction standards" [ref=e141]
+          - button "Edit UX AI interaction standards" [ref=e246]
+            - StaticText "↗"
+      - row
+        - cell "AI-assisted research synthesis" [ref=e142]
+          - button "AI-assisted research synthesis" [ref=e247]
+        - cell "Committed" [ref=e143]
+        - cell "Nov 2 — Dec 18" [ref=e144]
+          - StaticText "Nov 2 — Dec 18"
+        - cell "1.4 FTE" [ref=e145]
+          - StaticText "1.4 FTE"
+        - cell "Edit AI-assisted research synthesis" [ref=e146]
+          - button "Edit AI-assisted research synthesis" [ref=e248]
+            - StaticText "↗"
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

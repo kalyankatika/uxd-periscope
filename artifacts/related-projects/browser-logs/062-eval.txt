@@ -1,0 +1,21 @@
+{
+  "connections": [
+    {
+      "name": "Jordan Ellis",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Sofia Ramirez",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Grace Liu",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Advisor productivity",
+      "reason": "Supports this priority"
+    }
+  ],
+  "title": "Advisor workspace"
+}

@@ -1,0 +1,29 @@
+{
+  "connections": [
+    {
+      "name": "Maya Chen",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Sofia Ramirez",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Leo Martinez",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Oliver Grant",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Client onboarding",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "Accessible component library",
+      "reason": "Depends on"
+    }
+  ],
+  "title": "Account opening redesign"
+}

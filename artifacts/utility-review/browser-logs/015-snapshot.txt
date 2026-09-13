@@ -1,0 +1,71 @@
+- dialog "Account opening redesign"
+  - paragraph
+    - StaticText "Client onboarding"
+  - heading "Account opening redesign" [level=2, ref=e1]
+  - button "Close project" [ref=e2]
+    - StaticText "✕"
+  - generic
+    - StaticText "Decision required"
+    - StaticText "Top priority"
+    - heading "Expected outcome" [level=3, ref=e5]
+    - paragraph
+      - StaticText "Help new clients open an account without getting stuck or starting over."
+    - heading "Latest update" [level=3, ref=e6]
+    - paragraph
+      - StaticText "The shorter application has been tested. The team is ready to finalize the identity-check experience."
+    - heading "Decision required" [level=3, ref=e7]
+    - paragraph
+      - StaticText "Decide whether the new identity check belongs in this release or the next one."
+    - DescriptionList
+      - term "Project owner"
+      - definition
+        - button "Maya Chen →" [ref=e18]
+          - StaticText "Maya Chen →"
+      - term "Delivery"
+      - definition
+        - StaticText "In progress"
+      - term "Dates"
+      - definition
+        - StaticText "Oct 1 – Nov 20"
+      - term "Commitment"
+      - definition
+        - StaticText "Committed"
+    - heading "Project team" [level=3, ref=e8]
+    - button "MC Maya Chen Product Design" [ref=e9]
+      - StaticText "MC"
+      - StaticText "Maya Chen"
+      - StaticText "Product Design"
+    - button "SR Sofia Ramirez Research & insights" [ref=e10]
+      - StaticText "SR"
+      - StaticText "Sofia Ramirez"
+      - StaticText "Research & insights"
+    - button "LM Leo Martinez Content design" [ref=e11]
+      - StaticText "LM"
+      - StaticText "Leo Martinez"
+      - StaticText "Content design"
+    - button "OG Oliver Grant Design systems" [ref=e12]
+      - StaticText "OG"
+      - StaticText "Oliver Grant"
+      - StaticText "Design systems"
+    - group
+      - DisclosureTriangle "Weekly effort" [expanded=false]
+        - StaticText "Weekly effort"
+    - heading "Related projects" [level=3, ref=e13]
+    - button "Advisor workspace → Shared people" [ref=e14]
+      - strong
+        - StaticText "Advisor workspace →"
+      - StaticText "Shared people"
+    - button "Accessible component library → Needed by this project" [ref=e15]
+      - strong
+        - StaticText "Accessible component library →"
+      - StaticText "Needed by this project"
+    - button "Mobile portfolio overview → Shared people" [ref=e16]
+      - strong
+        - StaticText "Mobile portfolio overview →"
+      - StaticText "Shared people"
+    - button "UXD product design strategy → Shared people" [ref=e17]
+      - strong
+        - StaticText "UXD product design strategy →"
+      - StaticText "Shared people"
+  - button "View in map" [ref=e3]
+  - button "Edit project" [ref=e4]

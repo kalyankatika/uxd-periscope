@@ -1,0 +1,34 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (4)",
+  "rows": [
+    {
+      "name": "UXD product design strategy",
+      "reasons": [
+        "Needed by this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Mobile portfolio overview",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Planning assistant discovery",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Conversational planning prototype",
+      "reasons": [
+        "Same business priority",
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "Service concept pilots"
+}

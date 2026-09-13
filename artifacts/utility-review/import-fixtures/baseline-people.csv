@@ -1,0 +1,6 @@
+Employee ID,Full name,Discipline,Working time (FTE),Non-project time (%),Job title,Team,Manager ID,Leader,Source note
+0001,Dana Ellis,Product Design,1,80,Head of UXD,UXD,,Yes,Fictional evaluation data
+0010,Avery Shah,Product Design,1,40,VP Product Design,Product Design,0001,Yes,Fictional evaluation data
+0011,Sam Rivera,Product Design,1,20,Product Designer,Product Design,0010,No,Fictional evaluation data
+0020,Robin Lee,UX Research,1,40,VP Research,Research,0001,Yes,Fictional evaluation data
+0021,Morgan Patel,UX Research,1,20,Researcher,Research,0020,No,Fictional evaluation data

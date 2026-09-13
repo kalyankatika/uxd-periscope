@@ -1,0 +1,43 @@
+PROJECT
+×
+Accessible component library
+
+Give every team accessible, reusable components for the journeys clients use most.
+
+On track
+Due Dec 18
+
+Latest update
+Forms and navigation are ready for adoption. Account opening and mobile teams are coordinating the rollout.
+
+Open project details ↗
+◎ Focus connections
+Direct connections 7
+◇
+Account opening redesign
+Needed by
+↗
+OG
+Oliver Grant
+Project owner
+↗
+IC
+Isabel Costa
+Contributor
+↗
+GL
+Grace Liu
+Contributor
+↗
+◎
+Shared experience capabilities
+Supports this priority
+↗
+◇
+Mobile portfolio overview
+Needed by
+↗
+◇
+UX AI interaction standards
+Needed by
+↗

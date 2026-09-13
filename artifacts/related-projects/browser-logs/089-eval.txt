@@ -1,0 +1,33 @@
+{
+  "connections": [
+    {
+      "name": "Account opening redesign",
+      "reason": "Needed by"
+    },
+    {
+      "name": "Oliver Grant",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Isabel Costa",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Grace Liu",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Shared experience capabilities",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "Mobile portfolio overview",
+      "reason": "Needed by"
+    },
+    {
+      "name": "UX AI interaction standards",
+      "reason": "Needed by"
+    }
+  ],
+  "title": "Accessible component library"
+}

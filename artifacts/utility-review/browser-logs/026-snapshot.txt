@@ -1,0 +1,105 @@
+- complementary "Selected item details"
+  - StaticText "PROJECT"
+  - button "Clear selected item" [ref=e27]
+    - StaticText "×"
+  - heading "Account opening redesign" [level=3, ref=e28]
+  - paragraph
+    - StaticText "Help new clients open an account without getting stuck or starting over."
+  - StaticText "Decision required"
+  - generic
+    - StaticText "Due Nov 20"
+  - strong
+    - StaticText "Action required"
+  - paragraph
+    - StaticText "Decide whether the new identity check belongs in this release or the next one."
+  - strong
+    - StaticText "Latest update"
+  - StaticText "The shorter application has been tested. The team is ready to finalize the identity-check experience."
+  - button "Open project details " [ref=e29]
+  - button "◎ Focus connections" [ref=e30]
+    - StaticText "◎ Focus connections"
+  - heading "Direct connections 6" [level=4, ref=e31]
+    - StaticText "Direct connections 6"
+  - button "Maya Chen Project owner" [ref=e32]
+    - strong
+      - StaticText "Maya Chen"
+    - StaticText "Project owner"
+  - button "Sofia Ramirez Contributor" [ref=e33]
+    - strong
+      - StaticText "Sofia Ramirez"
+    - StaticText "Contributor"
+  - button "Leo Martinez Contributor" [ref=e34]
+    - strong
+      - StaticText "Leo Martinez"
+    - StaticText "Contributor"
+  - button "Oliver Grant Contributor" [ref=e35]
+    - strong
+      - StaticText "Oliver Grant"
+    - StaticText "Contributor"
+  - button "Client onboarding Supports this priority" [ref=e36]
+    - strong
+      - StaticText "Client onboarding"
+    - StaticText "Supports this priority"
+  - button "Accessible component library Depends on" [ref=e37]
+    - strong
+      - StaticText "Accessible component library"
+    - StaticText "Depends on"
+- StaticText "PROJECT"
+- button "Clear selected item" [ref=e27]
+  - StaticText "×"
+- StaticText "Decision required"
+- generic
+  - StaticText "Due Nov 20"
+- strong
+  - StaticText "Action required"
+- paragraph
+  - StaticText "Decide whether the new identity check belongs in this release or the next one."
+- strong
+  - StaticText "Latest update"
+- StaticText "The shorter application has been tested. The team is ready to finalize the identity-check experience."
+- button "◎ Focus connections" [ref=e30]
+  - StaticText "◎ Focus connections"
+- heading "Direct connections 6" [level=4, ref=e31]
+  - StaticText "Direct connections 6"
+- button "Maya Chen Project owner" [ref=e32]
+  - strong
+    - StaticText "Maya Chen"
+  - StaticText "Project owner"
+- button "Sofia Ramirez Contributor" [ref=e33]
+  - strong
+    - StaticText "Sofia Ramirez"
+  - StaticText "Contributor"
+- button "Leo Martinez Contributor" [ref=e34]
+  - strong
+    - StaticText "Leo Martinez"
+  - StaticText "Contributor"
+- button "Oliver Grant Contributor" [ref=e35]
+  - strong
+    - StaticText "Oliver Grant"
+  - StaticText "Contributor"
+- button "Client onboarding Supports this priority" [ref=e36]
+  - strong
+    - StaticText "Client onboarding"
+  - StaticText "Supports this priority"
+- button "Accessible component library Depends on" [ref=e37]
+  - strong
+    - StaticText "Accessible component library"
+  - StaticText "Depends on"
+- strong
+  - StaticText "Maya Chen"
+- StaticText "Project owner"
+- strong
+  - StaticText "Sofia Ramirez"
+- StaticText "Contributor"
+- strong
+  - StaticText "Leo Martinez"
+- StaticText "Contributor"
+- strong
+  - StaticText "Oliver Grant"
+- StaticText "Contributor"
+- strong
+  - StaticText "Client onboarding"
+- StaticText "Supports this priority"
+- strong
+  - StaticText "Accessible component library"
+- StaticText "Depends on"

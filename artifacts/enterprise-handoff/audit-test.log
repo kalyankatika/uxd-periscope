@@ -1,0 +1,238 @@
+
+> uxd-periscope@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+TAP version 13
+# (node:30822) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: API validates writes, enforces origin, persists changes, and reports revision conflicts
+ok 1 - API validates writes, enforces origin, persists changes, and reports revision conflicts
+  ---
+  duration_ms: 121.742417
+  type: 'test'
+  ...
+# Subtest: 12 people provide 9.6 net FTE, research 1.6
+ok 2 - 12 people provide 9.6 net FTE, research 1.6
+  ---
+  duration_ms: 5.947875
+  type: 'test'
+  ...
+# Subtest: committed October research is 120%; proposed adds demand without mutating plan
+ok 3 - committed October research is 120%; proposed adds demand without mutating plan
+  ---
+  duration_ms: 0.958291
+  type: 'test'
+  ...
+# Subtest: thresholds and zero capacity
+ok 4 - thresholds and zero capacity
+  ---
+  duration_ms: 0.052083
+  type: 'test'
+  ...
+# Subtest: inclusive dates, weekday prorating, no demand outside dates
+ok 5 - inclusive dates, weekday prorating, no demand outside dates
+  ---
+  duration_ms: 1.256
+  type: 'test'
+  ...
+# Subtest: CSV round trips quoted names; rejects invalid and duplicate rows
+ok 6 - CSV round trips quoted names; rejects invalid and duplicate rows
+  ---
+  duration_ms: 2.127458
+  type: 'test'
+  ...
+# Subtest: Grid cards preserve graph identities, filtered connections and search scope
+ok 7 - Grid cards preserve graph identities, filtered connections and search scope
+  ---
+  duration_ms: 16.268292
+  type: 'test'
+  ...
+# Subtest: Grid owner labels use IDs and team project counts respect the selected period
+ok 8 - Grid owner labels use IDs and team project counts respect the selected period
+  ---
+  duration_ms: 1.983542
+  type: 'test'
+  ...
+# Subtest: The visual map shares export identities and shows only recorded relationships
+ok 9 - The visual map shares export identities and shows only recorded relationships
+  ---
+  duration_ms: 0.738042
+  type: 'test'
+  ...
+# Subtest: Attention and top-priority spotlights retain contributors and their reporting chains
+ok 10 - Attention and top-priority spotlights retain contributors and their reporting chains
+  ---
+  duration_ms: 0.749958
+  type: 'test'
+  ...
+# Subtest: Local graph depth follows both directions, and explains each relationship from the selected item
+ok 11 - Local graph depth follows both directions, and explains each relationship from the selected item
+  ---
+  duration_ms: 0.204125
+  type: 'test'
+  ...
+# Subtest: Quarter boundaries omit inactive projects without dangling dependencies
+ok 12 - Quarter boundaries omit inactive projects without dangling dependencies
+  ---
+  duration_ms: 0.162375
+  type: 'test'
+  ...
+# Subtest: Force layout stays deterministic, separated and immutable; fit contains all nodes
+ok 13 - Force layout stays deterministic, separated and immutable; fit contains all nodes
+  ---
+  duration_ms: 96.029417
+  type: 'test'
+  ...
+# Subtest: Zoom preserves the location under the pointer and clamps extreme input
+ok 14 - Zoom preserves the location under the pointer and clamps extreme input
+  ---
+  duration_ms: 0.087333
+  type: 'test'
+  ...
+# Subtest: Friendly source headers and explicit label aliases map without changing identity
+ok 15 - Friendly source headers and explicit label aliases map without changing identity
+  ---
+  duration_ms: 3.172875
+  type: 'test'
+  ...
+# Subtest: All exported project labels can be reviewed, including backlog and health aliases
+ok 16 - All exported project labels can be reviewed, including backlog and health aliases
+  ---
+  duration_ms: 6.916958
+  type: 'test'
+  ...
+# Subtest: Import review blocks missing relationships and inconsistent taxonomy without mutating the workspace
+ok 17 - Import review blocks missing relationships and inconsistent taxonomy without mutating the workspace
+  ---
+  duration_ms: 2.231541
+  type: 'test'
+  ...
+# (node:30827) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Legacy SQLite plans migrate without losing data; project context survives saves
+ok 18 - Legacy SQLite plans migrate without losing data; project context survives saves
+  ---
+  duration_ms: 30.44525
+  type: 'test'
+  ...
+# Subtest: Project context round trips through CSV; legacy imports retain safe defaults
+ok 19 - Project context round trips through CSV; legacy imports retain safe defaults
+  ---
+  duration_ms: 1.04925
+  type: 'test'
+  ...
+# (node:30828) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: SQLite saves, rejects stale revisions and invalid writes without changing the plan
+ok 20 - SQLite saves, rejects stale revisions and invalid writes without changing the plan
+  ---
+  duration_ms: 100.909375
+  type: 'test'
+  ...
+# Subtest: A leader sees work owned by reports and shared work, each project once
+ok 21 - A leader sees work owned by reports and shared work, each project once
+  ---
+  duration_ms: 6.191583
+  type: 'test'
+  ...
+# Subtest: Reporting validation rejects cycles, missing managers and broken project links
+ok 22 - Reporting validation rejects cycles, missing managers and broken project links
+  ---
+  duration_ms: 2.737417
+  type: 'test'
+  ...
+# Subtest: Reporting reassignment updates leader rollups without changing project ownership
+ok 23 - Reporting reassignment updates leader rollups without changing project ownership
+  ---
+  duration_ms: 0.890791
+  type: 'test'
+  ...
+# Subtest: Graph export contains stable, resolvable identity and relationship links
+ok 24 - Graph export contains stable, resolvable identity and relationship links
+  ---
+  duration_ms: 1.108542
+  type: 'test'
+  ...
+# Subtest: Organization and project relationships round trip through CSV
+ok 25 - Organization and project relationships round trip through CSV
+  ---
+  duration_ms: 3.497208
+  type: 'test'
+  ...
+# (node:30830) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Combined import saves both datasets once, resolves graph identities, and rejects stale or invalid replacements without partial writes
+ok 26 - Combined import saves both datasets once, resolves graph identities, and rejects stale or invalid replacements without partial writes
+  ---
+  duration_ms: 52.811875
+  type: 'test'
+  ...
+# Subtest: A complete new organization replaces both files without an invalid intermediate roster
+ok 27 - A complete new organization replaces both files without an invalid intermediate roster
+  ---
+  duration_ms: 8.654
+  type: 'test'
+  ...
+# Subtest: Merge keeps omitted records and reports each dataset's changes without mutating inputs or revision
+ok 28 - Merge keeps omitted records and reports each dataset's changes without mutating inputs or revision
+  ---
+  duration_ms: 1.4225
+  type: 'test'
+  ...
+# Subtest: Replace counts retained IDs as updates and removes both omitted datasets
+ok 29 - Replace counts retained IDs as updates and removes both omitted datasets
+  ---
+  duration_ms: 0.667042
+  type: 'test'
+  ...
+# Subtest: Leading zeros and case-sensitive IDs remain distinct even when names match
+ok 30 - Leading zeros and case-sensitive IDs remain distinct even when names match
+  ---
+  duration_ms: 1.780583
+  type: 'test'
+  ...
+# Subtest: Combined validation blocks missing managers, owners, contributors and dependencies
+ok 31 - Combined validation blocks missing managers, owners, contributors and dependencies
+  ---
+  duration_ms: 2.95625
+  type: 'test'
+  ...
+# Subtest: Reporting cycles and inconsistent team or priority labels block the combined plan
+ok 32 - Reporting cycles and inconsistent team or priority labels block the combined plan
+  ---
+  duration_ms: 0.521167
+  type: 'test'
+  ...
+# Subtest: Merge validates taxonomy against omitted existing records
+ok 33 - Merge validates taxonomy against omitted existing records
+  ---
+  duration_ms: 0.411959
+  type: 'test'
+  ...
+# Subtest: Schema validation rejects malformed inspected rows and duplicate IDs without throwing
+ok 34 - Schema validation rejects malformed inspected rows and duplicate IDs without throwing
+  ---
+  duration_ms: 1.585708
+  type: 'test'
+  ...
+# Subtest: The combined preview blocks plans over the UTF-8 save limit even when each file is smaller
+ok 35 - The combined preview blocks plans over the UTF-8 save limit even when each file is smaller
+  ---
+  duration_ms: 11.950042
+  type: 'test'
+  ...
+# Subtest: The exact save-size boundary is accepted and one extra byte is blocked
+ok 36 - The exact save-size boundary is accepted and one extra byte is blocked
+  ---
+  duration_ms: 13.030333
+  type: 'test'
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 403.067917

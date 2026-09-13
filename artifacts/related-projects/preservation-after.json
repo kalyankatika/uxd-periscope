@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "savedRecordsUnchanged": true,
+  "savedRecordFingerprints": {
+    "metadata": {
+      "rowCount": 1,
+      "sha256": "5cc6a8a697bb6f2fcb468ef02cf2a76e9ad3f5da223682f1ca29288836ee66b3"
+    },
+    "people": {
+      "rowCount": 12,
+      "sha256": "8e224a3e3da1a47f8eadcb0579178f50660a754058bd5ba8f80c9d5d37e0bd66"
+    },
+    "initiatives": {
+      "rowCount": 5,
+      "sha256": "602d468636b44af55adc823d0492db174352be8a38158af698f700c1e6f02e81"
+    }
+  },
+  "sourceHashes": {
+    "app/leadership.tsx": "7130d9d6028e633132766079a939d610f493740a1cb89bc1acb1827e7f0741ee",
+    "lib/work-graph.ts": "fa72f3f9960180ec9e84caaca08146c42caa2d008e0a7e1cf40ceffdfef2bbb4",
+    "tests/work-graph.test.ts": "c7708c3cec19b1e2d23c511cae1ea21ff69dd87094f5ca501b86b913a41a9d31",
+    "app/globals.css": "0d3a32b82b4c5260b8d1f39da2b321e89fa0f71d63bda392869b62b374023b66",
+    "package.json": "44b7dd7f4e6a4a9311235a262741b8b8cea1b668b8eff1a24b8e6fb97fa60743",
+    "package-lock.json": "cefe9df1547da8e70af89f2be64c0e30f3edafe6cf746ef93a9a7f39d410dda2"
+  },
+  "changedProductFiles": [
+    "app/leadership.tsx",
+    "lib/work-graph.ts",
+    "tests/work-graph.test.ts"
+  ],
+  "stylesAndDependenciesUnchanged": true,
+  "method": "Read-only SQLite fingerprints of complete ordered metadata, people and project rows before/after restarting current build. Record contents not logged. Byte-level SQLite hashes are not used as the preservation criterion across a server restart."
+}

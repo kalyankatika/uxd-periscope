@@ -1,0 +1,46 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (6)",
+  "rows": [
+    {
+      "name": "AI-assisted research synthesis",
+      "reasons": [
+        "Depends on this project",
+        "Same business priority",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Advisor workspace",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Retirement guidance",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Accessible component library",
+      "reasons": [
+        "Same business priority"
+      ]
+    },
+    {
+      "name": "Planning assistant discovery",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Conversational planning prototype",
+      "reasons": [
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "Research repository"
+}

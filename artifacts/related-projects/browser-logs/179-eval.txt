@@ -1,0 +1,29 @@
+{
+  "connections": [
+    {
+      "name": "Leila Haddad",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Ben Carter",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Owen Hughes",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Nina Patel",
+      "reason": "Contributor"
+    },
+    {
+      "name": "New product opportunities",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "UXD product design strategy",
+      "reason": "Depends on"
+    }
+  ],
+  "title": "Service concept pilots"
+}

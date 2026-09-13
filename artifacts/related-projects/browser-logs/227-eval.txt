@@ -1,0 +1,33 @@
+{
+  "connections": [
+    {
+      "name": "Sam Okafor",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Ethan Park",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Amara Nwosu",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Tessa Wu",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Shared experience capabilities",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "Research repository",
+      "reason": "Depends on"
+    },
+    {
+      "name": "UX AI interaction standards",
+      "reason": "Depends on"
+    }
+  ],
+  "title": "AI-assisted research synthesis"
+}

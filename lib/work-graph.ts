@@ -48,25 +48,34 @@ export function leaders(people: Person[]): Person[] {
   );
 }
 export function relatedProjects(plan: Plan, project: Initiative) {
+  const participantIds = (p: Initiative) =>
+    new Set(p.leadId ? [...p.memberIds, p.leadId] : p.memberIds);
+  const participants = participantIds(project);
+  const prerequisites = new Set(project.dependsOn);
+  const isDependency = (p: Initiative) =>
+    prerequisites.has(p.id) || p.dependsOn.includes(project.id);
   return plan.initiatives
     .filter((p) => p.id !== project.id)
     .map((p) => ({
       project: p,
       reasons: [
-        ...(project.dependsOn.includes(p.id) ? ["Needed by this project"] : []),
+        ...(prerequisites.has(p.id) ? ["Needed by this project"] : []),
         ...(p.dependsOn.includes(project.id)
           ? ["Depends on this project"]
           : []),
         ...(project.priority && p.priority === project.priority
           ? ["Same business priority"]
           : []),
-        ...((project.leadId && project.leadId === p.leadId) ||
-        project.memberIds.some((id) => p.memberIds.includes(id))
+        ...([...participantIds(p)].some((id) => participants.has(id))
           ? ["Shared people"]
           : []),
       ],
     }))
-    .filter((p) => p.reasons.length);
+    .filter((p) => p.reasons.length)
+    .sort(
+      (a, b) =>
+        Number(isDependency(b.project)) - Number(isDependency(a.project)),
+    );
 }
 export function workGraph(plan: Plan) {
   const personId = (id: string) =>

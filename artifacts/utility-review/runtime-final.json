@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-12T23:26:57.778920+00:00",
+  "servers": {
+    "3000": {
+      "httpStatus": 200
+    },
+    "3021": {
+      "httpStatus": 200
+    }
+  },
+  "browserErrorsLog": "browser-logs/173-errors.txt",
+  "browserConsoleLog": "browser-logs/174-console.txt",
+  "browserErrorsEmpty": true,
+  "browserConsoleEmpty": true
+}

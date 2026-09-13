@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-12T21:08:23.230051+00:00",
+  "baseUrl": "http://127.0.0.1:60961",
+  "database": "Disposable fictional-data database in isolated copy",
+  "originalServerUntouched": true,
+  "ownedServerStopped": true,
+  "checks": [
+    {
+      "check": "Fresh saved workspace seed",
+      "result": "passed",
+      "people": 12,
+      "projects": 5,
+      "revision": 0
+    },
+    {
+      "check": "Rendered home page",
+      "result": "passed",
+      "status": 200
+    },
+    {
+      "check": "HTTP same-origin validated save",
+      "result": "passed",
+      "status": 200,
+      "revision": 1
+    },
+    {
+      "check": "HTTP stale revision rejected",
+      "result": "passed",
+      "status": 409
+    },
+    {
+      "check": "HTTP foreign origin rejected",
+      "result": "passed",
+      "status": 403
+    },
+    {
+      "check": "Graph JSON-LD resolves saved project",
+      "result": "passed",
+      "status": 200
+    },
+    {
+      "check": "Restart persistence",
+      "result": "passed",
+      "revision": 1,
+      "projects": 6
+    }
+  ]
+}

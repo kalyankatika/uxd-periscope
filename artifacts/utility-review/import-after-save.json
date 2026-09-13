@@ -1,0 +1,183 @@
+{
+  "people": [
+    {
+      "id": "0001",
+      "name": "Dana Ellis",
+      "craft": "design",
+      "title": "Head of UXD",
+      "team": "UXD",
+      "managerId": null,
+      "isLeader": true,
+      "fte": 1,
+      "nonProjectPct": 80
+    },
+    {
+      "id": "0010",
+      "name": "Avery Chen",
+      "craft": "design",
+      "title": "VP Product Design",
+      "team": "Product Design",
+      "managerId": "0001",
+      "isLeader": true,
+      "fte": 1,
+      "nonProjectPct": 40
+    },
+    {
+      "id": "0011",
+      "name": "Sam Rivera",
+      "craft": "design",
+      "title": "Product Designer",
+      "team": "Product Design",
+      "managerId": "0010",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "0020",
+      "name": "Robin Lee",
+      "craft": "research",
+      "title": "VP Research",
+      "team": "Research",
+      "managerId": "0001",
+      "isLeader": true,
+      "fte": 1,
+      "nonProjectPct": 40
+    },
+    {
+      "id": "0021",
+      "name": "Morgan Patel",
+      "craft": "research",
+      "title": "Researcher",
+      "team": "Research",
+      "managerId": "0020",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "0030",
+      "name": "Taylor Brooks",
+      "craft": "design",
+      "title": "UX AI Designer",
+      "team": "UX AI",
+      "managerId": "0010",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "UX-001",
+      "name": "Onboarding redesign",
+      "leadId": "0010",
+      "memberIds": [
+        "0011",
+        "0021",
+        "0030"
+      ],
+      "dependsOn": [
+        "UX-002"
+      ],
+      "importance": "top",
+      "health": "on_track",
+      "decision": "",
+      "update": "Scope approved; testing is booked",
+      "priority": "Reduce onboarding friction",
+      "owner": "",
+      "summary": "Reduce drop-off in account opening",
+      "delivery": "in_progress",
+      "start": "2026-10-01",
+      "end": "2026-12-18",
+      "status": "committed",
+      "effort": {
+        "design": 0.7,
+        "research": 0.3,
+        "content": 0,
+        "design_eng": 0
+      }
+    },
+    {
+      "id": "UX-002",
+      "name": "Onboarding research",
+      "leadId": "0020",
+      "memberIds": [
+        "0021"
+      ],
+      "dependsOn": [],
+      "importance": "high",
+      "health": "on_track",
+      "decision": "",
+      "update": "Recruitment is confirmed",
+      "priority": "Reduce onboarding friction",
+      "owner": "",
+      "summary": "Validate the onboarding journey",
+      "delivery": "in_progress",
+      "start": "2026-10-01",
+      "end": "2026-10-30",
+      "status": "committed",
+      "effort": {
+        "design": 0,
+        "research": 0.6,
+        "content": 0,
+        "design_eng": 0
+      }
+    },
+    {
+      "id": "UX-003",
+      "name": "Component accessibility",
+      "leadId": "0011",
+      "memberIds": [
+        "0011"
+      ],
+      "dependsOn": [],
+      "importance": "high",
+      "health": "at_risk",
+      "decision": "Confirm accessibility review availability",
+      "update": "Review slots are not confirmed",
+      "priority": "Accessible experiences",
+      "owner": "",
+      "summary": "Remove keyboard barriers in shared components",
+      "delivery": "in_progress",
+      "start": "2026-10-01",
+      "end": "2026-11-20",
+      "status": "committed",
+      "effort": {
+        "design": 0.4,
+        "research": 0,
+        "content": 0,
+        "design_eng": 0
+      }
+    },
+    {
+      "id": "UX-004",
+      "name": "UX AI assistance prototype",
+      "leadId": "0030",
+      "memberIds": [
+        "0011"
+      ],
+      "dependsOn": [
+        "UX-003"
+      ],
+      "importance": "normal",
+      "health": "not_reported",
+      "decision": "",
+      "update": "Prototype proposed for the next planning review",
+      "priority": "UX AI",
+      "owner": "",
+      "summary": "Test assisted navigation concepts",
+      "delivery": "planned",
+      "start": "2026-11-02",
+      "end": "2026-12-18",
+      "status": "proposed",
+      "effort": {
+        "design": 0.5,
+        "research": 0.2,
+        "content": 0,
+        "design_eng": 0
+      }
+    }
+  ],
+  "revision": 2
+}

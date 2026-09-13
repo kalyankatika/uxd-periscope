@@ -1,6 +1,10 @@
 # Enterprise data mapping
 
+This document is the **implemented local CSV contract**. The [enterprise connector assessment](enterprise-connectors.md) describes proposed API/JSON ingestion and source authority; its illustrative JSON envelope is not accepted by this version of the application. See the [enterprise product assessment](enterprise-product-assessment.md) for generic domain, time and financial extensions.
+
 Periscope currently runs locally. The example organization and demo video contain fictional records. No real enterprise data source is connected or synchronized.
+
+The repository includes a complete [fictional UXD data pack](../examples/uxd-demo/README.md) with importable people/projects CSVs and an equivalent canonical `workspace.json`. Use the CSV pair in the current UI. The JSON file is a developer reference for the existing Plan model, not a supported generic JSON upload or the proposed connector envelope. The pack's metadata is kept in a separate manifest so it cannot be mistaken for imported project fields.
 
 ## Source contract
 
@@ -37,12 +41,14 @@ Recognized value conversions include Product Design → `design`, Content Design
 
 ## Import procedure
 
-1. Reconcile IDs and canonical team/priority labels in the source files. Import the people roster before projects that reference it. Upload the full set of interdependent projects together.
-2. Open **People & imports** and choose People or Projects. Select **Upload CSV**. The current limit is 2 MB per file.
-3. Review column mappings, value conversions, excluded columns, record counts, and the first five record names. Validation applies to every row, not just the preview.
-4. Correct missing IDs, reporting cycles, invalid project links, and conflicting labels in the source. Import is disabled while these errors remain.
-5. Confirm the import. Merge adds or replaces records by ID and keeps omitted existing IDs. Replace removes omitted records in the selected dataset. Imported records are complete replacements: optional columns omitted from an updated record use their documented defaults.
-6. Reconcile total people/project counts against the source and inspect each leadership team. Review unassigned project owners, project date coverage, shared contributors, and dependencies.
+1. Reconcile IDs and canonical team/priority labels in the source files. Include the full people roster and all projects, including projects outside the displayed quarter.
+2. Open **People & imports → Import organization**. Choose a **People CSV** and a **Projects CSV**, then select **Merge by ID** or **Replace people and projects**. Each file can be up to 2 MB; the resulting serialized workspace must also fit the API's 2 MB save limit.
+3. Select **Review organization**. Review new, updated, removed, and resulting totals for both datasets. Expand each file's section to inspect column mappings, value conversions, excluded columns, and the first five record names. Every row is validated, not just the preview.
+4. Correct missing IDs, reporting cycles, invalid project links, and conflicting labels in the source. Validation checks the final combined organization, so project owners and contributors may refer to people in the accompanying file. References never resolve by display name. Import is disabled while errors remain.
+5. Confirm **Import organization**. Both datasets save in one revision-checked SQLite transaction, or neither changes. Cancel or close the review to leave the workspace unchanged. Merge keeps omitted existing IDs; replace removes omitted people and projects from both datasets. Imported records are complete replacements: omitted optional columns use their defaults. All dates are imported; the quarter only filters views.
+6. Reconcile total people/project counts against the source and inspect each leadership team in **Teams & reporting**, **Work map**, and **Grid**. Review unassigned project owners, project date coverage, shared contributors, and dependencies.
 7. Export the resulting CSVs and JSON-LD as a reconciliation snapshot. Record source system, extraction date, source owner, and any approved mapping exceptions outside the demo dataset.
+
+For an update to only one dataset, use **Import or export one file** below the organization form. Choose People or Projects and **Upload CSV**. A single-file import validates against the other dataset already in the workspace. Import new people before projects that reference them. Use the combined organization import when replacing both connected datasets, to avoid invalid intermediate references to the previous roster or projects.
 
 The saved-workspace API checks revisions to prevent a stale session from overwriting a newer save. Example mode updates only the current session. Automated enterprise synchronization, authentication, and source connectors are separate work requiring the actual source and its data contract.

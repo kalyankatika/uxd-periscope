@@ -1,0 +1,172 @@
+{
+  "projectExports": {
+    "top-projects.csv": {
+      "rowCount": 5,
+      "verifiedProjectIds": [
+        "advisor",
+        "ai-standards",
+        "experience-strategy",
+        "opening",
+        "retirement"
+      ],
+      "fieldChecksPerRow": 15
+    },
+    "attention-projects.csv": {
+      "rowCount": 5,
+      "verifiedProjectIds": [
+        "ai-research",
+        "conversational-prototype",
+        "mobile",
+        "opening",
+        "retirement"
+      ],
+      "fieldChecksPerRow": 15
+    },
+    "marcus-projects.csv": {
+      "rowCount": 8,
+      "verifiedProjectIds": [
+        "advisor",
+        "ai-research",
+        "coaching",
+        "conversational-prototype",
+        "experience-strategy",
+        "insights",
+        "opening",
+        "retirement"
+      ],
+      "fieldChecksPerRow": 15
+    }
+  },
+  "graphExport": {
+    "nodeCount": 46,
+    "nodeTypes": {
+      "schema:Person": 26,
+      "Priority": 7,
+      "schema:Project": 13
+    },
+    "relationshipCounts": {
+      "reportsTo": 25,
+      "ledBy": 13,
+      "contributors": 32,
+      "dependsOn": 7,
+      "supports": 13
+    },
+    "allNodeFieldsAndEveryRelationshipCompared": true
+  },
+  "capacity": {
+    "committed": {
+      "csvRowsVerified": 56,
+      "domLabelsVerified": 56,
+      "demandFteWeeksByCraft": {
+        "design": 42.48,
+        "research": 26.78,
+        "content": 22.3,
+        "design_eng": 41.52
+      },
+      "totalDemandFteWeeks": 133.08,
+      "overCapacityWeeksByCraft": {
+        "design": [],
+        "research": [
+          "2026-10-12",
+          "2026-10-19",
+          "2026-10-26",
+          "2026-11-02",
+          "2026-11-09",
+          "2026-11-16",
+          "2026-11-23"
+        ],
+        "content": [
+          "2026-10-26",
+          "2026-11-02",
+          "2026-11-09"
+        ],
+        "design_eng": [
+          "2026-11-02",
+          "2026-11-09"
+        ]
+      },
+      "csvStatusCounts": {
+        "green": 35,
+        "amber": 9,
+        "red": 12
+      },
+      "domOverCapacityLabelCount": 12
+    },
+    "proposed": {
+      "csvRowsVerified": 56,
+      "domLabelsVerified": 56,
+      "demandFteWeeksByCraft": {
+        "design": 45.2,
+        "research": 29.5,
+        "content": 23.66,
+        "design_eng": 43.56
+      },
+      "totalDemandFteWeeks": 141.92,
+      "overCapacityWeeksByCraft": {
+        "design": [],
+        "research": [
+          "2026-10-12",
+          "2026-10-19",
+          "2026-10-26",
+          "2026-11-02",
+          "2026-11-09",
+          "2026-11-16",
+          "2026-11-23",
+          "2026-11-30"
+        ],
+        "content": [
+          "2026-10-26",
+          "2026-11-02",
+          "2026-11-09"
+        ],
+        "design_eng": [
+          "2026-11-02",
+          "2026-11-09",
+          "2026-11-16"
+        ]
+      },
+      "csvStatusCounts": {
+        "green": 32,
+        "amber": 10,
+        "red": 14
+      },
+      "domOverCapacityLabelCount": 14
+    }
+  },
+  "status": "pass",
+  "checkCounts": {
+    "fixture": 4,
+    "top-projects.csv": 79,
+    "attention-projects.csv": 79,
+    "marcus-projects.csv": 124,
+    "graph": 142,
+    "capacity-committed.csv": 283,
+    "capacity-dom-committed.json": 339,
+    "capacity-proposed.csv": 283,
+    "capacity-dom-proposed.json": 339
+  },
+  "totalChecks": 1672,
+  "failureCount": 0,
+  "failures": [],
+  "method": "Python standard library; raw fictional Plan, stable-ID graph comparison, set-based reporting traversal and independent daily Fraction arithmetic. No product helpers or browser output used as expected calculations.",
+  "caveats": [
+    "Project comparison CSVs contain no stable IDs. Their unique fictional project names are used only to compare this known fixture after checking uniqueness; this does not establish a safe name-based import identity strategy.",
+    "Numeric export fields are compared within 1e-10 to ignore ordinary binary floating-point serialization noise. String fields, ID sets, rounded percentages and status labels are exact comparisons.",
+    "Captured DOM artifacts contain accessibility-label text, not CSS classes or pixel colors. They establish displayed numbers and explicit over-capacity labels; amber/green DOM color rendering is not verified by this script.",
+    "Research on November 30 with proposed work is 2.4/2.39 = 100.4184%, correctly red/over capacity although the displayed percentage rounds to 100%.",
+    "Capacity retains 14 full weekly supply baselines (70 equivalent weekdays) and clips demand to 66 quarter weekdays, following the documented contract. It excludes holidays, leave and named-person assignment constraints.",
+    "Graph export is a relationship projection, not a lossless Plan backup: it does not include every raw field such as latest update, decision text, person FTE or non-project percentage. Verified completeness is against the stated node/relationship export fields.",
+    "Captured exports and DOM labels represent the manager's browser evaluation of fictional example data. This verification does not establish behavior with real enterprise sources or later changed datasets."
+  ],
+  "inputSha256": {
+    "example-plan.json": "fa050d97ec2e0b565f8b014d17a7d8f50ea4385b0e0d5bbf3254500cc40ee5ab",
+    "top-projects.csv": "00790e1385d0ef947dfc6dba3a8a580f5ee8a59a122c80fe2981ecd68f2c9a35",
+    "attention-projects.csv": "6393b5814d772a5cbe93659f905c06f487ee13d8be651a980113e264aee23831",
+    "marcus-projects.csv": "2251828e3b5549f156334ec5b68bd5c2fe9d682bf578318daa26ef5a812a42ac",
+    "example-graph.jsonld": "0958aae973743e2e2dddd977a767483244661cca26f85c2d577b5e4e3a326162",
+    "capacity-committed.csv": "b9dfee0d7cafd54fc5e6866efd870904d69b24eb741f29d8f87c9a3508c376f5",
+    "capacity-proposed.csv": "cc69b8b81c9c2d14418bece33d29e6c9268c16478bdf5d9f8f3c1473c710df37",
+    "capacity-dom-committed.json": "f32254ae9189a49de65cafe1318090ae8970e9b513ee59b203c779b0b0a9fdc8",
+    "capacity-dom-proposed.json": "35a76a178d5a6c470dcc7b5768d8c7772e9db93576882ec460c9c1fb0901968c"
+  }
+}

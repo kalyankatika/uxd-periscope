@@ -1,0 +1,31 @@
+{
+  "dataset": "Periscope UXD demo",
+  "datasetVersion": 1,
+  "fictional": true,
+  "description": "Fictional people, projects and relationships for a UXD leadership demonstration. No enterprise records or live integrations.",
+  "source": "lib/leadership-demo.ts#leadershipDemo",
+  "period": {
+    "label": "Q4 2026",
+    "start": "2026-10-01",
+    "end": "2026-12-31",
+    "selectMonth": "2026-10"
+  },
+  "counts": {
+    "people": 26,
+    "projects": 13,
+    "headOfUxd": 1,
+    "functionalLeaders": 7,
+    "functionalTeams": 7,
+    "priorities": 7,
+    "dependencies": 7,
+    "topPriorityProjects": 5,
+    "projectsNeedingAttention": 5
+  },
+  "files": {
+    "people.csv": "People, reporting structure and discipline capacity",
+    "projects.csv": "Projects, ownership, contributors, priorities and dependencies",
+    "workspace.json": "Equivalent full Plan object with revision 0; a reference for adapters, not a browser JSON upload"
+  },
+  "identity": "Use person and project IDs for all relationships. Display names and legacy owner labels do not resolve identity.",
+  "persistence": "Generating these files does not change saved data. The in-app example remains session-only. Import CSV files into a separate demo database when persistence is needed."
+}

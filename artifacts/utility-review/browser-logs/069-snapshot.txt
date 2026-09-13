@@ -1,0 +1,176 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "⌘ Work map" [ref=e8]
+      - StaticText "⌘"
+      - StaticText "Work map"
+    - button "◫ Overview" [ref=e9]
+      - StaticText "◫"
+      - StaticText "Overview"
+    - button "♧ Teams & reporting" [ref=e10]
+      - StaticText "♧"
+      - StaticText "Teams & reporting"
+    - button "▦ Projects" [ref=e11]
+      - StaticText "▦"
+      - StaticText "Projects"
+    - button "◷ Capacity" [ref=e12]
+      - StaticText "◷"
+      - StaticText "Capacity"
+    - button "☷ Project plan" [ref=e13]
+      - StaticText "☷"
+      - StaticText "Project plan"
+    - button "⚙ People & imports" [ref=e14]
+      - StaticText "⚙"
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 26 people"
+  - StaticText "Example data · Session only"
+- main
+  - StaticText "Example data · Fictional organization · Changes are temporary"
+  - button "Open workspace" [ref=e3]
+  - heading "Teams & reporting" [level=1, ref=e4]
+  - paragraph
+    - StaticText "Reporting structure and team projects."
+  - button "＋ Add project" [ref=e5]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e36]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e37]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e27]
+  - button "← All teams" [ref=e6]
+  - button "＋ Add person" [ref=e7]
+  - generic
+    - StaticText "MR"
+    - paragraph
+      - StaticText "Research & insights"
+    - heading "Marcus Reed" [level=2, ref=e15]
+    - paragraph
+      - StaticText "Head of Research · Reports to Avery Morgan"
+    - button "Edit reporting details" [ref=e16]
+    - strong
+      - StaticText "3"
+    - StaticText " people in team"
+    - strong
+      - StaticText "8"
+    - StaticText " related projects"
+    - strong
+      - StaticText "4"
+    - StaticText " to review"
+  - generic
+    - heading "Marcus’s team projects" [level=2, ref=e17]
+      - StaticText "Marcus’s team projects"
+    - paragraph
+      - StaticText "Includes projects owned by their reports and projects with team contributors. Shared projects appear once."
+    - button "Compare projects →" [ref=e18]
+    - article
+      - StaticText "Client onboarding"
+      - button "Account opening redesign" [ref=e28]
+      - paragraph
+        - StaticText "Help new clients open an account without getting stuck or starting over."
+      - StaticText "Maya Chen"
+      - StaticText "Due "
+      - StaticText "Nov 20"
+      - StaticText "Top priority"
+      - StaticText "Decision required"
+    - article
+      - StaticText "Advisor productivity"
+      - button "Advisor workspace" [ref=e29]
+      - paragraph
+        - StaticText "Bring the right client information into one place before every advisor meeting."
+      - StaticText "Jordan Ellis"
+      - StaticText "Due "
+      - StaticText "Dec 4"
+      - StaticText "Top priority"
+      - StaticText "On track"
+    - article
+      - StaticText "Client financial planning"
+      - button "Retirement guidance" [ref=e30]
+      - paragraph
+        - StaticText "Make retirement choices easier to understand, so clients know what to do next."
+      - StaticText "Leo Martinez"
+      - StaticText "Due "
+      - StaticText "Dec 11"
+      - StaticText "Top priority"
+      - StaticText "At risk"
+    - article
+      - StaticText "Shared experience capabilities"
+      - button "Research repository" [ref=e31]
+      - paragraph
+        - StaticText "Make existing client research easy to find before teams start new work."
+      - StaticText "Ethan Park"
+      - StaticText "Due "
+      - StaticText "Nov 27"
+      - StaticText "On track"
+    - article
+      - StaticText "Client financial planning"
+      - button "Planning assistant discovery" [ref=e32]
+      - paragraph
+        - StaticText "Explore whether guided prompts can help clients take their next planning step."
+      - StaticText "Amara Nwosu"
+      - StaticText "Due "
+      - StaticText "Dec 31"
+      - StaticText "Not reported"
+    - article
+      - StaticText "Product experience alignment"
+      - button "UXD product design strategy" [ref=e33]
+      - paragraph
+        - StaticText "Define shared experience principles and a prioritized roadmap across onboarding, advice, and retirement products."
+      - StaticText "Tessa Wu"
+      - StaticText "Due "
+      - StaticText "Nov 6"
+      - StaticText "Top priority"
+      - StaticText "On track"
+    - article
+      - StaticText "New product opportunities"
+      - button "Conversational planning prototype" [ref=e34]
+      - paragraph
+        - StaticText "Evaluate a conversational planning concept with clear handoffs to human support."
+      - StaticText "Ben Carter"
+      - StaticText "Due "
+      - StaticText "Dec 18"
+      - StaticText "Decision required"
+    - article
+      - StaticText "Shared experience capabilities"
+      - button "AI-assisted research synthesis" [ref=e35]
+      - paragraph
+        - StaticText "Pilot AI-assisted research summaries with source citations and researcher review before publication."
+      - StaticText "Sam Okafor"
+      - StaticText "Due "
+      - StaticText "Dec 18"
+      - StaticText "At risk"
+  - complementary
+    - heading "Direct reports" [level=2, ref=e19]
+    - StaticText "SR"
+    - button "Sofia Ramirez Lead Researcher" [ref=e20]
+      - strong
+        - StaticText "Sofia Ramirez"
+      - StaticText "Lead Researcher"
+    - button "Edit Sofia Ramirez" [ref=e21]
+      - StaticText "Edit"
+    - StaticText "EP"
+    - button "Ethan Park Senior Researcher" [ref=e22]
+      - strong
+        - StaticText "Ethan Park"
+      - StaticText "Senior Researcher"
+    - button "Edit Ethan Park" [ref=e23]
+      - StaticText "Edit"
+    - StaticText "AN"
+    - button "Amara Nwosu Researcher" [ref=e24]
+      - strong
+        - StaticText "Amara Nwosu"
+      - StaticText "Researcher"
+    - button "Edit Amara Nwosu" [ref=e25]
+      - StaticText "Edit"
+    - button "＋ Add person" [ref=e26]
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

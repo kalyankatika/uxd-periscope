@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: Grid cards preserve graph identities, filtered connections and search scope
+ok 1 - Grid cards preserve graph identities, filtered connections and search scope
+  ---
+  duration_ms: 14.227166
+  type: 'test'
+  ...
+# Subtest: Grid owner labels use IDs and team project counts respect the selected period
+ok 2 - Grid owner labels use IDs and team project counts respect the selected period
+  ---
+  duration_ms: 1.398208
+  type: 'test'
+  ...
+# Subtest: The visual map shares export identities and shows only recorded relationships
+ok 3 - The visual map shares export identities and shows only recorded relationships
+  ---
+  duration_ms: 0.954042
+  type: 'test'
+  ...
+# Subtest: Attention and top-priority spotlights retain contributors and their reporting chains
+ok 4 - Attention and top-priority spotlights retain contributors and their reporting chains
+  ---
+  duration_ms: 0.800583
+  type: 'test'
+  ...
+# Subtest: Local graph depth follows both directions, and explains each relationship from the selected item
+ok 5 - Local graph depth follows both directions, and explains each relationship from the selected item
+  ---
+  duration_ms: 0.216125
+  type: 'test'
+  ...
+# Subtest: Quarter boundaries omit inactive projects without dangling dependencies
+ok 6 - Quarter boundaries omit inactive projects without dangling dependencies
+  ---
+  duration_ms: 0.151375
+  type: 'test'
+  ...
+# Subtest: Force layout stays deterministic, separated and immutable; fit contains all nodes
+ok 7 - Force layout stays deterministic, separated and immutable; fit contains all nodes
+  ---
+  duration_ms: 95.445042
+  type: 'test'
+  ...
+# Subtest: Zoom preserves the location under the pointer and clamps extreme input
+ok 8 - Zoom preserves the location under the pointer and clamps extreme input
+  ---
+  duration_ms: 0.083083
+  type: 'test'
+  ...
+# Subtest: A leader sees work owned by reports and shared work, each project once
+ok 9 - A leader sees work owned by reports and shared work, each project once
+  ---
+  duration_ms: 4.955916
+  type: 'test'
+  ...
+# Subtest: Reporting validation rejects cycles, missing managers and broken project links
+ok 10 - Reporting validation rejects cycles, missing managers and broken project links
+  ---
+  duration_ms: 1.881709
+  type: 'test'
+  ...
+# Subtest: Reporting reassignment updates leader rollups without changing project ownership
+ok 11 - Reporting reassignment updates leader rollups without changing project ownership
+  ---
+  duration_ms: 0.624959
+  type: 'test'
+  ...
+# Subtest: Graph export contains stable, resolvable identity and relationship links
+ok 12 - Graph export contains stable, resolvable identity and relationship links
+  ---
+  duration_ms: 1.065333
+  type: 'test'
+  ...
+# Subtest: Organization and project relationships round trip through CSV
+ok 13 - Organization and project relationships round trip through CSV
+  ---
+  duration_ms: 2.845417
+  type: 'test'
+  ...
+# Subtest: Related projects keep all direct dependencies first without truncating or mutating the plan
+ok 14 - Related projects keep all direct dependencies first without truncating or mutating the plan
+  ---
+  duration_ms: 0.455833
+  type: 'test'
+  ...
+# Subtest: Related projects agree with all seven exported dependency edges in both directions
+ok 15 - Related projects agree with all seven exported dependency edges in both directions
+  ---
+  duration_ms: 0.655791
+  type: 'test'
+  ...
+# Subtest: Shared people include opposite lead and contributor roles symmetrically
+ok 16 - Shared people include opposite lead and contributor roles symmetrically
+  ---
+  duration_ms: 0.569333
+  type: 'test'
+  ...
+# Subtest: A person present as both lead and contributor contributes one relationship reason
+ok 17 - A person present as both lead and contributor contributes one relationship reason
+  ---
+  duration_ms: 0.548458
+  type: 'test'
+  ...
+# Subtest: Matching display names do not connect different person IDs
+ok 18 - Matching display names do not connect different person IDs
+  ---
+  duration_ms: 0.6315
+  type: 'test'
+  ...
+# Subtest: Renaming people and projects preserves ID-based relationships
+ok 19 - Renaming people and projects preserves ID-based relationships
+  ---
+  duration_ms: 0.915
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 293.840542

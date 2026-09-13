@@ -1,0 +1,21 @@
+{
+  "connections": [
+    {
+      "name": "Grace Liu",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Theo Reed",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Maya Chen",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Client financial planning",
+      "reason": "Supports this priority"
+    }
+  ],
+  "title": "Statement content redesign"
+}

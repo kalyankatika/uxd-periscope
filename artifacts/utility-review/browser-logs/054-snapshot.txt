@@ -1,0 +1,71 @@
+- dialog "AI-assisted research synthesis"
+  - paragraph
+    - StaticText "Shared experience capabilities"
+  - heading "AI-assisted research synthesis" [level=2, ref=e1]
+  - button "Close project" [ref=e2]
+    - StaticText "✕"
+  - generic
+    - StaticText "At risk"
+    - StaticText "High priority"
+    - heading "Expected outcome" [level=3, ref=e5]
+    - paragraph
+      - StaticText "Pilot AI-assisted research summaries with source citations and researcher review before publication."
+    - heading "Latest update" [level=3, ref=e6]
+    - paragraph
+      - StaticText "The evaluation tool is ready, but preparation of the de-identified research dataset is behind schedule."
+    - heading "Action required" [level=3, ref=e7]
+    - paragraph
+      - StaticText "Confirm researcher availability for dataset review before the pilot starts."
+    - DescriptionList
+      - term "Project owner"
+      - definition
+        - button "Sam Okafor →" [ref=e18]
+          - StaticText "Sam Okafor →"
+      - term "Delivery"
+      - definition
+        - StaticText "In progress"
+      - term "Dates"
+      - definition
+        - StaticText "Nov 2 – Dec 18"
+      - term "Commitment"
+      - definition
+        - StaticText "Committed"
+    - heading "Project team" [level=3, ref=e8]
+    - button "SO Sam Okafor UX AI" [ref=e9]
+      - StaticText "SO"
+      - StaticText "Sam Okafor"
+      - StaticText "UX AI"
+    - button "EP Ethan Park Research & insights" [ref=e10]
+      - StaticText "EP"
+      - StaticText "Ethan Park"
+      - StaticText "Research & insights"
+    - button "AN Amara Nwosu Research & insights" [ref=e11]
+      - StaticText "AN"
+      - StaticText "Amara Nwosu"
+      - StaticText "Research & insights"
+    - button "TW Tessa Wu Design Strategy" [ref=e12]
+      - StaticText "TW"
+      - StaticText "Tessa Wu"
+      - StaticText "Design Strategy"
+    - group
+      - DisclosureTriangle "Weekly effort" [expanded=false]
+        - StaticText "Weekly effort"
+    - heading "Related projects" [level=3, ref=e13]
+    - button "Retirement guidance → Shared people" [ref=e14]
+      - strong
+        - StaticText "Retirement guidance →"
+      - StaticText "Shared people"
+    - button "Accessible component library → Same business priority" [ref=e15]
+      - strong
+        - StaticText "Accessible component library →"
+      - StaticText "Same business priority"
+    - button "Research repository → Needed by this project · Same business priority · Shared people" [ref=e16]
+      - strong
+        - StaticText "Research repository →"
+      - StaticText "Needed by this project · Same business priority · Shared people"
+    - button "Conversational planning prototype → Shared people" [ref=e17]
+      - strong
+        - StaticText "Conversational planning prototype →"
+      - StaticText "Shared people"
+  - button "View in map" [ref=e3]
+  - button "Edit project" [ref=e4]

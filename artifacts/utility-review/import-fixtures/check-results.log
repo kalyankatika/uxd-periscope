@@ -1,0 +1,2 @@
+Fixture checks PASS: baseline CSV/JSON agreement, expected merge counts, renamed stable owner, shared contributors, dependencies, rollups without duplication, ignored column review metadata, invalid manager/status rejection, unsafe subset replacement rejection, repeated-import count semantics, CSV round trip, stable JSON-LD identity.
+This check is in memory only; it does not read or write SQLite and does not prove browser usability.

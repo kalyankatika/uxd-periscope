@@ -1,0 +1,259 @@
+{
+  "people": [
+    {
+      "id": "p1",
+      "name": "Alex Morgan",
+      "craft": "design",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p10",
+      "name": "Drew Thomas",
+      "craft": "design_eng",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p11",
+      "name": "Quinn Garcia",
+      "craft": "design_eng",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p12",
+      "name": "Reese Martin",
+      "craft": "design_eng",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p2",
+      "name": "Jamie Chen",
+      "craft": "design",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p3",
+      "name": "Sam Rivera",
+      "craft": "design",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p4",
+      "name": "Taylor Brooks",
+      "craft": "design",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p5",
+      "name": "Jordan Lee",
+      "craft": "research",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p6",
+      "name": "Morgan Davis",
+      "craft": "research",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p7",
+      "name": "Riley Patel",
+      "craft": "content",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p8",
+      "name": "Casey Wilson",
+      "craft": "content",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "p9",
+      "name": "Avery Kim",
+      "craft": "design_eng",
+      "title": "",
+      "team": "",
+      "managerId": null,
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "i1",
+      "name": "Unified workspace",
+      "leadId": null,
+      "memberIds": [],
+      "dependsOn": [],
+      "importance": "normal",
+      "health": "not_reported",
+      "decision": "",
+      "update": "",
+      "priority": "",
+      "owner": "",
+      "summary": "",
+      "delivery": "planned",
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "status": "committed",
+      "effort": {
+        "design": 1.4,
+        "research": 1.12,
+        "content": 0.6,
+        "design_eng": 1.2
+      }
+    },
+    {
+      "id": "i2",
+      "name": "Onboarding refresh",
+      "leadId": null,
+      "memberIds": [],
+      "dependsOn": [],
+      "importance": "normal",
+      "health": "not_reported",
+      "decision": "",
+      "update": "",
+      "priority": "",
+      "owner": "",
+      "summary": "",
+      "delivery": "planned",
+      "start": "2026-10-01",
+      "end": "2026-11-13",
+      "status": "committed",
+      "effort": {
+        "design": 0.8,
+        "research": 0.8,
+        "content": 0.5,
+        "design_eng": 0.5
+      }
+    },
+    {
+      "id": "i3",
+      "name": "Enterprise discovery",
+      "leadId": null,
+      "memberIds": [],
+      "dependsOn": [],
+      "importance": "normal",
+      "health": "not_reported",
+      "decision": "",
+      "update": "",
+      "priority": "",
+      "owner": "",
+      "summary": "",
+      "delivery": "planned",
+      "start": "2026-10-19",
+      "end": "2026-12-11",
+      "status": "proposed",
+      "effort": {
+        "design": 0.4,
+        "research": 0.8,
+        "content": 0.2,
+        "design_eng": 0.2
+      }
+    },
+    {
+      "id": "i4",
+      "name": "Accessible foundations",
+      "leadId": null,
+      "memberIds": [],
+      "dependsOn": [],
+      "importance": "normal",
+      "health": "not_reported",
+      "decision": "",
+      "update": "",
+      "priority": "",
+      "owner": "",
+      "summary": "",
+      "delivery": "planned",
+      "start": "2026-11-02",
+      "end": "2026-12-31",
+      "status": "committed",
+      "effort": {
+        "design": 0.6,
+        "research": 0,
+        "content": 0.2,
+        "design_eng": 0.8
+      }
+    },
+    {
+      "id": "i5",
+      "name": "Self-service analytics",
+      "leadId": null,
+      "memberIds": [],
+      "dependsOn": [],
+      "importance": "normal",
+      "health": "not_reported",
+      "decision": "",
+      "update": "",
+      "priority": "",
+      "owner": "",
+      "summary": "",
+      "delivery": "planned",
+      "start": "2026-11-16",
+      "end": "2026-12-31",
+      "status": "stretch",
+      "effort": {
+        "design": 0.8,
+        "research": 0.4,
+        "content": 0.4,
+        "design_eng": 0.8
+      }
+    }
+  ],
+  "revision": 0
+}

@@ -1,0 +1,663 @@
+{
+  "people": [
+    {
+      "id": "aisha",
+      "name": "Aisha Patel",
+      "craft": "design",
+      "title": "AI Experience Designer",
+      "team": "UX AI",
+      "managerId": "riley",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "amara",
+      "name": "Amara Nwosu",
+      "craft": "research",
+      "title": "Researcher",
+      "team": "Research & insights",
+      "managerId": "marcus",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 25
+    },
+    {
+      "id": "ben",
+      "name": "Ben Carter",
+      "craft": "design_eng",
+      "title": "Prototyping Engineer",
+      "team": "Innovation",
+      "managerId": "victor",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "daniel",
+      "name": "Daniel Kim",
+      "craft": "design_eng",
+      "title": "Head of Design Systems",
+      "team": "Design systems",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 0.4,
+      "nonProjectPct": 50
+    },
+    {
+      "id": "elena",
+      "name": "Elena Brooks",
+      "craft": "design",
+      "title": "Head of Product Design",
+      "team": "Product Design",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 0.4,
+      "nonProjectPct": 50
+    },
+    {
+      "id": "ethan",
+      "name": "Ethan Park",
+      "craft": "research",
+      "title": "Senior Researcher",
+      "team": "Research & insights",
+      "managerId": "marcus",
+      "isLeader": false,
+      "fte": 0.8,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "grace",
+      "name": "Grace Liu",
+      "craft": "content",
+      "title": "Senior Content Designer",
+      "team": "Content design",
+      "managerId": "priya",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "isabel",
+      "name": "Isabel Costa",
+      "craft": "design_eng",
+      "title": "Design Engineer",
+      "team": "Design systems",
+      "managerId": "daniel",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan Ellis",
+      "craft": "design",
+      "title": "Senior Product Designer",
+      "team": "Product Design",
+      "managerId": "elena",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "leila",
+      "name": "Leila Haddad",
+      "craft": "design",
+      "title": "Innovation Lead",
+      "team": "Innovation",
+      "managerId": "victor",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "leo",
+      "name": "Leo Martinez",
+      "craft": "content",
+      "title": "Lead Content Designer",
+      "team": "Content design",
+      "managerId": "priya",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "marcus",
+      "name": "Marcus Reed",
+      "craft": "research",
+      "title": "Head of Research",
+      "team": "Research & insights",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 0.4,
+      "nonProjectPct": 50
+    },
+    {
+      "id": "maya",
+      "name": "Maya Chen",
+      "craft": "design",
+      "title": "Principal Product Designer",
+      "team": "Product Design",
+      "managerId": "elena",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "nina",
+      "name": "Nina Patel",
+      "craft": "design",
+      "title": "Product Designer",
+      "team": "Product Design",
+      "managerId": "elena",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 15
+    },
+    {
+      "id": "noah",
+      "name": "Noah Bennett",
+      "craft": "design_eng",
+      "title": "Design Engineer",
+      "team": "Design systems",
+      "managerId": "daniel",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 15
+    },
+    {
+      "id": "oliver",
+      "name": "Oliver Grant",
+      "craft": "design_eng",
+      "title": "Lead Design Engineer",
+      "team": "Design systems",
+      "managerId": "daniel",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "owen",
+      "name": "Owen Hughes",
+      "craft": "design",
+      "title": "Service Designer",
+      "team": "Design Strategy",
+      "managerId": "sana",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "priya",
+      "name": "Priya Shah",
+      "craft": "content",
+      "title": "Head of Content Design",
+      "team": "Content design",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 0.4,
+      "nonProjectPct": 50
+    },
+    {
+      "id": "riley",
+      "name": "Riley Thompson",
+      "craft": "design_eng",
+      "title": "Head of UX AI",
+      "team": "UX AI",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 0.4,
+      "nonProjectPct": 50
+    },
+    {
+      "id": "sam",
+      "name": "Sam Okafor",
+      "craft": "design_eng",
+      "title": "AI Design Engineer",
+      "team": "UX AI",
+      "managerId": "riley",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "sana",
+      "name": "Sana Ahmed",
+      "craft": "design",
+      "title": "Head of Design Strategy",
+      "team": "Design Strategy",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 0.4,
+      "nonProjectPct": 50
+    },
+    {
+      "id": "sofia",
+      "name": "Sofia Ramirez",
+      "craft": "research",
+      "title": "Lead Researcher",
+      "team": "Research & insights",
+      "managerId": "marcus",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "tessa",
+      "name": "Tessa Wu",
+      "craft": "design",
+      "title": "Principal Design Strategist",
+      "team": "Design Strategy",
+      "managerId": "sana",
+      "isLeader": false,
+      "fte": 1,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "theo",
+      "name": "Theo Reed",
+      "craft": "content",
+      "title": "Content Designer",
+      "team": "Content design",
+      "managerId": "priya",
+      "isLeader": false,
+      "fte": 0.8,
+      "nonProjectPct": 20
+    },
+    {
+      "id": "uxd-head",
+      "name": "Avery Morgan",
+      "craft": "design",
+      "title": "Head of UXD",
+      "team": "User experience",
+      "managerId": null,
+      "isLeader": true,
+      "fte": 0,
+      "nonProjectPct": 100
+    },
+    {
+      "id": "victor",
+      "name": "Victor Alvarez",
+      "craft": "design",
+      "title": "Head of Innovation",
+      "team": "Innovation",
+      "managerId": "uxd-head",
+      "isLeader": true,
+      "fte": 0.4,
+      "nonProjectPct": 50
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "advisor",
+      "name": "Advisor workspace",
+      "leadId": "jordan",
+      "memberIds": [
+        "sofia",
+        "grace"
+      ],
+      "dependsOn": [],
+      "importance": "top",
+      "health": "on_track",
+      "decision": "",
+      "update": "Advisors have reviewed the new workspace. The team is refining the meeting-preparation flow.",
+      "priority": "Advisor productivity",
+      "owner": "Jordan Ellis",
+      "summary": "Bring the right client information into one place before every advisor meeting.",
+      "delivery": "in_progress",
+      "start": "2026-10-01",
+      "end": "2026-12-04",
+      "status": "committed",
+      "effort": {
+        "design": 0.8,
+        "research": 0.4,
+        "content": 0.3,
+        "design_eng": 0.3
+      }
+    },
+    {
+      "id": "components",
+      "name": "Accessible component library",
+      "leadId": "oliver",
+      "memberIds": [
+        "isabel",
+        "grace"
+      ],
+      "dependsOn": [],
+      "importance": "high",
+      "health": "on_track",
+      "decision": "",
+      "update": "Forms and navigation are ready for adoption. Account opening and mobile teams are coordinating the rollout.",
+      "priority": "Shared experience capabilities",
+      "owner": "Oliver Grant",
+      "summary": "Give every team accessible, reusable components for the journeys clients use most.",
+      "delivery": "in_progress",
+      "start": "2026-10-01",
+      "end": "2026-12-18",
+      "status": "committed",
+      "effort": {
+        "design": 0.3,
+        "research": 0.1,
+        "content": 0.2,
+        "design_eng": 1
+      }
+    },
+    {
+      "id": "experience-strategy",
+      "name": "UXD product design strategy",
+      "leadId": "tessa",
+      "memberIds": [
+        "owen",
+        "maya",
+        "sofia"
+      ],
+      "dependsOn": [],
+      "importance": "top",
+      "health": "on_track",
+      "decision": "",
+      "update": "Journey reviews are complete. Product Design and Research are validating the proposed investment priorities.",
+      "priority": "Product experience alignment",
+      "owner": "Tessa Wu",
+      "summary": "Define shared experience principles and a prioritized roadmap across onboarding, advice, and retirement products.",
+      "delivery": "in_progress",
+      "start": "2026-10-01",
+      "end": "2026-11-06",
+      "status": "committed",
+      "effort": {
+        "design": 0.5,
+        "research": 0.2,
+        "content": 0.1,
+        "design_eng": 0
+      }
+    },
+    {
+      "id": "opening",
+      "name": "Account opening redesign",
+      "leadId": "maya",
+      "memberIds": [
+        "sofia",
+        "leo",
+        "oliver"
+      ],
+      "dependsOn": [
+        "components"
+      ],
+      "importance": "top",
+      "health": "needs_decision",
+      "decision": "Decide whether the new identity check belongs in this release or the next one.",
+      "update": "The shorter application has been tested. The team is ready to finalize the identity-check experience.",
+      "priority": "Client onboarding",
+      "owner": "Maya Chen",
+      "summary": "Help new clients open an account without getting stuck or starting over.",
+      "delivery": "in_progress",
+      "start": "2026-10-01",
+      "end": "2026-11-20",
+      "status": "committed",
+      "effort": {
+        "design": 1,
+        "research": 0.5,
+        "content": 0.4,
+        "design_eng": 0.5
+      }
+    },
+    {
+      "id": "statements",
+      "name": "Statement content redesign",
+      "leadId": "grace",
+      "memberIds": [
+        "theo",
+        "maya"
+      ],
+      "dependsOn": [],
+      "importance": "normal",
+      "health": "on_track",
+      "decision": "",
+      "update": "The reviewed copy has been handed over to the statements team.",
+      "priority": "Client financial planning",
+      "owner": "Grace Liu",
+      "summary": "Replace confusing statement terminology with language clients can understand.",
+      "delivery": "completed",
+      "start": "2026-10-01",
+      "end": "2026-10-09",
+      "status": "committed",
+      "effort": {
+        "design": 0.1,
+        "research": 0,
+        "content": 0.5,
+        "design_eng": 0
+      }
+    },
+    {
+      "id": "ai-standards",
+      "name": "UX AI interaction standards",
+      "leadId": "aisha",
+      "memberIds": [
+        "sam",
+        "grace",
+        "oliver"
+      ],
+      "dependsOn": [
+        "components"
+      ],
+      "importance": "top",
+      "health": "on_track",
+      "decision": "",
+      "update": "Content Design has reviewed the patterns. Design Systems is preparing the first component examples.",
+      "priority": "Responsible AI experiences",
+      "owner": "Aisha Patel",
+      "summary": "Define reusable interaction patterns for AI disclosures, source references, user feedback, and error recovery.",
+      "delivery": "in_progress",
+      "start": "2026-10-05",
+      "end": "2026-11-13",
+      "status": "committed",
+      "effort": {
+        "design": 0.4,
+        "research": 0.1,
+        "content": 0.3,
+        "design_eng": 0.4
+      }
+    },
+    {
+      "id": "insights",
+      "name": "Research repository",
+      "leadId": "ethan",
+      "memberIds": [
+        "amara",
+        "jordan"
+      ],
+      "dependsOn": [],
+      "importance": "high",
+      "health": "on_track",
+      "decision": "",
+      "update": "The first set of findings is organized around client journeys. Two teams are trying the search experience.",
+      "priority": "Shared experience capabilities",
+      "owner": "Ethan Park",
+      "summary": "Make existing client research easy to find before teams start new work.",
+      "delivery": "in_progress",
+      "start": "2026-10-05",
+      "end": "2026-11-27",
+      "status": "committed",
+      "effort": {
+        "design": 0.2,
+        "research": 0.5,
+        "content": 0.1,
+        "design_eng": 0.2
+      }
+    },
+    {
+      "id": "innovation-lab",
+      "name": "Service concept pilots",
+      "leadId": "leila",
+      "memberIds": [
+        "ben",
+        "owen",
+        "nina"
+      ],
+      "dependsOn": [
+        "experience-strategy"
+      ],
+      "importance": "high",
+      "health": "on_track",
+      "decision": "",
+      "update": "Prototype scenarios are ready. Design Strategy is defining the success criteria with Product Design.",
+      "priority": "New product opportunities",
+      "owner": "Leila Haddad",
+      "summary": "Test two service concepts with clients before committing to product development.",
+      "delivery": "in_progress",
+      "start": "2026-10-12",
+      "end": "2026-12-11",
+      "status": "committed",
+      "effort": {
+        "design": 0.5,
+        "research": 0.2,
+        "content": 0.1,
+        "design_eng": 0.4
+      }
+    },
+    {
+      "id": "retirement",
+      "name": "Retirement guidance",
+      "leadId": "leo",
+      "memberIds": [
+        "ethan",
+        "maya"
+      ],
+      "dependsOn": [],
+      "importance": "top",
+      "health": "at_risk",
+      "decision": "",
+      "update": "Participant recruitment is slower than expected. The research lead is adjusting the interview plan.",
+      "priority": "Client financial planning",
+      "owner": "Leo Martinez",
+      "summary": "Make retirement choices easier to understand, so clients know what to do next.",
+      "delivery": "in_progress",
+      "start": "2026-10-12",
+      "end": "2026-12-11",
+      "status": "committed",
+      "effort": {
+        "design": 0.3,
+        "research": 0.5,
+        "content": 0.6,
+        "design_eng": 0.1
+      }
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile portfolio overview",
+      "leadId": "nina",
+      "memberIds": [
+        "noah",
+        "leo"
+      ],
+      "dependsOn": [
+        "components"
+      ],
+      "importance": "high",
+      "health": "at_risk",
+      "decision": "",
+      "update": "The design is progressing, but delivery depends on shared chart and accessibility components.",
+      "priority": "Client financial planning",
+      "owner": "Nina Patel",
+      "summary": "Help clients understand portfolio performance at a glance on their phone.",
+      "delivery": "in_progress",
+      "start": "2026-10-19",
+      "end": "2026-12-18",
+      "status": "committed",
+      "effort": {
+        "design": 0.7,
+        "research": 0.2,
+        "content": 0.2,
+        "design_eng": 0.6
+      }
+    },
+    {
+      "id": "conversational-prototype",
+      "name": "Conversational planning prototype",
+      "leadId": "ben",
+      "memberIds": [
+        "aisha",
+        "amara",
+        "leo"
+      ],
+      "dependsOn": [
+        "ai-standards"
+      ],
+      "importance": "high",
+      "health": "needs_decision",
+      "decision": "Select one concept and approve the client-testing scope for the next pilot.",
+      "update": "Two interaction approaches have been tested with internal reviewers. Client testing is awaiting a scope decision.",
+      "priority": "New product opportunities",
+      "owner": "Ben Carter",
+      "summary": "Evaluate a conversational planning concept with clear handoffs to human support.",
+      "delivery": "in_progress",
+      "start": "2026-10-26",
+      "end": "2026-12-18",
+      "status": "committed",
+      "effort": {
+        "design": 0.3,
+        "research": 0.2,
+        "content": 0.2,
+        "design_eng": 0.6
+      }
+    },
+    {
+      "id": "ai-research",
+      "name": "AI-assisted research synthesis",
+      "leadId": "sam",
+      "memberIds": [
+        "ethan",
+        "amara",
+        "tessa"
+      ],
+      "dependsOn": [
+        "insights",
+        "ai-standards"
+      ],
+      "importance": "high",
+      "health": "at_risk",
+      "decision": "Confirm researcher availability for dataset review before the pilot starts.",
+      "update": "The evaluation tool is ready, but preparation of the de-identified research dataset is behind schedule.",
+      "priority": "Shared experience capabilities",
+      "owner": "Sam Okafor",
+      "summary": "Pilot AI-assisted research summaries with source citations and researcher review before publication.",
+      "delivery": "in_progress",
+      "start": "2026-11-02",
+      "end": "2026-12-18",
+      "status": "committed",
+      "effort": {
+        "design": 0.2,
+        "research": 0.4,
+        "content": 0.1,
+        "design_eng": 0.7
+      }
+    },
+    {
+      "id": "coaching",
+      "name": "Planning assistant discovery",
+      "leadId": "amara",
+      "memberIds": [
+        "nina",
+        "isabel"
+      ],
+      "dependsOn": [],
+      "importance": "normal",
+      "health": "not_reported",
+      "decision": "",
+      "update": "An early idea for next quarter. The team has not committed to delivery.",
+      "priority": "Client financial planning",
+      "owner": "Amara Nwosu",
+      "summary": "Explore whether guided prompts can help clients take their next planning step.",
+      "delivery": "planned",
+      "start": "2026-11-16",
+      "end": "2026-12-31",
+      "status": "proposed",
+      "effort": {
+        "design": 0.4,
+        "research": 0.4,
+        "content": 0.2,
+        "design_eng": 0.3
+      }
+    }
+  ],
+  "revision": 1
+}

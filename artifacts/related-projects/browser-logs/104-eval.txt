@@ -1,0 +1,25 @@
+{
+  "connections": [
+    {
+      "name": "Ethan Park",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Amara Nwosu",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Jordan Ellis",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Shared experience capabilities",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "AI-assisted research synthesis",
+      "reason": "Needed by"
+    }
+  ],
+  "title": "Research repository"
+}

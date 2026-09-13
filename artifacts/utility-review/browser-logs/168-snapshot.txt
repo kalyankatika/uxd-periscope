@@ -1,0 +1,64 @@
+- dialog "Onboarding redesign"
+  - paragraph
+    - StaticText "Reduce onboarding friction"
+  - heading "Onboarding redesign" [level=2, ref=e1]
+  - button "Close project" [ref=e2]
+    - StaticText "✕"
+  - generic
+    - StaticText "On track"
+    - StaticText "Top priority"
+    - heading "Expected outcome" [level=3, ref=e5]
+    - paragraph
+      - StaticText "Reduce drop-off in account opening"
+    - heading "Latest update" [level=3, ref=e6]
+    - paragraph
+      - StaticText "Scope approved; testing is booked"
+    - DescriptionList
+      - term "Project owner"
+      - definition
+        - button "Avery Chen →" [ref=e16]
+          - StaticText "Avery Chen →"
+      - term "Delivery"
+      - definition
+        - StaticText "In progress"
+      - term "Dates"
+      - definition
+        - StaticText "Oct 1 – Dec 18"
+      - term "Commitment"
+      - definition
+        - StaticText "Committed"
+    - heading "Project team" [level=3, ref=e7]
+    - button "AC Avery Chen Product Design" [ref=e8]
+      - StaticText "AC"
+      - StaticText "Avery Chen"
+      - StaticText "Product Design"
+    - button "SR Sam Rivera Product Design" [ref=e9]
+      - StaticText "SR"
+      - StaticText "Sam Rivera"
+      - StaticText "Product Design"
+    - button "MP Morgan Patel Research" [ref=e10]
+      - StaticText "MP"
+      - StaticText "Morgan Patel"
+      - StaticText "Research"
+    - button "TB Taylor Brooks UX AI" [ref=e11]
+      - StaticText "TB"
+      - StaticText "Taylor Brooks"
+      - StaticText "UX AI"
+    - group
+      - DisclosureTriangle "Weekly effort" [expanded=false]
+        - StaticText "Weekly effort"
+    - heading "Related projects" [level=3, ref=e12]
+    - button "Onboarding research → Needed by this project · Same business priority · Shared people" [ref=e13]
+      - strong
+        - StaticText "Onboarding research →"
+      - StaticText "Needed by this project · Same business priority · Shared people"
+    - button "Component accessibility → Shared people" [ref=e14]
+      - strong
+        - StaticText "Component accessibility →"
+      - StaticText "Shared people"
+    - button "UX AI assistance prototype → Shared people" [ref=e15]
+      - strong
+        - StaticText "UX AI assistance prototype →"
+      - StaticText "Shared people"
+  - button "View in map" [ref=e3]
+  - button "Edit project" [ref=e4]

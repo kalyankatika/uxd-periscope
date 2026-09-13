@@ -22,6 +22,8 @@ Labels such as “on track” and “needs a decision” come from explicit proj
 
 The Work map also has a **Grid** view. Cards retain the same graph identities and selected period, with owners for projects, teams for people, and supporting work for priorities. Type filters, priority/attention filters, connection focus, and the selected detail panel carry across views. Grid search narrows the filtered items; sorting supports type, name, and number of connections. Connection counts reflect the visible graph before the search narrows cards. Team and supporting-project counts cover the selected period. **View on map** returns to the graph with the same selection.
 
+Project details show the full **Related projects** list and its total. Direct prerequisites and dependents appear first, with the direction explained on each row. Other relationships include a shared business priority or people involved as an owner or contributor on either project. Each project appears once with all applicable reasons; names are display labels, never relationship keys. Selecting a related project opens its details at the top and focuses the new heading. These navigation actions do not save or change project records.
+
 ## Portable relationship model
 
 - Person `id` is stable; `managerId` records reporting relationships. Reporting cycles and unknown managers are rejected.
@@ -31,7 +33,7 @@ The Work map also has a **Grid** view. Cards retain the same graph identities an
 - The “Export connected data” button exports the dataset currently on screen. The API always reads the persisted workspace. Example mode is explicitly local to the current session.
 - No external source is automatically synchronized. Connectors can use the existing plan API and graph export as an interchange boundary; authentication is required before any shared deployment.
 
-CSV person fields include optional `title`, `team`, `managerId`, and `isLeader` (`true`/`false`). Project CSVs include optional `leadId`, `memberIds`, `dependsOn`, `importance`, `health`, `decision`, and `update`. Multiple IDs are separated by `|`. Import people before projects that reference them. Existing columns remain supported. Saving a plan validates all references together.
+CSV person fields include optional `title`, `team`, `managerId`, and `isLeader` (`true`/`false`). Project CSVs include optional `leadId`, `memberIds`, `dependsOn`, `importance`, `health`, `decision`, and `update`. Multiple IDs are separated by `|`. **Import organization** reviews people and projects together and saves the combined plan in one transaction. For separate uploads, import people before projects that reference them. Existing columns remain supported. Saving a plan validates all references together.
 
 ## Example and saved data
 

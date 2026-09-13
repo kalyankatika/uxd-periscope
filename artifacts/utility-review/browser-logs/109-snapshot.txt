@@ -1,0 +1,126 @@
+- dialog
+  - form
+    - paragraph
+      - StaticText "PROJECT DETAILS"
+    - heading "Edit project" [level=2, ref=e1]
+    - button "Close project" [ref=e2]
+      - StaticText "✕"
+    - generic
+      - LabelText
+        - StaticText "Name"
+        - textbox "Name" [required, ref=e6]: Planning assistant discovery
+          - StaticText "Planning assistant discovery"
+      - LabelText
+        - StaticText "Business priority"
+        - textbox "Business priority" [ref=e7]: Client financial planning
+          - StaticText "Client financial planning"
+      - LabelText
+        - StaticText "Project owner"
+        - combobox "Project owner" [expanded=false, ref=e8]: Amara Nwosu — Research & insights
+          - MenuListPopup
+            - option "Not assigned" [ref=e18]
+            - option "Avery Morgan — User experience" [ref=e19]
+            - option "Elena Brooks — Product Design" [ref=e20]
+            - option "Marcus Reed — Research & insights" [ref=e21]
+            - option "Priya Shah — Content design" [ref=e22]
+            - option "Daniel Kim — Design systems" [ref=e23]
+            - option "Maya Chen — Product Design" [ref=e24]
+            - option "Jordan Ellis — Product Design" [ref=e25]
+            - option "Nina Patel — Product Design" [ref=e26]
+            - option "Sofia Ramirez — Research & insights" [ref=e27]
+            - option "Ethan Park — Research & insights" [ref=e28]
+            - option "Amara Nwosu — Research & insights" [selected, ref=e29]
+            - option "Leo Martinez — Content design" [ref=e30]
+            - option "Grace Liu — Content design" [ref=e31]
+            - option "Theo Reed — Content design" [ref=e32]
+            - option "Oliver Grant — Design systems" [ref=e33]
+            - option "Isabel Costa — Design systems" [ref=e34]
+            - option "Noah Bennett — Design systems" [ref=e35]
+            - option "Sana Ahmed — Design Strategy" [ref=e36]
+            - option "Victor Alvarez — Innovation" [ref=e37]
+            - option "Riley Thompson — UX AI" [ref=e38]
+            - option "Tessa Wu — Design Strategy" [ref=e39]
+            - option "Owen Hughes — Design Strategy" [ref=e40]
+            - option "Leila Haddad — Innovation" [ref=e41]
+            - option "Ben Carter — Innovation" [ref=e42]
+            - option "Aisha Patel — UX AI" [ref=e43]
+            - option "Sam Okafor — UX AI" [ref=e44]
+      - LabelText
+        - StaticText "Importance"
+        - combobox "Importance" [expanded=false, ref=e9]: Standard
+          - MenuListPopup
+            - option "Top priority" [ref=e45]
+            - option "High priority" [ref=e46]
+            - option "Standard" [selected, ref=e47]
+      - LabelText
+        - StaticText "Project health"
+        - combobox "Project health" [expanded=false, ref=e10]: Not reported
+          - MenuListPopup
+            - option "Not reported" [selected, ref=e48]
+            - option "On track" [ref=e49]
+            - option "At risk" [ref=e50]
+            - option "Decision required" [ref=e51]
+      - LabelText
+        - StaticText "Latest update"
+        - textbox "Latest update" [ref=e11]: An early idea for next quarter. The team has not committed to delivery.
+          - StaticText "An early idea for next quarter. The team has not committed to delivery."
+      - LabelText
+        - StaticText "Action required"
+        - textbox "Action required" [ref=e12]
+      - group
+        - DisclosureTriangle "Contributors (2)" [expanded=false]
+          - StaticText "Contributors (2)"
+      - group
+        - DisclosureTriangle "Project dependencies (0)" [expanded=false]
+          - StaticText "Project dependencies (0)"
+      - LabelText
+        - StaticText "Expected outcome"
+        - textbox "Expected outcome" [ref=e13]: Explore whether guided prompts can help clients take their next planning step.
+          - StaticText "Explore whether guided prompts can help clients take their next planning step."
+      - LabelText
+        - StaticText "Delivery status"
+        - combobox "Delivery status" [expanded=false, ref=e14]: Planned
+          - MenuListPopup
+            - option "Planned" [selected, ref=e52]
+            - option "In progress" [ref=e53]
+            - option "Blocked" [ref=e54]
+            - option "Completed" [ref=e55]
+      - LabelText
+        - StaticText "Start"
+        - Date "Start": 2026-11-16
+          - generic
+            - spinbutton "Month Month" [ref=e56]: 11
+              - StaticText "11"
+            - StaticText "/"
+            - spinbutton "Day Day" [ref=e57]: 16
+              - StaticText "16"
+            - StaticText "/"
+            - spinbutton "Year Year" [ref=e58]: 2026
+              - StaticText "2026"
+          - button "Show date picker Show date picker" [ref=e16]
+      - LabelText
+        - StaticText "End"
+        - Date "End": 2026-12-31
+          - generic
+            - spinbutton "Month Month" [ref=e59]: 12
+              - StaticText "12"
+            - StaticText "/"
+            - spinbutton "Day Day" [ref=e60]: 31
+              - StaticText "31"
+            - StaticText "/"
+            - spinbutton "Year Year" [ref=e61]: 2026
+              - StaticText "2026"
+          - button "Show date picker Show date picker" [ref=e17]
+      - LabelText
+        - StaticText "Commitment"
+        - combobox "Commitment" [expanded=false, ref=e15]: Proposed
+          - MenuListPopup
+            - option "Proposed" [selected, ref=e62]
+            - option "Committed" [ref=e63]
+            - option "Backlog" [ref=e64]
+      - group
+        - DisclosureTriangle "Effort & capacity" [expanded=false]
+          - StaticText "Effort & capacity"
+    - button "Delete" [ref=e3]
+    - button "Cancel" [ref=e4]
+    - button "Save project" [ref=e5]

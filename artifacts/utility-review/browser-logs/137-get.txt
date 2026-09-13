@@ -1,0 +1,99 @@
+Review organization import
+×
+
+Saved workspace
+
+Merge both files by ID. Both datasets will be saved in one transaction.
+
+Changes across all dates
+Dataset	In file	New	Updated	Removed	After import
+People	2	1	1	0	6
+Projects	2	1	1	0	4
+Resolve these issues before importing
+Unknown manager for Taylor Brooks
+
+Review the column mappings, label conversions, and record previews for each file. Every row is validated. Person and project IDs are matched exactly.
+
+People · invalid-missing-manager-people.csv
+
+Columns excluded from import: Source note
+
+Column mapping
+
+Recognized column names map to the fields below. Person and project relationships use exact IDs.
+
+Source column	Periscope field
+Employee ID	Record ID
+Full name	Name
+Discipline	Discipline
+Working time (FTE)	Working time (FTE)
+Non-project time (%)	Non-project time (%)
+Job title	Job title
+Team	Team
+Manager ID	Manager ID
+Leader	Leader
+Label mapping
+
+Recognized labels are converted to the following stored values.
+
+Field	Source label	Stored value
+Discipline	Product Design	design
+Leader	Yes	true
+Leader	No	false
+Record preview
+ID	Name
+0010	Avery Chen
+0030	Taylor Brooks
+
+Showing the first 2 records. All 2 records will be imported.
+
+Projects · update-projects.csv
+
+Columns excluded from import: Source note
+
+Column mapping
+
+Recognized column names map to the fields below. Person and project relationships use exact IDs.
+
+Source column	Periscope field
+Project ID	Record ID
+Project name	Name
+Start date	Start date
+End date	End date
+Commitment	Commitment
+Design effort	Design effort
+Research effort	Research effort
+Content effort	Content effort
+Design engineering effort	Design engineering effort
+Project owner ID	Project owner ID
+Contributor IDs	Contributor IDs
+Dependency IDs	Dependency IDs
+Importance	Importance
+Project health	Project health
+Action required	Action required
+Latest update	Latest update
+Business priority	Business priority
+Expected outcome	Expected outcome
+Delivery status	Delivery status
+Label mapping
+
+Recognized labels are converted to the following stored values.
+
+Field	Source label	Stored value
+Commitment	Committed	committed
+Project health	On track	on_track
+Delivery status	In progress	in_progress
+Importance	Top priority	top
+Commitment	Proposed	proposed
+Project health	No update yet	not_reported
+Delivery status	Planned	planned
+Importance	Normal	normal
+Record preview
+ID	Name
+UX-001	Onboarding redesign
+UX-004	UX AI assistance prototype
+
+Showing the first 2 records. All 2 records will be imported.
+
+Cancel
+Import organization

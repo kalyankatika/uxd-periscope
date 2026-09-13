@@ -1,0 +1,9 @@
+# Keep deterministic demo fixtures identical across platforms.
+examples/uxd-demo/*.csv text eol=lf
+examples/uxd-demo/*.json text eol=lf
+
+# Preserve captured verification evidence byte-for-byte, including export CRLF.
+artifacts/** -text
+artifacts/**/*.csv whitespace=cr-at-eol
+artifacts/**/*.log whitespace=-blank-at-eof
+artifacts/**/browser-logs/*.txt whitespace=-blank-at-eol,-blank-at-eof

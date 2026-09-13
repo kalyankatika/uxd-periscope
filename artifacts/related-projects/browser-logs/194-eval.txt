@@ -1,0 +1,29 @@
+{
+  "connections": [
+    {
+      "name": "Ben Carter",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Aisha Patel",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Amara Nwosu",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Leo Martinez",
+      "reason": "Contributor"
+    },
+    {
+      "name": "New product opportunities",
+      "reason": "Supports this priority"
+    },
+    {
+      "name": "UX AI interaction standards",
+      "reason": "Depends on"
+    }
+  ],
+  "title": "Conversational planning prototype"
+}

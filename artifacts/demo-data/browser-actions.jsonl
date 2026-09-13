@@ -1,0 +1,31 @@
+{"at": "2026-09-13T00:48:04.257880+00:00", "args": ["open", "http://127.0.0.1:3023"], "exitCode": 0, "output": "browser-logs/001-open.txt"}
+{"at": "2026-09-13T00:48:04.452650+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/002-set.txt"}
+{"at": "2026-09-13T00:48:04.663497+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/003-snapshot.txt"}
+{"at": "2026-09-13T00:48:04.854243+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/004-errors.txt"}
+{"at": "2026-09-13T00:48:05.050823+00:00", "args": ["console"], "exitCode": 0, "output": "browser-logs/005-console.txt"}
+{"at": "2026-09-13T00:48:12.944983+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/demo-data/01-fresh-example.png"], "exitCode": 0, "output": "browser-logs/006-screenshot.txt"}
+{"at": "2026-09-13T00:48:13.130260+00:00", "args": ["scrollintoview", "@e3"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-13T00:48:13.318038+00:00", "args": ["click", "@e3"], "exitCode": 0, "output": "browser-logs/007-click.txt"}
+{"at": "2026-09-13T00:48:13.522061+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/008-snapshot.txt"}
+{"at": "2026-09-13T00:48:20.502584+00:00", "args": ["scrollintoview", "@e13"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-13T00:48:20.680603+00:00", "args": ["click", "@e13"], "exitCode": 0, "output": "browser-logs/009-click.txt"}
+{"at": "2026-09-13T00:48:20.893982+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/010-snapshot.txt"}
+{"at": "2026-09-13T00:48:30.535520+00:00", "args": ["upload", "@e86", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/examples/uxd-demo/people.csv"], "exitCode": 0, "output": "browser-logs/011-upload.txt"}
+{"at": "2026-09-13T00:48:30.723001+00:00", "args": ["upload", "@e87", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/examples/uxd-demo/projects.csv"], "exitCode": 0, "output": "browser-logs/012-upload.txt"}
+{"at": "2026-09-13T00:48:30.913637+00:00", "args": ["scrollintoview", "@e88"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-13T00:48:31.083633+00:00", "args": ["select", "@e88", "replace"], "exitCode": 0, "output": "browser-logs/013-select.txt"}
+{"at": "2026-09-13T00:48:31.305157+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/014-snapshot.txt"}
+{"at": "2026-09-13T00:48:34.190840+00:00", "args": ["scrollintoview", "button[type=\"submit\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-13T00:48:34.358071+00:00", "args": ["click", "button[type=\"submit\"]"], "exitCode": 0, "output": "browser-logs/015-click.txt"}
+{"at": "2026-09-13T00:48:34.579343+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/016-snapshot.txt"}
+{"at": "2026-09-13T00:48:34.822216+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/demo-data/02-review.png"], "exitCode": 0, "output": "browser-logs/017-screenshot.txt"}
+{"at": "2026-09-13T00:48:43.622201+00:00", "args": ["scrollintoview", "@e4"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-13T00:48:43.798656+00:00", "args": ["click", "@e4"], "exitCode": 0, "output": "browser-logs/018-click.txt"}
+{"at": "2026-09-13T00:48:44.016771+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/019-snapshot.txt"}
+{"at": "2026-09-13T00:48:44.322662+00:00", "args": ["reload"], "exitCode": 0, "output": "browser-logs/020-reload.txt"}
+{"at": "2026-09-13T00:48:44.521361+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/021-snapshot.txt"}
+{"at": "2026-09-13T00:48:44.793327+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/demo-data/03-imported-after-reload.png"], "exitCode": 0, "output": "browser-logs/022-screenshot.txt"}
+{"at": "2026-09-13T00:49:03.627625+00:00", "args": ["download", "[aria-label=\"Export connected data\"]", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/demo-data/imported-graph.jsonld"], "exitCode": 0, "output": "browser-logs/023-download.txt"}
+{"at": "2026-09-13T00:49:03.820652+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/024-errors.txt"}
+{"at": "2026-09-13T00:49:04.023553+00:00", "args": ["console"], "exitCode": 0, "output": "browser-logs/025-console.txt"}
+{"at": "2026-09-13T00:49:47.313086+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/026-close.txt"}

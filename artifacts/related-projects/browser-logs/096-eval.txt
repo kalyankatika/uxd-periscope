@@ -1,0 +1,58 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (8)",
+  "rows": [
+    {
+      "name": "Account opening redesign",
+      "reasons": [
+        "Depends on this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Mobile portfolio overview",
+      "reasons": [
+        "Depends on this project"
+      ]
+    },
+    {
+      "name": "UX AI interaction standards",
+      "reasons": [
+        "Depends on this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Advisor workspace",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Research repository",
+      "reasons": [
+        "Same business priority"
+      ]
+    },
+    {
+      "name": "Statement content redesign",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Planning assistant discovery",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "AI-assisted research synthesis",
+      "reasons": [
+        "Same business priority"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "Accessible component library"
+}

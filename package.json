@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start --hostname 127.0.0.1",
     "test": "node --import tsx --test tests/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "demo:data": "node --import tsx scripts/generate-demo-data.ts",
+    "demo:check": "node --import tsx --test tests/demo-data.test.ts",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm test && npm run build"
   },
   "dependencies": {
     "d3-force": "^3.0.0",

@@ -1,0 +1,21 @@
+{
+  "connections": [
+    {
+      "name": "Leo Martinez",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Ethan Park",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Maya Chen",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Client financial planning",
+      "reason": "Supports this priority"
+    }
+  ],
+  "title": "Retirement guidance"
+}

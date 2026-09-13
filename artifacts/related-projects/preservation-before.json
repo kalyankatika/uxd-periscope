@@ -1,0 +1,15 @@
+{
+  "sourceHashes": {
+    "app/leadership.tsx": "c78aab67377dfb0c1494616c137d801f73b5e7f730d66e8a3464ce11a73c680b",
+    "lib/work-graph.ts": "b844f4361938d2206f4059a8e6a484269bf9abc7ea699850188d532d1c107b27",
+    "tests/work-graph.test.ts": "cce36dc48ea58f81042cea7177b38f11ac6553df29b127f08cb875b95801dc12",
+    "app/globals.css": "0d3a32b82b4c5260b8d1f39da2b321e89fa0f71d63bda392869b62b374023b66",
+    "package.json": "44b7dd7f4e6a4a9311235a262741b8b8cea1b668b8eff1a24b8e6fb97fa60743",
+    "package-lock.json": "cefe9df1547da8e70af89f2be64c0e30f3edafe6cf746ef93a9a7f39d410dda2"
+  },
+  "savedDatabaseHashes": {
+    "data/planner.sqlite": "97e8d54f8a7255106f66cf1b213c4a4d7b558d21310b1c2bfedc3d0d526dddda",
+    "data/planner.sqlite-shm": "f66047ec9236844e7d4254a4e7ec87488d552f9f577d966a1d0d4a0ae74bb02f",
+    "data/planner.sqlite-wal": "1ed140a9c4c3c9d4b9ac760e1943027897544a5de434f2115228c4c292df3970"
+  }
+}

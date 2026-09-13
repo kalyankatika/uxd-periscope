@@ -1,0 +1,121 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "⌘ Work map" [ref=e8]
+      - StaticText "⌘"
+      - StaticText "Work map"
+    - button "◫ Overview" [ref=e9]
+      - StaticText "◫"
+      - StaticText "Overview"
+    - button "♧ Teams & reporting" [ref=e10]
+      - StaticText "♧"
+      - StaticText "Teams & reporting"
+    - button "▦ Projects" [ref=e11]
+      - StaticText "▦"
+      - StaticText "Projects"
+    - button "◷ Capacity" [ref=e12]
+      - StaticText "◷"
+      - StaticText "Capacity"
+    - button "☷ Project plan" [ref=e13]
+      - StaticText "☷"
+      - StaticText "Project plan"
+    - button "⚙ People & imports" [ref=e14]
+      - StaticText "⚙"
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 6 people"
+  - StaticText "Saved workspace"
+- main
+  - StaticText "Saved workspace · Changes apply to all local sessions"
+  - button "Use example data" [ref=e3]
+  - heading "Teams & reporting" [level=1, ref=e4]
+  - paragraph
+    - StaticText "Reporting structure and team projects."
+  - button "＋ Add project" [ref=e5]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e29]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e30]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e25]
+  - button "← All teams" [ref=e6]
+  - button "＋ Add person" [ref=e7]
+  - generic
+    - StaticText "AC"
+    - paragraph
+      - StaticText "Product Design"
+    - heading "Avery Chen" [level=2, ref=e15]
+    - paragraph
+      - StaticText "VP Product Design · Reports to Dana Ellis"
+    - button "Edit reporting details" [ref=e16]
+    - strong
+      - StaticText "2"
+    - StaticText " people in team"
+    - strong
+      - StaticText "3"
+    - StaticText " related projects"
+    - strong
+      - StaticText "1"
+    - StaticText " to review"
+  - generic
+    - heading "Avery’s team projects" [level=2, ref=e17]
+      - StaticText "Avery’s team projects"
+    - paragraph
+      - StaticText "Includes projects owned by their reports and projects with team contributors. Shared projects appear once."
+    - button "Compare projects →" [ref=e18]
+    - article
+      - StaticText "Reduce onboarding friction"
+      - button "Onboarding redesign" [ref=e26]
+      - paragraph
+        - StaticText "Reduce drop-off in account opening"
+      - StaticText "Avery Chen"
+      - StaticText "Due "
+      - StaticText "Dec 18"
+      - StaticText "Top priority"
+      - StaticText "On track"
+    - article
+      - StaticText "Accessible experiences"
+      - button "Component accessibility" [ref=e27]
+      - paragraph
+        - StaticText "Remove keyboard barriers in shared components"
+      - StaticText "Sam Rivera"
+      - StaticText "Due "
+      - StaticText "Nov 20"
+      - StaticText "At risk"
+    - article
+      - StaticText "UX AI"
+      - button "UX AI assistance prototype" [ref=e28]
+      - paragraph
+        - StaticText "Test assisted navigation concepts"
+      - StaticText "Taylor Brooks"
+      - StaticText "Due "
+      - StaticText "Dec 18"
+      - StaticText "Not reported"
+  - complementary
+    - heading "Direct reports" [level=2, ref=e19]
+    - StaticText "SR"
+    - button "Sam Rivera Product Designer" [ref=e20]
+      - strong
+        - StaticText "Sam Rivera"
+      - StaticText "Product Designer"
+    - button "Edit Sam Rivera" [ref=e21]
+      - StaticText "Edit"
+    - StaticText "TB"
+    - button "Taylor Brooks UX AI Designer" [ref=e22]
+      - strong
+        - StaticText "Taylor Brooks"
+      - StaticText "UX AI Designer"
+    - button "Edit Taylor Brooks" [ref=e23]
+      - StaticText "Edit"
+    - button "＋ Add person" [ref=e24]
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

@@ -5,7 +5,7 @@ Periscope runs locally on your computer. It includes the application, fonts, fic
 ## Prerequisites
 
 - Git.
-- Node.js **22.13 or later**, with npm. Installation was validated with **Node.js 22.23.2 and npm 10.9.8**. Node's built-in `node:sqlite` module is required.
+- Node.js **22.13 or later**, with npm. Installation was validated with **Node.js 22.23.2 and npm 10.9.8**; `.nvmrc` pins the tested Node version. Node's built-in `node:sqlite` module is required.
 - Internet access for the initial clone and dependency installation.
 - A writable project directory for the build output and saved database.
 
@@ -26,6 +26,8 @@ npm ci
 ```
 
 `npm ci` installs the dependency versions recorded in `package-lock.json`. Run subsequent commands from the `uxd-periscope` directory.
+
+If you use nvm, run `nvm install` and `nvm use` from this directory before `npm ci`. nvm is optional. The newest enterprise assessment and import changes must be included in the revision you clone; see [enterprise handoff](enterprise-handoff.md) for the current transfer and release boundaries.
 
 ## Run the app
 
@@ -54,13 +56,15 @@ For the production server, use `npm start -- --port 3001`. Open `http://127.0.0.
 
 ## First use
 
+For an enterprise showcase using files shipped with the repository, follow the [UXD demo data pack](../examples/uxd-demo/README.md). It includes matching CSV/JSON records, an isolated demo database setup, expected import counts and a walkthrough. `npm run demo:check` validates these files without changing any workspace.
+
 The initial screen is **Work map**. A fresh installation displays the fictional leadership example: 26 people, seven teams, and 13 projects. Explore the map or switch to **Grid**, then use **Overview**, **Teams & reporting**, **Projects**, and **Capacity** from the navigation.
 
 - **Example data** is for exploration. Edits stay in memory and reset on reload.
 - **Open workspace** switches to the saved SQLite workspace. A new database starts with a smaller, separate sample of 12 people and five projects. Edits in this mode persist.
 - **Use example data** returns to the leadership example.
 
-To bring in your own data, open **People & imports** in the saved workspace. Import people before projects, review the column and label mappings, and confirm the import. See [Enterprise data mapping](enterprise-data-mapping.md) for required fields, stable IDs, supported labels, and merge/replace behavior. Source connectors and automatic synchronization are not implemented.
+To bring in your own data, open **People & imports** in the saved workspace. Under **Import organization**, select the people and project CSVs, choose merge or replace, review both files' counts and mappings, then confirm one combined save. Single-file updates remain available below that form. See [Enterprise data mapping](enterprise-data-mapping.md) for required fields, stable IDs, supported labels, and merge/replace behavior. Source connectors and automatic synchronization are not implemented.
 
 ## Configure the database
 
@@ -97,8 +101,7 @@ Stop the server and back up the database first. Commit or otherwise preserve you
 ```sh
 git pull --ff-only
 npm ci
-npm test
-npm run build
+npm run verify
 npm start
 ```
 
@@ -107,12 +110,10 @@ The default `data` directory and `.env.local` remain local. Do not remove the da
 ## Verify the installation
 
 ```sh
-npm test
-npm run typecheck
-npm run build
+npm run verify
 ```
 
-Tests use temporary databases. They cover calculations, import mappings and validation, graph relationships, reporting rollups, persistence, migrations, and API behavior.
+`verify` runs type checking, tests and the production build. Tests use temporary databases. They cover calculations, import mappings and validation, graph relationships, reporting rollups, persistence, migrations, and API behavior. The [clean-build evidence](../artifacts/enterprise-handoff/README.md) records an isolated installation and production startup. The GitHub verification workflow is defined, but its remote execution remains separate from the local results.
 
 After starting the server, check that the Work map loads, switch to Grid, and open Overview. The [40-second silent demo](../artifacts/platform-demo/periscope-overview-demo.mp4) shows the main workflow. Demo recording tools are optional; Python, ffmpeg, and agent-browser are not required to run the application.
 
@@ -132,3 +133,5 @@ After starting the server, check that the Work map loads, switch to Grid, and op
 ## Deployment scope
 
 This version is a local application without authentication. A shared enterprise deployment requires authentication, access controls, durable storage, and an agreed data integration approach. The included start command intentionally binds to localhost; these instructions do not publish the app to the internet.
+
+A static frontend can be a later deployment option with a separate backend. Today's SQLite reads/writes and dynamic routes require the Node service. See the [architecture decision](enterprise-architecture.md) and [enterprise handoff](enterprise-handoff.md), including source/asset rights and operational requirements, before taking the repository into a shared environment.

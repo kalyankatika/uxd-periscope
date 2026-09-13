@@ -19,6 +19,7 @@ import {
   type ImportKind,
 } from "@/lib/csv";
 import ImportReview from "./import-review";
+import WorkspaceImport from "./workspace-import";
 
 const viewLabels = {
   connections: "Work map",
@@ -551,8 +552,14 @@ export default function Planner({ initial }: { initial: Plan }) {
           )}
           {view === "people" && (
             <>
+              <WorkspaceImport
+                plan={plan}
+                example={useExample}
+                busy={busy}
+                onSave={persist}
+              />
               <section className="panel import-panel">
-                <h2>Import planning data</h2>
+                <h2>Import or export one file</h2>
                 <p>
                   Upload a CSV to review column and label mappings before
                   importing. Records merge by ID. Reporting lines and project

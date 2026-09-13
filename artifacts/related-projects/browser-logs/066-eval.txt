@@ -1,0 +1,44 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (6)",
+  "rows": [
+    {
+      "name": "Account opening redesign",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Accessible component library",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Research repository",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Statement content redesign",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "UXD product design strategy",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "UX AI interaction standards",
+      "reasons": [
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "Advisor workspace"
+}

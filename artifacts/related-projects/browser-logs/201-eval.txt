@@ -1,0 +1,58 @@
+{
+  "focused": "lead-project-title",
+  "heading": "Related projects (8)",
+  "rows": [
+    {
+      "name": "UX AI interaction standards",
+      "reasons": [
+        "Needed by this project",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Account opening redesign",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Retirement guidance",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Research repository",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Mobile portfolio overview",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Planning assistant discovery",
+      "reasons": [
+        "Shared people"
+      ]
+    },
+    {
+      "name": "Service concept pilots",
+      "reasons": [
+        "Same business priority",
+        "Shared people"
+      ]
+    },
+    {
+      "name": "AI-assisted research synthesis",
+      "reasons": [
+        "Shared people"
+      ]
+    }
+  ],
+  "scrollTop": 0,
+  "title": "Conversational planning prototype"
+}

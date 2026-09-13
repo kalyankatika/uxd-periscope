@@ -1,0 +1,105 @@
+Project / outcome ↕	Importance ↑	Project owner ↕	Project health ↕	Due ↕	Weekly effort ↕	Action required
+
+Account opening redesign ↗
+
+Help new clients open an account without getting stuck or starting over.
+
+Client onboarding	Top priority	Maya Chen
+Product Design
+	
+Decision required
+In progress
+	Nov 20	2.4 FTE
+combined weekly effort
+	Decide whether the new identity check belongs in this release or the next one.
+
+Advisor workspace ↗
+
+Bring the right client information into one place before every advisor meeting.
+
+Advisor productivity	Top priority	Jordan Ellis
+Product Design
+	
+On track
+In progress
+	Dec 4	1.8 FTE
+combined weekly effort
+	None recorded
+
+Retirement guidance ↗
+
+Make retirement choices easier to understand, so clients know what to do next.
+
+Client financial planning	Top priority	Leo Martinez
+Content design
+	
+At risk
+In progress
+	Dec 11	1.5 FTE
+combined weekly effort
+	Participant recruitment is slower than expected. The research lead is adjusting the interview plan.
+
+UXD product design strategy ↗
+
+Define shared experience principles and a prioritized roadmap across onboarding, advice, and retirement products.
+
+Product experience alignment	Top priority	Tessa Wu
+Design Strategy
+	
+On track
+In progress
+	Nov 6	0.8 FTE
+combined weekly effort
+	None recorded
+
+AI-assisted research synthesis ↗
+
+Pilot AI-assisted research summaries with source citations and researcher review before publication.
+
+Shared experience capabilities	High priority	Sam Okafor
+UX AI
+	
+At risk
+In progress
+	Dec 18	1.4 FTE
+combined weekly effort
+	Confirm researcher availability for dataset review before the pilot starts.
+
+Conversational planning prototype ↗
+
+Evaluate a conversational planning concept with clear handoffs to human support.
+
+New product opportunities	High priority	Ben Carter
+Innovation
+	
+Decision required
+In progress
+	Dec 18	1.3 FTE
+combined weekly effort
+	Select one concept and approve the client-testing scope for the next pilot.
+
+Research repository ↗
+
+Make existing client research easy to find before teams start new work.
+
+Shared experience capabilities	High priority	Ethan Park
+Research & insights
+	
+On track
+In progress
+	Nov 27	1.0 FTE
+combined weekly effort
+	None recorded
+
+Planning assistant discovery ↗
+
+Explore whether guided prompts can help clients take their next planning step.
+
+Client financial planning	Standard	Amara Nwosu
+Research & insights
+	
+Not reported
+Planned
+	Dec 31	1.3 FTE
+combined weekly effort
+	None recorded

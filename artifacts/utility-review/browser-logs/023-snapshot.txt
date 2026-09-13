@@ -1,0 +1,340 @@
+- complementary
+  - link "Periscope home" [ref=e1]
+    - StaticText "periscope"
+    - StaticText "UXD"
+  - StaticText "WORKSPACE"
+  - navigation "Main navigation" [ref=e2]
+    - button "⌘ Work map" [ref=e7]
+      - StaticText "⌘"
+      - StaticText "Work map"
+    - button "◫ Overview" [ref=e8]
+      - StaticText "◫"
+      - StaticText "Overview"
+    - button "♧ Teams & reporting" [ref=e9]
+      - StaticText "♧"
+      - StaticText "Teams & reporting"
+    - button "▦ Projects" [ref=e10]
+      - StaticText "▦"
+      - StaticText "Projects"
+    - button "◷ Capacity" [ref=e11]
+      - StaticText "◷"
+      - StaticText "Capacity"
+    - button "☷ Project plan" [ref=e12]
+      - StaticText "☷"
+      - StaticText "Project plan"
+    - button "⚙ People & imports" [ref=e13]
+      - StaticText "⚙"
+      - StaticText "People & imports"
+  - StaticText " Leadership workspace"
+  - paragraph
+    - StaticText "UXD · 26 people"
+  - StaticText "Example data · Session only"
+- main
+  - StaticText "Example data · Fictional organization · Changes are temporary"
+  - button "Open workspace" [ref=e3]
+  - heading "Work map" [level=1, ref=e4]
+  - paragraph
+    - StaticText "People, projects, priorities, and their relationships."
+  - button "＋ Add project" [ref=e5]
+  - LabelText
+    - StaticText "Planning period"
+    - DateTime "Planning quarter": 2026-10
+      - generic
+        - spinbutton "Month Month" [ref=e38]: 10
+          - StaticText "October"
+        - StaticText " "
+        - spinbutton "Year Year" [ref=e39]: 2026
+          - StaticText "2026"
+      - button "Show month picker Show month picker" [ref=e19]
+  - region "Interactive work map" [ref=e6]
+    - paragraph
+      - StaticText "RELATIONSHIPS"
+    - heading "Organization graph" [level=2, ref=e14]
+    - paragraph
+      - StaticText "13 projects · 26 people · 7 priorities"
+    - group "Work view"
+      - button " Map" [ref=e20]
+      - button " Grid" [ref=e21]
+    - button "Compare projects " [ref=e15]
+    - button "Export connected data" [ref=e16]
+      - StaticText "↓"
+    - button "Expand map" [ref=e17]
+      - StaticText "⤢"
+    - textbox "Search people, projects or priorities" [ref=e22]
+    - group "Project filter"
+      - button "All work" [ref=e23]
+      - button "Top priorities 5" [ref=e24]
+        - StaticText "Top priorities 5"
+      - button "Needs attention 5" [ref=e25]
+        - StaticText "Needs attention 5"
+    - generic
+      - group "Show or hide node types"
+        - button "Priorities" [ref=e40]
+          - StaticText "Priorities"
+        - button "Projects" [ref=e41]
+          - StaticText "Projects"
+        - button "Leaders" [ref=e42]
+          - StaticText "Leaders"
+        - button "People" [ref=e43]
+          - StaticText "People"
+      - group "Knowledge graph. Select an item to view its connections." [ref=e26] focusable [tabindex]
+        - graphics-symbol "Elena Brooks — reports to — Avery Morgan"
+        - graphics-symbol "Marcus Reed — reports to — Avery Morgan"
+        - graphics-symbol "Priya Shah — reports to — Avery Morgan"
+        - graphics-symbol "Daniel Kim — reports to — Avery Morgan"
+        - graphics-symbol "Maya Chen — reports to — Elena Brooks"
+        - graphics-symbol "Jordan Ellis — reports to — Elena Brooks"
+        - graphics-symbol "Nina Patel — reports to — Elena Brooks"
+        - graphics-symbol "Sofia Ramirez — reports to — Marcus Reed"
+        - graphics-symbol "Ethan Park — reports to — Marcus Reed"
+        - graphics-symbol "Amara Nwosu — reports to — Marcus Reed"
+        - graphics-symbol "Leo Martinez — reports to — Priya Shah"
+        - graphics-symbol "Grace Liu — reports to — Priya Shah"
+        - graphics-symbol "Theo Reed — reports to — Priya Shah"
+        - graphics-symbol "Oliver Grant — reports to — Daniel Kim"
+        - graphics-symbol "Isabel Costa — reports to — Daniel Kim"
+        - graphics-symbol "Noah Bennett — reports to — Daniel Kim"
+        - graphics-symbol "Sana Ahmed — reports to — Avery Morgan"
+        - graphics-symbol "Victor Alvarez — reports to — Avery Morgan"
+        - graphics-symbol "Riley Thompson — reports to — Avery Morgan"
+        - graphics-symbol "Tessa Wu — reports to — Sana Ahmed"
+        - graphics-symbol "Owen Hughes — reports to — Sana Ahmed"
+        - graphics-symbol "Leila Haddad — reports to — Victor Alvarez"
+        - graphics-symbol "Ben Carter — reports to — Victor Alvarez"
+        - graphics-symbol "Aisha Patel — reports to — Riley Thompson"
+        - graphics-symbol "Sam Okafor — reports to — Riley Thompson"
+        - graphics-symbol "Maya Chen — owns project — Account opening redesign"
+        - graphics-symbol "Sofia Ramirez — contributes to — Account opening redesign"
+        - graphics-symbol "Leo Martinez — contributes to — Account opening redesign"
+        - graphics-symbol "Oliver Grant — contributes to — Account opening redesign"
+        - graphics-symbol "Account opening redesign — supports this priority — Client onboarding"
+        - graphics-symbol "Account opening redesign — depends on — Accessible component library"
+        - graphics-symbol "Jordan Ellis — owns project — Advisor workspace"
+        - graphics-symbol "Sofia Ramirez — contributes to — Advisor workspace"
+        - graphics-symbol "Grace Liu — contributes to — Advisor workspace"
+        - graphics-symbol "Advisor workspace — supports this priority — Advisor productivity"
+        - graphics-symbol "Leo Martinez — owns project — Retirement guidance"
+        - graphics-symbol "Ethan Park — contributes to — Retirement guidance"
+        - graphics-symbol "Maya Chen — contributes to — Retirement guidance"
+        - graphics-symbol "Retirement guidance — supports this priority — Client financial planning"
+        - graphics-symbol "Oliver Grant — owns project — Accessible component library"
+        - graphics-symbol "Isabel Costa — contributes to — Accessible component library"
+        - graphics-symbol "Grace Liu — contributes to — Accessible component library"
+        - graphics-symbol "Accessible component library — supports this priority — Shared experience capabilities"
+        - graphics-symbol "Ethan Park — owns project — Research repository"
+        - graphics-symbol "Amara Nwosu — contributes to — Research repository"
+        - graphics-symbol "Jordan Ellis — contributes to — Research repository"
+        - graphics-symbol "Research repository — supports this priority — Shared experience capabilities"
+        - graphics-symbol "Nina Patel — owns project — Mobile portfolio overview"
+        - graphics-symbol "Noah Bennett — contributes to — Mobile portfolio overview"
+        - graphics-symbol "Leo Martinez — contributes to — Mobile portfolio overview"
+        - graphics-symbol "Mobile portfolio overview — supports this priority — Client financial planning"
+        - graphics-symbol "Mobile portfolio overview — depends on — Accessible component library"
+        - graphics-symbol "Grace Liu — owns project — Statement content redesign"
+        - graphics-symbol "Theo Reed — contributes to — Statement content redesign"
+        - graphics-symbol "Maya Chen — contributes to — Statement content redesign"
+        - graphics-symbol "Statement content redesign — supports this priority — Client financial planning"
+        - graphics-symbol "Amara Nwosu — owns project — Planning assistant discovery"
+        - graphics-symbol "Nina Patel — contributes to — Planning assistant discovery"
+        - graphics-symbol "Isabel Costa — contributes to — Planning assistant discovery"
+        - graphics-symbol "Planning assistant discovery — supports this priority — Client financial planning"
+        - graphics-symbol "Tessa Wu — owns project — UXD product design strategy"
+        - graphics-symbol "Owen Hughes — contributes to — UXD product design strategy"
+        - graphics-symbol "Maya Chen — contributes to — UXD product design strategy"
+        - graphics-symbol "Sofia Ramirez — contributes to — UXD product design strategy"
+        - graphics-symbol "UXD product design strategy — supports this priority — Product experience alignment"
+        - graphics-symbol "Leila Haddad — owns project — Service concept pilots"
+        - graphics-symbol "Ben Carter — contributes to — Service concept pilots"
+        - graphics-symbol "Owen Hughes — contributes to — Service concept pilots"
+        - graphics-symbol "Nina Patel — contributes to — Service concept pilots"
+        - graphics-symbol "Service concept pilots — supports this priority — New product opportunities"
+        - graphics-symbol "Service concept pilots — depends on — UXD product design strategy"
+        - graphics-symbol "Ben Carter — owns project — Conversational planning prototype"
+        - graphics-symbol "Aisha Patel — contributes to — Conversational planning prototype"
+        - graphics-symbol "Amara Nwosu — contributes to — Conversational planning prototype"
+        - graphics-symbol "Leo Martinez — contributes to — Conversational planning prototype"
+        - graphics-symbol "Conversational planning prototype — supports this priority — New product opportunities"
+        - graphics-symbol "Conversational planning prototype — depends on — UX AI interaction standards"
+        - graphics-symbol "Aisha Patel — owns project — UX AI interaction standards"
+        - graphics-symbol "Sam Okafor — contributes to — UX AI interaction standards"
+        - graphics-symbol "Grace Liu — contributes to — UX AI interaction standards"
+        - graphics-symbol "Oliver Grant — contributes to — UX AI interaction standards"
+        - graphics-symbol "UX AI interaction standards — supports this priority — Responsible AI experiences"
+        - graphics-symbol "UX AI interaction standards — depends on — Accessible component library"
+        - graphics-symbol "Sam Okafor — owns project — AI-assisted research synthesis"
+        - graphics-symbol "Ethan Park — contributes to — AI-assisted research synthesis"
+        - graphics-symbol "Amara Nwosu — contributes to — AI-assisted research synthesis"
+        - graphics-symbol "Tessa Wu — contributes to — AI-assisted research synthesis"
+        - graphics-symbol "AI-assisted research synthesis — supports this priority — Shared experience capabilities"
+        - graphics-symbol "AI-assisted research synthesis — depends on — Research repository"
+        - graphics-symbol "AI-assisted research synthesis — depends on — UX AI interaction standards"
+        - button "Team member: Aisha Patel. Show connections." [ref=e44]
+        - button "Team member: Amara Nwosu. Show connections." [ref=e45]
+        - button "Team member: Ben Carter. Show connections." [ref=e46]
+        - button "Leader: Daniel Kim. Show connections." [ref=e47]
+          - StaticText "DK"
+          - StaticText "Daniel Kim"
+        - button "Leader: Elena Brooks. Show connections." [ref=e48]
+          - StaticText "EB"
+          - StaticText "Elena Brooks"
+        - button "Team member: Ethan Park. Show connections." [ref=e49]
+        - button "Team member: Grace Liu. Show connections." [ref=e50]
+        - button "Team member: Isabel Costa. Show connections." [ref=e51]
+        - button "Team member: Jordan Ellis. Show connections." [ref=e52]
+        - button "Team member: Leila Haddad. Show connections." [ref=e53]
+        - button "Team member: Leo Martinez. Show connections." [ref=e54]
+          - StaticText "Leo Martinez"
+        - button "Leader: Marcus Reed. Show connections." [ref=e55]
+          - StaticText "MR"
+          - StaticText "Marcus Reed"
+        - button "Team member: Maya Chen. Show connections." [ref=e56]
+          - StaticText "Maya Chen"
+        - button "Team member: Nina Patel. Show connections." [ref=e57]
+        - button "Team member: Noah Bennett. Show connections." [ref=e58]
+        - button "Team member: Oliver Grant. Show connections." [ref=e59]
+          - StaticText "Oliver Grant"
+        - button "Team member: Owen Hughes. Show connections." [ref=e60]
+        - button "Leader: Priya Shah. Show connections." [ref=e61]
+          - StaticText "PS"
+          - StaticText "Priya Shah"
+        - button "Leader: Riley Thompson. Show connections." [ref=e62]
+          - StaticText "RT"
+          - StaticText "Riley Thompson"
+        - button "Team member: Sam Okafor. Show connections." [ref=e63]
+        - button "Leader: Sana Ahmed. Show connections." [ref=e64]
+          - StaticText "SA"
+          - StaticText "Sana Ahmed"
+        - button "Team member: Sofia Ramirez. Show connections." [ref=e65]
+          - StaticText "Sofia Ramirez"
+        - button "Team member: Tessa Wu. Show connections." [ref=e66]
+        - button "Team member: Theo Reed. Show connections." [ref=e67]
+        - button "Leader: Avery Morgan. Show connections." [ref=e68]
+          - StaticText "AM"
+          - StaticText "Avery Morgan"
+        - button "Leader: Victor Alvarez. Show connections." [ref=e69]
+          - StaticText "VA"
+          - StaticText "Victor Alvarez"
+        - button "Business priority: Advisor productivity. Show connections." [ref=e70]
+          - StaticText "Advisor productivity"
+        - button "Business priority: Client financial planning. Show connections." [ref=e71]
+          - generic
+            - StaticText "Client financialplanning"
+        - button "Business priority: Client onboarding. Show connections." [ref=e72]
+          - StaticText "Client onboarding"
+        - button "Business priority: New product opportunities. Show connections." [ref=e73]
+          - generic
+            - StaticText "New productopportunities"
+        - button "Business priority: Product experience alignment. Show connections." [ref=e74]
+          - generic
+            - StaticText "Product experiencealignment"
+        - button "Business priority: Responsible AI experiences. Show connections." [ref=e75]
+          - generic
+            - StaticText "Responsible AIexperiences"
+        - button "Business priority: Shared experience capabilities. Show connections." [ref=e76]
+          - generic
+            - StaticText "Shared experiencecapabilities"
+        - button "Project: Advisor workspace. Show connections." [ref=e77]
+          - StaticText "Advisor workspace"
+        - button "Project: AI-assisted research synthesis, needs attention. Show connections." [ref=e78]
+          - StaticText "!"
+          - generic
+            - StaticText "AI-assisted researchsynthesis"
+        - button "Project: UX AI interaction standards. Show connections." [ref=e79]
+          - generic
+            - StaticText "UX AI interactionstandards"
+        - button "Project: Planning assistant discovery. Show connections." [ref=e80]
+          - generic
+            - StaticText "Planning assistantdiscovery"
+        - button "Project: Accessible component library. Show connections." [ref=e81]
+          - generic
+            - StaticText "Accessible componentlibrary"
+        - button "Project: Conversational planning prototype, needs attention. Show connections." [ref=e82]
+          - StaticText "!"
+          - generic
+            - StaticText "Conversational planningprototype"
+        - button "Project: UXD product design strategy. Show connections." [ref=e83]
+          - generic
+            - StaticText "UXD product designstrategy"
+        - button "Project: Service concept pilots. Show connections." [ref=e84]
+          - StaticText "Service concept pilots"
+        - button "Project: Research repository. Show connections." [ref=e85]
+          - StaticText "Research repository"
+        - button "Project: Mobile portfolio overview, needs attention. Show connections." [ref=e86]
+          - StaticText "!"
+          - generic
+            - StaticText "Mobile portfoliooverview"
+        - button "Project: Account opening redesign, needs attention. Show connections." [ref=e87]
+          - StaticText "!"
+          - generic
+            - StaticText "Account openingredesign"
+        - button "Project: Retirement guidance, needs attention. Show connections." [ref=e88]
+          - StaticText "!"
+          - StaticText "Retirement guidance"
+        - button "Project: Statement content redesign. Show connections." [ref=e89]
+          - generic
+            - StaticText "Statement contentredesign"
+      - StaticText "All relationships"
+      - generic
+        - button "Zoom in" [ref=e90]
+          - StaticText "+"
+        - button "Zoom out" [ref=e91]
+          - StaticText "−"
+        - button "Fit" [ref=e92]
+        - StaticText "54"
+        - StaticText "%"
+        - button "All labels" [ref=e93]
+        - button "Browse list" [expanded=false, ref=e94]
+      - paragraph
+        - StaticText "Drag to pan · Scroll to zoom · Select an item for details"
+    - complementary "Selected item details"
+      - StaticText "PROJECT"
+      - button "Clear selected item" [ref=e27]
+        - StaticText "×"
+      - heading "Account opening redesign" [level=3, ref=e28]
+      - paragraph
+        - StaticText "Help new clients open an account without getting stuck or starting over."
+      - StaticText "Decision required"
+      - generic
+        - StaticText "Due Nov 20"
+      - strong
+        - StaticText "Action required"
+      - paragraph
+        - StaticText "Decide whether the new identity check belongs in this release or the next one."
+      - strong
+        - StaticText "Latest update"
+      - StaticText "The shorter application has been tested. The team is ready to finalize the identity-check experience."
+      - button "Open project details " [ref=e29]
+      - button "◎ Focus connections" [ref=e30]
+        - StaticText "◎ Focus connections"
+      - heading "Direct connections 6" [level=4, ref=e31]
+        - StaticText "Direct connections 6"
+      - button "Maya Chen Project owner" [ref=e32]
+        - strong
+          - StaticText "Maya Chen"
+        - StaticText "Project owner"
+      - button "Sofia Ramirez Contributor" [ref=e33]
+        - strong
+          - StaticText "Sofia Ramirez"
+        - StaticText "Contributor"
+      - button "Leo Martinez Contributor" [ref=e34]
+        - strong
+          - StaticText "Leo Martinez"
+        - StaticText "Contributor"
+      - button "Oliver Grant Contributor" [ref=e35]
+        - strong
+          - StaticText "Oliver Grant"
+        - StaticText "Contributor"
+      - button "Client onboarding Supports this priority" [ref=e36]
+        - strong
+          - StaticText "Client onboarding"
+        - StaticText "Supports this priority"
+      - button "Accessible component library Depends on" [ref=e37]
+        - strong
+          - StaticText "Accessible component library"
+        - StaticText "Depends on"
+    - StaticText "46 items · 90 connections in view"
+    - StaticText "Node size: direct connections · Dragged positions are not saved"
+    - button "Reset view" [ref=e18]
+  - sectionfooter
+    - StaticText "Periscope · UXD workspace"
+- alert

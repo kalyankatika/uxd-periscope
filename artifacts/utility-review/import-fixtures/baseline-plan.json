@@ -1,0 +1,143 @@
+{
+  "revision": 0,
+  "people": [
+    {
+      "id": "0001",
+      "name": "Dana Ellis",
+      "craft": "design",
+      "fte": 1,
+      "nonProjectPct": 80,
+      "title": "Head of UXD",
+      "team": "UXD",
+      "managerId": null,
+      "isLeader": true
+    },
+    {
+      "id": "0010",
+      "name": "Avery Shah",
+      "craft": "design",
+      "fte": 1,
+      "nonProjectPct": 40,
+      "title": "VP Product Design",
+      "team": "Product Design",
+      "managerId": "0001",
+      "isLeader": true
+    },
+    {
+      "id": "0011",
+      "name": "Sam Rivera",
+      "craft": "design",
+      "fte": 1,
+      "nonProjectPct": 20,
+      "title": "Product Designer",
+      "team": "Product Design",
+      "managerId": "0010",
+      "isLeader": false
+    },
+    {
+      "id": "0020",
+      "name": "Robin Lee",
+      "craft": "research",
+      "fte": 1,
+      "nonProjectPct": 40,
+      "title": "VP Research",
+      "team": "Research",
+      "managerId": "0001",
+      "isLeader": true
+    },
+    {
+      "id": "0021",
+      "name": "Morgan Patel",
+      "craft": "research",
+      "fte": 1,
+      "nonProjectPct": 20,
+      "title": "Researcher",
+      "team": "Research",
+      "managerId": "0020",
+      "isLeader": false
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "UX-001",
+      "name": "Onboarding redesign",
+      "start": "2026-10-01",
+      "end": "2026-12-18",
+      "status": "committed",
+      "effort": {
+        "design": 0.7,
+        "research": 0.3,
+        "content": 0,
+        "design_eng": 0
+      },
+      "leadId": "0010",
+      "memberIds": [
+        "0011",
+        "0021"
+      ],
+      "dependsOn": [
+        "UX-002"
+      ],
+      "importance": "top",
+      "health": "needs_decision",
+      "decision": "Approve assisted onboarding scope",
+      "update": "Scope decision is due before usability testing",
+      "priority": "Reduce onboarding friction",
+      "summary": "Reduce drop-off in account opening",
+      "owner": "",
+      "delivery": "in_progress"
+    },
+    {
+      "id": "UX-002",
+      "name": "Onboarding research",
+      "start": "2026-10-01",
+      "end": "2026-10-30",
+      "status": "committed",
+      "effort": {
+        "design": 0,
+        "research": 0.6,
+        "content": 0,
+        "design_eng": 0
+      },
+      "leadId": "0020",
+      "memberIds": [
+        "0021"
+      ],
+      "dependsOn": [],
+      "importance": "high",
+      "health": "on_track",
+      "decision": "",
+      "update": "Recruitment is confirmed",
+      "priority": "Reduce onboarding friction",
+      "summary": "Validate the onboarding journey",
+      "owner": "",
+      "delivery": "in_progress"
+    },
+    {
+      "id": "UX-003",
+      "name": "Component accessibility",
+      "start": "2026-10-01",
+      "end": "2026-11-20",
+      "status": "committed",
+      "effort": {
+        "design": 0.4,
+        "research": 0,
+        "content": 0,
+        "design_eng": 0
+      },
+      "leadId": "0011",
+      "memberIds": [
+        "0011"
+      ],
+      "dependsOn": [],
+      "importance": "high",
+      "health": "at_risk",
+      "decision": "Confirm accessibility review availability",
+      "update": "Review slots are not confirmed",
+      "priority": "Accessible experiences",
+      "summary": "Remove keyboard barriers in shared components",
+      "owner": "",
+      "delivery": "in_progress"
+    }
+  ]
+}

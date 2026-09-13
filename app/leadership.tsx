@@ -76,6 +76,9 @@ function Health({ project }: { project: Initiative }) {
     </span>
   );
 }
+function focusProjectHeading(node: HTMLHeadingElement | null) {
+  node?.focus({ preventScroll: true });
+}
 export default function Leadership({
   plan,
   start,
@@ -129,6 +132,7 @@ export default function Leadership({
     ? leaderProjects({ ...plan, initiatives: period }, leader.id)
     : period;
   const selected = plan.initiatives.find((p) => p.id === projectId);
+  const related = selected ? relatedProjects(plan, selected) : [];
   const tops = period
     .filter((p) => p.importance === "top" && p.delivery !== "completed")
     .sort((a, b) => a.end.localeCompare(b.end));
@@ -784,13 +788,19 @@ export default function Leadership({
         onClose={() => setProjectId(null)}
       >
         {selected && (
-          <div className="detail-content">
+          <div className="detail-content" key={selected.id}>
             <div className="panel-head">
               <div>
                 <p className="section-kicker">
                   {selected.priority || "PROJECT OVERVIEW"}
                 </p>
-                <h2 id="lead-project-title">{selected.name}</h2>
+                <h2
+                  id="lead-project-title"
+                  tabIndex={-1}
+                  ref={focusProjectHeading}
+                >
+                  {selected.name}
+                </h2>
               </div>
               <button
                 aria-label="Close project"
@@ -915,19 +925,19 @@ export default function Leadership({
                   </div>
                 ))}
               </details>
-              <h3>Related projects</h3>
-              {relatedProjects(plan, selected)
-                .slice(0, 4)
-                .map(({ project, reasons }) => (
-                  <button
-                    className="related-detail"
-                    key={project.id}
-                    onClick={() => setProjectId(project.id)}
-                  >
-                    <strong>{project.name} →</strong>
-                    <small>{reasons.join(" · ")}</small>
-                  </button>
-                ))}
+              <h3>Related projects ({related.length})</h3>
+              {related.map(({ project, reasons }) => (
+                <button
+                  type="button"
+                  className="related-detail"
+                  key={project.id}
+                  onClick={() => setProjectId(project.id)}
+                >
+                  <strong>{project.name} →</strong>
+                  <small>{reasons.join(" · ")}</small>
+                </button>
+              ))}
+              {!related.length && <p className="muted">No related projects.</p>}
             </div>
             <div className="drawer-footer">
               <button

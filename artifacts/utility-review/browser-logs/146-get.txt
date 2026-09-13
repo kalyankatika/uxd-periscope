@@ -1,0 +1,46 @@
+Saved workspace · Changes apply to all local sessions
+Use example data
+People & imports
+
+Import and export planning data. Review team capacity.
+
+↓ Export review
+＋ Add project
+Planning period
+Import organization
+
+Load people and projects together. Review both files and their connected reporting lines, owners, contributors, and dependencies before saving.
+
+Organization CSV files
+People CSV
+Full roster and reporting structure
+Projects CSV
+All projects, including other quarters
+Import mode
+Merge by ID
+Replace people and projects
+Review organization
+
+Merge keeps existing IDs not included in these files and replaces matching records. Each CSV can be up to 2 MB; the resulting workspace must fit the 2 MB save limit. Use the sample files below for supported columns and labels.
+
+Projects (invalid-status-projects.csv): Row 3: Unrecognized Commitment label “In delivery”. Use a supported value from the sample CSV.
+Import or export one file
+
+Upload a CSV to review column and label mappings before importing. Records merge by ID. Reporting lines and project links are validated before saving.
+
+Import type 
+People
+Projects
+Replace all people
+↑ Upload CSV
+↓ Sample CSV
+↓ Export people
+Team capacity
+5 people
+Person	Discipline	FTE	Non-project	Available FTE
+Dana Ellis	Design	1	80%	0.2
+Avery Shah	Design	1	40%	0.6
+Sam Rivera	Design	1	20%	0.8
+Robin Lee	Research	1	40%	0.6
+Morgan Patel	Research	1	20%	0.8
+Periscope · UXD workspace

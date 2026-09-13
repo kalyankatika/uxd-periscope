@@ -1,0 +1,13 @@
+Effort & capacity
+Weekly effort by discipline
+
+A value of 1 is one person's full week; 0.5 is half their time. Start and end dates are inclusive.
+
+Design
+Research
+Content
+Design engineering
+Include proposed in preview
+Live preview · Committed + proposed
+
+14 weekly discipline totals exceed capacity.

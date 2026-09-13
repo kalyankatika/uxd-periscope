@@ -1,0 +1,64 @@
+- dialog "Accessible component library"
+  - paragraph
+    - StaticText "Shared experience capabilities"
+  - heading "Accessible component library" [level=2, ref=e1]
+  - button "Close project" [ref=e2]
+    - StaticText "✕"
+  - generic
+    - StaticText "On track"
+    - StaticText "High priority"
+    - heading "Expected outcome" [level=3, ref=e5]
+    - paragraph
+      - StaticText "Give every team accessible, reusable components for the journeys clients use most."
+    - heading "Latest update" [level=3, ref=e6]
+    - paragraph
+      - StaticText "Forms and navigation are ready for adoption. Account opening and mobile teams are coordinating the rollout."
+    - DescriptionList
+      - term "Project owner"
+      - definition
+        - button "Oliver Grant →" [ref=e16]
+          - StaticText "Oliver Grant →"
+      - term "Delivery"
+      - definition
+        - StaticText "In progress"
+      - term "Dates"
+      - definition
+        - StaticText "Oct 1 – Dec 18"
+      - term "Commitment"
+      - definition
+        - StaticText "Committed"
+    - heading "Project team" [level=3, ref=e7]
+    - button "OG Oliver Grant Design systems" [ref=e8]
+      - StaticText "OG"
+      - StaticText "Oliver Grant"
+      - StaticText "Design systems"
+    - button "IC Isabel Costa Design systems" [ref=e9]
+      - StaticText "IC"
+      - StaticText "Isabel Costa"
+      - StaticText "Design systems"
+    - button "GL Grace Liu Content design" [ref=e10]
+      - StaticText "GL"
+      - StaticText "Grace Liu"
+      - StaticText "Content design"
+    - group
+      - DisclosureTriangle "Weekly effort" [expanded=false]
+        - StaticText "Weekly effort"
+    - heading "Related projects" [level=3, ref=e11]
+    - button "Account opening redesign → Depends on this project" [ref=e12]
+      - strong
+        - StaticText "Account opening redesign →"
+      - StaticText "Depends on this project"
+    - button "Advisor workspace → Shared people" [ref=e13]
+      - strong
+        - StaticText "Advisor workspace →"
+      - StaticText "Shared people"
+    - button "Research repository → Same business priority" [ref=e14]
+      - strong
+        - StaticText "Research repository →"
+      - StaticText "Same business priority"
+    - button "Mobile portfolio overview → Depends on this project" [ref=e15]
+      - strong
+        - StaticText "Mobile portfolio overview →"
+      - StaticText "Depends on this project"
+  - button "View in map" [ref=e3]
+  - button "Edit project" [ref=e4]

@@ -1,0 +1,204 @@
+TAP version 13
+# (node:91195) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: API validates writes, enforces origin, persists changes, and reports revision conflicts
+ok 1 - API validates writes, enforces origin, persists changes, and reports revision conflicts
+  ---
+  duration_ms: 86.000333
+  type: 'test'
+  ...
+# Subtest: Grid cards preserve graph identities, filtered connections and search scope
+ok 2 - Grid cards preserve graph identities, filtered connections and search scope
+  ---
+  duration_ms: 16.047708
+  type: 'test'
+  ...
+# Subtest: Grid owner labels use IDs and team project counts respect the selected period
+ok 3 - Grid owner labels use IDs and team project counts respect the selected period
+  ---
+  duration_ms: 1.536416
+  type: 'test'
+  ...
+# Subtest: The visual map shares export identities and shows only recorded relationships
+ok 4 - The visual map shares export identities and shows only recorded relationships
+  ---
+  duration_ms: 0.78175
+  type: 'test'
+  ...
+# Subtest: Attention and top-priority spotlights retain contributors and their reporting chains
+ok 5 - Attention and top-priority spotlights retain contributors and their reporting chains
+  ---
+  duration_ms: 0.722708
+  type: 'test'
+  ...
+# Subtest: Local graph depth follows both directions, and explains each relationship from the selected item
+ok 6 - Local graph depth follows both directions, and explains each relationship from the selected item
+  ---
+  duration_ms: 0.202542
+  type: 'test'
+  ...
+# Subtest: Quarter boundaries omit inactive projects without dangling dependencies
+ok 7 - Quarter boundaries omit inactive projects without dangling dependencies
+  ---
+  duration_ms: 0.15675
+  type: 'test'
+  ...
+# Subtest: Force layout stays deterministic, separated and immutable; fit contains all nodes
+ok 8 - Force layout stays deterministic, separated and immutable; fit contains all nodes
+  ---
+  duration_ms: 94.944417
+  type: 'test'
+  ...
+# Subtest: Zoom preserves the location under the pointer and clamps extreme input
+ok 9 - Zoom preserves the location under the pointer and clamps extreme input
+  ---
+  duration_ms: 0.081583
+  type: 'test'
+  ...
+# Subtest: Friendly source headers and explicit label aliases map without changing identity
+ok 10 - Friendly source headers and explicit label aliases map without changing identity
+  ---
+  duration_ms: 4.707625
+  type: 'test'
+  ...
+# Subtest: All exported project labels can be reviewed, including backlog and health aliases
+ok 11 - All exported project labels can be reviewed, including backlog and health aliases
+  ---
+  duration_ms: 5.982
+  type: 'test'
+  ...
+# Subtest: Import review blocks missing relationships and inconsistent taxonomy without mutating the workspace
+ok 12 - Import review blocks missing relationships and inconsistent taxonomy without mutating the workspace
+  ---
+  duration_ms: 2.142541
+  type: 'test'
+  ...
+# (node:91199) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Legacy SQLite plans migrate without losing data; project context survives saves
+ok 13 - Legacy SQLite plans migrate without losing data; project context survives saves
+  ---
+  duration_ms: 25.424125
+  type: 'test'
+  ...
+# Subtest: Project context round trips through CSV; legacy imports retain safe defaults
+ok 14 - Project context round trips through CSV; legacy imports retain safe defaults
+  ---
+  duration_ms: 1.008042
+  type: 'test'
+  ...
+# (node:91200) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: SQLite saves, rejects stale revisions and invalid writes without changing the plan
+ok 15 - SQLite saves, rejects stale revisions and invalid writes without changing the plan
+  ---
+  duration_ms: 67.631458
+  type: 'test'
+  ...
+# Subtest: A leader sees work owned by reports and shared work, each project once
+ok 16 - A leader sees work owned by reports and shared work, each project once
+  ---
+  duration_ms: 5.973458
+  type: 'test'
+  ...
+# Subtest: Reporting validation rejects cycles, missing managers and broken project links
+ok 17 - Reporting validation rejects cycles, missing managers and broken project links
+  ---
+  duration_ms: 3.002625
+  type: 'test'
+  ...
+# Subtest: Reporting reassignment updates leader rollups without changing project ownership
+ok 18 - Reporting reassignment updates leader rollups without changing project ownership
+  ---
+  duration_ms: 0.871417
+  type: 'test'
+  ...
+# Subtest: Graph export contains stable, resolvable identity and relationship links
+ok 19 - Graph export contains stable, resolvable identity and relationship links
+  ---
+  duration_ms: 1.134625
+  type: 'test'
+  ...
+# Subtest: Organization and project relationships round trip through CSV
+ok 20 - Organization and project relationships round trip through CSV
+  ---
+  duration_ms: 3.734834
+  type: 'test'
+  ...
+# (node:91202) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Combined import saves both datasets once, resolves graph identities, and rejects stale or invalid replacements without partial writes
+ok 21 - Combined import saves both datasets once, resolves graph identities, and rejects stale or invalid replacements without partial writes
+  ---
+  duration_ms: 40.977125
+  type: 'test'
+  ...
+# Subtest: A complete new organization replaces both files without an invalid intermediate roster
+ok 22 - A complete new organization replaces both files without an invalid intermediate roster
+  ---
+  duration_ms: 8.797625
+  type: 'test'
+  ...
+# Subtest: Merge keeps omitted records and reports each dataset's changes without mutating inputs or revision
+ok 23 - Merge keeps omitted records and reports each dataset's changes without mutating inputs or revision
+  ---
+  duration_ms: 1.290625
+  type: 'test'
+  ...
+# Subtest: Replace counts retained IDs as updates and removes both omitted datasets
+ok 24 - Replace counts retained IDs as updates and removes both omitted datasets
+  ---
+  duration_ms: 0.845
+  type: 'test'
+  ...
+# Subtest: Leading zeros and case-sensitive IDs remain distinct even when names match
+ok 25 - Leading zeros and case-sensitive IDs remain distinct even when names match
+  ---
+  duration_ms: 1.55675
+  type: 'test'
+  ...
+# Subtest: Combined validation blocks missing managers, owners, contributors and dependencies
+ok 26 - Combined validation blocks missing managers, owners, contributors and dependencies
+  ---
+  duration_ms: 2.207083
+  type: 'test'
+  ...
+# Subtest: Reporting cycles and inconsistent team or priority labels block the combined plan
+ok 27 - Reporting cycles and inconsistent team or priority labels block the combined plan
+  ---
+  duration_ms: 0.299666
+  type: 'test'
+  ...
+# Subtest: Merge validates taxonomy against omitted existing records
+ok 28 - Merge validates taxonomy against omitted existing records
+  ---
+  duration_ms: 0.277
+  type: 'test'
+  ...
+# Subtest: Schema validation rejects malformed inspected rows and duplicate IDs without throwing
+ok 29 - Schema validation rejects malformed inspected rows and duplicate IDs without throwing
+  ---
+  duration_ms: 1.467292
+  type: 'test'
+  ...
+# Subtest: The combined preview blocks plans over the UTF-8 save limit even when each file is smaller
+ok 30 - The combined preview blocks plans over the UTF-8 save limit even when each file is smaller
+  ---
+  duration_ms: 10.710208
+  type: 'test'
+  ...
+# Subtest: The exact save-size boundary is accepted and one extra byte is blocked
+ok 31 - The exact save-size boundary is accepted and one extra byte is blocked
+  ---
+  duration_ms: 11.741125
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 276.724209

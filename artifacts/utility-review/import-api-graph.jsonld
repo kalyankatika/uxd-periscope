@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "@vocab": "urn:periscope:vocab:"
+  },
+  "revision": 2,
+  "@graph": [
+    {
+      "@id": "urn:periscope:person:0001",
+      "@type": "schema:Person",
+      "schema:name": "Dana Ellis",
+      "schema:jobTitle": "Head of UXD",
+      "team": "UXD"
+    },
+    {
+      "@id": "urn:periscope:person:0010",
+      "@type": "schema:Person",
+      "schema:name": "Avery Chen",
+      "schema:jobTitle": "VP Product Design",
+      "team": "Product Design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:0001"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:0011",
+      "@type": "schema:Person",
+      "schema:name": "Sam Rivera",
+      "schema:jobTitle": "Product Designer",
+      "team": "Product Design",
+      "reportsTo": {
+        "@id": "urn:periscope:person:0010"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:0020",
+      "@type": "schema:Person",
+      "schema:name": "Robin Lee",
+      "schema:jobTitle": "VP Research",
+      "team": "Research",
+      "reportsTo": {
+        "@id": "urn:periscope:person:0001"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:0021",
+      "@type": "schema:Person",
+      "schema:name": "Morgan Patel",
+      "schema:jobTitle": "Researcher",
+      "team": "Research",
+      "reportsTo": {
+        "@id": "urn:periscope:person:0020"
+      }
+    },
+    {
+      "@id": "urn:periscope:person:0030",
+      "@type": "schema:Person",
+      "schema:name": "Taylor Brooks",
+      "schema:jobTitle": "UX AI Designer",
+      "team": "UX AI",
+      "reportsTo": {
+        "@id": "urn:periscope:person:0010"
+      }
+    },
+    {
+      "@id": "urn:periscope:priority:Reduce%20onboarding%20friction",
+      "@type": "Priority",
+      "schema:name": "Reduce onboarding friction"
+    },
+    {
+      "@id": "urn:periscope:priority:Accessible%20experiences",
+      "@type": "Priority",
+      "schema:name": "Accessible experiences"
+    },
+    {
+      "@id": "urn:periscope:priority:UX%20AI",
+      "@type": "Priority",
+      "schema:name": "UX AI"
+    },
+    {
+      "@id": "urn:periscope:project:UX-001",
+      "@type": "schema:Project",
+      "schema:name": "Onboarding redesign",
+      "schema:description": "Reduce drop-off in account opening",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-12-18",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "top",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.7,
+        "research": 0.3,
+        "content": 0,
+        "design_eng": 0
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:0010"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:0011"
+        },
+        {
+          "@id": "urn:periscope:person:0021"
+        },
+        {
+          "@id": "urn:periscope:person:0030"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:UX-002"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:Reduce%20onboarding%20friction"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:UX-002",
+      "@type": "schema:Project",
+      "schema:name": "Onboarding research",
+      "schema:description": "Validate the onboarding journey",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-10-30",
+      "deliveryStatus": "in_progress",
+      "health": "on_track",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0,
+        "research": 0.6,
+        "content": 0,
+        "design_eng": 0
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:0020"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:0021"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Reduce%20onboarding%20friction"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:UX-003",
+      "@type": "schema:Project",
+      "schema:name": "Component accessibility",
+      "schema:description": "Remove keyboard barriers in shared components",
+      "schema:startDate": "2026-10-01",
+      "schema:endDate": "2026-11-20",
+      "deliveryStatus": "in_progress",
+      "health": "at_risk",
+      "importance": "high",
+      "commitment": "committed",
+      "weeklyEffort": {
+        "design": 0.4,
+        "research": 0,
+        "content": 0,
+        "design_eng": 0
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:0011"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:0011"
+        }
+      ],
+      "dependsOn": [],
+      "supports": {
+        "@id": "urn:periscope:priority:Accessible%20experiences"
+      }
+    },
+    {
+      "@id": "urn:periscope:project:UX-004",
+      "@type": "schema:Project",
+      "schema:name": "UX AI assistance prototype",
+      "schema:description": "Test assisted navigation concepts",
+      "schema:startDate": "2026-11-02",
+      "schema:endDate": "2026-12-18",
+      "deliveryStatus": "planned",
+      "health": "not_reported",
+      "importance": "normal",
+      "commitment": "proposed",
+      "weeklyEffort": {
+        "design": 0.5,
+        "research": 0.2,
+        "content": 0,
+        "design_eng": 0
+      },
+      "ledBy": {
+        "@id": "urn:periscope:person:0030"
+      },
+      "contributors": [
+        {
+          "@id": "urn:periscope:person:0011"
+        }
+      ],
+      "dependsOn": [
+        {
+          "@id": "urn:periscope:project:UX-003"
+        }
+      ],
+      "supports": {
+        "@id": "urn:periscope:priority:UX%20AI"
+      }
+    }
+  ]
+}

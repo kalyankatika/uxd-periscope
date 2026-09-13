@@ -1,0 +1,48 @@
+PROJECT
+×
+UX AI interaction standards
+
+Define reusable interaction patterns for AI disclosures, source references, user feedback, and error recovery.
+
+View on map ↗
+On track
+Due Nov 13
+
+Latest update
+Content Design has reviewed the patterns. Design Systems is preparing the first component examples.
+
+Open project details ↗
+◎ Focus connections
+Direct connections 8
+◇
+Conversational planning prototype
+Needed by
+↗
+AP
+Aisha Patel
+Project owner
+↗
+SO
+Sam Okafor
+Contributor
+↗
+GL
+Grace Liu
+Contributor
+↗
+OG
+Oliver Grant
+Contributor
+↗
+◎
+Responsible AI experiences
+Supports this priority
+↗
+◇
+Accessible component library
+Depends on
+↗
+◇
+AI-assisted research synthesis
+Needed by
+↗

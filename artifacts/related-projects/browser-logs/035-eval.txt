@@ -1,0 +1,14 @@
+{
+  "button": {
+    "bottom": 793.15625,
+    "height": 40,
+    "left": 1134,
+    "right": 1381,
+    "top": 753.15625,
+    "width": 247,
+    "x": 1134,
+    "y": 753.15625
+  },
+  "content": "",
+  "open": false
+}

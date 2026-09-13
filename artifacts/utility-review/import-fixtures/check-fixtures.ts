@@ -1,0 +1,51 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { inspectCsv, exportCsv } from '../../../lib/csv';
+import { planSchema, type Plan } from '../../../lib/domain';
+import { previewWorkspaceImport } from '../../../lib/import-preview';
+import { leaderProjects, workGraph } from '../../../lib/work-graph';
+
+// Expectations were recorded in expected-results.md before this check and browser tests.
+const root = resolve('artifacts/utility-review/import-fixtures');
+const read = (name: string) => readFileSync(resolve(root, name), 'utf8');
+const csv = (name: string, kind: 'people' | 'initiatives') => inspectCsv(kind, read(name));
+const baseline: Plan = planSchema.parse(JSON.parse(read('baseline-plan.json')));
+assert.deepEqual(csv('baseline-people.csv', 'people').rows, baseline.people);
+assert.deepEqual(csv('baseline-projects.csv', 'initiatives').rows, baseline.initiatives);
+const before = structuredClone(baseline);
+const incoming = { people: csv('update-people.csv', 'people'), initiatives: csv('update-projects.csv', 'initiatives') };
+const preview = previewWorkspaceImport(baseline, incoming, false);
+assert.deepEqual(preview.errors, []);
+assert.deepEqual(preview.counts, {people: {added: 1, updated: 1, removed: 0}, initiatives: {added: 1, updated: 1, removed: 0}});
+assert.equal(preview.plan.people.length, 6);
+assert.equal(preview.plan.initiatives.length, 4);
+assert.deepEqual(baseline, before);
+assert.equal(preview.plan.people.find(p => p.id === '0010')?.name, 'Avery Chen');
+assert.equal(preview.plan.people.find(p => p.id === '0030')?.managerId, '0010');
+const onboarding = preview.plan.initiatives.find(p => p.id === 'UX-001')!;
+assert.equal(onboarding.leadId, '0010');
+assert.deepEqual(onboarding.memberIds, ['0011', '0021', '0030']);
+assert.deepEqual(onboarding.dependsOn, ['UX-002']);
+assert.equal(onboarding.health, 'on_track');
+assert.equal(onboarding.decision, '');
+for (const id of ['0001', '0011', '0020', '0021']) assert.deepEqual(preview.plan.people.find(p=>p.id===id), baseline.people.find(p=>p.id===id));
+for (const id of ['UX-002', 'UX-003']) assert.deepEqual(preview.plan.initiatives.find(p=>p.id===id), baseline.initiatives.find(p=>p.id===id));
+for (const [leader, expected] of Object.entries({'0010':['UX-001','UX-003','UX-004'],'0020':['UX-001','UX-002'],'0001':['UX-001','UX-002','UX-003','UX-004']})) {
+ assert.deepEqual(leaderProjects(preview.plan, leader).map(p=>p.id).sort(), expected);
+}
+assert.deepEqual(incoming.people.ignored, ['Source note']);
+assert.deepEqual(incoming.initiatives.ignored, ['Source note']);
+assert.deepEqual(previewWorkspaceImport(baseline, {...incoming, people:csv('invalid-missing-manager-people.csv','people')}, false).errors, ['Unknown manager for Taylor Brooks']);
+assert.throws(() => csv('invalid-status-projects.csv', 'initiatives'), /Row 3: Unrecognized Commitment label “In delivery”/);
+assert.ok(previewWorkspaceImport(baseline, incoming, true).errors.length > 0);
+const repeat=previewWorkspaceImport(preview.plan,incoming,false);
+assert.deepEqual(repeat.counts,{people:{added:0,updated:2,removed:0},initiatives:{added:0,updated:2,removed:0}});
+const roundTrip=planSchema.parse({...preview.plan,people:inspectCsv('people',exportCsv(preview.plan.people)).rows,initiatives:inspectCsv('initiatives',exportCsv(preview.plan.initiatives.map(({effort,...row})=>({...row,...effort})))).rows});
+assert.deepEqual(roundTrip,preview.plan);
+const graph=workGraph(preview.plan);
+const node=graph['@graph'].find(p=>p['@id']==='urn:periscope:project:UX-001')!;
+assert.deepEqual(node.ledBy,{'@id':'urn:periscope:person:0010'});
+assert.deepEqual(node.dependsOn,[{'@id':'urn:periscope:project:UX-002'}]);
+console.log('Fixture checks PASS: baseline CSV/JSON agreement, expected merge counts, renamed stable owner, shared contributors, dependencies, rollups without duplication, ignored column review metadata, invalid manager/status rejection, unsafe subset replacement rejection, repeated-import count semantics, CSV round trip, stable JSON-LD identity.');
+console.log('This check is in memory only; it does not read or write SQLite and does not prove browser usability.');

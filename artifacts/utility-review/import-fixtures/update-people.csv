@@ -1,0 +1,3 @@
+Employee ID,Full name,Discipline,Working time (FTE),Non-project time (%),Job title,Team,Manager ID,Leader,Source note
+0010,Avery Chen,Product Design,1,40,VP Product Design,Product Design,0001,Yes,Fictional evaluation data
+0030,Taylor Brooks,Product Design,1,20,UX AI Designer,UX AI,0010,No,Fictional evaluation data

@@ -1,0 +1,206 @@
+{"at": "2026-09-12T23:10:20.254504+00:00", "args": ["open", "http://127.0.0.1:3021/"], "exitCode": 0, "output": "browser-logs/001-open.txt"}
+{"at": "2026-09-12T23:10:20.451872+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/002-set.txt"}
+{"at": "2026-09-12T23:10:20.667076+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/003-snapshot.txt"}
+{"at": "2026-09-12T23:10:20.961552+00:00", "args": ["screenshot", "artifacts/utility-review/01-initial-map.png"], "exitCode": 0, "output": "browser-logs/004-screenshot.txt"}
+{"at": "2026-09-12T23:10:21.149578+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/005-errors.txt"}
+{"at": "2026-09-12T23:10:21.349609+00:00", "args": ["console"], "exitCode": 0, "output": "browser-logs/006-console.txt"}
+{"at": "2026-09-12T23:10:35.118061+00:00", "args": ["click", "@e8"], "exitCode": 0, "output": "browser-logs/007-click.txt"}
+{"at": "2026-09-12T23:10:35.320142+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/008-snapshot.txt"}
+{"at": "2026-09-12T23:10:35.546319+00:00", "args": ["screenshot", "artifacts/utility-review/02-overview.png"], "exitCode": 0, "output": "browser-logs/009-screenshot.txt"}
+{"at": "2026-09-12T23:10:43.865533+00:00", "args": ["click", "@e15"], "exitCode": 0, "output": "browser-logs/010-click.txt"}
+{"at": "2026-09-12T23:10:44.073200+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/011-snapshot.txt"}
+{"at": "2026-09-12T23:10:44.301421+00:00", "args": ["screenshot", "artifacts/utility-review/03-top-projects.png"], "exitCode": 0, "output": "browser-logs/012-screenshot.txt"}
+{"at": "2026-09-12T23:10:55.382861+00:00", "args": ["download", "@e14", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/top-projects.csv"], "exitCode": 0, "output": "browser-logs/013-download.txt"}
+{"at": "2026-09-12T23:10:55.593009+00:00", "args": ["click", "@e77"], "exitCode": 0, "output": "browser-logs/014-click.txt"}
+{"at": "2026-09-12T23:10:55.796176+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/015-snapshot.txt"}
+{"at": "2026-09-12T23:10:56.049698+00:00", "args": ["screenshot", "artifacts/utility-review/04-opening-detail.png"], "exitCode": 0, "output": "browser-logs/016-screenshot.txt"}
+{"at": "2026-09-12T23:11:07.923918+00:00", "args": ["click", "@e15"], "exitCode": 0, "output": "browser-logs/017-click.txt"}
+{"at": "2026-09-12T23:11:08.132196+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/018-snapshot.txt"}
+{"at": "2026-09-12T23:11:08.389404+00:00", "args": ["screenshot", "artifacts/utility-review/05-components-detail.png"], "exitCode": 0, "output": "browser-logs/019-screenshot.txt"}
+{"at": "2026-09-12T23:11:15.569707+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/020-snapshot.txt"}
+{"at": "2026-09-12T23:11:15.819854+00:00", "args": ["screenshot", "artifacts/utility-review/05-components-detail.png"], "exitCode": 0, "output": "browser-logs/021-screenshot.txt"}
+{"at": "2026-09-12T23:11:27.380694+00:00", "args": ["click", "@e3"], "exitCode": 0, "output": "browser-logs/022-click.txt"}
+{"at": "2026-09-12T23:11:27.589244+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/023-snapshot.txt"}
+{"at": "2026-09-12T23:11:27.875693+00:00", "args": ["screenshot", "artifacts/utility-review/06-opening-map.png"], "exitCode": 0, "output": "browser-logs/024-screenshot.txt"}
+{"at": "2026-09-12T23:11:47.926590+00:00", "args": ["click", "@e37"], "exitCode": 0, "output": "browser-logs/025-click.txt"}
+{"at": "2026-09-12T23:11:48.143980+00:00", "args": ["snapshot", "-s", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/026-snapshot.txt"}
+{"at": "2026-09-12T23:11:48.438801+00:00", "args": ["screenshot", "artifacts/utility-review/07-components-map.png"], "exitCode": 0, "output": "browser-logs/027-screenshot.txt"}
+{"at": "2026-09-12T23:11:48.637630+00:00", "args": ["download", "[aria-label=\"Export connected data\"]", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/example-graph.jsonld"], "exitCode": 0, "output": "browser-logs/028-download.txt"}
+{"at": "2026-09-12T23:12:00.242043+00:00", "args": ["get", "box", "@e37"], "exitCode": 0, "output": "browser-logs/029-get.txt"}
+{"at": "2026-09-12T23:12:00.436131+00:00", "args": ["scrollintoview", "@e37"], "exitCode": 0, "output": "browser-logs/030-scrollintoview.txt"}
+{"at": "2026-09-12T23:12:00.651859+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/031-snapshot.txt"}
+{"at": "2026-09-12T23:12:00.938419+00:00", "args": ["screenshot", "artifacts/utility-review/07a-connection-visible.png"], "exitCode": 0, "output": "browser-logs/032-screenshot.txt"}
+{"at": "2026-09-12T23:12:08.103730+00:00", "args": ["click", "@e37"], "exitCode": 0, "output": "browser-logs/033-click.txt"}
+{"at": "2026-09-12T23:12:08.302386+00:00", "args": ["get", "text", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/034-get.txt"}
+{"at": "2026-09-12T23:12:08.518120+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/035-snapshot.txt"}
+{"at": "2026-09-12T23:12:08.809810+00:00", "args": ["screenshot", "artifacts/utility-review/07b-components-map.png"], "exitCode": 0, "output": "browser-logs/036-screenshot.txt"}
+{"at": "2026-09-12T23:12:36.977933+00:00", "args": ["scrollintoview", "@e29"], "exitCode": 0, "output": "browser-logs/037-scrollintoview.txt"}
+{"at": "2026-09-12T23:12:37.189778+00:00", "args": ["click", "@e29"], "exitCode": 0, "output": "browser-logs/038-click.txt"}
+{"at": "2026-09-12T23:12:37.389285+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/039-snapshot.txt"}
+{"at": "2026-09-12T23:12:37.683712+00:00", "args": ["screenshot", "artifacts/utility-review/08-components-related-truncation.png"], "exitCode": 0, "output": "browser-logs/040-screenshot.txt"}
+{"at": "2026-09-12T23:12:50.793543+00:00", "args": ["click", "@e2"], "exitCode": 0, "output": "browser-logs/041-click.txt"}
+{"at": "2026-09-12T23:12:50.994639+00:00", "args": ["find", "role", "button", "click", "--name", "\u25eb Overview"], "exitCode": 1, "output": "browser-logs/042-find.txt"}
+{"at": "2026-09-12T23:13:09.862304+00:00", "args": ["press", "Escape"], "exitCode": 0, "output": "browser-logs/043-press.txt"}
+{"at": "2026-09-12T23:13:10.063709+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/044-snapshot.txt"}
+{"at": "2026-09-12T23:13:17.303919+00:00", "args": ["click", "@e8"], "exitCode": 0, "output": "browser-logs/045-click.txt"}
+{"at": "2026-09-12T23:13:17.504028+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/046-snapshot.txt"}
+{"at": "2026-09-12T23:13:34.011766+00:00", "args": ["scrollintoview", "@e8"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:13:34.182441+00:00", "args": ["click", "@e8"], "exitCode": 0, "output": "browser-logs/047-click.txt"}
+{"at": "2026-09-12T23:13:34.374311+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/048-snapshot.txt"}
+{"at": "2026-09-12T23:13:40.694364+00:00", "args": ["scrollintoview", "@e13"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:13:40.865383+00:00", "args": ["click", "@e13"], "exitCode": 0, "output": "browser-logs/049-click.txt"}
+{"at": "2026-09-12T23:13:41.059995+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/050-snapshot.txt"}
+{"at": "2026-09-12T23:13:41.274698+00:00", "args": ["screenshot", "artifacts/utility-review/09-attention-projects.png"], "exitCode": 0, "output": "browser-logs/051-screenshot.txt"}
+{"at": "2026-09-12T23:13:53.068335+00:00", "args": ["download", "@e14", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/attention-projects.csv"], "exitCode": 0, "output": "browser-logs/052-download.txt"}
+{"at": "2026-09-12T23:13:53.258239+00:00", "args": ["scrollintoview", "@e79"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:13:53.427773+00:00", "args": ["click", "@e79"], "exitCode": 0, "output": "browser-logs/053-click.txt"}
+{"at": "2026-09-12T23:13:53.620716+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/054-snapshot.txt"}
+{"at": "2026-09-12T23:13:53.858360+00:00", "args": ["screenshot", "artifacts/utility-review/10-ai-research-detail.png"], "exitCode": 0, "output": "browser-logs/055-screenshot.txt"}
+{"at": "2026-09-12T23:13:54.039945+00:00", "args": ["press", "Escape"], "exitCode": 0, "output": "browser-logs/056-press.txt"}
+{"at": "2026-09-12T23:14:39.046272+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/057-snapshot.txt"}
+{"at": "2026-09-12T23:14:47.359961+00:00", "args": ["get", "url"], "exitCode": 0, "output": "browser-logs/058-get.txt"}
+{"at": "2026-09-12T23:14:47.592196+00:00", "args": ["screenshot", "artifacts/utility-review/browser-recovery-state.png"], "exitCode": 0, "output": "browser-logs/059-screenshot.txt"}
+{"at": "2026-09-12T23:14:47.783466+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/060-errors.txt"}
+{"at": "2026-09-12T23:14:47.989537+00:00", "args": ["eval", "document.body.innerText.slice(0,1000)"], "exitCode": 0, "output": "browser-logs/061-eval.txt"}
+{"at": "2026-09-12T23:14:53.871657+00:00", "args": ["tab", "list"], "exitCode": 0, "output": "browser-logs/062-tab.txt"}
+{"at": "2026-09-12T23:15:04.573864+00:00", "args": ["open", "http://127.0.0.1:3021/"], "exitCode": 0, "output": "browser-logs/063-open.txt"}
+{"at": "2026-09-12T23:15:04.769156+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/064-set.txt"}
+{"at": "2026-09-12T23:15:04.976112+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/065-snapshot.txt"}
+{"at": "2026-09-12T23:15:12.248720+00:00", "args": ["scrollintoview", "@e8"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:15:12.429513+00:00", "args": ["click", "@e8"], "exitCode": 0, "output": "browser-logs/066-click.txt"}
+{"at": "2026-09-12T23:15:12.638304+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/067-snapshot.txt"}
+{"at": "2026-09-12T23:15:28.840530+00:00", "args": ["scrollintoview", "@e28"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:15:29.025233+00:00", "args": ["click", "@e28"], "exitCode": 0, "output": "browser-logs/068-click.txt"}
+{"at": "2026-09-12T23:15:29.233595+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/069-snapshot.txt"}
+{"at": "2026-09-12T23:15:29.501680+00:00", "args": ["screenshot", "artifacts/utility-review/11-marcus-rollup.png"], "exitCode": 0, "output": "browser-logs/070-screenshot.txt"}
+{"at": "2026-09-12T23:15:39.337621+00:00", "args": ["scrollintoview", "@e18"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:15:39.517273+00:00", "args": ["click", "@e18"], "exitCode": 0, "output": "browser-logs/071-click.txt"}
+{"at": "2026-09-12T23:15:39.730217+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/072-snapshot.txt"}
+{"at": "2026-09-12T23:15:39.930088+00:00", "args": ["get", "text", "table"], "exitCode": 0, "output": "browser-logs/073-get.txt"}
+{"at": "2026-09-12T23:15:40.202482+00:00", "args": ["screenshot", "artifacts/utility-review/12-marcus-comparison.png"], "exitCode": 0, "output": "browser-logs/074-screenshot.txt"}
+{"at": "2026-09-12T23:15:47.511994+00:00", "args": ["download", "@e14", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/marcus-projects.csv"], "exitCode": 0, "output": "browser-logs/075-download.txt"}
+{"at": "2026-09-12T23:15:47.706916+00:00", "args": ["scrollintoview", "@e6"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:15:47.922827+00:00", "args": ["click", "@e6"], "exitCode": 0, "output": "browser-logs/076-click.txt"}
+{"at": "2026-09-12T23:15:48.129461+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/077-snapshot.txt"}
+{"at": "2026-09-12T23:15:53.842652+00:00", "args": ["scrollintoview", "@e49"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:15:54.029432+00:00", "args": ["click", "@e49"], "exitCode": 0, "output": "browser-logs/078-click.txt"}
+{"at": "2026-09-12T23:15:54.229226+00:00", "args": ["get", "text", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/079-get.txt"}
+{"at": "2026-09-12T23:15:54.435891+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/080-snapshot.txt"}
+{"at": "2026-09-12T23:15:54.734934+00:00", "args": ["screenshot", "artifacts/utility-review/13-marcus-map.png"], "exitCode": 0, "output": "browser-logs/081-screenshot.txt"}
+{"at": "2026-09-12T23:15:59.783161+00:00", "args": ["scrollintoview", "@e30"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:15:59.966030+00:00", "args": ["click", "@e30"], "exitCode": 0, "output": "browser-logs/082-click.txt"}
+{"at": "2026-09-12T23:16:00.180733+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/083-snapshot.txt"}
+{"at": "2026-09-12T23:16:06.253711+00:00", "args": ["scrollintoview", "@e21"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:16:06.437274+00:00", "args": ["click", "@e21"], "exitCode": 0, "output": "browser-logs/084-click.txt"}
+{"at": "2026-09-12T23:16:06.657217+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/085-snapshot.txt"}
+{"at": "2026-09-12T23:16:06.852617+00:00", "args": ["get", "text", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/086-get.txt"}
+{"at": "2026-09-12T23:16:07.115632+00:00", "args": ["screenshot", "artifacts/utility-review/14-marcus-focused-grid.png"], "exitCode": 0, "output": "browser-logs/087-screenshot.txt"}
+{"at": "2026-09-12T23:16:18.050063+00:00", "args": ["scrollintoview", "@e18"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:16:18.234634+00:00", "args": ["click", "@e18"], "exitCode": 0, "output": "browser-logs/088-click.txt"}
+{"at": "2026-09-12T23:16:18.459518+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/089-snapshot.txt"}
+{"at": "2026-09-12T23:16:25.371196+00:00", "args": ["scrollintoview", "@e68"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:16:25.552752+00:00", "args": ["click", "@e68"], "exitCode": 0, "output": "browser-logs/090-click.txt"}
+{"at": "2026-09-12T23:16:25.754770+00:00", "args": ["get", "text", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/091-get.txt"}
+{"at": "2026-09-12T23:16:25.988350+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/092-snapshot.txt"}
+{"at": "2026-09-12T23:16:32.919749+00:00", "args": ["scrollintoview", "@e32"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:16:33.099438+00:00", "args": ["click", "@e32"], "exitCode": 0, "output": "browser-logs/093-click.txt"}
+{"at": "2026-09-12T23:16:33.302728+00:00", "args": ["get", "text", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/094-get.txt"}
+{"at": "2026-09-12T23:16:33.549387+00:00", "args": ["screenshot", "artifacts/utility-review/15-ai-standards-grid-connections.png"], "exitCode": 0, "output": "browser-logs/095-screenshot.txt"}
+{"at": "2026-09-12T23:16:33.772642+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/096-snapshot.txt"}
+{"at": "2026-09-12T23:16:46.293824+00:00", "args": ["scrollintoview", "@e11"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:16:46.478858+00:00", "args": ["click", "@e11"], "exitCode": 0, "output": "browser-logs/097-click.txt"}
+{"at": "2026-09-12T23:16:46.696206+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/098-snapshot.txt"}
+{"at": "2026-09-12T23:16:46.957750+00:00", "args": ["screenshot", "artifacts/utility-review/16-capacity-committed.png", "--full"], "exitCode": 0, "output": "browser-logs/099-screenshot.txt"}
+{"at": "2026-09-12T23:17:04.219888+00:00", "args": ["eval", "Array.from(document.querySelectorAll(\"[aria-label] \")).map(e=>e.getAttribute(\"aria-label\")).filter(s=>s.includes(\", week of \"))"], "exitCode": 0, "output": "browser-logs/100-eval.txt"}
+{"at": "2026-09-12T23:17:04.431664+00:00", "args": ["download", "@e5", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/capacity-committed.csv"], "exitCode": 0, "output": "browser-logs/101-download.txt"}
+{"at": "2026-09-12T23:17:04.628301+00:00", "args": ["scrollintoview", "@e16"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:17:04.817045+00:00", "args": ["check", "@e16"], "exitCode": 0, "output": "browser-logs/102-check.txt"}
+{"at": "2026-09-12T23:17:05.014456+00:00", "args": ["get", "text", "main"], "exitCode": 0, "output": "browser-logs/103-get.txt"}
+{"at": "2026-09-12T23:17:05.299311+00:00", "args": ["screenshot", "artifacts/utility-review/17-capacity-proposed.png", "--full"], "exitCode": 0, "output": "browser-logs/104-screenshot.txt"}
+{"at": "2026-09-12T23:17:34.060120+00:00", "args": ["eval", "Array.from(document.querySelectorAll(\"[aria-label] \")).map(e=>e.getAttribute(\"aria-label\")).filter(s=>s.includes(\", week of \"))"], "exitCode": 0, "output": "browser-logs/105-eval.txt"}
+{"at": "2026-09-12T23:17:34.288571+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/106-snapshot.txt"}
+{"at": "2026-09-12T23:17:40.792041+00:00", "args": ["download", "@e5", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/capacity-proposed.csv"], "exitCode": 0, "output": "browser-logs/107-download.txt"}
+{"at": "2026-09-12T23:17:40.989929+00:00", "args": ["scrollintoview", "@e237"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:17:41.181388+00:00", "args": ["click", "@e237"], "exitCode": 0, "output": "browser-logs/108-click.txt"}
+{"at": "2026-09-12T23:17:41.392988+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/109-snapshot.txt"}
+{"at": "2026-09-12T23:17:41.625233+00:00", "args": ["screenshot", "artifacts/utility-review/18-proposal-effort.png"], "exitCode": 0, "output": "browser-logs/110-screenshot.txt"}
+{"at": "2026-09-12T23:17:50.055183+00:00", "args": ["scrollintoview", "summary:has-text(\"Effort & capacity\")"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:17:50.226410+00:00", "args": ["click", "summary:has-text(\"Effort & capacity\")"], "exitCode": 1, "output": "browser-logs/111-click.txt"}
+{"at": "2026-09-12T23:18:04.301985+00:00", "args": ["eval", "Array.from(document.querySelectorAll(\"dialog[open] summary\")).map(e=>({text:e.textContent,html:e.outerHTML}))"], "exitCode": 0, "output": "browser-logs/112-eval.txt"}
+{"at": "2026-09-12T23:18:14.453876+00:00", "args": ["find", "text", "Effort & capacity", "click"], "exitCode": 0, "output": "browser-logs/113-find.txt"}
+{"at": "2026-09-12T23:18:14.667468+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/114-snapshot.txt"}
+{"at": "2026-09-12T23:18:22.094398+00:00", "args": ["scrollintoview", ".effort-details > summary"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:18:22.260564+00:00", "args": ["click", ".effort-details > summary"], "exitCode": 0, "output": "browser-logs/115-click.txt"}
+{"at": "2026-09-12T23:18:22.455385+00:00", "args": ["get", "text", ".effort-details"], "exitCode": 0, "output": "browser-logs/116-get.txt"}
+{"at": "2026-09-12T23:18:22.659297+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/117-snapshot.txt"}
+{"at": "2026-09-12T23:18:22.920938+00:00", "args": ["screenshot", "artifacts/utility-review/19-proposal-effort-expanded.png"], "exitCode": 0, "output": "browser-logs/118-screenshot.txt"}
+{"at": "2026-09-12T23:18:23.107515+00:00", "args": ["scrollintoview", "@e4"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:18:23.272025+00:00", "args": ["click", "@e4"], "exitCode": 0, "output": "browser-logs/119-click.txt"}
+{"at": "2026-09-12T23:18:57.453836+00:00", "args": ["reload"], "exitCode": 0, "output": "browser-logs/120-reload.txt"}
+{"at": "2026-09-12T23:18:57.646550+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/121-snapshot.txt"}
+{"at": "2026-09-12T23:19:04.422180+00:00", "args": ["scrollintoview", "@e13"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:19:04.591926+00:00", "args": ["click", "@e13"], "exitCode": 0, "output": "browser-logs/122-click.txt"}
+{"at": "2026-09-12T23:19:04.795577+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/123-snapshot.txt"}
+{"at": "2026-09-12T23:19:05.054230+00:00", "args": ["screenshot", "artifacts/utility-review/20-import-baseline.png"], "exitCode": 0, "output": "browser-logs/124-screenshot.txt"}
+{"at": "2026-09-12T23:19:13.869181+00:00", "args": ["upload", "@e51", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/import-fixtures/update-people.csv"], "exitCode": 0, "output": "browser-logs/125-upload.txt"}
+{"at": "2026-09-12T23:19:14.067910+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/126-snapshot.txt"}
+{"at": "2026-09-12T23:19:20.786617+00:00", "args": ["upload", "@e52", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/import-fixtures/update-projects.csv"], "exitCode": 0, "output": "browser-logs/127-upload.txt"}
+{"at": "2026-09-12T23:19:20.991586+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/128-snapshot.txt"}
+{"at": "2026-09-12T23:19:26.890878+00:00", "args": ["scrollintoview", "@e25"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:19:27.062902+00:00", "args": ["click", "@e25"], "exitCode": 0, "output": "browser-logs/129-click.txt"}
+{"at": "2026-09-12T23:19:27.276838+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/130-snapshot.txt"}
+{"at": "2026-09-12T23:19:27.524986+00:00", "args": ["screenshot", "artifacts/utility-review/21-import-review.png", "--full"], "exitCode": 0, "output": "browser-logs/131-screenshot.txt"}
+{"at": "2026-09-12T23:19:57.979968+00:00", "args": ["scrollintoview", "@e3"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:19:58.144332+00:00", "args": ["click", "@e3"], "exitCode": 0, "output": "browser-logs/132-click.txt"}
+{"at": "2026-09-12T23:19:58.340837+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/133-snapshot.txt"}
+{"at": "2026-09-12T23:20:13.879681+00:00", "args": ["upload", "@e51", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/import-fixtures/invalid-missing-manager-people.csv"], "exitCode": 0, "output": "browser-logs/134-upload.txt"}
+{"at": "2026-09-12T23:20:14.085374+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/135-snapshot.txt"}
+{"at": "2026-09-12T23:20:14.274505+00:00", "args": ["scrollintoview", "@e25"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:20:14.445675+00:00", "args": ["click", "@e25"], "exitCode": 0, "output": "browser-logs/136-click.txt"}
+{"at": "2026-09-12T23:20:14.646898+00:00", "args": ["get", "text", "dialog[open]"], "exitCode": 0, "output": "browser-logs/137-get.txt"}
+{"at": "2026-09-12T23:20:14.888310+00:00", "args": ["screenshot", "artifacts/utility-review/22-invalid-manager.png"], "exitCode": 0, "output": "browser-logs/138-screenshot.txt"}
+{"at": "2026-09-12T23:20:15.078858+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/139-snapshot.txt"}
+{"at": "2026-09-12T23:20:40.485336+00:00", "args": ["scrollintoview", "@e3"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:20:40.657048+00:00", "args": ["click", "@e3"], "exitCode": 0, "output": "browser-logs/140-click.txt"}
+{"at": "2026-09-12T23:20:40.865701+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/141-snapshot.txt"}
+{"at": "2026-09-12T23:20:49.340058+00:00", "args": ["upload", "@e51", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/import-fixtures/update-people.csv"], "exitCode": 0, "output": "browser-logs/142-upload.txt"}
+{"at": "2026-09-12T23:20:49.536583+00:00", "args": ["upload", "@e52", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/import-fixtures/invalid-status-projects.csv"], "exitCode": 0, "output": "browser-logs/143-upload.txt"}
+{"at": "2026-09-12T23:20:49.735970+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/144-snapshot.txt"}
+{"at": "2026-09-12T23:20:49.925744+00:00", "args": ["scrollintoview", "@e25"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:20:50.097907+00:00", "args": ["click", "@e25"], "exitCode": 0, "output": "browser-logs/145-click.txt"}
+{"at": "2026-09-12T23:20:50.295329+00:00", "args": ["get", "text", "main"], "exitCode": 0, "output": "browser-logs/146-get.txt"}
+{"at": "2026-09-12T23:20:50.508323+00:00", "args": ["screenshot", "artifacts/utility-review/23-invalid-status.png"], "exitCode": 0, "output": "browser-logs/147-screenshot.txt"}
+{"at": "2026-09-12T23:21:01.549557+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/148-snapshot.txt"}
+{"at": "2026-09-12T23:21:09.299316+00:00", "args": ["upload", "@e52", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/import-fixtures/update-projects.csv"], "exitCode": 0, "output": "browser-logs/149-upload.txt"}
+{"at": "2026-09-12T23:21:09.502971+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/150-snapshot.txt"}
+{"at": "2026-09-12T23:21:09.692029+00:00", "args": ["scrollintoview", "@e25"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:21:09.863868+00:00", "args": ["click", "@e25"], "exitCode": 0, "output": "browser-logs/151-click.txt"}
+{"at": "2026-09-12T23:21:10.077972+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/152-snapshot.txt"}
+{"at": "2026-09-12T23:21:17.720762+00:00", "args": ["scrollintoview", "@e4"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:21:17.892560+00:00", "args": ["click", "@e4"], "exitCode": 0, "output": "browser-logs/153-click.txt"}
+{"at": "2026-09-12T23:21:18.092334+00:00", "args": ["get", "text", "main"], "exitCode": 0, "output": "browser-logs/154-get.txt"}
+{"at": "2026-09-12T23:21:18.330685+00:00", "args": ["reload"], "exitCode": 0, "output": "browser-logs/155-reload.txt"}
+{"at": "2026-09-12T23:21:18.531800+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/156-snapshot.txt"}
+{"at": "2026-09-12T23:21:18.809921+00:00", "args": ["screenshot", "artifacts/utility-review/24-imported-after-reload.png"], "exitCode": 0, "output": "browser-logs/157-screenshot.txt"}
+{"at": "2026-09-12T23:21:29.424406+00:00", "args": ["scrollintoview", "@e45"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:21:29.601191+00:00", "args": ["click", "@e45"], "exitCode": 0, "output": "browser-logs/158-click.txt"}
+{"at": "2026-09-12T23:21:29.800486+00:00", "args": ["get", "text", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/159-get.txt"}
+{"at": "2026-09-12T23:21:30.003307+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/160-snapshot.txt"}
+{"at": "2026-09-12T23:21:30.296681+00:00", "args": ["screenshot", "artifacts/utility-review/25-imported-project-map.png"], "exitCode": 0, "output": "browser-logs/161-screenshot.txt"}
+{"at": "2026-09-12T23:21:45.691291+00:00", "args": ["scrollintoview", "@e21"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:21:45.866593+00:00", "args": ["click", "@e21"], "exitCode": 0, "output": "browser-logs/162-click.txt"}
+{"at": "2026-09-12T23:21:46.067235+00:00", "args": ["get", "text", "[aria-label=\"Selected item details\"]"], "exitCode": 0, "output": "browser-logs/163-get.txt"}
+{"at": "2026-09-12T23:21:46.281533+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/164-snapshot.txt"}
+{"at": "2026-09-12T23:21:46.517477+00:00", "args": ["screenshot", "artifacts/utility-review/26-imported-project-grid.png"], "exitCode": 0, "output": "browser-logs/165-screenshot.txt"}
+{"at": "2026-09-12T23:21:46.714300+00:00", "args": ["download", "@e16", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/utility-review/imported-graph.jsonld"], "exitCode": 0, "output": "browser-logs/166-download.txt"}
+{"at": "2026-09-12T23:21:56.782919+00:00", "args": ["scrollintoview", "@e30"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:21:56.959898+00:00", "args": ["click", "@e30"], "exitCode": 0, "output": "browser-logs/167-click.txt"}
+{"at": "2026-09-12T23:21:57.166939+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/168-snapshot.txt"}
+{"at": "2026-09-12T23:21:57.434170+00:00", "args": ["screenshot", "artifacts/utility-review/27-imported-project-detail.png"], "exitCode": 0, "output": "browser-logs/169-screenshot.txt"}
+{"at": "2026-09-12T23:22:04.614246+00:00", "args": ["scrollintoview", "@e16"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-12T23:22:04.787900+00:00", "args": ["click", "@e16"], "exitCode": 0, "output": "browser-logs/170-click.txt"}
+{"at": "2026-09-12T23:22:04.990958+00:00", "args": ["snapshot"], "exitCode": 0, "output": "browser-logs/171-snapshot.txt"}
+{"at": "2026-09-12T23:22:05.231502+00:00", "args": ["screenshot", "artifacts/utility-review/28-imported-leader-rollup.png"], "exitCode": 0, "output": "browser-logs/172-screenshot.txt"}
+{"at": "2026-09-12T23:25:04.989168+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/173-errors.txt"}
+{"at": "2026-09-12T23:25:06.566929+00:00", "args": ["console"], "exitCode": 0, "output": "browser-logs/174-console.txt"}
+{"at": "2026-09-12T23:26:59.845532+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/175-close.txt"}

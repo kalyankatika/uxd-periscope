@@ -1,0 +1,21 @@
+{
+  "connections": [
+    {
+      "name": "Amara Nwosu",
+      "reason": "Project owner"
+    },
+    {
+      "name": "Nina Patel",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Isabel Costa",
+      "reason": "Contributor"
+    },
+    {
+      "name": "Client financial planning",
+      "reason": "Supports this priority"
+    }
+  ],
+  "title": "Planning assistant discovery"
+}

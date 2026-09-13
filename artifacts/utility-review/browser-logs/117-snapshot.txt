@@ -1,0 +1,70 @@
+- heading "Edit project" [level=2, ref=e1]
+- button "Close project" [ref=e2]
+- textbox "Name" [required, ref=e6]: Planning assistant discovery
+- textbox "Business priority" [ref=e7]: Client financial planning
+- combobox "Project owner" [expanded=false, ref=e8]: Amara Nwosu — Research & insights
+  - option "Not assigned" [ref=e24]
+  - option "Avery Morgan — User experience" [ref=e25]
+  - option "Elena Brooks — Product Design" [ref=e26]
+  - option "Marcus Reed — Research & insights" [ref=e27]
+  - option "Priya Shah — Content design" [ref=e28]
+  - option "Daniel Kim — Design systems" [ref=e29]
+  - option "Maya Chen — Product Design" [ref=e30]
+  - option "Jordan Ellis — Product Design" [ref=e31]
+  - option "Nina Patel — Product Design" [ref=e32]
+  - option "Sofia Ramirez — Research & insights" [ref=e33]
+  - option "Ethan Park — Research & insights" [ref=e34]
+  - option "Amara Nwosu — Research & insights" [selected, ref=e35]
+  - option "Leo Martinez — Content design" [ref=e36]
+  - option "Grace Liu — Content design" [ref=e37]
+  - option "Theo Reed — Content design" [ref=e38]
+  - option "Oliver Grant — Design systems" [ref=e39]
+  - option "Isabel Costa — Design systems" [ref=e40]
+  - option "Noah Bennett — Design systems" [ref=e41]
+  - option "Sana Ahmed — Design Strategy" [ref=e42]
+  - option "Victor Alvarez — Innovation" [ref=e43]
+  - option "Riley Thompson — UX AI" [ref=e44]
+  - option "Tessa Wu — Design Strategy" [ref=e45]
+  - option "Owen Hughes — Design Strategy" [ref=e46]
+  - option "Leila Haddad — Innovation" [ref=e47]
+  - option "Ben Carter — Innovation" [ref=e48]
+  - option "Aisha Patel — UX AI" [ref=e49]
+  - option "Sam Okafor — UX AI" [ref=e50]
+- combobox "Importance" [expanded=false, ref=e9]: Standard
+  - option "Top priority" [ref=e51]
+  - option "High priority" [ref=e52]
+  - option "Standard" [selected, ref=e53]
+- combobox "Project health" [expanded=false, ref=e10]: Not reported
+  - option "Not reported" [selected, ref=e54]
+  - option "On track" [ref=e55]
+  - option "At risk" [ref=e56]
+  - option "Decision required" [ref=e57]
+- textbox "Latest update" [ref=e11]: An early idea for next quarter. The team has not committed to delivery.
+- textbox "Action required" [ref=e12]
+- textbox "Expected outcome" [ref=e13]: Explore whether guided prompts can help clients take their next planning step.
+- combobox "Delivery status" [expanded=false, ref=e14]: Planned
+  - option "Planned" [selected, ref=e58]
+  - option "In progress" [ref=e59]
+  - option "Blocked" [ref=e60]
+  - option "Completed" [ref=e61]
+- spinbutton "Month Month" [ref=e62]: 11
+- spinbutton "Day Day" [ref=e63]: 16
+- spinbutton "Year Year" [ref=e64]: 2026
+- button "Show date picker Show date picker" [ref=e18]
+- spinbutton "Month Month" [ref=e65]: 12
+- spinbutton "Day Day" [ref=e66]: 31
+- spinbutton "Year Year" [ref=e67]: 2026
+- button "Show date picker Show date picker" [ref=e19]
+- combobox "Commitment" [expanded=false, ref=e15]: Proposed
+  - option "Proposed" [selected, ref=e68]
+  - option "Committed" [ref=e69]
+  - option "Backlog" [ref=e70]
+- heading "Weekly effort by discipline" [level=3, ref=e16]
+- spinbutton "Design" [required, ref=e20]: 0.4000000059604645
+- spinbutton "Research" [required, ref=e21]: 0.4000000059604645
+- spinbutton "Content" [required, ref=e22]: 0.20000000298023224
+- spinbutton "Design engineering" [required, ref=e23]: 0.30000001192092896
+- checkbox "Include proposed in preview" [checked=true, ref=e17]
+- button "Delete" [ref=e3]
+- button "Cancel" [ref=e4]
+- button "Save project" [ref=e5]

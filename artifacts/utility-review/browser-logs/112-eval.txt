@@ -1,0 +1,14 @@
+[
+  {
+    "html": "<summary>Contributors (2)</summary>",
+    "text": "Contributors (2)"
+  },
+  {
+    "html": "<summary>Project dependencies (0)</summary>",
+    "text": "Project dependencies (0)"
+  },
+  {
+    "html": "<summary>Effort &amp; capacity</summary>",
+    "text": "Effort & capacity"
+  }
+]
