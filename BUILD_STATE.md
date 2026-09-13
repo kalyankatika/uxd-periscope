@@ -1,6 +1,14 @@
 # Periscope build state
 
-## Current objective — complete
+## Current objective — interface alignment complete
+
+Replaced sidebar text symbols with consistent 20px SVG icons and centered icon/label containers. Map/Grid use the same SVG family at 16px. The brand mark is now a fixed 28px SVG; the Periscope wordmark and UXD badge share its center. Font leading is trimmed where supported, with explicit-size flex alignment as the fallback. Active navigation is exposed through aria-current and decorative SVGs are hidden from assistive technology.
+
+Corrected the 761–800px layout gap so tablet navigation uses the horizontal layout rather than a full-width sidebar beside compressed content. Mobile navigation labels remain visible; only sidebar icons are hidden. Returning home resets horizontal navigation scrolling so the active label remains fully visible. Fidelity Sans, #368727 buttons, rounded actions, logo-home behavior, and Work map interactions are preserved.
+
+Typecheck and production build pass. Desktop, 780px tablet and 390px mobile layouts were visually inspected; measured desktop brand/icon/label centers agree. Navigation, logo-home and Map/Grid controls were checked in the browser. Evidence: [alignment checks](artifacts/alignment/README.md). No saved-data writes were performed. The current production preview remains on port 3000 (server session 90530).
+
+## Previous objective — people management complete
 
 People can be added to reporting hierarchies, moved between managers and teams, and removed with explicit reassignment of reports and project ownership. The implementation preserves stable IDs, complete projects, example/saved separation, Fidelity Sans, rounded actions and the existing Work map interaction design.
 
@@ -18,7 +26,7 @@ All 57 tests pass, including 12 new pure-operation tests. Typecheck and producti
 
 Desktop and 390-pixel mobile views were visually checked, including the editor and row controls. No runtime exceptions or framework overlays appeared. Example-only edits left the saved API Plan unchanged. The initial checkpoint assertion was corrected to compare records by ID rather than SQLite row order; no application failure was involved.
 
-The user's database files were unchanged throughout isolated testing. The saved Plan hash also remained identical across the preview restart. Port 3000 runs the current production build (server session 78506). The disposable port-3024 server and dedicated browser are closed.
+The user's database files were unchanged throughout isolated testing. The saved Plan hash also remained identical across the preview restart. That phase used production preview session 78506; the alignment phase above records the current runtime. The disposable port-3024 server and dedicated browser are closed.
 
 Evidence: [people-management verification](artifacts/people-management/README.md). Instructions: [manual hierarchy controls](docs/enterprise-data-mapping.md#manual-people-and-hierarchy-changes).
 

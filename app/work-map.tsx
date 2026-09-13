@@ -10,6 +10,7 @@ import {
 } from "react";
 import type { Initiative, Plan } from "@/lib/domain";
 import WorkGrid from "./work-grid";
+import UiIcon from "./ui-icon";
 import { graphGridItems, type GridSort } from "@/lib/graph-grid";
 import {
   buildGraph,
@@ -423,13 +424,13 @@ export default function WorkMap({
               aria-pressed={viewMode === "map"}
               onClick={() => changeView("map")}
             >
-              <span aria-hidden="true">⌘</span> Map
+              <UiIcon name="connections" className="map-view-icon" /> Map
             </button>
             <button
               aria-pressed={viewMode === "grid"}
               onClick={() => changeView("grid")}
             >
-              <span aria-hidden="true">▦</span> Grid
+              <UiIcon name="compare" className="map-view-icon" /> Grid
             </button>
           </div>
           <button onClick={onCompare}>

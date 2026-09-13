@@ -1,4 +1,5 @@
 "use client";
+import UiIcon from "./ui-icon";
 import { useRef, useState } from "react";
 import Leadership from "./leadership";
 import { leadershipDemo, isStarterPlan } from "@/lib/leadership-demo";
@@ -87,6 +88,7 @@ export default function Planner({ initial }: { initial: Plan }) {
       inspection: CsvInspection;
     } | null>(null);
   const plan = useExample ? example : workspace;
+  const navigation = useRef<HTMLElement>(null);
   const dialog = useRef<HTMLDialogElement>(null),
     [replaceImport, setReplaceImport] = useState(false),
     [importKind, setImportKind] = useState<"people" | "initiatives">("people"),
@@ -225,18 +227,36 @@ export default function Planner({ initial }: { initial: Plan }) {
               return;
             event.preventDefault();
             setView("connections");
+            navigation.current?.scrollTo({ left: 0, behavior: "auto" });
             setHomeVersion((version) => version + 1);
             window.scrollTo({ top: 0, behavior: "auto" });
           }}
         >
-          <span className="brand-icon" aria-hidden="true">
-            ◉
-          </span>
+          <svg
+            className="brand-icon"
+            viewBox="0 0 28 28"
+            width="28"
+            height="28"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle
+              cx="14"
+              cy="14"
+              r="13"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            />
+            <circle cx="14" cy="14" r="10" fill="currentColor" />
+          </svg>
           <span className="brand-name">periscope</span>
-          <span className="brand-tag">UXD</span>
+          <span className="brand-tag">
+            <span>UXD</span>
+          </span>
         </a>
         <div className="workspace-label">WORKSPACE</div>
-        <nav aria-label="Main navigation">
+        <nav ref={navigation} aria-label="Main navigation">
           {(
             [
               "connections",
@@ -247,14 +267,15 @@ export default function Planner({ initial }: { initial: Plan }) {
               "cutline",
               "people",
             ] as const
-          ).map((v, index) => (
+          ).map((v) => (
             <button
               key={v}
               onClick={() => setView(v)}
               className={view === v ? "nav active" : "nav"}
+              aria-current={view === v ? "page" : undefined}
             >
-              <span>{["⌘", "◫", "♧", "▦", "◷", "☷", "⚙"][index]}</span>
-              {viewLabels[v]}
+              <UiIcon name={v} />
+              <span className="nav-label">{viewLabels[v]}</span>
             </button>
           ))}
         </nav>

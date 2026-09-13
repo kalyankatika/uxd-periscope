@@ -1,0 +1,6 @@
+- heading "Organization grid" [level=2, ref=e14]
+- button "Map" [ref=e20]
+- button "Grid" [ref=e21]
+- button "Compare projects " [ref=e15]
+- button "Export connected data" [ref=e16]
+- button "Expand grid" [ref=e17]
