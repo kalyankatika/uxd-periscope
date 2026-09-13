@@ -59,3 +59,7 @@ Replaced text-symbol icons with shared outline SVGs matching the left navigation
 ## Compact planning controls — September 13, 2026
 
 Moved Planning period and its calendar input immediately left of Add project in the title action row. Removed the separate empty toolbar on views without scenario controls, recovering vertical space for Work map. Narrow screens wrap the controls without clipping. Production build passed; desktop/mobile browser checks passed with no runtime errors. Current preview runs on port 3000; saved workspace unchanged.
+
+## Refreshed silent reel — September 13, 2026
+
+Re-recorded the 40-second 1080p overview-first reel from the current app using fictional data. Shows Work map, project connections, grid, nested reporting and capacity with captions and dissolves. No audio streams; full decode and visual scene checks passed, browser reported no errors. Updated recording script for current SVG control labels and 27-person fixture. Artifact: artifacts/platform-demo/periscope-overview-demo.mp4. Saved workspace unchanged.

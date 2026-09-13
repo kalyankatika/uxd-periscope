@@ -23,7 +23,7 @@ SCENES = [
     ("map", "WORK MAP", "Open the map and explore connections", 6.5),
     ("connections", "PROJECT CONNECTIONS", "Owners, contributors and dependencies", 6),
     ("grid", "GRID VIEW", "Review the same work in cards", 6),
-    ("teams", "TEAM PROJECTS", "Follow a leader’s reporting line", 6),
+    ("teams", "REPORTING LINES", "Explore leaders and their reports", 6),
     ("capacity", "CAPACITY", "Compare project demand with available time", 6),
 ]
 
@@ -70,7 +70,7 @@ def record(start=0, stop=None):
         browser("record", "start", WORK / (name + ".webm"), URL)
         began = time.monotonic()
         try:
-            browser("wait", "--fn", 'document.fonts.status === "loaded" && document.querySelectorAll(".map-node").length === 46')
+            browser("wait", "--fn", 'document.fonts.status === "loaded" && document.querySelectorAll(".map-node").length === 47')
             if "Fictional organization" not in browser("get", "text", ".example-banner"):
                 raise RuntimeError("Recording requires the fictional example")
             if name in ("connections", "grid", "teams"):
@@ -80,17 +80,18 @@ def record(start=0, stop=None):
             if name == "grid":
                 click("Grid")
             if name == "teams":
-                click("Leader: Riley Thompson", contains=True)
+                click("Reporting lines")
+                click("Leader: Elena Brooks", contains=True)
             if name in ("overview", "map"):
-                click("◫ Overview")
+                click("Overview")
             if name == "capacity":
-                click("◷ Capacity")
+                click("Capacity")
             browser("mouse", "move", "20", "20")
             time.sleep(0.25)
             trim = time.monotonic() - began
             if name == "map":
                 time.sleep(0.6)
-                click("⌘ Work map")
+                click("Work map")
                 time.sleep(1.0)
                 click("Expand map")
                 time.sleep(1.2)
@@ -102,7 +103,7 @@ def record(start=0, stop=None):
                 time.sleep(1.0)
             elif name == "connections":
                 time.sleep(1.0)
-                click("◎ Focus connections")
+                click("Focus connections")
                 time.sleep(1.2)
                 select("Connection distance", "2")
                 time.sleep(0.8)
@@ -117,10 +118,8 @@ def record(start=0, stop=None):
                 time.sleep(2.1)
             elif name == "teams":
                 time.sleep(1.0)
-                click("View team projects")
-                time.sleep(1.5)
-                browser("scroll", "down", "380")
-                time.sleep(2.0)
+                click("Show reporting group")
+                time.sleep(3.5)
             elif name == "overview":
                 time.sleep(4.5)
                 browser("scrollintoview", ".teams-section")
