@@ -63,3 +63,7 @@ Moved Planning period and its calendar input immediately left of Add project in 
 ## Refreshed silent reel — September 13, 2026
 
 Re-recorded the 40-second 1080p overview-first reel from the current app using fictional data. Shows Work map, project connections, grid, nested reporting and capacity with captions and dissolves. No audio streams; full decode and visual scene checks passed, browser reported no errors. Updated recording script for current SVG control labels and 27-person fixture. Artifact: artifacts/platform-demo/periscope-overview-demo.mp4. Saved workspace unchanged.
+
+## Demo consistency asset — September 18, 2026
+
+Captured docs/demo-reel-playbook.md as the reusable reference for the reel positively received by the Head of UXD. Includes reference revision/artifacts, storyboard outcomes, exact visual specifications, isolated setup, recording/retake commands, media verification and a reusable request. Linked from the repository and demo READMEs. Reviewed against the recording script, scene manifest and fixture documentation; local links checked. Documentation-only change; no new footage or app behavior changes.

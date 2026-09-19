@@ -1,5 +1,7 @@
 # Periscope platform demo
 
+[Repeat this setup: demo reel playbook](../../docs/demo-reel-playbook.md) — the consistency reference for future recordings.
+
 **Short silent cut: [periscope-overview-demo.mp4](periscope-overview-demo.mp4) · 40 seconds · 1920 × 1080**
 
 Opens with the full platform overview, visible branding and navigation, priorities, and team cards. The next scene navigates into Work map and expands it, followed by project connections, Grid view, reporting hierarchy, and capacity. Brief on-screen captions, quarter-second dissolves, and a closing title replace narration. The MP4 contains no audio track. All footage was recorded from the running app with fictional data. Complete decode and visual spot checks passed; recording reported no browser errors. The earlier map-first cut remains at `periscope-short-silent.mp4`.
