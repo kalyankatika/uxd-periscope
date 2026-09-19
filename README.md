@@ -75,6 +75,8 @@ For substantial builds, use the [Periscope Manager Loop](docs/manager-loop.md) w
 
 ## Demo
 
+[Onboarding walkthrough](docs/onboarding-walkthrough.md): tested first-time leadership and organization setup scenario, findings and improvements.
+
 Use the [demo reel playbook](docs/demo-reel-playbook.md) to repeat the reviewed silent reel: storyboard, visual specifications, setup, retakes and release checks.
 
 The current [40-second silent demo](artifacts/platform-demo/periscope-overview-demo.mp4) starts with the platform overview before drilling into the map, project connections, grid, reporting hierarchy, and capacity. The longer narrated recording, captions, and reusable example files are also in `artifacts/platform-demo`. The earlier capacity-only recording remains in `artifacts/demo`.

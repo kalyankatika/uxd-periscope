@@ -52,6 +52,20 @@ function download(name: string, text: string) {
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
+function downloadSample(kind: ImportKind) {
+  const sample = leadershipDemo();
+  download(
+    kind + "-sample.csv",
+    kind === "people"
+      ? exportCsv(sample.people)
+      : exportCsv(
+          sample.initiatives.map(({ effort, ...project }) => ({
+            ...project,
+            ...effort,
+          })),
+        ),
+  );
+}
 const pct = (n: number) =>
   Number.isFinite(n) ? Math.round(n * 100) + "%" : "No capacity";
 const fte = (n: number) => n.toFixed(2).replace(/0$/, "");
@@ -610,6 +624,7 @@ export default function Planner({ initial }: { initial: Plan }) {
                 example={useExample}
                 busy={busy}
                 onSave={persist}
+                onDownloadSample={downloadSample}
               />
               <section className="panel import-panel">
                 <h2>Import or export one file</h2>
@@ -645,20 +660,7 @@ export default function Planner({ initial }: { initial: Plan }) {
                   <button disabled={busy} onClick={() => file.current?.click()}>
                     <UiIcon name="upload" className="action-icon" /> Upload CSV
                   </button>
-                  <button
-                    onClick={() =>
-                      download(
-                        importKind + "-sample.csv",
-                        importKind === "people"
-                          ? exportCsv(leadershipDemo().people)
-                          : exportCsv(
-                              leadershipDemo().initiatives.map(
-                                ({ effort, ...p }) => ({ ...p, ...effort }),
-                              ),
-                            ),
-                      )
-                    }
-                  >
+                  <button onClick={() => downloadSample(importKind)}>
                     <UiIcon name="download" className="action-icon" /> Sample
                     CSV
                   </button>

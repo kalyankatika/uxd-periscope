@@ -67,3 +67,9 @@ Re-recorded the 40-second 1080p overview-first reel from the current app using f
 ## Demo consistency asset — September 18, 2026
 
 Captured docs/demo-reel-playbook.md as the reusable reference for the reel positively received by the Head of UXD. Includes reference revision/artifacts, storyboard outcomes, exact visual specifications, isolated setup, recording/retake commands, media verification and a reusable request. Linked from the repository and demo READMEs. Reviewed against the recording script, scene manifest and fixture documentation; local links checked. Documentation-only change; no new footage or app behavior changes.
+
+## Onboarding evaluation — September 19, 2026 — complete
+
+Scope: first-time Head of Design discovery, priority/owner and nested-report navigation, fictional CSV organization onboarding, manual hierarchy changes and reload persistence in an isolated database. Complete when browser outcomes are documented, clear defects corrected and verified, and original saved-data integrity checked. Independent read-only reviewer inspects onboarding copy/flow; primary agent owns browser evidence and integration.
+
+Completed leadership discovery, paired CSV import, new operations hire, reviewed manager move, reload/restart persistence, grid search, capacity scenario and responsive onboarding checks. Added direct sample downloads, pre-import persistence guidance and visible capacity defaults. 62 tests/build passed; original saved data integrity verified. Report and repeatable scenario: docs/onboarding-walkthrough.md; evidence: artifacts/onboarding-review. Main preview refreshed on port 3000 (session 65962). Automation snapshot stall documented separately from product findings.

@@ -1,0 +1,94 @@
+periscope
+UXD
+WORKSPACE
+Work map
+Overview
+Teams & reporting
+Projects
+Capacity
+Project plan
+People & imports
+ Leadership workspace
+
+UXD · 28 people
+
+Saved workspace
+Saved workspace · Changes apply to all local sessions
+Use example data
+Teams & reporting
+
+Reporting structure and team projects.
+
+Planning period
+ Add project
+Plan saved.
+ All teams
+ Add person
+ME
+
+UXD Operations
+
+Morgan Ellis
+
+Design Operations Program Manager · Reports to Rowan Blake
+
+Edit person
+Move
+0 people in team
+0 related projects
+0 to review
+Morgan’s team projects
+
+Includes projects owned by their reports and projects with team contributors. Shared projects appear once.
+
+Compare projects 
+No linked projects. Assign a project owner or contributor to add a project to this team.
+Direct reports
+
+No direct reports recorded.
+
+ Add direct report
+Move person
+Morgan Ellis
+
+Currently reports to Rowan Blake.
+
+New manager
+No manager in this workspace
+Aisha Patel · AI Product Design (aisha)
+Amara Nwosu · Design Research (amara)
+Avery Morgan · UXD (uxd-head)
+Ben Carter · Emerging Experiences (ben)
+Daniel Kim · Design Systems & Engineering (daniel)
+Elena Brooks · Product Design (elena)
+Ethan Park · Design Research (ethan)
+Grace Liu · Content & Conversation Design (grace)
+Isabel Costa · Design Systems & Engineering (isabel)
+Jordan Ellis · Product Design (jordan)
+Leila Haddad · Emerging Experiences (leila)
+Leo Martinez · Content & Conversation Design (leo)
+Marcus Reed · Design Research (marcus)
+Maya Chen · Product Design (maya)
+Nina Patel · Product Design (nina)
+Noah Bennett · Design Systems & Engineering (noah)
+Oliver Grant · Design Systems & Engineering (oliver)
+Owen Hughes · Experience Strategy (owen)
+Priya Shah · Content & Conversation Design (priya)
+Riley Thompson · AI Product Design (riley)
+Rowan Blake · UXD Operations (uxd-ops)
+Sam Okafor · AI Product Design (sam)
+Sana Ahmed · Experience Strategy (sana)
+Sofia Ramirez · Design Research (sofia)
+Tessa Wu · Experience Strategy (tessa)
+Theo Reed · Content & Conversation Design (theo)
+Victor Alvarez · Emerging Experiences (victor)
+Use the Product Design team for this person and their reports
+Move summary
+
+0 people continue reporting through Morgan Ellis. Project owners and contributors stay assigned.
+
+Existing team labels stay the same.
+
+Cancel
+Move person
+Periscope · UXD workspace

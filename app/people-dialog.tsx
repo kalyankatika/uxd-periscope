@@ -220,7 +220,15 @@ export default function PeopleDialog({
                 </select>
               </label>
               <details className="effort-details">
-                <summary>Weekly availability</summary>
+                <summary>
+                  Weekly availability · {Math.round(draft.fte * 100)}% working
+                  time
+                  {" · "}
+                  {Math.round(
+                    draft.fte * (1 - draft.nonProjectPct / 100) * 100,
+                  )}
+                  % of full time available for projects
+                </summary>
                 <label>
                   Working time (1 = full time)
                   <input

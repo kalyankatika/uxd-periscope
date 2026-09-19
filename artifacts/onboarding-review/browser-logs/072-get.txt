@@ -1,0 +1,199 @@
+periscope
+UXD
+WORKSPACE
+Work map
+Overview
+Teams & reporting
+Projects
+Capacity
+Project plan
+People & imports
+ Leadership workspace
+
+UXD · 28 people
+
+Saved workspace
+Saved workspace · Changes apply to all local sessions
+Use example data
+Capacity
+
+Weekly project demand and available team capacity.
+
+ Export review
+Planning period
+ Add project
+Include proposed
+What-if scenario
+
+Available capacity
+
+15.53 FTE / week
+After non-project commitments
+
+Committed projects
+
+12
+1 proposed · 0 in backlog
+
+Weeks above capacity
+
+07 of 14
+3 disciplines over capacity
+Allocation by discipline
+
+Weekly demand as a share of available capacity
+
+≤80%
+81–100%
+>100%
+DISCIPLINE / AVAILABLE	Sep 28	Oct 5	Oct 12	Oct 19	Oct 26	Nov 2	Nov 9	Nov 16	Nov 23	Nov 30	Dec 7	Dec 14	Dec 21	Dec 28
+Design
+6.25 FTE / week
+	
+17%
+	
+53%
+	
+64%
+	
+75%
+	
+80%
+	
+83%
+	
+75%
+	
+69%
+	
+53%
+	
+50%
+	
+37%
+	
+24%
+	
+0%
+	
+0%
+
+Research
+2.39 FTE / week
+	
+20%
+	
+75%
+	
+105%
+	
+113%
+	
+121%
+	
+138%
+	
+130%
+	
+126%
+	
+105%
+	
+84%
+	
+67%
+	
+38%
+	
+0%
+	
+0%
+
+Content
+2.44 FTE / week
+	
+25%
+	
+78%
+	
+86%
+	
+94%
+	
+102%
+	
+107%
+	
+102%
+	
+90%
+	
+74%
+	
+70%
+	
+57%
+	
+29%
+	
+0%
+	
+0%
+
+Design engineering
+4.45 FTE / week
+	
+16%
+	
+54%
+	
+65%
+	
+79%
+	
+92%
+	
+108%
+	
+108%
+	
+99%
+	
+88%
+	
+83%
+	
+76%
+	
+65%
+	
+0%
+	
+0%
+Showing committed projects only. Backlog projects are excluded. Partial weeks use working days.
+Research reaches 138% of capacity
+
+Peak week: Nov 2. Reduce effort, move dates, or add capacity before taking on more work.
+
+View project plan 
+Projects this quarter 13
+
+Select a project to view its allocation.
+
+Project	Status	Dates	Weekly effort	
+Actions
+
+Advisor workspace	Committed	Oct 1 — Dec 4	1.8 FTE	
+Accessible component library	Committed	Oct 1 — Dec 18	1.6 FTE	
+UXD product design strategy	Committed	Oct 1 — Nov 6	0.8 FTE	
+Account opening redesign	Committed	Oct 1 — Nov 20	2.4 FTE	
+Statement content redesign	Committed	Oct 1 — Oct 9	0.6 FTE	
+UX AI interaction standards	Committed	Oct 5 — Nov 13	1.2 FTE	
+Research repository	Committed	Oct 5 — Nov 27	1.0 FTE	
+Service concept pilots	Committed	Oct 12 — Dec 11	1.2 FTE	
+Retirement guidance	Committed	Oct 12 — Dec 11	1.5 FTE	
+Mobile portfolio overview	Committed	Oct 19 — Dec 18	1.7 FTE	
+Conversational planning prototype	Committed	Oct 26 — Dec 18	1.3 FTE	
+AI-assisted research synthesis	Committed	Nov 2 — Dec 18	1.4 FTE	
+Planning assistant discovery	Proposed	Nov 16 — Dec 31	1.3 FTE	
+Periscope · UXD workspace

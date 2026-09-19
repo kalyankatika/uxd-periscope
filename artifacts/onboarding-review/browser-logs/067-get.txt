@@ -1,0 +1,87 @@
+periscope
+UXD
+WORKSPACE
+Work map
+Overview
+Teams & reporting
+Projects
+Capacity
+Project plan
+People & imports
+ Leadership workspace
+
+UXD · 28 people
+
+Saved workspace
+Saved workspace · Changes apply to all local sessions
+Use example data
+Work map
+
+People, projects, priorities, and their relationships.
+
+Planning period
+ Add project
+
+RELATIONSHIPS
+
+Reporting hierarchy
+
+13 projects · 28 people · 7 priorities
+
+Map
+Grid
+Compare projects 
+All work
+Reporting lines
+Top priorities 5
+Needs attention 5
+
+1 of 28 items
+
+Sort by
+Type
+Name A–Z
+Most connections
+TEAM MEMBER
+Morgan Ellis
+Team
+UXD Operations
+Design Operations Program Manager
+0 related projects
+1 connection in view
+
+ITEM DETAILS
+
+Select an item
+
+Select a person, project, or priority to view details and connections.
+
+01
+
+Priorities
+View projects linked to each business priority.
+
+02
+
+People
+View project owners, contributors, and reporting lines.
+
+03
+
+Project health
+Amber markers indicate projects requiring attention.
+
+Top-priority projects
+Advisor workspace
+Top-priority project
+UXD product design strategy
+Top-priority project
+Account opening redesign
+Top-priority project
+Project involvement / priority link
+Reporting line
+Project dependency
+1 of 28 items
+Select a card to view details and connections
+Reset view
+Periscope · UXD workspace

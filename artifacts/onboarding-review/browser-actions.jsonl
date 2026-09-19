@@ -1,0 +1,131 @@
+{"at": "2026-09-19T04:24:03.859527+00:00", "args": ["open", "http://127.0.0.1:3001/"], "exitCode": 0, "output": "browser-logs/001-open.txt"}
+{"at": "2026-09-19T04:24:04.049440+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/002-set.txt"}
+{"at": "2026-09-19T04:24:04.247915+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/003-snapshot.txt"}
+{"at": "2026-09-19T04:24:08.890159+00:00", "args": ["scrollintoview", "@e7"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:24:09.058632+00:00", "args": ["click", "@e7"], "exitCode": 0, "output": "browser-logs/004-click.txt"}
+{"at": "2026-09-19T04:24:09.248590+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/005-snapshot.txt"}
+{"at": "2026-09-19T04:24:35.650370+00:00", "args": ["scrollintoview", "@e25"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:24:35.816694+00:00", "args": ["click", "@e25"], "exitCode": 0, "output": "browser-logs/006-click.txt"}
+{"at": "2026-09-19T04:24:36.002347+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/007-snapshot.txt"}
+{"at": "2026-09-19T04:24:40.498543+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/008-get.txt"}
+{"at": "2026-09-19T04:24:40.680714+00:00", "args": ["scrollintoview", "@e22"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:24:40.848803+00:00", "args": ["click", "@e22"], "exitCode": 0, "output": "browser-logs/009-click.txt"}
+{"at": "2026-09-19T04:24:41.035652+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/010-snapshot.txt"}
+{"at": "2026-09-19T04:24:46.879180+00:00", "args": ["scrollintoview", "@e21"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:24:47.042051+00:00", "args": ["click", "@e21"], "exitCode": 0, "output": "browser-logs/011-click.txt"}
+{"at": "2026-09-19T04:24:47.227878+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/012-snapshot.txt"}
+{"at": "2026-09-19T04:24:47.433463+00:00", "args": ["screenshot", "artifacts/onboarding-review/01-nested-report.png"], "exitCode": 0, "output": "browser-logs/013-screenshot.txt"}
+{"at": "2026-09-19T04:24:52.785915+00:00", "args": ["scrollintoview", "@e14"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:24:52.953389+00:00", "args": ["click", "@e14"], "exitCode": 0, "output": "browser-logs/014-click.txt"}
+{"at": "2026-09-19T04:24:53.154335+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/015-snapshot.txt"}
+{"at": "2026-09-19T04:24:59.452330+00:00", "args": ["scrollintoview", "@e13"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:24:59.619052+00:00", "args": ["click", "@e13"], "exitCode": 0, "output": "browser-logs/016-click.txt"}
+{"at": "2026-09-19T04:24:59.806488+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/017-snapshot.txt"}
+{"at": "2026-09-19T04:25:12.941136+00:00", "args": ["upload", "@e87", "examples/uxd-demo/people.csv"], "exitCode": 0, "output": "browser-logs/018-upload.txt"}
+{"at": "2026-09-19T04:25:13.125125+00:00", "args": ["upload", "@e88", "examples/uxd-demo/projects.csv"], "exitCode": 0, "output": "browser-logs/019-upload.txt"}
+{"at": "2026-09-19T04:25:13.303349+00:00", "args": ["scrollintoview", "@e89"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:25:13.459465+00:00", "args": ["select", "@e89", "replace"], "exitCode": 0, "output": "browser-logs/020-select.txt"}
+{"at": "2026-09-19T04:25:13.642071+00:00", "args": ["scrollintoview", "@e26"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:25:13.807160+00:00", "args": ["click", "@e26"], "exitCode": 0, "output": "browser-logs/021-click.txt"}
+{"at": "2026-09-19T04:26:14.193617+00:00", "args": ["screenshot", "artifacts/onboarding-review/02-import-review.png"], "exitCode": 1, "output": "browser-logs/022-screenshot.txt"}
+{"at": "2026-09-19T04:26:54.829823+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/023-snapshot.txt"}
+{"at": "2026-09-19T04:26:56.303558+00:00", "args": ["open", "http://127.0.0.1:3001/"], "exitCode": 0, "output": "browser-logs/024-open.txt"}
+{"at": "2026-09-19T04:26:56.497828+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/025-snapshot.txt"}
+{"at": "2026-09-19T04:27:02.961286+00:00", "args": ["scrollintoview", "@e13"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:27:03.130560+00:00", "args": ["click", "@e13"], "exitCode": 0, "output": "browser-logs/026-click.txt"}
+{"at": "2026-09-19T04:27:03.320213+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/027-snapshot.txt"}
+{"at": "2026-09-19T04:27:26.394802+00:00", "args": ["scrollintoview", "@e12"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:27:26.562511+00:00", "args": ["click", "@e12"], "exitCode": 0, "output": "browser-logs/028-click.txt"}
+{"at": "2026-09-19T04:27:26.751983+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/029-snapshot.txt"}
+{"at": "2026-09-19T04:27:33.929065+00:00", "args": ["upload", "@e87", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/examples/uxd-demo/people.csv"], "exitCode": 0, "output": "browser-logs/030-upload.txt"}
+{"at": "2026-09-19T04:27:34.113238+00:00", "args": ["upload", "@e88", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/examples/uxd-demo/projects.csv"], "exitCode": 0, "output": "browser-logs/031-upload.txt"}
+{"at": "2026-09-19T04:27:34.293631+00:00", "args": ["scrollintoview", "@e89"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:27:34.454814+00:00", "args": ["select", "@e89", "replace"], "exitCode": 0, "output": "browser-logs/032-select.txt"}
+{"at": "2026-09-19T04:27:34.646673+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/033-snapshot.txt"}
+{"at": "2026-09-19T04:27:40.423026+00:00", "args": ["scrollintoview", "@e26"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:27:40.589615+00:00", "args": ["click", "@e26"], "exitCode": 0, "output": "browser-logs/034-click.txt"}
+{"at": "2026-09-19T04:27:40.774607+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/035-get.txt"}
+{"at": "2026-09-19T04:27:47.295866+00:00", "args": ["find", "role", "button", "click", "--name", "Import organization"], "exitCode": 0, "output": "browser-logs/036-find.txt"}
+{"at": "2026-09-19T04:27:47.563482+00:00", "args": ["reload"], "exitCode": 0, "output": "browser-logs/037-reload.txt"}
+{"at": "2026-09-19T04:27:47.758425+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/038-snapshot.txt"}
+{"at": "2026-09-19T04:28:00.416655+00:00", "args": ["scrollintoview", "@e8"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:28:00.583615+00:00", "args": ["click", "@e8"], "exitCode": 0, "output": "browser-logs/039-click.txt"}
+{"at": "2026-09-19T04:28:00.774546+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/040-snapshot.txt"}
+{"at": "2026-09-19T04:28:06.968601+00:00", "args": ["scrollintoview", "@e56"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:28:07.132195+00:00", "args": ["click", "@e56"], "exitCode": 0, "output": "browser-logs/041-click.txt"}
+{"at": "2026-09-19T04:28:07.322038+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/042-snapshot.txt"}
+{"at": "2026-09-19T04:28:15.832685+00:00", "args": ["scrollintoview", "@e6"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:28:15.995077+00:00", "args": ["fill", "@e6", "Morgan Ellis"], "exitCode": 0, "output": "browser-logs/043-fill.txt"}
+{"at": "2026-09-19T04:28:16.178015+00:00", "args": ["scrollintoview", "@e7"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:28:16.340109+00:00", "args": ["fill", "@e7", "Design Operations Program Manager"], "exitCode": 0, "output": "browser-logs/044-fill.txt"}
+{"at": "2026-09-19T04:28:16.526503+00:00", "args": ["find", "text", "Weekly availability", "click"], "exitCode": 0, "output": "browser-logs/045-find.txt"}
+{"at": "2026-09-19T04:28:16.712668+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/046-snapshot.txt"}
+{"at": "2026-09-19T04:28:27.208864+00:00", "args": ["scrollintoview", "@e12"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:28:27.371342+00:00", "args": ["fill", "@e12", "100"], "exitCode": 0, "output": "browser-logs/047-fill.txt"}
+{"at": "2026-09-19T04:28:27.552122+00:00", "args": ["scrollintoview", "@e4"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:28:27.724313+00:00", "args": ["click", "@e4"], "exitCode": 0, "output": "browser-logs/048-click.txt"}
+{"at": "2026-09-19T04:28:27.909173+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/049-get.txt"}
+{"at": "2026-09-19T04:28:33.056363+00:00", "args": ["find", "role", "button", "click", "--name", "Rowan Blake VP of UXD Operations \u00b7 UXD Operations"], "exitCode": 1, "output": "browser-logs/050-find.txt"}
+{"at": "2026-09-19T04:28:38.608091+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/051-snapshot.txt"}
+{"at": "2026-09-19T04:29:04.559036+00:00", "args": ["scrollintoview", "@e55"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:29:04.722573+00:00", "args": ["click", "@e55"], "exitCode": 0, "output": "browser-logs/052-click.txt"}
+{"at": "2026-09-19T04:29:04.910300+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/053-snapshot.txt"}
+{"at": "2026-09-19T04:29:11.220897+00:00", "args": ["scrollintoview", "@e21"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:29:11.385926+00:00", "args": ["click", "@e21"], "exitCode": 0, "output": "browser-logs/054-click.txt"}
+{"at": "2026-09-19T04:29:11.572054+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/055-snapshot.txt"}
+{"at": "2026-09-19T04:29:17.214484+00:00", "args": ["scrollintoview", "@e17"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:29:17.380953+00:00", "args": ["click", "@e17"], "exitCode": 0, "output": "browser-logs/056-click.txt"}
+{"at": "2026-09-19T04:29:17.571734+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/057-snapshot.txt"}
+{"at": "2026-09-19T04:29:26.408868+00:00", "args": ["scrollintoview", "@e7"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:29:26.570168+00:00", "args": ["select", "@e7", "elena"], "exitCode": 0, "output": "browser-logs/058-select.txt"}
+{"at": "2026-09-19T04:29:26.756717+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/059-get.txt"}
+{"at": "2026-09-19T04:29:26.941245+00:00", "args": ["scrollintoview", "@e4"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:29:27.106210+00:00", "args": ["click", "@e4"], "exitCode": 0, "output": "browser-logs/060-click.txt"}
+{"at": "2026-09-19T04:29:27.370007+00:00", "args": ["reload"], "exitCode": 0, "output": "browser-logs/061-reload.txt"}
+{"at": "2026-09-19T04:30:02.500530+00:00", "args": ["reload"], "exitCode": 0, "output": "browser-logs/062-reload.txt"}
+{"at": "2026-09-19T04:30:02.698698+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/063-snapshot.txt"}
+{"at": "2026-09-19T04:30:10.152598+00:00", "args": ["scrollintoview", "@e24"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:30:10.316847+00:00", "args": ["click", "@e24"], "exitCode": 0, "output": "browser-logs/064-click.txt"}
+{"at": "2026-09-19T04:30:10.500792+00:00", "args": ["scrollintoview", "@e22"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:30:10.663718+00:00", "args": ["fill", "@e22", "Morgan Ellis"], "exitCode": 0, "output": "browser-logs/065-fill.txt"}
+{"at": "2026-09-19T04:30:10.844980+00:00", "args": ["scrollintoview", "@e21"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:30:11.010832+00:00", "args": ["click", "@e21"], "exitCode": 0, "output": "browser-logs/066-click.txt"}
+{"at": "2026-09-19T04:30:11.193823+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/067-get.txt"}
+{"at": "2026-09-19T04:30:11.430092+00:00", "args": ["screenshot", "artifacts/onboarding-review/03-new-hire-grid.png"], "exitCode": 0, "output": "browser-logs/068-screenshot.txt"}
+{"at": "2026-09-19T04:30:17.688966+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/069-snapshot.txt"}
+{"at": "2026-09-19T04:30:27.104060+00:00", "args": ["scrollintoview", "@e10"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:30:27.272598+00:00", "args": ["click", "@e10"], "exitCode": 0, "output": "browser-logs/070-click.txt"}
+{"at": "2026-09-19T04:30:27.473391+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/071-snapshot.txt"}
+{"at": "2026-09-19T04:31:02.979585+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/072-get.txt"}
+{"at": "2026-09-19T04:31:03.161325+00:00", "args": ["scrollintoview", "@e16"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:31:03.329497+00:00", "args": ["check", "@e16"], "exitCode": 0, "output": "browser-logs/073-check.txt"}
+{"at": "2026-09-19T04:31:03.512744+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/074-get.txt"}
+{"at": "2026-09-19T04:31:03.694261+00:00", "args": ["scrollintoview", "@e14"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:31:03.859572+00:00", "args": ["click", "@e14"], "exitCode": 0, "output": "browser-logs/075-click.txt"}
+{"at": "2026-09-19T04:31:04.045645+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/076-snapshot.txt"}
+{"at": "2026-09-19T04:31:18.847377+00:00", "args": ["open", "http://127.0.0.1:3001/?onboarding=verified"], "exitCode": 0, "output": "browser-logs/077-open.txt"}
+{"at": "2026-09-19T04:31:19.041169+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/078-snapshot.txt"}
+{"at": "2026-09-19T04:31:23.890812+00:00", "args": ["scrollintoview", "@e12"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:31:24.057462+00:00", "args": ["click", "@e12"], "exitCode": 0, "output": "browser-logs/079-click.txt"}
+{"at": "2026-09-19T04:31:24.244612+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/080-snapshot.txt"}
+{"at": "2026-09-19T04:31:38.587233+00:00", "args": ["download", "@e15", "/private/tmp/onboarding-people.csv"], "exitCode": 0, "output": "browser-logs/081-download.txt"}
+{"at": "2026-09-19T04:31:38.778127+00:00", "args": ["download", "@e16", "/private/tmp/onboarding-projects.csv"], "exitCode": 0, "output": "browser-logs/082-download.txt"}
+{"at": "2026-09-19T04:31:38.977833+00:00", "args": ["screenshot", "artifacts/onboarding-review/04-import-guidance.png"], "exitCode": 0, "output": "browser-logs/083-screenshot.txt"}
+{"at": "2026-09-19T04:31:39.174028+00:00", "args": ["set", "viewport", "390", "844"], "exitCode": 0, "output": "browser-logs/084-set.txt"}
+{"at": "2026-09-19T04:31:39.368434+00:00", "args": ["screenshot", "artifacts/onboarding-review/05-mobile-import.png"], "exitCode": 0, "output": "browser-logs/085-screenshot.txt"}
+{"at": "2026-09-19T04:31:39.552135+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/086-errors.txt"}
+{"at": "2026-09-19T04:31:49.518302+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/087-set.txt"}
+{"at": "2026-09-19T04:31:49.732043+00:00", "args": ["scrollintoview", "@e8"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:31:49.897982+00:00", "args": ["click", "@e8"], "exitCode": 0, "output": "browser-logs/088-click.txt"}
+{"at": "2026-09-19T04:31:50.088820+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/089-snapshot.txt"}
+{"at": "2026-09-19T04:32:02.570835+00:00", "args": ["scrollintoview", "@e6"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-19T04:32:02.736757+00:00", "args": ["click", "@e6"], "exitCode": 0, "output": "browser-logs/090-click.txt"}
+{"at": "2026-09-19T04:32:02.925438+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/091-get.txt"}
+{"at": "2026-09-19T04:32:03.137240+00:00", "args": ["screenshot", "artifacts/onboarding-review/06-person-availability.png"], "exitCode": 0, "output": "browser-logs/092-screenshot.txt"}
+{"at": "2026-09-19T04:32:03.325902+00:00", "args": ["press", "Escape"], "exitCode": 0, "output": "browser-logs/093-press.txt"}
+{"at": "2026-09-19T04:32:03.510186+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/094-errors.txt"}
+{"at": "2026-09-19T04:32:03.775790+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/095-close.txt"}
+{"at": "2026-09-19T04:32:57.650543+00:00", "args": ["open", "http://127.0.0.1:3000/?review=onboarding"], "exitCode": 0, "output": "browser-logs/096-open.txt"}
+{"at": "2026-09-19T04:32:57.910949+00:00", "args": ["screenshot", "artifacts/onboarding-review/07-main-preview.png"], "exitCode": 0, "output": "browser-logs/097-screenshot.txt"}
+{"at": "2026-09-19T04:32:58.100533+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/098-errors.txt"}
+{"at": "2026-09-19T04:32:58.456598+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/099-close.txt"}

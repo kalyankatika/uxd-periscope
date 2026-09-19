@@ -1,0 +1,105 @@
+periscope
+UXD
+WORKSPACE
+Work map
+Overview
+Teams & reporting
+Projects
+Capacity
+Project plan
+People & imports
+ Leadership workspace
+
+UXD · 28 people
+
+Saved workspace
+Saved workspace · Changes apply to all local sessions
+Use example data
+Teams & reporting
+
+Reporting structure and team projects.
+
+Planning period
+ Add project
+Plan saved.
+Reporting structure
+ Add person
+Reporting structure
+
+Open a person to see their work. Use Move or drag the handle onto a new manager. Moves are reviewed before saving.
+
+28 people
+No manager in this workspace Drop here to move to the top level
+AM
+Avery Morgan
+Head of Design · UXD
+13 projects
+ Report
+Edit
+Move
+8 direct reports
+DK
+Daniel Kim
+VP of Design, Systems & Engineering · Design Systems & Engineering
+5 projects
+ Report
+Edit
+Move
+3 direct reports
+EB
+Elena Brooks
+VP of Design, Digital Products · Product Design
+9 projects
+ Report
+Edit
+Move
+2 direct reports
+MR
+Marcus Reed
+VP of Design, Research · Design Research
+8 projects
+ Report
+Edit
+Move
+3 direct reports
+PS
+Priya Shah
+VP of Design, Content & Conversation · Content & Conversation Design
+8 projects
+ Report
+Edit
+Move
+3 direct reports
+RT
+Riley Thompson
+VP of Design, AI Products · AI Product Design
+3 projects
+ Report
+Edit
+Move
+2 direct reports
+SA
+Sana Ahmed
+VP of Design, Experience Strategy · Experience Strategy
+3 projects
+ Report
+Edit
+Move
+2 direct reports
+RB
+Rowan Blake
+VP of UXD Operations · UXD Operations
+0 projects
+ Report
+Edit
+Move
+1 direct reports
+VA
+Victor Alvarez
+VP of Design, Emerging Experiences · Emerging Experiences
+2 projects
+ Report
+Edit
+Move
+2 direct reports
+Periscope · UXD workspace

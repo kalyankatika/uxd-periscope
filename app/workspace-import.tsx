@@ -23,11 +23,13 @@ export default function WorkspaceImport({
   example,
   busy,
   onSave,
+  onDownloadSample,
 }: {
   plan: Plan;
   example: boolean;
   busy: boolean;
   onSave: (next: Plan) => Promise<boolean>;
+  onDownloadSample: (kind: ImportKind) => void;
 }) {
   const [files, setFiles] = useState<Record<ImportKind, File | null>>({
     people: null,
@@ -86,6 +88,23 @@ export default function WorkspaceImport({
         Load people and projects together. Review both files and their connected
         reporting lines, owners, contributors, and dependencies before saving.
       </p>
+      <p className="muted">
+        {example
+          ? "Example imports are temporary and reset on reload. Select Open workspace before importing to save your changes."
+          : "Confirmed imports are saved locally and remain after reload."}
+      </p>
+      <div className="actions">
+        {datasets.map(({ kind, label }) => (
+          <button
+            key={kind}
+            type="button"
+            onClick={() => onDownloadSample(kind)}
+          >
+            <UiIcon name="download" className="action-icon" /> {label} sample
+            CSV
+          </button>
+        ))}
+      </div>
       <form
         ref={form}
         onSubmit={(event) => {
@@ -148,7 +167,8 @@ export default function WorkspaceImport({
           ? "Replace removes people and projects omitted from these files."
           : "Merge keeps existing IDs not included in these files and replaces matching records."}{" "}
         Each CSV can be up to 2 MB; the resulting workspace must fit the 2 MB
-        save limit. Use the sample files below for supported columns and labels.
+        save limit. The sample files include fictional records with supported
+        columns and labels.
       </p>
       {error && (
         <div className="message error" role="alert">

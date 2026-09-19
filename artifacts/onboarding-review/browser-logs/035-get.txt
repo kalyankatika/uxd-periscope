@@ -1,0 +1,176 @@
+periscope
+UXD
+WORKSPACE
+Work map
+Overview
+Teams & reporting
+Projects
+Capacity
+Project plan
+People & imports
+ Leadership workspace
+
+UXD · 12 people
+
+Saved workspace
+Saved workspace · Changes apply to all local sessions
+Use example data
+People & imports
+
+Import and export planning data. Review team capacity.
+
+ Export review
+Planning period
+ Add project
+Import organization
+
+Load people and projects together. Review both files and their connected reporting lines, owners, contributors, and dependencies before saving.
+
+Organization CSV files
+People CSV
+Full roster and reporting structure
+Projects CSV
+All projects, including other quarters
+Import mode
+Merge by ID
+Replace people and projects
+Review organization
+
+Replace removes people and projects omitted from these files. Each CSV can be up to 2 MB; the resulting workspace must fit the 2 MB save limit. Use the sample files below for supported columns and labels.
+
+Review organization import
+
+Saved workspace
+
+Replace people and projects. Both datasets will be saved in one transaction.
+
+Changes across all dates
+Dataset	In file	New	Updated	Removed	After import
+People	27	27	0	12	27
+Projects	13	13	0	5	13
+
+People and projects omitted from these files will be removed after you confirm.
+
+Both files and all relationship references are valid.
+
+Review the column mappings, label conversions, and record previews for each file. Every row is validated. Person and project IDs are matched exactly.
+
+People · people.csv
+Column mapping
+
+Recognized column names map to the fields below. Person and project relationships use exact IDs.
+
+Source column	Periscope field
+Record ID	Record ID
+Name	Name
+Discipline	Discipline
+Job title	Job title
+Team	Team
+Manager ID	Manager ID
+Leader	Leader
+Working time (FTE)	Working time (FTE)
+Non-project time (%)	Non-project time (%)
+Label mapping
+
+Recognized labels are converted to the following stored values.
+
+Field	Source label	Stored value
+Discipline	Design	design
+Leader	Yes	true
+Discipline	Research	research
+Discipline	Content	content
+Discipline	Design engineering	design_eng
+Leader	No	false
+Record preview
+ID	Name
+uxd-head	Avery Morgan
+uxd-ops	Rowan Blake
+elena	Elena Brooks
+marcus	Marcus Reed
+priya	Priya Shah
+
+Showing the first 5 records. All 27 records will be imported.
+
+Projects · projects.csv
+Column mapping
+
+Recognized column names map to the fields below. Person and project relationships use exact IDs.
+
+Source column	Periscope field
+Record ID	Record ID
+Name	Name
+Project owner ID	Project owner ID
+Contributor IDs	Contributor IDs
+Dependency IDs	Dependency IDs
+Importance	Importance
+Project health	Project health
+Action required	Action required
+Latest update	Latest update
+Business priority	Business priority
+Legacy owner name	Legacy owner name
+Expected outcome	Expected outcome
+Delivery status	Delivery status
+Start date	Start date
+End date	End date
+Commitment	Commitment
+Design effort	Design effort
+Research effort	Research effort
+Content effort	Content effort
+Design engineering effort	Design engineering effort
+Label mapping
+
+Recognized labels are converted to the following stored values.
+
+Field	Source label	Stored value
+Commitment	Committed	committed
+Project health	Needs decision	needs_decision
+Delivery status	In progress	in_progress
+Importance	Top priority	top
+Project health	On track	on_track
+Project health	At risk	at_risk
+Importance	High priority	high
+Delivery status	Completed	completed
+Importance	Standard	normal
+Commitment	Proposed	proposed
+Project health	Not reported	not_reported
+Delivery status	Planned	planned
+Record preview
+ID	Name
+opening	Account opening redesign
+advisor	Advisor workspace
+retirement	Retirement guidance
+components	Accessible component library
+insights	Research repository
+
+Showing the first 5 records. All 13 records will be imported.
+
+Cancel
+Import organization
+Import or export one file
+
+Upload a CSV to review column and label mappings before importing. Records merge by ID. Reporting lines and project links are validated before saving.
+
+Import type 
+People
+Projects
+Replace all people
+ Upload CSV
+ Sample CSV
+ Export people
+Team capacity
+Manage people & reporting
+12 people
+Person	Discipline	FTE	Non-project	Available FTE
+Alex Morgan	Design	1	20%	0.8
+Drew Thomas	Design engineering	1	20%	0.8
+Quinn Garcia	Design engineering	1	20%	0.8
+Reese Martin	Design engineering	1	20%	0.8
+Jamie Chen	Design	1	20%	0.8
+Sam Rivera	Design	1	20%	0.8
+Taylor Brooks	Design	1	20%	0.8
+Jordan Lee	Research	1	20%	0.8
+Morgan Davis	Research	1	20%	0.8
+Riley Patel	Content	1	20%	0.8
+Casey Wilson	Content	1	20%	0.8
+Avery Kim	Design engineering	1	20%	0.8
+Periscope · UXD workspace

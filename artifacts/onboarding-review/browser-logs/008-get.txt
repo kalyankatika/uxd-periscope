@@ -1,0 +1,235 @@
+periscope
+UXD
+WORKSPACE
+Work map
+Overview
+Teams & reporting
+Projects
+Capacity
+Project plan
+People & imports
+ Leadership workspace
+
+UXD · 27 people
+
+Example data · Session only
+Example data · Fictional organization · Changes are temporary
+Open workspace
+Overview
+
+Project status, top priorities, and items requiring attention.
+
+Planning period
+ Add project
+13
+projects in view
+11
+in progress
+5
+need attention 
+8
+leadership teams
+
+PRIORITIES
+
+Top-priority projects
+View top-priority projects 
+01
+Product experience alignment
+UXD product design strategy
+
+Define shared experience principles and a prioritized roadmap across onboarding, advice, and retirement products.
+
+TW
+Tessa Wu
+On track
+02
+Responsible AI experiences
+UX AI interaction standards
+
+Define reusable interaction patterns for AI disclosures, source references, user feedback, and error recovery.
+
+AP
+Aisha Patel
+On track
+03
+Client onboarding
+Account opening redesign
+
+Help new clients open an account without getting stuck or starting over.
+
+MC
+Maya Chen
+Decision required
+04
+Advisor productivity
+Advisor workspace
+
+Bring the right client information into one place before every advisor meeting.
+
+JE
+Jordan Ellis
+On track
+
+PROJECT HEALTH
+
+Items requiring attention
+5
+Decision required
+Account opening redesign
+
+Decide whether the new identity check belongs in this release or the next one.
+
+View project 
+At risk
+Retirement guidance
+
+Participant recruitment is slower than expected. The research lead is adjusting the interview plan.
+
+View project 
+At risk
+Mobile portfolio overview
+
+The design is progressing, but delivery depends on shared chart and accessibility components.
+
+View project 
+
+ORGANIZATION
+
+Teams
+
+Select a leader to see their team’s projects, including work led by their reports.
+
+View reporting structure 
+RB
+0 people in team
+Rowan Blake
+
+UXD Operations
+
+No top priority assigned
+0 projects
+No issues reported
+EB
+3 people in team
+Elena Brooks
+
+Product Design
+
+Client onboarding · Advisor productivity
+9 projects
+3 to review
+MR
+3 people in team
+Marcus Reed
+
+Design Research
+
+Client onboarding · Advisor productivity
+8 projects
+4 to review
+PS
+3 people in team
+Priya Shah
+
+Content & Conversation Design
+
+Client onboarding · Advisor productivity
+8 projects
+4 to review
+DK
+3 people in team
+Daniel Kim
+
+Design Systems & Engineering
+
+Client onboarding · Responsible AI experiences
+5 projects
+2 to review
+SA
+2 people in team
+Sana Ahmed
+
+Experience Strategy
+
+Product experience alignment
+3 projects
+1 to review
+VA
+2 people in team
+Victor Alvarez
+
+Emerging Experiences
+
+No top priority assigned
+2 projects
+1 to review
+RT
+2 people in team
+Riley Thompson
+
+AI Product Design
+
+Responsible AI experiences
+3 projects
+2 to review
+
+Client onboarding
+
+Account opening redesign
+Decision required
+Top priority
+Expected outcome
+
+Help new clients open an account without getting stuck or starting over.
+
+Latest update
+
+The shorter application has been tested. The team is ready to finalize the identity-check experience.
+
+Decision required
+
+Decide whether the new identity check belongs in this release or the next one.
+
+Project owner
+Maya Chen 
+Delivery
+In progress
+Dates
+Oct 1 – Nov 20
+Commitment
+Committed
+Project team
+MC
+Maya Chen
+Product Design
+SR
+Sofia Ramirez
+Design Research
+LM
+Leo Martinez
+Content & Conversation Design
+OG
+Oliver Grant
+Design Systems & Engineering
+Weekly effort
+Related projects (8)
+Accessible component library 
+Needed by this project · Shared people
+Advisor workspace 
+Shared people
+Retirement guidance 
+Shared people
+Mobile portfolio overview 
+Shared people
+Statement content redesign 
+Shared people
+UXD product design strategy 
+Shared people
+Conversational planning prototype 
+Shared people
+UX AI interaction standards 
+Shared people
+View in map
+Edit project
+Periscope · UXD workspace
