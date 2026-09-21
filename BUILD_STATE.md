@@ -119,3 +119,7 @@ Delivered Network/By team in the existing Work map. Stable-ID ownership places e
 ## Graph control fixes — September 20, 2026
 
 Browse list now opens a scrollable panel over the graph instead of below the entire map. Close control and Escape dismiss it with focus restored; selecting an item closes it and opens the existing details. Layout uses a centered shared chevron instead of the native dropdown arrow. Browser verified desktop opening, keyboard dismissal/focus, mobile selection and no horizontal overflow, zero vertical center difference for the dropdown arrow, and no runtime errors. 71 tests and production build pass. Current preview running port3000 (session29796). Saved workspace not edited.
+
+## Team node visibility correction — September 20, 2026
+
+Removed the overview zoom threshold that hid team nodes and links. By team now always renders its people, projects, priorities and within-group connections; group headers still zoom into details. Browser verified47/47 example nodes visible across10groups on desktop and mobile, with390px document width and no runtime errors. All71tests and production build pass. Current app running port3000/session46244. Saved data unchanged.

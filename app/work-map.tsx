@@ -803,7 +803,6 @@ export default function WorkMap({
                 >
                   {byTeam &&
                     teamLayout.groups.map((group) => {
-                      const compact = camera.k < 0.6;
                       const count =
                         group.id === "priorities"
                           ? `${teamLayout.nodes.filter((n) => n.groupId === group.id).length} shared priorities`
@@ -828,22 +827,6 @@ export default function WorkMap({
                           y: size.height / 2 - (group.y + group.height / 2) * k,
                         });
                       };
-                      const title = compact
-                        ? group.label.slice(
-                            0,
-                            Math.max(
-                              8,
-                              Math.floor((group.width * camera.k) / 7) - 3,
-                            ),
-                          ) +
-                          (group.label.length >
-                          Math.max(
-                            8,
-                            Math.floor((group.width * camera.k) / 7) - 3,
-                          )
-                            ? "…"
-                            : "")
-                        : group.label;
                       return (
                         <g key={group.id} className="map-team-group">
                           <rect
@@ -879,24 +862,24 @@ export default function WorkMap({
                               x={group.x}
                               y={group.y}
                               width={group.width}
-                              height={compact ? group.height : 76}
+                              height={76}
                               rx="18"
                               fill="#294633"
                             />
                             <text
-                              x={group.x + (compact ? 10 / camera.k : 18)}
-                              y={group.y + (compact ? 24 / camera.k : 29)}
+                              x={group.x + 18}
+                              y={group.y + 29}
                               fill="#f1f7ef"
-                              fontSize={compact ? 12 / camera.k : 22}
+                              fontSize={22}
                               fontWeight="700"
                             >
-                              {title}
+                              {group.label}
                             </text>
                             <text
-                              x={group.x + (compact ? 10 / camera.k : 18)}
-                              y={group.y + (compact ? 42 / camera.k : 55)}
+                              x={group.x + 18}
+                              y={group.y + 55}
                               fill="#bdd0bc"
-                              fontSize={compact ? 10 / camera.k : 17}
+                              fontSize={17}
                             >
                               {count}
                             </text>
@@ -904,8 +887,7 @@ export default function WorkMap({
                         </g>
                       );
                     })}
-                  {!(byTeam && camera.k < 0.6) &&
-                    visible.links.map((edge) => {
+                  {visible.links.map((edge) => {
                       const source = nodeMap.get(edge.source),
                         target = nodeMap.get(edge.target);
                       if (!source || !target) return null;
@@ -997,7 +979,7 @@ export default function WorkMap({
                           ? !connected
                           : !!query.trim() && !matchIds.has(node.id);
                     const showLabel =
-                      (byTeam && camera.k > 0.6) ||
+                      byTeam ||
                       (preset === "reporting" && nodes.length <= 12) ||
                       labels ||
                       active ||
@@ -1018,8 +1000,6 @@ export default function WorkMap({
                         className={`map-node ${node.kind} ${active ? "is-active" : ""}`}
                         style={{
                           opacity: dim ? 0.16 : 1,
-                          visibility:
-                            byTeam && camera.k < 0.6 ? "hidden" : "visible",
                         }}
                         onMouseEnter={() => {
                           if (!drag.current) setHoveredId(node.id);
