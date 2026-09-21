@@ -33,3 +33,5 @@ jobs:
         env:
           DATABASE_PATH: ${{ runner.temp }}/periscope-verify.sqlite
         run: npm run verify
+      - name: Verify static export
+        run: npm run build:static

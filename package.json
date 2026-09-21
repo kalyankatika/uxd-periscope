@@ -10,7 +10,9 @@
     "demo:data": "node --import tsx scripts/generate-demo-data.ts",
     "demo:check": "node --import tsx --test tests/demo-data.test.ts",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run typecheck && npm test && npm run build"
+    "verify": "npm run typecheck && npm test && npm run build",
+    "build:static": "node scripts/build-static.mjs",
+    "preview:static": "node scripts/preview-static.mjs"
   },
   "dependencies": {
     "d3-force": "^3.0.0",

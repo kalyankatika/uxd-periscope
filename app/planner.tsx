@@ -76,10 +76,24 @@ const dateLabel = (date: string) =>
     day: "numeric",
     timeZone: "UTC",
   });
-export default function Planner({ initial }: { initial: Plan }) {
+export default function Planner({
+  initial,
+  readOnly = false,
+  sourceLabel = "Imported snapshot",
+  sourceUpdatedAt,
+  onRefresh,
+}: {
+  initial: Plan;
+  readOnly?: boolean;
+  sourceLabel?: string;
+  sourceUpdatedAt?: string;
+  onRefresh?: () => void;
+}) {
   const [workspace, setWorkspace] = useState(initial),
     [example, setExample] = useState(leadershipDemo),
-    [useExample, setUseExample] = useState(() => isStarterPlan(initial)),
+    [useExample, setUseExample] = useState(
+      () => !readOnly && isStarterPlan(initial),
+    ),
     [quarter, setQuarter] = useState("2026-10-01"),
     [whatIf, setWhatIf] = useState(false),
     [planView, setPlanView] = useState<"list" | "timeline">("list"),
@@ -108,7 +122,9 @@ export default function Planner({ initial }: { initial: Plan }) {
     setView(next);
     window.scrollTo({ top: 0, behavior: "auto" });
   }
-  const plan = useExample ? example : workspace;
+  const plan = readOnly ? initial : useExample ? example : workspace;
+  const labelFor = (v: keyof typeof viewLabels) =>
+    readOnly && v === "people" ? "People" : viewLabels[v];
   const navigation = useRef<HTMLElement>(null);
   const pageHeader = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -169,6 +185,7 @@ export default function Planner({ initial }: { initial: Plan }) {
     0,
   );
   async function persist(next: Plan) {
+    if (readOnly) return false;
     const valid = planSchema.safeParse(next);
     if (!valid.success) {
       setError(valid.error.issues.map((i) => i.message).join("; "));
@@ -201,6 +218,7 @@ export default function Planner({ initial }: { initial: Plan }) {
     }
   }
   function edit(i?: Initiative) {
+    if (readOnly) return;
     setError("");
     setDraft(
       i
@@ -253,7 +271,7 @@ export default function Planner({ initial }: { initial: Plan }) {
       <aside className="rail">
         <a
           className="brand"
-          href="/"
+          href="./"
           aria-label="Periscope home"
           onClick={(event) => {
             if (
@@ -313,12 +331,12 @@ export default function Planner({ initial }: { initial: Plan }) {
                 setView(v);
                 window.scrollTo({ top: 0, behavior: "auto" });
               }}
-              title={viewLabels[v]}
+              title={labelFor(v)}
               className={view === v ? "nav active" : "nav"}
               aria-current={view === v ? "page" : undefined}
             >
               <UiIcon name={v} />
-              <span className="nav-label">{viewLabels[v]}</span>
+              <span className="nav-label">{labelFor(v)}</span>
             </button>
           ))}
         </nav>
@@ -326,7 +344,11 @@ export default function Planner({ initial }: { initial: Plan }) {
           <span className="live-dot" /> Leadership workspace
           <p>UXD · {plan.people.length} people</p>
           <small>
-            {useExample ? "Example data · Session only" : "Saved workspace"}
+            {readOnly
+              ? "Read-only snapshot"
+              : useExample
+                ? "Example data · Session only"
+                : "Saved workspace"}
           </small>
         </div>
       </aside>
@@ -339,20 +361,30 @@ export default function Planner({ initial }: { initial: Plan }) {
           >
             <div className="example-banner">
               <span>
-                {useExample
-                  ? "Example data · Fictional organization · Changes are temporary"
-                  : "Saved workspace · Changes apply to all local sessions"}
+                {readOnly
+                  ? `Read-only · ${sourceLabel} · Edit records in source platforms`
+                  : useExample
+                    ? "Example data · Fictional organization · Changes are temporary"
+                    : "Saved workspace · Changes apply to all local sessions"}
               </span>
-              <button
-                onClick={() => {
-                  setUseExample(!useExample);
-                  setMapProjectId("");
-                  setNotice("");
-                  setError("");
-                }}
-              >
-                {useExample ? "Open workspace" : "Use example data"}
-              </button>
+              {readOnly && sourceUpdatedAt && (
+                <span>Source updated {sourceUpdatedAt}</span>
+              )}
+              {readOnly && onRefresh && (
+                <button onClick={onRefresh}>Refresh data</button>
+              )}
+              {!readOnly && (
+                <button
+                  onClick={() => {
+                    setUseExample(!useExample);
+                    setMapProjectId("");
+                    setNotice("");
+                    setError("");
+                  }}
+                >
+                  {useExample ? "Open workspace" : "Use example data"}
+                </button>
+              )}
             </div>
           </header>
           {view !== "connections" && (
@@ -366,13 +398,13 @@ export default function Planner({ initial }: { initial: Plan }) {
                 <UiIcon name="arrowLeft" className="action-icon" /> Back to Work
                 map
               </button>
-              <span>{viewLabels[view]} · Whole organization</span>
+              <span>{labelFor(view)} · Whole organization</span>
             </nav>
           )}
           <div className="title-row">
             <div>
-              <h1>{viewLabels[view]}</h1>
-              <p className="subtitle">{viewDescriptions[view]}</p>
+              <h1>{labelFor(view)}</h1>
+              <p className="subtitle">{readOnly && view === "people" ? "Review people and team capacity." : viewDescriptions[view]}</p>
             </div>
             <div className="actions">
               {(view === "capacity" ||
@@ -418,9 +450,11 @@ export default function Planner({ initial }: { initial: Plan }) {
                   }}
                 />
               </label>
-              <button className="primary" onClick={() => edit()}>
-                <UiIcon name="plus" className="action-icon" /> Add project
-              </button>
+              {!readOnly && (
+                <button className="primary" onClick={() => edit()}>
+                  <UiIcon name="plus" className="action-icon" /> Add project
+                </button>
+              )}
             </div>
           </div>
           {["capacity", "cutline"].includes(view) && (
@@ -497,6 +531,7 @@ export default function Planner({ initial }: { initial: Plan }) {
               onMapProject={setMapProjectId}
               onEdit={edit}
               onSave={persist}
+              readOnly={readOnly}
               onMode={navigate}
               busy={busy}
             />
@@ -512,6 +547,7 @@ export default function Planner({ initial }: { initial: Plan }) {
               onMapProject={setMapProjectId}
               onEdit={edit}
               onSave={persist}
+              readOnly={readOnly}
               onMode={navigate}
               busy={busy}
             />
@@ -627,141 +663,191 @@ export default function Planner({ initial }: { initial: Plan }) {
           )}
           {view === "cutline" && (
             <div className="cutline">
-              <div className="map-layout-chips" role="group" aria-label="Project plan view">
-                <button aria-pressed={planView === "list"} onClick={() => setPlanView("list")}>List</button>
-                <button aria-pressed={planView === "timeline"} onClick={() => setPlanView("timeline")}>Timeline</button>
+              <div
+                className="map-layout-chips"
+                role="group"
+                aria-label="Project plan view"
+              >
+                <button
+                  aria-pressed={planView === "list"}
+                  onClick={() => setPlanView("list")}
+                >
+                  List
+                </button>
+                <button
+                  aria-pressed={planView === "timeline"}
+                  onClick={() => setPlanView("timeline")}
+                >
+                  Timeline
+                </button>
               </div>
-              {planView === "timeline" ? <ProjectTimeline plan={plan} projects={inQuarter} start={quarter} end={end}
-                onOpen={(id) => { setMapProjectId(id); setView("connections"); }} /> :
-              (["committed", "proposed", "stretch"] as const).map((s) => (
-                <section className="panel" key={s}>
-                  <div className="panel-head">
-                    <div>
-                      <h2 className="capitalize">
-                        {
+              {planView === "timeline" ? (
+                <ProjectTimeline
+                  plan={plan}
+                  projects={inQuarter}
+                  start={quarter}
+                  end={end}
+                  onOpen={(id) => {
+                    setMapProjectId(id);
+                    setView("connections");
+                  }}
+                />
+              ) : (
+                (["committed", "proposed", "stretch"] as const).map((s) => (
+                  <section className="panel" key={s}>
+                    <div className="panel-head">
+                      <div>
+                        <h2 className="capitalize">
                           {
-                            committed: "Committed",
-                            proposed: "Proposed",
-                            stretch: "Backlog",
-                          }[s]
-                        }{" "}
-                        <span className="count">
-                          {inQuarter.filter((i) => i.status === s).length}
-                        </span>
-                      </h2>
-                      <p>
-                        {s === "committed"
-                          ? "Included in the baseline plan"
-                          : s === "proposed"
-                            ? "Included when proposed projects are enabled"
-                            : "Excluded from capacity calculations"}
-                      </p>
+                            {
+                              committed: "Committed",
+                              proposed: "Proposed",
+                              stretch: "Backlog",
+                            }[s]
+                          }{" "}
+                          <span className="count">
+                            {inQuarter.filter((i) => i.status === s).length}
+                          </span>
+                        </h2>
+                        <p>
+                          {s === "committed"
+                            ? "Included in the baseline plan"
+                            : s === "proposed"
+                              ? "Included when proposed projects are enabled"
+                              : "Excluded from capacity calculations"}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  {initiativeTable(inQuarter.filter((i) => i.status === s))}
-                </section>
-              ))}
+                    {initiativeTable(inQuarter.filter((i) => i.status === s))}
+                  </section>
+                ))
+              )}
             </div>
           )}
           {view === "people" && (
             <>
-              <WorkspaceImport
-                plan={plan}
-                example={useExample}
-                busy={busy}
-                onSave={persist}
-                onDownloadSample={downloadSample}
-              />
-              <section className="panel import-panel">
-                <h2>Import or export one file</h2>
-                <p>
-                  Upload a CSV to review column and label mappings before
-                  importing. Records merge by ID. Reporting lines and project
-                  links are validated before saving.
-                </p>
-                <div className="actions">
-                  <label>
-                    Import type{" "}
-                    <select
-                      value={importKind}
-                      onChange={(e) =>
-                        setImportKind(
-                          e.target.value as "people" | "initiatives",
-                        )
-                      }
-                    >
-                      <option value="people">People</option>
-                      <option value="initiatives">Projects</option>
-                    </select>
-                  </label>
-                  <label className="scenario-choice">
+              {!readOnly && (
+                <>
+                  <WorkspaceImport
+                    plan={plan}
+                    example={useExample}
+                    busy={busy}
+                    onSave={persist}
+                    onDownloadSample={downloadSample}
+                  />
+                  <section className="panel import-panel">
+                    <h2>Import or export one file</h2>
+                    <p>
+                      Upload a CSV to review column and label mappings before
+                      importing. Records merge by ID. Reporting lines and
+                      project links are validated before saving.
+                    </p>
+                    <div className="actions">
+                      <label>
+                        Import type{" "}
+                        <select
+                          value={importKind}
+                          onChange={(e) =>
+                            setImportKind(
+                              e.target.value as "people" | "initiatives",
+                            )
+                          }
+                        >
+                          <option value="people">People</option>
+                          <option value="initiatives">Projects</option>
+                        </select>
+                      </label>
+                      <label className="scenario-choice">
+                        <input
+                          type="checkbox"
+                          checked={replaceImport}
+                          onChange={(e) => setReplaceImport(e.target.checked)}
+                        />{" "}
+                        Replace all{" "}
+                        {importKind === "people" ? "people" : "projects"}
+                      </label>
+                      <button
+                        disabled={busy}
+                        onClick={() => file.current?.click()}
+                      >
+                        <UiIcon name="upload" className="action-icon" /> Upload
+                        CSV
+                      </button>
+                      <button onClick={() => downloadSample(importKind)}>
+                        <UiIcon name="download" className="action-icon" />{" "}
+                        Sample CSV
+                      </button>
+                      <button
+                        onClick={() =>
+                          download(
+                            importKind + ".csv",
+                            exportCsv(
+                              importKind === "people"
+                                ? plan.people
+                                : plan.initiatives.map(({ effort, ...i }) => ({
+                                    ...i,
+                                    ...effort,
+                                  })),
+                            ),
+                          )
+                        }
+                      >
+                        <UiIcon name="download" className="action-icon" />{" "}
+                        Export {importKind === "people" ? "people" : "projects"}
+                      </button>
+                    </div>
                     <input
-                      type="checkbox"
-                      checked={replaceImport}
-                      onChange={(e) => setReplaceImport(e.target.checked)}
-                    />{" "}
-                    Replace all{" "}
-                    {importKind === "people" ? "people" : "projects"}
-                  </label>
-                  <button disabled={busy} onClick={() => file.current?.click()}>
-                    <UiIcon name="upload" className="action-icon" /> Upload CSV
-                  </button>
-                  <button onClick={() => downloadSample(importKind)}>
-                    <UiIcon name="download" className="action-icon" /> Sample
-                    CSV
-                  </button>
-                  <button
-                    onClick={() =>
-                      download(
-                        importKind + ".csv",
-                        exportCsv(
-                          importKind === "people"
-                            ? plan.people
-                            : plan.initiatives.map(({ effort, ...i }) => ({
-                                ...i,
-                                ...effort,
-                              })),
-                        ),
-                      )
-                    }
-                  >
-                    <UiIcon name="download" className="action-icon" /> Export{" "}
-                    {importKind === "people" ? "people" : "projects"}
-                  </button>
-                </div>
-                <input
-                  ref={file}
-                  hidden
-                  type="file"
-                  accept=".csv,text/csv"
-                  onChange={async (e) => {
-                    const f = e.target.files?.[0];
-                    if (!f) return;
-                    try {
-                      if (f.size > 2_000_000)
-                        throw new Error("CSV must be under 2 MB");
-                      const inspection = inspectCsv(importKind, await f.text());
-                      setError("");
-                      setPendingImport({
-                        fileName: f.name,
-                        kind: importKind,
-                        replace: replaceImport,
-                        inspection,
-                      });
-                    } catch (err) {
-                      setError(
-                        err instanceof Error ? err.message : "Import failed",
-                      );
-                    }
-                    e.target.value = "";
-                  }}
-                />
-              </section>
+                      ref={file}
+                      hidden
+                      type="file"
+                      accept=".csv,text/csv"
+                      onChange={async (e) => {
+                        const f = e.target.files?.[0];
+                        if (!f) return;
+                        try {
+                          if (f.size > 2_000_000)
+                            throw new Error("CSV must be under 2 MB");
+                          const inspection = inspectCsv(
+                            importKind,
+                            await f.text(),
+                          );
+                          setError("");
+                          setPendingImport({
+                            fileName: f.name,
+                            kind: importKind,
+                            replace: replaceImport,
+                            inspection,
+                          });
+                        } catch (err) {
+                          setError(
+                            err instanceof Error
+                              ? err.message
+                              : "Import failed",
+                          );
+                        }
+                        e.target.value = "";
+                      }}
+                    />
+                  </section>
+                </>
+              )}
               <section className="panel">
                 <div className="panel-head">
                   <h2>Team capacity</h2>
+                  {readOnly && (
+                    <button
+                      onClick={() =>
+                        download("people.csv", exportCsv(plan.people))
+                      }
+                    >
+                      <UiIcon name="download" className="action-icon" /> Export
+                      people
+                    </button>
+                  )}
                   <button onClick={() => setView("teams")}>
-                    Manage people & reporting
+                    {readOnly
+                      ? "View reporting structure"
+                      : "Manage people & reporting"}
                   </button>
                   <span>{plan.people.length} people</span>
                 </div>
@@ -795,7 +881,7 @@ export default function Planner({ initial }: { initial: Plan }) {
           <footer>Periscope · UXD workspace</footer>
         </div>
       </main>
-      {pendingImport && (
+      {!readOnly && pendingImport && (
         <ImportReview
           plan={plan}
           pending={pendingImport}
@@ -1156,7 +1242,9 @@ export default function Planner({ initial }: { initial: Plan }) {
               <th>Dates</th>
               <th>Weekly effort</th>
               <th>
-                <span className="sr-only">Actions</span>
+                <span className="sr-only">
+                  {readOnly ? "Details" : "Actions"}
+                </span>
               </th>
             </tr>
           </thead>
@@ -1164,7 +1252,14 @@ export default function Planner({ initial }: { initial: Plan }) {
             {items.map((i) => (
               <tr key={i.id}>
                 <td>
-                  <button className="text-button" onClick={() => edit(i)}>
+                  <button
+                    className="text-button"
+                    onClick={() =>
+                      readOnly
+                        ? (setMapProjectId(i.id), navigate("connections"))
+                        : edit(i)
+                    }
+                  >
                     {i.name}
                   </button>
                 </td>
@@ -1186,7 +1281,14 @@ export default function Planner({ initial }: { initial: Plan }) {
                   {fte(Object.values(i.effort).reduce((a, b) => a + b, 0))} FTE
                 </td>
                 <td>
-                  <button aria-label={"Edit " + i.name} onClick={() => edit(i)}>
+                  <button
+                    aria-label={(readOnly ? "View " : "Edit ") + i.name}
+                    onClick={() =>
+                      readOnly
+                        ? (setMapProjectId(i.id), navigate("connections"))
+                        : edit(i)
+                    }
+                  >
                     <UiIcon name="arrowUpRight" className="action-icon" />
                   </button>
                 </td>

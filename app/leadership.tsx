@@ -92,8 +92,10 @@ export default function Leadership({
   busy,
   mapProjectId,
   onMapProject,
+  readOnly = false,
 }: {
   plan: Plan;
+  readOnly?: boolean;
   start: string;
   end: string;
   mode: Mode;
@@ -187,7 +189,7 @@ export default function Leadership({
     projectDialog.current?.showModal();
   }
   function openLeader(id: string) {
-    if (mode === "connections") {
+    if (mode === "connections" && !readOnly) {
       const person = peopleById.get(id);
       if (person) openPerson(person);
       return;
@@ -197,12 +199,14 @@ export default function Leadership({
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
   function openPerson(p?: Person, managerId?: string) {
+    if (readOnly) return;
     setPeopleRequest(
       p ? { kind: "edit", personId: p.id } : { kind: "add", managerId },
     );
   }
   function canDrop(managerId: string | null) {
     return (
+      !readOnly &&
       !!draggedId &&
       !busy &&
       managerId !== peopleById.get(draggedId)?.managerId &&
@@ -565,10 +569,12 @@ export default function Leadership({
             </div>
             {!cards.length && (
               <div className="lead-empty">
-                No teams configured. Add reporting relationships to list teams.{" "}
-                <button onClick={() => onMode("teams")}>
-                  Edit reporting structure
-                </button>
+                No teams configured.{" "}
+                {!readOnly && (
+                  <button onClick={() => onMode("teams")}>
+                    Edit reporting structure
+                  </button>
+                )}
               </div>
             )}
           </section>
@@ -586,13 +592,15 @@ export default function Leadership({
                 "Reporting structure"
               )}
             </button>
-            <button
-              className="primary"
-              disabled={busy}
-              onClick={() => openPerson()}
-            >
-              <UiIcon name="plus" className="action-icon" /> Add person
-            </button>
+            {!readOnly && (
+              <button
+                className="primary"
+                disabled={busy}
+                onClick={() => openPerson()}
+              >
+                <UiIcon name="plus" className="action-icon" /> Add person
+              </button>
+            )}
           </div>
           {leader ? (
             <>
@@ -609,15 +617,21 @@ export default function Leadership({
                       ` · Reports to ${peopleById.get(leader.managerId)?.name || "unassigned"}`}
                   </p>
                 </div>
-                <button onClick={() => openPerson(leader)}>Edit person</button>
-                <button
-                  disabled={busy}
-                  onClick={() =>
-                    setPeopleRequest({ kind: "move", personId: leader.id })
-                  }
-                >
-                  Move
-                </button>
+                {!readOnly && (
+                  <>
+                    <button onClick={() => openPerson(leader)}>
+                      Edit person
+                    </button>
+                    <button
+                      disabled={busy}
+                      onClick={() =>
+                        setPeopleRequest({ kind: "move", personId: leader.id })
+                      }
+                    >
+                      Move
+                    </button>
+                  </>
+                )}
                 <div className="leader-profile-stats">
                   <span>
                     <strong>{groupIds.size - 1}</strong> people in team
@@ -662,25 +676,29 @@ export default function Leadership({
                           <strong>{p.name}</strong>
                           <small>{p.title || labels[p.craft]}</small>
                         </button>
-                        <button
-                          className="person-edit"
-                          aria-label={"Edit " + p.name}
-                          onClick={() => openPerson(p)}
-                        >
-                          Edit
-                        </button>
+                        {!readOnly && (
+                          <button
+                            className="person-edit"
+                            aria-label={"Edit " + p.name}
+                            onClick={() => openPerson(p)}
+                          >
+                            Edit
+                          </button>
+                        )}
                       </div>
                     ))}
                   {!plan.people.some((p) => p.managerId === leader.id) && (
                     <p className="muted">No direct reports recorded.</p>
                   )}
-                  <button
-                    disabled={busy}
-                    onClick={() => openPerson(undefined, leader.id)}
-                  >
-                    <UiIcon name="plus" className="action-icon" /> Add direct
-                    report
-                  </button>
+                  {!readOnly && (
+                    <button
+                      disabled={busy}
+                      onClick={() => openPerson(undefined, leader.id)}
+                    >
+                      <UiIcon name="plus" className="action-icon" /> Add direct
+                      report
+                    </button>
+                  )}
                 </aside>
               </div>
             </>
@@ -690,8 +708,9 @@ export default function Leadership({
                 <div>
                   <h2>Reporting structure</h2>
                   <p>
-                    Open a person to see their work. Use Move or drag the handle
-                    onto a new manager. Moves are reviewed before saving.
+                    {readOnly
+                      ? "Open a person to see their work and reporting relationships."
+                      : "Open a person to see their work. Use Move or drag the handle onto a new manager. Moves are reviewed before saving."}
                   </p>
                 </div>
                 <span>{plan.people.length} people</span>
@@ -711,13 +730,12 @@ export default function Leadership({
                 onDrop={(event) => dropPerson(event, null)}
               >
                 No manager in this workspace{" "}
-                <span>Drop here to move to the top level</span>
+                {!readOnly && <span>Drop here to move to the top level</span>}
               </div>
               {renderTree(null, new Set())}
               {!plan.people.length && (
                 <div className="lead-empty">
-                  No people added. Add leaders and team members, then assign
-                  their managers.
+                  {readOnly ? "No people recorded in this snapshot." : "No people added. Add leaders and team members, then assign their managers."}
                 </div>
               )}
             </section>
@@ -895,12 +913,13 @@ export default function Leadership({
         <WorkMap
           key={`${start}:${end}`}
           plan={plan}
+          readOnly={readOnly}
           start={start}
           end={end}
           initialProjectId={mapProjectId}
           onProject={openProject}
           onPerson={openLeader}
-          onAddReport={(id) => openPerson(undefined, id)}
+          onAddReport={readOnly ? undefined : (id) => openPerson(undefined, id)}
           onExport={() =>
             saveFile(
               "uxd-work-graph.jsonld",
@@ -1082,21 +1101,23 @@ export default function Leadership({
               >
                 View in map
               </button>
-              <button
-                className="primary"
-                onClick={() => {
-                  const p = selected;
-                  projectDialog.current?.close();
-                  onEdit(p);
-                }}
-              >
-                Edit project
-              </button>
+              {!readOnly && (
+                <button
+                  className="primary"
+                  onClick={() => {
+                    const p = selected;
+                    projectDialog.current?.close();
+                    onEdit(p);
+                  }}
+                >
+                  Edit project
+                </button>
+              )}
             </div>
           </div>
         )}
       </dialog>
-      {peopleRequest && (
+      {!readOnly && peopleRequest && (
         <PeopleDialog
           plan={plan}
           request={peopleRequest}
@@ -1140,27 +1161,29 @@ export default function Leadership({
                   }}
                   onDrop={(event) => dropPerson(event, p.id)}
                 >
-                  <button
-                    className="quiet-link drag-person"
-                    disabled={busy}
-                    draggable={!busy}
-                    aria-label={"Move " + p.name}
-                    title="Drag onto a manager, or select to move"
-                    onClick={() =>
-                      setPeopleRequest({ kind: "move", personId: p.id })
-                    }
-                    onDragStart={(event) => {
-                      event.dataTransfer.setData("text/plain", p.id);
-                      event.dataTransfer.effectAllowed = "move";
-                      setDraggedId(p.id);
-                    }}
-                    onDragEnd={() => {
-                      setDraggedId(null);
-                      setDropTarget(null);
-                    }}
-                  >
-                    <UiIcon name="grip" className="action-icon" />
-                  </button>
+                  {!readOnly && (
+                    <button
+                      className="quiet-link drag-person"
+                      disabled={busy}
+                      draggable={!busy}
+                      aria-label={"Move " + p.name}
+                      title="Drag onto a manager, or select to move"
+                      onClick={() =>
+                        setPeopleRequest({ kind: "move", personId: p.id })
+                      }
+                      onDragStart={(event) => {
+                        event.dataTransfer.setData("text/plain", p.id);
+                        event.dataTransfer.effectAllowed = "move";
+                        setDraggedId(p.id);
+                      }}
+                      onDragEnd={() => {
+                        setDraggedId(null);
+                        setDropTarget(null);
+                      }}
+                    >
+                      <UiIcon name="grip" className="action-icon" />
+                    </button>
+                  )}
                   <span
                     className={
                       "person-avatar " +
@@ -1183,34 +1206,36 @@ export default function Leadership({
                     }{" "}
                     projects
                   </span>
-                  <div className="tree-actions">
-                    <button
-                      className="quiet-link"
-                      disabled={busy}
-                      aria-label={"Add direct report to " + p.name}
-                      onClick={() => openPerson(undefined, p.id)}
-                    >
-                      <UiIcon name="plus" className="action-icon" /> Report
-                    </button>
-                    <button
-                      className="quiet-link"
-                      disabled={busy}
-                      aria-label={"Edit " + p.name}
-                      onClick={() => openPerson(p)}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="quiet-link"
-                      disabled={busy}
-                      aria-label={"Change manager for " + p.name}
-                      onClick={() =>
-                        setPeopleRequest({ kind: "move", personId: p.id })
-                      }
-                    >
-                      Move
-                    </button>
-                  </div>
+                  {!readOnly && (
+                    <div className="tree-actions">
+                      <button
+                        className="quiet-link"
+                        disabled={busy}
+                        aria-label={"Add direct report to " + p.name}
+                        onClick={() => openPerson(undefined, p.id)}
+                      >
+                        <UiIcon name="plus" className="action-icon" /> Report
+                      </button>
+                      <button
+                        className="quiet-link"
+                        disabled={busy}
+                        aria-label={"Edit " + p.name}
+                        onClick={() => openPerson(p)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="quiet-link"
+                        disabled={busy}
+                        aria-label={"Change manager for " + p.name}
+                        onClick={() =>
+                          setPeopleRequest({ kind: "move", personId: p.id })
+                        }
+                      >
+                        Move
+                      </button>
+                    </div>
+                  )}
                 </div>
                 {children.length > 0 && (
                   <details open={managerId === null}>

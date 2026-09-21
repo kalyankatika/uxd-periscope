@@ -4,3 +4,5 @@ data/*.sqlite*
 *.tsbuildinfo
 .env*
 !.env.example
+.static-build/
+static-site/

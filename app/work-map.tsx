@@ -94,8 +94,10 @@ export default function WorkMap({
   onPerson,
   onAddReport,
   onExport,
+  readOnly = false,
 }: {
   plan: Plan;
+  readOnly?: boolean;
   start: string;
   end: string;
   initialProjectId?: string;
@@ -1134,7 +1136,7 @@ export default function WorkMap({
                   <p>
                     {projectCount
                       ? "Change the project filter or enable a node type."
-                      : "Add projects, then assign owners, contributors, and priorities."}
+                      : readOnly ? "No work recorded in this snapshot." : "Add projects, then assign owners, contributors, and priorities."}
                   </p>
                   <button onClick={reset}>Reset map</button>
                 </div>
@@ -1373,7 +1375,7 @@ export default function WorkMap({
                       </details>
                     )}
                   </div>
-                  <button
+                  {!readOnly && <button
                     className="primary map-open-button"
                     onClick={() => {
                       setExpanded(false);
@@ -1384,8 +1386,8 @@ export default function WorkMap({
                     <span aria-hidden="true">
                       <UiIcon name="arrowUpRight" className="action-icon" />
                     </span>
-                  </button>
-                  {onAddReport && (
+                  </button>}
+                  {!readOnly && onAddReport && (
                     <button
                       className="map-open-button"
                       onClick={() => {
@@ -1445,7 +1447,7 @@ export default function WorkMap({
                     No connections recorded yet.{" "}
                     {project
                       ? "Open this project to add its owner, contributors and priority."
-                      : "Add reporting details or link this person to a project."}
+                      : readOnly ? "No related records in this snapshot." : "Add reporting details or link this person to a project."}
                   </p>
                 )}
               </div>

@@ -12,6 +12,22 @@ The active scope is **UXD**: give ELT, the head of UXD and design leaders a clea
 
 The [UXD Operations implementation backlog](docs/uxd-operations-backlog.md) captures prioritized staffing, update freshness, decision tracking, enterprise integration and financial work, with dependencies and completion criteria. These are proposed capabilities, not shipped features.
 
+## Share a static JSON-backed version
+
+The latest branch supports a **read-only static site with no SQL or application-server dependency at runtime**. It includes fictional JSON and can later load the same contract from an approved API.
+
+```sh
+git clone --branch codex/organization-explorer https://github.com/kalyankatika/uxd-periscope.git
+cd uxd-periscope
+npm ci
+npm run build:static
+npm run preview:static
+```
+
+Open http://127.0.0.1:3001/. Deploy the generated **static-site/** folder to approved static hosting. Configure **data/config.json** to select the JSON source. See [static deployment instructions](docs/static-deployment.md) for source validation, enterprise access, subdirectory hosting and API migration. Imported data is read-only; source-platform links and live synchronization are not yet implemented.
+
+The existing local editing workspace remains available below.
+
 ## Install and run
 
 Requires Git and Node.js 22.13 or later, with npm. Validated with Node.js 22.23.2 and npm 10.9.8; `.nvmrc` pins that tested Node version. If using nvm, run `nvm install` and `nvm use` after cloning.

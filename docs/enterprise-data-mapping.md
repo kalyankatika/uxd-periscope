@@ -8,14 +8,14 @@ The repository includes a complete [fictional UXD data pack](../examples/uxd-dem
 
 ## Future enterprise requirement: read-only source-backed data
 
-Captured from the user on September 20, 2026. This is a future product requirement, not an implemented permission mode.
+Captured from the user on September 20, 2026. Static JSON deployment now provides a read-only viewer with no save API; see [static deployment](static-deployment.md). Enterprise authentication, source-system integrations and server-side authorization for future APIs remain deployment/integration work.
 
 - Provide an enterprise read-only experience for imported/source-backed people, reporting structures, projects, priorities and related data. Authoritative changes are made in the originating platforms.
 - Replace source-backed create/edit/delete and hierarchy-move actions with “Open in source” links where a verified source URL is available. Do not silently write back or create local overrides of source-owned fields.
 - Preserve source system, stable source record ID, field authority where sources overlap, and last successful refresh metadata. Show stale or unavailable data honestly; opening the source does not imply a refresh has happened.
 - Enforce read-only access at the server/API boundary as well as in the interface. Ingestion uses separately authorized service access; viewer access cannot mutate imported records. Source platforms retain their own edit permissions.
 - Keep fictional demo changes session-only. Existing local/manual editing remains a separate mode; it must never be mistaken for changes to connected enterprise records. Any future scenarios or annotations must be explicitly separate from source facts.
-- Connector mappings and refresh behavior require actual enterprise sources and agreed contracts. No live synchronization or read-only enforcement is currently implemented.
+- Connector mappings and refresh behavior require actual enterprise sources and agreed contracts. No live synchronization is implemented. Static mode removes mutation controls and ships no mutation endpoints; future enterprise APIs must independently enforce authorization.
 
 Acceptance for the future mode: source-backed mutation requests are rejected; viewers can navigate and inspect permitted data; verified source links open the matching record; refreshed data reflects upstream changes without local edits; demo/manual mode is visibly distinct.
 
