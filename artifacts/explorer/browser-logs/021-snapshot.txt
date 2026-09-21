@@ -1,0 +1,65 @@
+- heading "Edit project" [level=2, ref=e1]
+- button "Close project" [ref=e2]
+- textbox "Name" [required, ref=e6]: Account opening redesign
+- textbox "Business priority" [ref=e7]: Client onboarding
+- combobox "Project owner" [expanded=false, ref=e8]: Maya Chen — Product Design
+  - option "Not assigned" [ref=e18]
+  - option "Avery Morgan — UXD" [ref=e19]
+  - option "Rowan Blake — UXD Operations" [ref=e20]
+  - option "Elena Brooks — Product Design" [ref=e21]
+  - option "Marcus Reed — Design Research" [ref=e22]
+  - option "Priya Shah — Content & Conversation Design" [ref=e23]
+  - option "Daniel Kim — Design Systems & Engineering" [ref=e24]
+  - option "Maya Chen — Product Design" [selected, ref=e25]
+  - option "Jordan Ellis — Product Design" [ref=e26]
+  - option "Nina Patel — Product Design" [ref=e27]
+  - option "Sofia Ramirez — Design Research" [ref=e28]
+  - option "Ethan Park — Design Research" [ref=e29]
+  - option "Amara Nwosu — Design Research" [ref=e30]
+  - option "Leo Martinez — Content & Conversation Design" [ref=e31]
+  - option "Grace Liu — Content & Conversation Design" [ref=e32]
+  - option "Theo Reed — Content & Conversation Design" [ref=e33]
+  - option "Oliver Grant — Design Systems & Engineering" [ref=e34]
+  - option "Isabel Costa — Design Systems & Engineering" [ref=e35]
+  - option "Noah Bennett — Design Systems & Engineering" [ref=e36]
+  - option "Sana Ahmed — Experience Strategy" [ref=e37]
+  - option "Victor Alvarez — Emerging Experiences" [ref=e38]
+  - option "Riley Thompson — AI Product Design" [ref=e39]
+  - option "Tessa Wu — Experience Strategy" [ref=e40]
+  - option "Owen Hughes — Experience Strategy" [ref=e41]
+  - option "Leila Haddad — Emerging Experiences" [ref=e42]
+  - option "Ben Carter — Emerging Experiences" [ref=e43]
+  - option "Aisha Patel — AI Product Design" [ref=e44]
+  - option "Sam Okafor — AI Product Design" [ref=e45]
+- combobox "Importance" [expanded=false, ref=e9]: Top priority
+  - option "Top priority" [selected, ref=e46]
+  - option "High priority" [ref=e47]
+  - option "Standard" [ref=e48]
+- combobox "Project health" [expanded=false, ref=e10]: Decision required
+  - option "Not reported" [ref=e49]
+  - option "On track" [ref=e50]
+  - option "At risk" [ref=e51]
+  - option "Decision required" [selected, ref=e52]
+- textbox "Latest update" [ref=e11]: The shorter application has been tested. The team is ready to finalize the identity-check experience.
+- textbox "Action required" [ref=e12]: Decide whether the new identity check belongs in this release or the next one.
+- textbox "Expected outcome" [ref=e13]: Help new clients open an account without getting stuck or starting over.
+- combobox "Delivery status" [expanded=false, ref=e14]: In progress
+  - option "Planned" [ref=e53]
+  - option "In progress" [selected, ref=e54]
+  - option "Blocked" [ref=e55]
+  - option "Completed" [ref=e56]
+- spinbutton "Month Month" [ref=e57]: 10
+- spinbutton "Day Day" [ref=e58]: 1
+- spinbutton "Year Year" [ref=e59]: 2026
+- button "Show date picker Show date picker" [ref=e16]
+- spinbutton "Month Month" [ref=e60]: 11
+- spinbutton "Day Day" [ref=e61]: 20
+- spinbutton "Year Year" [ref=e62]: 2026
+- button "Show date picker Show date picker" [ref=e17]
+- combobox "Commitment" [expanded=false, ref=e15]: Committed
+  - option "Proposed" [ref=e63]
+  - option "Committed" [selected, ref=e64]
+  - option "Backlog" [ref=e65]
+- button "Delete" [ref=e3]
+- button "Cancel" [ref=e4]
+- button "Save project" [ref=e5]

@@ -73,6 +73,10 @@ npm run verify
 
 For substantial builds, use the [Periscope Manager Loop](docs/manager-loop.md) with its copyable launch and resume prompts. [BUILD_STATE.md](BUILD_STATE.md) records the current objective, verified outcomes, and next action.
 
+## Organization-centered experiment
+
+On the `codex/organization-explorer` branch, choose **Explore** or open [the experimental workspace](http://127.0.0.1:3000/?view=explore). [Design scope and evaluation](docs/organization-explorer.md). Existing Work map and planning views remain available.
+
 ## Demo
 
 [Onboarding walkthrough](docs/onboarding-walkthrough.md): tested first-time leadership and organization setup scenario, findings and improvements.

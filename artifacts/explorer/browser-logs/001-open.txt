@@ -1,0 +1,2 @@
+✓ Periscope · UXD workspace
+  http://127.0.0.1:3002/?view=explore

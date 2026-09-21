@@ -1,0 +1,83 @@
+{"at": "2026-09-21T01:14:20.221303+00:00", "args": ["open", "http://127.0.0.1:3002/?view=explore"], "exitCode": 0, "output": "browser-logs/001-open.txt"}
+{"at": "2026-09-21T01:14:20.415844+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/002-set.txt"}
+{"at": "2026-09-21T01:14:20.617038+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/003-snapshot.txt"}
+{"at": "2026-09-21T01:14:20.874607+00:00", "args": ["screenshot", "artifacts/explorer/01-organization.png"], "exitCode": 0, "output": "browser-logs/004-screenshot.txt"}
+{"at": "2026-09-21T01:14:34.612429+00:00", "args": ["scrollintoview", "@e51"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:14:34.787827+00:00", "args": ["click", "@e51"], "exitCode": 0, "output": "browser-logs/005-click.txt"}
+{"at": "2026-09-21T01:14:34.988494+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/006-snapshot.txt"}
+{"at": "2026-09-21T01:14:45.896151+00:00", "args": ["scrollintoview", "@e55"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:14:46.064608+00:00", "args": ["click", "@e55"], "exitCode": 0, "output": "browser-logs/007-click.txt"}
+{"at": "2026-09-21T01:14:46.268068+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/008-snapshot.txt"}
+{"at": "2026-09-21T01:14:54.263320+00:00", "args": ["scrollintoview", "@e54"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:14:54.431995+00:00", "args": ["click", "@e54"], "exitCode": 0, "output": "browser-logs/009-click.txt"}
+{"at": "2026-09-21T01:14:54.640578+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/010-snapshot.txt"}
+{"at": "2026-09-21T01:15:03.322907+00:00", "args": ["scrollintoview", "@e56"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:03.491000+00:00", "args": ["click", "@e56"], "exitCode": 0, "output": "browser-logs/011-click.txt"}
+{"at": "2026-09-21T01:15:03.692299+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/012-snapshot.txt"}
+{"at": "2026-09-21T01:15:03.954581+00:00", "args": ["screenshot", "artifacts/explorer/02-project.png"], "exitCode": 0, "output": "browser-logs/013-screenshot.txt"}
+{"at": "2026-09-21T01:15:12.229174+00:00", "args": ["scrollintoview", "@e55"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:12.400684+00:00", "args": ["click", "@e55"], "exitCode": 0, "output": "browser-logs/014-click.txt"}
+{"at": "2026-09-21T01:15:12.603346+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/015-snapshot.txt"}
+{"at": "2026-09-21T01:15:12.814562+00:00", "args": ["set", "viewport", "390", "844"], "exitCode": 0, "output": "browser-logs/016-set.txt"}
+{"at": "2026-09-21T01:15:13.071523+00:00", "args": ["screenshot", "artifacts/explorer/03-mobile-priority.png"], "exitCode": 0, "output": "browser-logs/017-screenshot.txt"}
+{"at": "2026-09-21T01:15:22.901988+00:00", "args": ["scrollintoview", "@e16"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:23.073972+00:00", "args": ["click", "@e16"], "exitCode": 0, "output": "browser-logs/018-click.txt"}
+{"at": "2026-09-21T01:15:23.273710+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/019-snapshot.txt"}
+{"at": "2026-09-21T01:15:42.325975+00:00", "args": ["scrollintoview", "@e17"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:42.502438+00:00", "args": ["click", "@e17"], "exitCode": 0, "output": "browser-logs/020-click.txt"}
+{"at": "2026-09-21T01:15:42.701644+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/021-snapshot.txt"}
+{"at": "2026-09-21T01:15:53.858340+00:00", "args": ["scrollintoview", "@e6"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:54.024546+00:00", "args": ["fill", "@e6", "Account opening review"], "exitCode": 0, "output": "browser-logs/022-fill.txt"}
+{"at": "2026-09-21T01:15:54.214035+00:00", "args": ["scrollintoview", "@e11"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:54.384924+00:00", "args": ["fill", "@e11", "Identity-check review completed in the fictional exploration session."], "exitCode": 0, "output": "browser-logs/023-fill.txt"}
+{"at": "2026-09-21T01:15:54.585023+00:00", "args": ["scrollintoview", "@e10"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:54.755287+00:00", "args": ["select", "@e10", "on_track"], "exitCode": 0, "output": "browser-logs/024-select.txt"}
+{"at": "2026-09-21T01:15:54.949547+00:00", "args": ["scrollintoview", "@e12"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:55.110853+00:00", "args": ["fill", "@e12", ""], "exitCode": 0, "output": "browser-logs/025-fill.txt"}
+{"at": "2026-09-21T01:15:55.300526+00:00", "args": ["scrollintoview", "@e5"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:15:55.480193+00:00", "args": ["click", "@e5"], "exitCode": 0, "output": "browser-logs/026-click.txt"}
+{"at": "2026-09-21T01:15:55.676853+00:00", "args": ["get", "text", "body"], "exitCode": 0, "output": "browser-logs/027-get.txt"}
+{"at": "2026-09-21T01:16:24.766023+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/028-snapshot.txt"}
+{"at": "2026-09-21T01:16:38.518750+00:00", "args": ["scrollintoview", "@e45"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:16:38.701930+00:00", "args": ["click", "@e45"], "exitCode": 0, "output": "browser-logs/029-click.txt"}
+{"at": "2026-09-21T01:16:38.913457+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/030-snapshot.txt"}
+{"at": "2026-09-21T01:16:54.506934+00:00", "args": ["scrollintoview", "@e7"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:16:54.684239+00:00", "args": ["click", "@e7"], "exitCode": 0, "output": "browser-logs/031-click.txt"}
+{"at": "2026-09-21T01:16:54.882005+00:00", "args": ["get", "text", ".explorer-breadcrumb"], "exitCode": 0, "output": "browser-logs/032-get.txt"}
+{"at": "2026-09-21T01:16:55.087535+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/033-snapshot.txt"}
+{"at": "2026-09-21T01:17:03.432283+00:00", "args": ["scrollintoview", "@e27"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:17:03.603602+00:00", "args": ["click", "@e27"], "exitCode": 0, "output": "browser-logs/034-click.txt"}
+{"at": "2026-09-21T01:17:03.810265+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/035-snapshot.txt"}
+{"at": "2026-09-21T01:17:13.463365+00:00", "args": ["scrollintoview", "@e18"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:17:13.633039+00:00", "args": ["click", "@e18"], "exitCode": 0, "output": "browser-logs/036-click.txt"}
+{"at": "2026-09-21T01:17:13.822723+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/037-snapshot.txt"}
+{"at": "2026-09-21T01:17:25.303826+00:00", "args": ["scrollintoview", "@e7"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:17:25.475776+00:00", "args": ["fill", "@e7", "Unsaved example name"], "exitCode": 0, "output": "browser-logs/038-fill.txt"}
+{"at": "2026-09-21T01:17:25.672830+00:00", "args": ["scrollintoview", "@e4"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:17:25.842202+00:00", "args": ["click", "@e4"], "exitCode": 0, "output": "browser-logs/039-click.txt"}
+{"at": "2026-09-21T01:17:26.043374+00:00", "args": ["get", "text", ".explorer-heading"], "exitCode": 0, "output": "browser-logs/040-get.txt"}
+{"at": "2026-09-21T01:17:26.243047+00:00", "args": ["eval", "JSON.stringify({viewport:innerWidth,width:document.documentElement.scrollWidth})"], "exitCode": 0, "output": "browser-logs/041-eval.txt"}
+{"at": "2026-09-21T01:17:26.440833+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/042-errors.txt"}
+{"at": "2026-09-21T01:17:59.599049+00:00", "args": ["open", "http://127.0.0.1:3000/?view=explore"], "exitCode": 0, "output": "browser-logs/043-open.txt"}
+{"at": "2026-09-21T01:17:59.788119+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/044-snapshot.txt"}
+{"at": "2026-09-21T01:18:08.600903+00:00", "args": ["scrollintoview", "@e18"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:18:08.771300+00:00", "args": ["fill", "@e18", "Nina"], "exitCode": 0, "output": "browser-logs/045-fill.txt"}
+{"at": "2026-09-21T01:18:08.974583+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/046-snapshot.txt"}
+{"at": "2026-09-21T01:18:16.278423+00:00", "args": ["scrollintoview", "@e26"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:18:16.450221+00:00", "args": ["click", "@e26"], "exitCode": 0, "output": "browser-logs/047-click.txt"}
+{"at": "2026-09-21T01:18:16.654574+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/048-snapshot.txt"}
+{"at": "2026-09-21T01:18:28.233729+00:00", "args": ["scrollintoview", "@e33"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:18:28.405677+00:00", "args": ["click", "@e33"], "exitCode": 0, "output": "browser-logs/049-click.txt"}
+{"at": "2026-09-21T01:18:28.618095+00:00", "args": ["screenshot", "artifacts/explorer/04-mobile-list.png"], "exitCode": 0, "output": "browser-logs/050-screenshot.txt"}
+{"at": "2026-09-21T01:18:28.807513+00:00", "args": ["scrollintoview", "@e16"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:18:28.977516+00:00", "args": ["click", "@e16"], "exitCode": 0, "output": "browser-logs/051-click.txt"}
+{"at": "2026-09-21T01:18:29.176376+00:00", "args": ["scrollintoview", "@e37"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:18:29.345035+00:00", "args": ["click", "@e37"], "exitCode": 0, "output": "browser-logs/052-click.txt"}
+{"at": "2026-09-21T01:18:29.546721+00:00", "args": ["screenshot", "artifacts/explorer/05-mobile-capacity.png"], "exitCode": 0, "output": "browser-logs/053-screenshot.txt"}
+{"at": "2026-09-21T01:18:29.734860+00:00", "args": ["eval", "JSON.stringify({viewport:innerWidth,width:document.documentElement.scrollWidth})"], "exitCode": 0, "output": "browser-logs/054-eval.txt"}
+{"at": "2026-09-21T01:18:29.924227+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/055-errors.txt"}
+{"at": "2026-09-21T01:19:16.026652+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/056-set.txt"}
+{"at": "2026-09-21T01:19:16.328771+00:00", "args": ["open", "http://127.0.0.1:3000/?view=explore&review=final"], "exitCode": 0, "output": "browser-logs/057-open.txt"}
+{"at": "2026-09-21T01:19:16.574841+00:00", "args": ["screenshot", "artifacts/explorer/06-final-desktop.png"], "exitCode": 0, "output": "browser-logs/058-screenshot.txt"}
+{"at": "2026-09-21T01:19:16.756889+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/059-errors.txt"}
+{"at": "2026-09-21T01:19:17.076448+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/060-close.txt"}

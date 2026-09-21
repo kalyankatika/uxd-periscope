@@ -2825,3 +2825,19 @@ button > .action-icon:not(:only-child):last-child {
 .planning-period input {
   border-color: #dce4d7;
 }
+
+.explorer-return {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 12px;
+  background: #edf5e9;
+  border: 1px solid #d4e4cc;
+  border-radius: 12px;
+}
+.explorer-return span {
+  color: #52634d;
+  font-size: 0.85rem;
+}

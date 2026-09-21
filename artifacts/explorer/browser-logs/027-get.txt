@@ -1,0 +1,94 @@
+periscope
+UXD
+Work map
+Explore
+Overview
+Teams & reporting
+Projects
+Capacity
+Project plan
+People & imports
+Example data · Fictional organization · Changes are temporary
+Open workspace
+Explore
+Planning period
+Example updated for this session.
+Organization
+Avery Morgan
+Elena Brooks
+Maya Chen
+Account opening review
+
+PROJECT · EXPLORER PREVIEW
+
+Account opening review
+
+Project
+
+Back
+Edit project
+All
+People
+Projects
+Priorities
+Map
+List
+Account opening review
+4 people · 1 projects
+Choose a connection to explore
+Project owner
+Maya Chen
+Contributor
+Sofia Ramirez
+Contributor
+Leo Martinez
+Contributor
+Oliver Grant
+Priority
+Client onboarding
+Depends on
+Accessible component library
+Details
+2026-10-01 — 2026-12-31
+Summary
+Projects (1)
+People (4)
+Capacity
+1
+Projects
+4
+People
+1
+Priorities
+0
+Need attention
+
+Help new clients open an account without getting stuck or starting over.
+
+Delivery
+In progress
+Health
+On track
+Dates
+2026-10-01 — 2026-11-20
+
+Latest update
+Identity-check review completed in the fictional exploration session.
+
+Decision required
+Decide whether the new identity check belongs in this release or the next one.
+
+Suggested actions
+Based on current workspace data
+
+No projects are marked at risk, blocked or requiring a decision.
+
+Workspace tools
+
+Open the full workspace. Return here to keep exploring.
+
+Compare projects
+Capacity
+Plan
+People & imports
+Periscope · UXD workspace
