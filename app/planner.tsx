@@ -21,10 +21,8 @@ import {
 } from "@/lib/csv";
 import ImportReview from "./import-review";
 import WorkspaceImport from "./workspace-import";
-import WorkspaceExplorer from "./workspace-explorer";
 
 const viewLabels = {
-  explore: "Explore",
   connections: "Work map",
   overview: "Overview",
   teams: "Teams & reporting",
@@ -34,8 +32,6 @@ const viewLabels = {
   people: "People & imports",
 };
 const viewDescriptions = {
-  explore:
-    "Experimental workspace · Navigate through people, projects and priorities.",
   connections: "People, projects, priorities, and their relationships.",
   overview: "Project status, top priorities, and items requiring attention.",
   teams: "Reporting structure and team projects.",
@@ -87,7 +83,6 @@ export default function Planner({ initial }: { initial: Plan }) {
     [whatIf, setWhatIf] = useState(false),
     [homeVersion, setHomeVersion] = useState(0),
     [view, setView] = useState<
-      | "explore"
       | "overview"
       | "teams"
       | "compare"
@@ -106,14 +101,6 @@ export default function Planner({ initial }: { initial: Plan }) {
       replace: boolean;
       inspection: CsvInspection;
     } | null>(null);
-  const [explorerOpened, setExplorerOpened] = useState(false);
-  const [returnToExplorer, setReturnToExplorer] = useState(false);
-  useEffect(() => {
-    if (new URLSearchParams(window.location.search).get("view") === "explore") {
-      setExplorerOpened(true);
-      setView("explore");
-    }
-  }, []);
   const plan = useExample ? example : workspace;
   const navigation = useRef<HTMLElement>(null);
   const pageHeader = useRef<HTMLElement>(null);
@@ -270,7 +257,6 @@ export default function Planner({ initial }: { initial: Plan }) {
             )
               return;
             event.preventDefault();
-            setReturnToExplorer(false);
             setView("connections");
             navigation.current?.scrollTo({ left: 0, behavior: "auto" });
             setHomeVersion((version) => version + 1);
@@ -305,7 +291,6 @@ export default function Planner({ initial }: { initial: Plan }) {
           {(
             [
               "connections",
-              "explore",
               "overview",
               "teams",
               "compare",
@@ -317,8 +302,6 @@ export default function Planner({ initial }: { initial: Plan }) {
             <button
               key={v}
               onClick={() => {
-                if (v === "explore") setExplorerOpened(true);
-                setReturnToExplorer(false);
                 setView(v);
                 window.scrollTo({ top: 0, behavior: "auto" });
               }}
@@ -326,7 +309,7 @@ export default function Planner({ initial }: { initial: Plan }) {
               className={view === v ? "nav active" : "nav"}
               aria-current={view === v ? "page" : undefined}
             >
-              <UiIcon name={v === "explore" ? "connections" : v} />
+              <UiIcon name={v} />
               <span className="nav-label">{viewLabels[v]}</span>
             </button>
           ))}
@@ -355,7 +338,6 @@ export default function Planner({ initial }: { initial: Plan }) {
               <button
                 onClick={() => {
                   setUseExample(!useExample);
-                  setReturnToExplorer(false);
                   setNotice("");
                   setError("");
                 }}
@@ -413,27 +395,11 @@ export default function Planner({ initial }: { initial: Plan }) {
                   }}
                 />
               </label>
-              {view !== "explore" && (
-                <button className="primary" onClick={() => edit()}>
-                  <UiIcon name="plus" className="action-icon" /> Add project
-                </button>
-              )}
+              <button className="primary" onClick={() => edit()}>
+                <UiIcon name="plus" className="action-icon" /> Add project
+              </button>
             </div>
           </div>
-          {returnToExplorer && view !== "explore" && (
-            <div className="explorer-return">
-              <button
-                onClick={() => {
-                  setView("explore");
-                  window.scrollTo({ top: 0, behavior: "auto" });
-                }}
-              >
-                <UiIcon name="arrowLeft" className="action-icon" /> Back to
-                Explore
-              </button>
-              <span>Workspace-wide tool · Your exploration is preserved.</span>
-            </div>
-          )}
           {["capacity", "cutline"].includes(view) && (
             <div className="toolbar">
               <label className="toggle">
@@ -496,24 +462,6 @@ export default function Planner({ initial }: { initial: Plan }) {
                 </span>
               </article>
             </section>
-          )}
-          {explorerOpened && (
-            <div hidden={view !== "explore"}>
-              <WorkspaceExplorer
-                key={String(useExample)}
-                plan={plan}
-                start={quarter}
-                end={end}
-                onEdit={edit}
-                onSave={persist}
-                busy={busy}
-                onOpenTool={(tool) => {
-                  setReturnToExplorer(true);
-                  setView(tool);
-                  window.scrollTo({ top: 0, behavior: "auto" });
-                }}
-              />
-            </div>
           )}
           {["overview", "teams", "compare", "connections"].includes(view) && (
             <Leadership

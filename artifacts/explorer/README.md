@@ -1,4 +1,6 @@
-# Explore experiment evidence
+# Retired Explore experiment evidence
+
+Historical prototype at `edc7ae9`, retired after user review in favor of the original knowledge graph.
 
 September 20, 2026. All screenshots and browser mutations use fictional session data. [Design and verification](../../docs/organization-explorer.md).
 

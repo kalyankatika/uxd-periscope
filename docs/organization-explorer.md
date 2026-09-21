@@ -1,4 +1,11 @@
-# Organization-centered workspace experiment
+# Organization-centered experiment — retired
+
+The September 20 prototype was set aside after user review: it added complexity and duplicated the original knowledge graph. The active interface now uses the original Work map, selection inspector, connection focus and existing detail views. No separate Explore navigation, card graph, scoped tabs or suggested-actions layer remains.
+
+The prior prototype is available in Git history at `edc7ae9`; the notes below are historical, not current behavior. `/?view=explore` now falls through to the default Work map.
+
+## Original experiment notes
+
 
 An alternative information architecture within Periscope, on `codex/organization-explorer`. Enter through **Explore**, or open `/?view=explore`. Existing views remain available for comparison. This is a feature experiment in the same Next.js / SQLite app, not a separate deployment or database.
 
