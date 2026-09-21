@@ -1,0 +1,17 @@
+.timeline-scroll { overflow-x: auto; padding: 0 16px 16px; }
+.timeline-scroll > section { min-width: 620px; }
+.timeline-scroll h3 { font-size: .85rem; margin: 18px 0 8px; color: #52634b; }
+.timeline-scale, .timeline-row { display: grid; grid-template-columns: 230px minmax(350px,1fr); gap: 16px; min-width: 620px; }
+.timeline-scale { font-size: .75rem; color: #52634b; }
+.timeline-scale > div { display: flex; justify-content: space-between; }
+.timeline-row { width: 100%; border: 0; border-radius: 8px; background: transparent; padding: 10px 0; text-align: left; align-items: center; }
+.timeline-row:hover, .timeline-row[aria-pressed="true"] { background: #eff6eb; }
+.timeline-row strong { display: block; font-size: .82rem; }
+.timeline-row small { display: block; color: #60715c; font-size: .7rem; margin-top: 4px; }
+.timeline-track { height: 30px; position: relative; background: repeating-linear-gradient(90deg,#edf1e9 0 1px,transparent 1px 25%); }
+.timeline-bar { position: absolute; top: 3px; height: 24px; border-radius: 6px; background: #c8e3bb; color: #294b22; font-size: .7rem; padding: 3px 6px; overflow: hidden; white-space: nowrap; }
+.timeline-bar.attention { background: #f3dfb2; color: #76551d; }
+.timeline-detail { border-top: 1px solid #d7e2cf; padding: 16px; }
+.timeline-detail h3,.timeline-detail h4 { margin: 8px 0; }
+.timeline-detail p { font-size: .85rem; color: #52634b; }
+.timeline-detail button { margin: 4px 8px 4px 0; }

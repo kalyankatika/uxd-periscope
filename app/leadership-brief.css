@@ -1,0 +1,82 @@
+.leadership-brief {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-width: 0;
+}
+.brief-section {
+  border: 1px solid var(--lead-line);
+  border-radius: 14px;
+  padding: 18px;
+  background: #f7f9f4;
+  min-width: 0;
+}
+.brief-section-heading,
+.brief-item-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brief-section-heading h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #293c25;
+}
+.brief-section-heading .attention-count {
+  flex: 0 0 auto;
+}
+.brief-period,
+.brief-empty {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #5a6653;
+  margin: 8px 0 0;
+}
+.brief-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #e2e8d9;
+  border-radius: 12px;
+  background: white;
+  text-align: left;
+  white-space: normal;
+  font-weight: 400;
+}
+.brief-item-heading {
+  color: #293c25;
+  line-height: 1.4;
+  font-size: 0.88rem;
+}
+.brief-item-heading .action-icon {
+  flex: 0 0 auto;
+}
+.brief-item-meta,
+.brief-item-detail {
+  font-size: 0.8rem;
+  color: #5a6653;
+  line-height: 1.5;
+}
+.brief-item-detail {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.brief-more summary {
+  min-height: 44px;
+  padding: 14px 0 0;
+  color: #386e2c;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.brief-more summary:focus-visible {
+  outline: 2px solid #368727;
+  outline-offset: 3px;
+  border-radius: 4px;
+}

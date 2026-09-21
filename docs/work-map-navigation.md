@@ -26,3 +26,12 @@ Use **Layout → By team** to review work grouped under accountable leaders. **N
 Each project appears once, grouped by its owner's reporting chain. Contributors can span groups without duplicating projects. Missing owners or invalid reporting chains appear under Unassigned; shared priorities have a separate group. Group project counts mean accountable ownership, not all work involving that team's members or capacity allocation.
 
 All people, project and priority nodes remain visible at every zoom level; the fitted overview is compact. Select a group to zoom into its people and projects; this does not filter the scope. Select a node to inspect its connections and reveal cross-group links. Narrow screens stack the groups; pan to explore and use Grid for comparison. Reporting lines retain their existing hierarchy layout. Layout choice is session-only.
+
+## Leadership perspectives
+
+- **By priority** groups each visible project under its recorded priority. Unaligned work is explicit. People occupy a separate group; selecting a project reveals its people connections. Priority identity follows the existing graph contract; it is not a new enterprise taxonomy.
+- **Grid → Team × priority** compares scoped project counts by accountable leader and priority. Select a nonempty cell to browse its projects, then select a project for existing details. Matrix counts are not allocation. The view choice survives Map/Grid switching.
+- **Project plan → Timeline** shows source start/end dates clipped to the selected planning period, grouped by priority. Select a project for owner, health and recorded incoming/outgoing dependencies. View in map opens the corresponding project. Dates outside the period remain visible in details; bars show only the overlap. Timeline includes the same committed, proposed and backlog register as List; the capacity scenario toggle affects capacity summaries, not this register.
+- **Overview** separates Decisions needed, Delivery risks and Upcoming dates. Dates are relative to the selected planning period, not a claim of what is due today. Entries open existing project details. No historical change feed is inferred from a current snapshot.
+
+All four perspectives use existing fictional/local records. This does not implement live source connectors, enterprise read-only enforcement, person-level allocation or historical change tracking.

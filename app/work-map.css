@@ -1345,3 +1345,9 @@ button.map-open-button {
   .work-map .map-toolbar .map-search { flex: 1 1 100%; max-width: none; margin-left: 0; }
   .work-map .map-toolbar .map-presets { width: 100%; justify-content: flex-start; }
 }
+
+@media (max-width: 650px) {
+  .map-layout-chips { flex-wrap: wrap; }
+  .map-layout-chips > span { display: none; }
+  .map-layout-chips button { white-space: nowrap; font-size: .75rem; }
+}

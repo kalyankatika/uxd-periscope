@@ -1,5 +1,7 @@
 "use client";
 import UiIcon from "./ui-icon";
+import { leadershipBrief } from "@/lib/leadership-brief";
+import "./leadership-brief.css";
 import { useMemo, useRef, useState } from "react";
 import {
   type Plan,
@@ -140,6 +142,7 @@ export default function Leadership({
     .filter((p) => p.importance === "top" && p.delivery !== "completed")
     .sort((a, b) => a.end.localeCompare(b.end));
   const attention = period.filter(needsAttention);
+  const brief = leadershipBrief(period, start, end);
   const scope = mode === "compare" && leaderId ? group : period;
   const filtered = scope.filter(
     (p) =>
@@ -388,49 +391,96 @@ export default function Leadership({
                 </div>
               )}
             </section>
-            <aside className="attention-panel">
-              <div className="lead-section-heading">
-                <div>
-                  <p className="section-kicker">PROJECT HEALTH</p>
-                  <h2>Items requiring attention</h2>
-                </div>
-                <span className="attention-count">{attention.length}</span>
-              </div>
-              {attention.slice(0, 3).map((p) => (
-                <button
-                  className="attention-item"
-                  key={p.id}
-                  onClick={() => openProject(p)}
+            <aside className="leadership-brief" aria-label="Leadership brief">
+              {(
+                [
+                  {
+                    title: "Decisions needed",
+                    items: brief.decisions,
+                    empty: "No decisions flagged.",
+                    kind: "decision",
+                  },
+                  {
+                    title: "Delivery risks",
+                    items: brief.risks,
+                    empty: "No delivery risks flagged.",
+                    kind: "risk",
+                  },
+                  {
+                    title: "Upcoming dates",
+                    items: brief.due,
+                    empty: "No open projects due in this period.",
+                    kind: "due",
+                  },
+                ] as const
+              ).map(({ title, items, empty, kind }) => (
+                <section
+                  className="brief-section"
+                  key={kind}
+                  aria-label={title}
                 >
-                  <span>
-                    {p.health === "needs_decision"
-                      ? "Decision required"
-                      : p.delivery === "blocked"
-                        ? "Blocked"
-                        : "At risk"}
-                  </span>
-                  <strong>{p.name}</strong>
-                  <p>
-                    {p.decision ||
-                      p.update ||
-                      "Open project details for the latest status."}
-                  </p>
-                  <span className="attention-action">
-                    View project{" "}
-                    <UiIcon name="arrowRight" className="action-icon" />
-                  </span>
-                </button>
+                  <div className="brief-section-heading">
+                    <h2>{title}</h2>
+                    <span className="attention-count">{items.length}</span>
+                  </div>
+                  {kind === "due" && (
+                    <p className="brief-period">
+                      Due {shortDate(start)} – {shortDate(end)} · Selected
+                      period
+                    </p>
+                  )}
+                  {!items.length && <p className="brief-empty">{empty}</p>}
+                  {items.slice(0, 2).map((p) => (
+                    <button
+                      className="brief-item"
+                      key={p.id}
+                      onClick={() => openProject(p)}
+                    >
+                      <span className="brief-item-heading">
+                        <strong>{p.name}</strong>
+                        <UiIcon name="arrowUpRight" className="action-icon" />
+                      </span>
+                      <span className="brief-item-meta">
+                        {kind === "due" ? `Due ${shortDate(p.end)} · ` : ""}
+                        {leadName(p)}
+                      </span>
+                      {kind !== "due" && (
+                        <span className="brief-item-detail">
+                          {kind === "decision"
+                            ? p.decision || "Decision details not recorded."
+                            : p.update ||
+                              (p.delivery === "blocked"
+                                ? "Blocked"
+                                : "At risk")}
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                  {items.length > 2 && (
+                    <details className="brief-more">
+                      <summary>Show {items.length - 2} more</summary>
+                      {items.slice(2).map((p) => (
+                        <button
+                          className="brief-item"
+                          key={p.id}
+                          onClick={() => openProject(p)}
+                        >
+                          <span className="brief-item-heading">
+                            <strong>{p.name}</strong>
+                            <UiIcon
+                              name="arrowUpRight"
+                              className="action-icon"
+                            />
+                          </span>
+                          <span className="brief-item-meta">
+                            {leadName(p)} · Due {shortDate(p.end)}
+                          </span>
+                        </button>
+                      ))}
+                    </details>
+                  )}
+                </section>
               ))}
-              {!attention.length && (
-                <div className="lead-empty">
-                  <h3>No issues reported</h3>
-                  <p>
-                    {period.some((p) => p.health === "not_reported")
-                      ? "Some projects still need a status update."
-                      : "Teams have not flagged any decisions or delivery concerns."}
-                  </p>
-                </div>
-              )}
             </aside>
           </div>
           <section className="teams-section">

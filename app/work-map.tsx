@@ -12,6 +12,7 @@ import type { Initiative, Plan } from "@/lib/domain";
 import WorkGrid from "./work-grid";
 import { scopeGraph } from "@/lib/graph-scope";
 import { layoutTeamGraph } from "@/lib/team-layout";
+import { layoutPriorityGraph } from "@/lib/priority-layout";
 import { graphTrail, visitGraphNode } from "@/lib/graph-navigation";
 import { layoutReportingGraph } from "@/lib/reporting-layout";
 import UiIcon from "./ui-icon";
@@ -115,7 +116,7 @@ export default function WorkMap({
   const [labels, setLabels] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [viewMode, setViewMode] = useState<"map" | "grid">("map");
-  const [mapLayout, setMapLayout] = useState<"network" | "team">("network");
+  const [mapLayout, setMapLayout] = useState<"network" | "team" | "priority">("network");
   const [gridSort, setGridSort] = useState<GridSort>("type");
   const [cameraOverride, setCamera] = useState<Camera | null>(null);
   const [size, setSize] = useState({ width: 900, height: 650 });
@@ -123,6 +124,7 @@ export default function WorkMap({
     Record<string, { x: number; y: number }>
   >({});
   const [listOpen, setListOpen] = useState(false);
+  const [gridView, setGridView] = useState<"cards" | "matrix">("cards");
   const browseButtonRef = useRef<HTMLButtonElement>(null);
   const listCloseRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -190,10 +192,10 @@ export default function WorkMap({
   );
   const workLayout = useMemo(() => layoutGraph(graph), [graph]);
   const teamLayout = useMemo(
-    () => layoutTeamGraph(visible, plan, size.width < 550 ? 1 : 3),
-    [visible, plan, size.width],
+    () => (mapLayout === "priority" ? layoutPriorityGraph : layoutTeamGraph)(visible, plan, size.width < 550 ? 1 : 3),
+    [visible, plan, size.width, mapLayout],
   );
-  const byTeam = mapLayout === "team" && preset !== "reporting";
+  const byTeam = mapLayout !== "network" && preset !== "reporting";
   const layout = useMemo(
     () =>
       preset === "reporting"
@@ -539,7 +541,7 @@ export default function WorkMap({
           {viewMode === "map" && preset !== "reporting" && (
             <div className="map-layout-chips" role="group" aria-label="Map layout">
               <span>Layout</span>
-              {(["network", "team"] as const).map((layout) => (
+              {(["network", "team", "priority"] as const).map((layout) => (
                 <button key={layout} aria-pressed={mapLayout === layout}
                   onClick={() => {
                     setMapLayout(layout);
@@ -547,7 +549,7 @@ export default function WorkMap({
                     setHoveredId(null);
                     setPositions({});
                   }}>
-                  {layout === "network" ? "Network" : "By team"}
+                  {layout === "network" ? "Network" : layout === "team" ? "By team" : "By priority"}
                 </button>
               ))}
             </div>
@@ -702,6 +704,9 @@ export default function WorkMap({
           </div>
           {viewMode === "grid" ? (
             <WorkGrid
+              view={gridView}
+              onView={setGridView}
+              plan={plan}
               items={gridItems}
               total={visible.nodes.length}
               selectedId={effectiveSelectedId}
@@ -1148,7 +1153,7 @@ export default function WorkMap({
               <div className="map-canvas-topline">
                 <span>
                   {byTeam
-                    ? "By accountable leader · Select group to zoom"
+                    ? mapLayout === "priority" ? "By priority · Select group to zoom" : "By accountable leader · Select group to zoom"
                     : preset === "reporting"
                       ? local && selected
                         ? `Reporting group: ${selected.label}`

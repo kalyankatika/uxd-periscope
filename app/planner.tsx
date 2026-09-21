@@ -2,6 +2,7 @@
 import UiIcon from "./ui-icon";
 import { useEffect, useRef, useState } from "react";
 import Leadership from "./leadership";
+import ProjectTimeline from "./project-timeline";
 import { leadershipDemo, isStarterPlan } from "@/lib/leadership-demo";
 import { planSchema } from "@/lib/domain";
 import {
@@ -81,6 +82,7 @@ export default function Planner({ initial }: { initial: Plan }) {
     [useExample, setUseExample] = useState(() => isStarterPlan(initial)),
     [quarter, setQuarter] = useState("2026-10-01"),
     [whatIf, setWhatIf] = useState(false),
+    [planView, setPlanView] = useState<"list" | "timeline">("list"),
     [homeVersion, setHomeVersion] = useState(0),
     [mapProjectId, setMapProjectId] = useState(""),
     [view, setView] = useState<
@@ -625,7 +627,13 @@ export default function Planner({ initial }: { initial: Plan }) {
           )}
           {view === "cutline" && (
             <div className="cutline">
-              {(["committed", "proposed", "stretch"] as const).map((s) => (
+              <div className="map-layout-chips" role="group" aria-label="Project plan view">
+                <button aria-pressed={planView === "list"} onClick={() => setPlanView("list")}>List</button>
+                <button aria-pressed={planView === "timeline"} onClick={() => setPlanView("timeline")}>Timeline</button>
+              </div>
+              {planView === "timeline" ? <ProjectTimeline plan={plan} projects={inQuarter} start={quarter} end={end}
+                onOpen={(id) => { setMapProjectId(id); setView("connections"); }} /> :
+              (["committed", "proposed", "stretch"] as const).map((s) => (
                 <section className="panel" key={s}>
                   <div className="panel-head">
                     <div>

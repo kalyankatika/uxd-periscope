@@ -1,0 +1,155 @@
+.work-grid-toolbar {
+  flex-wrap: wrap;
+}
+.priority-matrix-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.priority-matrix-switch button {
+  border: 1px solid #d7e2cf;
+  border-radius: 999px;
+  background: white;
+  padding: 8px 12px;
+  min-height: 36px;
+  color: #344530;
+  font-size: 0.75rem;
+}
+.priority-matrix-switch button[aria-pressed="true"] {
+  color: white;
+  background: #368727;
+  border-color: #368727;
+}
+.priority-matrix-note {
+  color: #617058;
+  font-size: 0.75rem;
+  margin: 0 0 12px;
+}
+.priority-matrix-scroll {
+  overflow: auto;
+  border: 1px solid #d7e2cf;
+  border-radius: 12px;
+}
+.priority-matrix table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  font-size: 0.78rem;
+  color: #344530;
+}
+.priority-matrix-caption {
+  text-align: left;
+  padding: 12px;
+  font-weight: 700;
+  background: #f5f8f2;
+}
+.priority-matrix th,
+.priority-matrix td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e4ebdf;
+  min-width: 110px;
+}
+.priority-matrix th {
+  background: #f5f8f2;
+  font-weight: 700;
+}
+.priority-matrix th:first-child {
+  text-align: left;
+  min-width: 165px;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  box-shadow: 1px 0 #e4ebdf;
+}
+.priority-matrix th small {
+  display: block;
+  font-weight: 400;
+  color: #617058;
+  margin-top: 5px;
+}
+.priority-matrix td button {
+  border: 1px solid #d3e6ca;
+  border-radius: 999px;
+  min-width: 44px;
+  min-height: 44px;
+  background: #edf5e8;
+  color: #245b1c;
+  font-weight: 700;
+}
+.priority-matrix td button[aria-pressed="true"] {
+  background: #368727;
+  color: white;
+}
+.priority-matrix tfoot {
+  font-weight: 700;
+}
+.priority-matrix button:focus-visible,
+.priority-matrix-switch button:focus-visible,
+.priority-matrix-scroll:focus-visible {
+  outline: 3px solid #368727;
+  outline-offset: 3px;
+}
+.priority-matrix-detail {
+  border: 1px solid #d7e2cf;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: white;
+}
+.priority-matrix-detail-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.priority-matrix-detail h3 {
+  font-size: 0.85rem;
+  margin: 0;
+}
+.priority-matrix-detail-heading button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: #f5f8f2;
+  border-radius: 999px;
+}
+.priority-matrix-detail-heading svg {
+  width: 18px;
+  height: 18px;
+}
+.priority-matrix-detail ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.priority-matrix-detail li button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  padding: 12px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: #f5f8f2;
+  color: #344530;
+  margin-top: 4px;
+}
+.priority-matrix-detail li button[aria-pressed="true"] {
+  outline: 2px solid #368727;
+}
+@media (max-width: 600px) {
+  .priority-matrix-switch button {
+    min-height: 44px;
+  }
+  .priority-matrix th:first-child {
+    min-width: 130px;
+    max-width: 150px;
+  }
+}
