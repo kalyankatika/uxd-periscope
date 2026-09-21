@@ -521,7 +521,7 @@ export default function WorkMap({
     >
       <div className="map-heading">
         <div className="map-title-summary">
-          <h2>Work map</h2>
+          {expanded && <h2>Work map</h2>}
           <p>
             {projectCount} projects <span>·</span>{" "}
             {

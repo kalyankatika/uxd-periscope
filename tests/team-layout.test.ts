@@ -168,3 +168,13 @@ test("team rows align and projects occupy a separate band below people", () => {
     }
   }
 });
+
+test("reporting root occupies the top-left cell regardless of ID order", () => {
+  const plan = fixture();
+  const result = layoutTeamGraph(graphFor(plan), plan);
+  assert.equal(result.groups[0].leaderId, "head");
+  assert.equal(result.groups[0].x, 0);
+  assert.equal(result.groups[0].y, 0);
+  const mobile = layoutTeamGraph(graphFor(plan), plan, 1);
+  assert.equal(mobile.groups[0].leaderId, "head");
+});

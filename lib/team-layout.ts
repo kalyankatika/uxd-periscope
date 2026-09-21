@@ -80,10 +80,14 @@ export function layoutTeamGraph(
     bucket.nodes.push(node);
     buckets.set(id, bucket);
   }
-  const entries = [...buckets.entries()].sort(([a], [b]) => {
-    const rank = (id: string) =>
-      id === "priorities" ? 2 : id === "unassigned" ? 1 : 0;
-    return rank(a) - rank(b) || compare(a, b);
+  const entries = [...buckets.entries()].sort(([a, aBucket], [b, bBucket]) => {
+    const rank = (id: string, leaderId?: string) => {
+      if (id === "priorities") return 3;
+      if (id === "unassigned") return 2;
+      const leader = leaderId ? people.get(leaderId) : undefined;
+      return leader && !leader.managerId ? 0 : 1;
+    };
+    return rank(a, aBucket.leaderId) - rank(b, bBucket.leaderId) || compare(a, b);
   });
   const nodes: TeamPositionedNode[] = [];
   const groups: TeamGroup[] = [];

@@ -143,3 +143,7 @@ User requests potential enterprise read-only viewing, with modifications perform
 ## Compact graph toolbar — September 20, 2026
 
 Moved Back/current selection/Whole organization into the search-and-filter toolbar, left aligned, with search immediately before All work on the right when space permits. Compact selection name retains full scope in its tooltip and graph label. Added Work map before entity counts so fullscreen retains its title. Responsive wrapping keeps390px fullscreen context to one36px row; no document overflow. Browser verified fullscreen title and Back clearing selection, no errors. Production build passed. Current preview port3000/session89530. Saved data unchanged.
+
+## Fullscreen title and leadership ordering — September 20, 2026
+
+Inner Work map heading now appears only in fullscreen. Team ordering places reporting-root groups before subordinate groups, using stable reporting IDs rather than names or titles. Browser verified Avery Head of Design at cell0,0 on desktop and first on mobile, fullscreen title present and normal inner title absent,390px width/no errors.73tests and production build pass. Preview port3000/session30247.
