@@ -33,6 +33,7 @@ export default function WorkGrid({
         </p>
         <label>
           Sort by
+          <span className="map-select-input">
           <select
             aria-label="Sort grid"
             value={sort}
@@ -42,6 +43,8 @@ export default function WorkGrid({
             <option value="name">Name A–Z</option>
             <option value="connections">Most connections</option>
           </select>
+          <UiIcon name="chevronDown" className="map-select-arrow" />
+          </span>
         </label>
       </div>
       <div

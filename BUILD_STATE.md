@@ -127,3 +127,7 @@ Removed the overview zoom threshold that hid team nodes and links. By team now a
 ## Team layout alignment — September 20, 2026
 
 Aligned team panel heights within each row, centered incomplete node rows, placed group leaders first, and separated projects into a consistently aligned lower band. Reserved overview space for graph controls. Limited team node hit areas so they do not cover group headers at overview zoom. Browser confirmed group-header zoom preserves all47nodes and whole-organization scope, readable detail spacing, mobile width390, no runtime errors.72tests including row/band invariants and production build pass. Current preview port3000/session41489. Saved data unchanged.
+
+## Layout chips and sort alignment — September 20, 2026
+
+Replaced Layout dropdown with Network/By team pressed-state chips. Grid sort now uses a centered shared chevron. Browser confirmed By team activates with47nodes, name sorting updates, arrow vertical center delta0px, mobile width390 without overflow, and Map/Grid return retains layout. Production build passed; no data/model behavior changed. Current preview port3000/session94556.

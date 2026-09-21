@@ -1303,19 +1303,6 @@ button.map-open-button {
   }
 }
 
-.map-layout-select {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  color: #52634b;
-}
-.map-layout-select select {
-  width: auto;
-  border-radius: 999px;
-  min-height: 40px;
-  padding: 6px 28px 6px 12px;
-}
 .map-team-group [role="button"] {
   cursor: pointer;
 }
@@ -1327,11 +1314,17 @@ button.map-open-button {
   .work-map .map-heading-actions {
     flex-wrap: wrap;
   }
-  .map-layout-select {
+  .map-layout-chips {
     margin-right: auto;
   }
 }
 
-.map-layout-input { position: relative; display: inline-flex; align-items: center; }
-.map-layout-input select { appearance: none; padding-right: 36px; }
-.map-layout-arrow { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; pointer-events: none; }
+
+.map-layout-chips { display: flex; align-items: center; gap: 6px; color: #52634b; font-size: 0.8rem; }
+.map-layout-chips > span { margin-right: 2px; }
+.map-layout-chips button { border: 1px solid #d7e2cf; border-radius: 999px; background: white; color: #52634b; padding: 8px 12px; min-height: 36px; }
+.map-layout-chips button[aria-pressed="true"] { background: #e8f3e2; border-color: #368727; color: #245b1b; font-weight: 700; }
+.map-layout-chips button:hover { background: #eef5e9; }
+.map-select-input { position: relative; display: inline-flex; align-items: center; }
+.work-grid-toolbar .map-select-input select { appearance: none; padding-right: 34px; }
+.map-select-arrow { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; pointer-events: none; }

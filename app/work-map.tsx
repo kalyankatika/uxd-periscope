@@ -554,25 +554,20 @@ export default function WorkMap({
         </div>
         <div className="map-heading-actions">
           {viewMode === "map" && preset !== "reporting" && (
-            <label className="map-layout-select">
-              Layout
-              <span className="map-layout-input">
-              <select
-                aria-label="Map layout"
-                value={mapLayout}
-                onChange={(e) => {
-                  setMapLayout(e.target.value as "network" | "team");
-                  setCamera(null);
-                  setHoveredId(null);
-                  setPositions({});
-                }}
-              >
-                <option value="network">Network</option>
-                <option value="team">By team</option>
-              </select>
-              <UiIcon name="chevronDown" className="map-layout-arrow" />
-              </span>
-            </label>
+            <div className="map-layout-chips" role="group" aria-label="Map layout">
+              <span>Layout</span>
+              {(["network", "team"] as const).map((layout) => (
+                <button key={layout} aria-pressed={mapLayout === layout}
+                  onClick={() => {
+                    setMapLayout(layout);
+                    setCamera(null);
+                    setHoveredId(null);
+                    setPositions({});
+                  }}>
+                  {layout === "network" ? "Network" : "By team"}
+                </button>
+              ))}
+            </div>
           )}
           <div className="map-view-switch" role="group" aria-label="Work view">
             <button
