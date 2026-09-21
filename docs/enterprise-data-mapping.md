@@ -6,6 +6,19 @@ Periscope currently runs locally. The example organization and demo video contai
 
 The repository includes a complete [fictional UXD data pack](../examples/uxd-demo/README.md) with importable people/projects CSVs and an equivalent canonical `workspace.json`. Use the CSV pair in the current UI. The JSON file is a developer reference for the existing Plan model, not a supported generic JSON upload or the proposed connector envelope. The pack's metadata is kept in a separate manifest so it cannot be mistaken for imported project fields.
 
+## Future enterprise requirement: read-only source-backed data
+
+Captured from the user on September 20, 2026. This is a future product requirement, not an implemented permission mode.
+
+- Provide an enterprise read-only experience for imported/source-backed people, reporting structures, projects, priorities and related data. Authoritative changes are made in the originating platforms.
+- Replace source-backed create/edit/delete and hierarchy-move actions with “Open in source” links where a verified source URL is available. Do not silently write back or create local overrides of source-owned fields.
+- Preserve source system, stable source record ID, field authority where sources overlap, and last successful refresh metadata. Show stale or unavailable data honestly; opening the source does not imply a refresh has happened.
+- Enforce read-only access at the server/API boundary as well as in the interface. Ingestion uses separately authorized service access; viewer access cannot mutate imported records. Source platforms retain their own edit permissions.
+- Keep fictional demo changes session-only. Existing local/manual editing remains a separate mode; it must never be mistaken for changes to connected enterprise records. Any future scenarios or annotations must be explicitly separate from source facts.
+- Connector mappings and refresh behavior require actual enterprise sources and agreed contracts. No live synchronization or read-only enforcement is currently implemented.
+
+Acceptance for the future mode: source-backed mutation requests are rejected; viewers can navigate and inspect permitted data; verified source links open the matching record; refreshed data reflects upstream changes without local edits; demo/manual mode is visibly distinct.
+
 ## Source contract
 
 Use an authoritative directory for people and reporting relationships, and an authoritative project register for projects. Include the complete project register in the source export; the selected quarter filters views without deleting projects outside that period.

@@ -135,3 +135,7 @@ Replaced Layout dropdown with Network/By team pressed-state chips. Grid sort now
 ## Team zoom navigation research — September 20, 2026
 
 Captured industry evidence and proposed return behavior in docs/graph-zoom-navigation.md. Current team-header zoom changes camera only, so selection Back may not appear; Fit is available but unclear. Recommended visible Back to teams for camera return, Fit view for current content, and separate Whole organization for scope reset. Includes mobile fit distinction, keyboard behavior and acceptance checks. Documentation only; implementation pending.
+
+## Future source authority requirement — September 20, 2026
+
+User requests potential enterprise read-only viewing, with modifications performed in originating platforms. Captured in docs/enterprise-data-mapping.md: source links/identity/freshness, API-enforced viewer restrictions, separate authorized ingestion, and explicit separation from fictional/manual modes. Documentation only; current local editing unchanged and no read-only enforcement or connector claimed.
