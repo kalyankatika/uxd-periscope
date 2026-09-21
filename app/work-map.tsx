@@ -12,6 +12,7 @@ import type { Initiative, Plan } from "@/lib/domain";
 import WorkGrid from "./work-grid";
 import { scopeGraph } from "@/lib/graph-scope";
 import { layoutTeamGraph } from "@/lib/team-layout";
+import { fillGroupWidth } from "@/lib/group-layout";
 import { layoutPriorityGraph } from "@/lib/priority-layout";
 import { graphTrail, visitGraphNode } from "@/lib/graph-navigation";
 import { layoutReportingGraph } from "@/lib/reporting-layout";
@@ -192,8 +193,8 @@ export default function WorkMap({
   );
   const workLayout = useMemo(() => layoutGraph(graph), [graph]);
   const teamLayout = useMemo(
-    () => (mapLayout === "priority" ? layoutPriorityGraph : layoutTeamGraph)(visible, plan, size.width < 550 ? 1 : 3),
-    [visible, plan, size.width, mapLayout],
+    () => fillGroupWidth((mapLayout === "priority" ? layoutPriorityGraph : layoutTeamGraph)(visible, plan, size.width < 550 ? 1 : 3), size.width, size.height),
+    [visible, plan, size.width, size.height, mapLayout],
   );
   const byTeam = mapLayout !== "network" && preset !== "reporting";
   const layout = useMemo(
@@ -225,23 +226,12 @@ export default function WorkMap({
     () => new Map(graph.nodes.map((n) => [n.id, n])),
     [graph.nodes],
   );
-  const fitted = useMemo(
-    () =>
-      byTeam && size.width < 550
-        ? { x: 20, y: 110, k: Math.max(0.2, (size.width - 40) / 500) }
-        : fitGraph(
-            byTeam
-              ? teamLayout.groups.flatMap((g) => [
-                  { x: g.x, y: g.y, radius: 0 },
-                  { x: g.x + g.width, y: g.y + g.height, radius: 0 },
-                ])
-              : nodes,
-            size.width,
-            byTeam ? Math.max(200, size.height - 50) : size.height,
-          ),
-    [nodes, size, byTeam, teamLayout],
-  );
-  const camera = cameraOverride || (byTeam && size.width >= 550 ? { ...fitted, y: fitted.y + 40 } : fitted);
+  const fitted = useMemo(() => {
+    if (!byTeam || !teamLayout.groups.length) return fitGraph(nodes, size.width, size.height);
+    const right = Math.max(...teamLayout.groups.map(g => g.x + g.width));
+    return { x: 16, y: 110, k: Math.max(.01, (size.width - 32) / right) };
+  }, [nodes, size, byTeam, teamLayout]);
+  const camera = cameraOverride || fitted;
   const cameraRef = useRef(camera);
   useEffect(() => {
     cameraRef.current = camera;

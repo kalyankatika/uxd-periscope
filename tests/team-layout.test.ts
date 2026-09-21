@@ -178,3 +178,15 @@ test("reporting root occupies the top-left cell regardless of ID order", () => {
   const mobile = layoutTeamGraph(graphFor(plan), plan, 1);
   assert.equal(mobile.groups[0].leaderId, "head");
 });
+
+test("shared priorities occupy a full-width final row", () => {
+  const plan = fixture();
+  for (const columns of [1, 3] as const) {
+    const result = layoutTeamGraph(graphFor(plan), plan, columns);
+    const footer = result.groups.find(g => g.id === "priorities")!;
+    const teams = result.groups.filter(g => g.id !== "priorities");
+    assert.equal(footer.x, 0);
+    assert.equal(footer.width, 500 * columns + 56 * (columns - 1));
+    assert.ok(teams.every(g => g.y + g.height < footer.y));
+  }
+});

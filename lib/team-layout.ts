@@ -95,8 +95,9 @@ export function layoutTeamGraph(
   const cellHeight = 105;
   const width = 500;
   let y = 0;
-  for (let row = 0; row < entries.length; row += columns) {
-    const rowEntries = entries.slice(row, row + columns);
+  const teamEntries = entries.filter(([id]) => id !== "priorities");
+  for (let row = 0; row < teamEntries.length; row += columns) {
+    const rowEntries = teamEntries.slice(row, row + columns);
     const peopleRows = Math.max(...rowEntries.map(([, b]) =>
       Math.ceil(b.nodes.filter(n => n.kind !== "project").length / 3)));
     const projectRows = Math.max(...rowEntries.map(([, b]) =>
@@ -153,6 +154,20 @@ export function layoutTeamGraph(
 
     });
     y += rowHeight + 56;
+  }
+  const priorities = buckets.get("priorities")?.nodes;
+  if (priorities?.length) {
+    const nodeColumns = columns * 3;
+    const fullWidth = width * columns + 56 * (columns - 1);
+    groups.push({ id: "priorities", label: "Priorities", subtitle: "Shared across teams",
+      x: 0, y, width: fullWidth, height: 130 + Math.ceil(priorities.length / nodeColumns) * cellHeight,
+      projectCount: 0, peopleCount: 0 });
+    priorities.forEach((node, index) => {
+      const rowCount = Math.min(nodeColumns, priorities.length - Math.floor(index / nodeColumns) * nodeColumns);
+      nodes.push({ ...node, groupId: "priorities",
+        x: fullWidth / 2 + ((index % nodeColumns) - (rowCount - 1) / 2) * cellWidth,
+        y: y + 130 + Math.floor(index / nodeColumns) * cellHeight, radius: 13 });
+    });
   }
   return { nodes, groups };
 }
