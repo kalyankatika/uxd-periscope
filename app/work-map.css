@@ -794,8 +794,30 @@ button.map-open-button {
   background: #f3f7ed;
 }
 .map-accessible-list {
-  border-top: 1px solid #dfe6d8;
-  padding: 22px;
+  position: absolute;
+  z-index: 8;
+  right: 12px;
+  bottom: 76px;
+  width: min(380px, calc(100% - 24px));
+  max-height: calc(100% - 100px);
+  overflow: auto;
+  border: 1px solid #dfe6d8;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 30px #0004;
+  padding: 16px;
+}
+.map-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.map-list-heading button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
 }
 .map-accessible-list h3 {
   margin: 0;
@@ -809,7 +831,7 @@ button.map-open-button {
 }
 .map-accessible-list > div:last-child {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 0 24px;
 }
 .map-expanded {
@@ -830,10 +852,7 @@ button.map-open-button {
   height: 100%;
   min-height: 0;
 }
-.map-expanded .map-accessible-list {
-  max-height: 180px;
-  overflow: auto;
-}
+
 .map-expanded .map-heading {
   flex-shrink: 0;
 }
@@ -1312,3 +1331,7 @@ button.map-open-button {
     margin-right: auto;
   }
 }
+
+.map-layout-input { position: relative; display: inline-flex; align-items: center; }
+.map-layout-input select { appearance: none; padding-right: 36px; }
+.map-layout-arrow { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; pointer-events: none; }

@@ -123,6 +123,15 @@ export default function WorkMap({
     Record<string, { x: number; y: number }>
   >({});
   const [listOpen, setListOpen] = useState(false);
+  const browseButtonRef = useRef<HTMLButtonElement>(null);
+  const listCloseRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (listOpen) listCloseRef.current?.focus();
+  }, [listOpen]);
+  function closeList() {
+    setListOpen(false);
+    browseButtonRef.current?.focus();
+  }
   const svg = useRef<SVGSVGElement>(null);
   const wrapper = useRef<HTMLDivElement>(null);
   const panel = useRef<HTMLElement>(null);
@@ -361,6 +370,7 @@ export default function WorkMap({
   }, [expanded]);
 
   function selectNode(id: string, _reveal = false) {
+    if (listOpen) closeList();
     if (!allNodeMap.has(id)) return;
 
     setTrail((previous) => visitGraphNode(previous, id, graphIds));
@@ -546,6 +556,7 @@ export default function WorkMap({
           {viewMode === "map" && preset !== "reporting" && (
             <label className="map-layout-select">
               Layout
+              <span className="map-layout-input">
               <select
                 aria-label="Map layout"
                 value={mapLayout}
@@ -559,6 +570,8 @@ export default function WorkMap({
                 <option value="network">Network</option>
                 <option value="team">By team</option>
               </select>
+              <UiIcon name="chevronDown" className="map-layout-arrow" />
+              </span>
             </label>
           )}
           <div className="map-view-switch" role="group" aria-label="Work view">
@@ -1198,6 +1211,8 @@ export default function WorkMap({
                     All labels
                   </button>
                   <button
+                    ref={browseButtonRef}
+                    aria-controls={`${dotsId}-list`}
                     aria-expanded={listOpen}
                     onClick={() => setListOpen(!listOpen)}
                   >
@@ -1205,6 +1220,25 @@ export default function WorkMap({
                   </button>
                 </div>
               </div>
+              {listOpen && (
+                <div id={`${dotsId}-list`} className="map-accessible-list"
+                  role="region" aria-label="Map items"
+                  onKeyDown={(event) => {
+                    if (event.key === "Escape") {
+                      event.stopPropagation();
+                      closeList();
+                    }
+                  }}>
+                  <div className="map-list-heading">
+                    <h3>Map items</h3>
+                    <button ref={listCloseRef} aria-label="Close map items" onClick={closeList}>
+                      <UiIcon name="close" className="action-icon" />
+                    </button>
+                  </div>
+                  <p>Select an item to view its details and connections.</p>
+                  <div>{visible.nodes.map((n) => nodeButton(n))}</div>
+                </div>
+              )}
               <p id={`${dotsId}-help`} className="map-help">
                 Drag to pan · Scroll to zoom · Select an item for details
               </p>
@@ -1516,15 +1550,7 @@ export default function WorkMap({
         </span>
         <button onClick={reset}>Reset view</button>
       </div>
-      {listOpen && (
-        <div className="map-accessible-list">
-          <div>
-            <h3>Map items</h3>
-            <p>Select an item to view its details and connections.</p>
-          </div>
-          <div>{visible.nodes.map((n) => nodeButton(n))}</div>
-        </div>
-      )}
+
     </section>
   );
 }

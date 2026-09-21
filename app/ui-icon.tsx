@@ -1,4 +1,5 @@
 const icons = {
+  chevronDown: <path d="m6 9 6 6 6-6" />,
   arrowRight: (
     <>
       <path d="M4 12h16m-6-6 6 6-6 6" />
