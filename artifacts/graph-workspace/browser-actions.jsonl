@@ -1,0 +1,74 @@
+{"at": "2026-09-21T01:47:12.701923+00:00", "args": ["open", "http://127.0.0.1:3000/?view=graph"], "exitCode": 0, "output": "browser-logs/001-open.txt"}
+{"at": "2026-09-21T01:47:12.909042+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/002-snapshot.txt"}
+{"at": "2026-09-21T01:47:23.248724+00:00", "args": ["scrollintoview", "@e59"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:47:23.441859+00:00", "args": ["click", "@e59"], "exitCode": 0, "output": "browser-logs/003-click.txt"}
+{"at": "2026-09-21T01:47:23.651007+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/004-snapshot.txt"}
+{"at": "2026-09-21T01:47:33.689764+00:00", "args": ["scrollintoview", "@e30"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:47:33.868228+00:00", "args": ["click", "@e30"], "exitCode": 0, "output": "browser-logs/005-click.txt"}
+{"at": "2026-09-21T01:47:34.073190+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/006-snapshot.txt"}
+{"at": "2026-09-21T01:47:42.414240+00:00", "args": ["scrollintoview", "@e36"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:47:42.582399+00:00", "args": ["click", "@e36"], "exitCode": 0, "output": "browser-logs/007-click.txt"}
+{"at": "2026-09-21T01:47:42.785732+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/008-snapshot.txt"}
+{"at": "2026-09-21T01:47:49.336525+00:00", "args": ["scrollintoview", "@e26"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:47:49.511415+00:00", "args": ["click", "@e26"], "exitCode": 0, "output": "browser-logs/009-click.txt"}
+{"at": "2026-09-21T01:47:49.712384+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/010-snapshot.txt"}
+{"at": "2026-09-21T01:48:05.258198+00:00", "args": ["scrollintoview", "@e2"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:48:05.430434+00:00", "args": ["click", "@e2"], "exitCode": 0, "output": "browser-logs/011-click.txt"}
+{"at": "2026-09-21T01:48:05.630721+00:00", "args": ["scrollintoview", ".graph-workspace-tools summary"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:48:05.804064+00:00", "args": ["click", ".graph-workspace-tools summary"], "exitCode": 0, "output": "browser-logs/012-click.txt"}
+{"at": "2026-09-21T01:48:06.008735+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/013-snapshot.txt"}
+{"at": "2026-09-21T01:48:12.574277+00:00", "args": ["scrollintoview", "@e60"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:48:12.745628+00:00", "args": ["click", "@e60"], "exitCode": 0, "output": "browser-logs/014-click.txt"}
+{"at": "2026-09-21T01:48:12.951430+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/015-snapshot.txt"}
+{"at": "2026-09-21T01:48:25.469396+00:00", "args": ["scrollintoview", "@e12"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:48:25.642815+00:00", "args": ["click", "@e12"], "exitCode": 0, "output": "browser-logs/016-click.txt"}
+{"at": "2026-09-21T01:48:25.858585+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/017-snapshot.txt"}
+{"at": "2026-09-21T01:48:26.101800+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/graph-workspace/desktop.png"], "exitCode": 0, "output": "browser-logs/018-screenshot.txt"}
+{"at": "2026-09-21T01:48:56.962309+00:00", "args": ["scrollintoview", "@e29"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:48:57.130766+00:00", "args": ["click", "@e29"], "exitCode": 0, "output": "browser-logs/019-click.txt"}
+{"at": "2026-09-21T01:48:57.335631+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/020-snapshot.txt"}
+{"at": "2026-09-21T01:49:05.329841+00:00", "args": ["scrollintoview", "@e31"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:49:05.503645+00:00", "args": ["click", "@e31"], "exitCode": 0, "output": "browser-logs/021-click.txt"}
+{"at": "2026-09-21T01:49:05.707678+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/022-snapshot.txt"}
+{"at": "2026-09-21T01:49:17.981516+00:00", "args": ["scrollintoview", "@e8"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:49:18.156039+00:00", "args": ["fill", "@e8", "Product Design Lead"], "exitCode": 0, "output": "browser-logs/023-fill.txt"}
+{"at": "2026-09-21T01:49:18.354657+00:00", "args": ["scrollintoview", "@e5"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:49:18.560665+00:00", "args": ["click", "@e5"], "exitCode": 0, "output": "browser-logs/024-click.txt"}
+{"at": "2026-09-21T01:49:18.761595+00:00", "args": ["get", "text", ".map-inspector"], "exitCode": 0, "output": "browser-logs/025-get.txt"}
+{"at": "2026-09-21T01:49:18.968652+00:00", "args": ["set", "viewport", "390", "844"], "exitCode": 0, "output": "browser-logs/026-set.txt"}
+{"at": "2026-09-21T01:49:19.164390+00:00", "args": ["eval", "JSON.stringify({viewport:innerWidth,width:document.documentElement.scrollWidth})"], "exitCode": 0, "output": "browser-logs/027-eval.txt"}
+{"at": "2026-09-21T01:49:19.387363+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/graph-workspace/mobile.png"], "exitCode": 0, "output": "browser-logs/028-screenshot.txt"}
+{"at": "2026-09-21T01:50:08.444230+00:00", "args": ["open", "http://127.0.0.1:3000/?view=graph"], "exitCode": 0, "output": "browser-logs/029-open.txt"}
+{"at": "2026-09-21T01:50:08.627501+00:00", "args": ["scrollintoview", ".graph-workspace-tools summary"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:50:08.796233+00:00", "args": ["click", ".graph-workspace-tools summary"], "exitCode": 0, "output": "browser-logs/030-click.txt"}
+{"at": "2026-09-21T01:50:09.010308+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/031-snapshot.txt"}
+{"at": "2026-09-21T01:50:20.830587+00:00", "args": ["scrollintoview", "@e90"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:50:21.014019+00:00", "args": ["click", "@e90"], "exitCode": 0, "output": "browser-logs/032-click.txt"}
+{"at": "2026-09-21T01:50:21.223760+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/033-snapshot.txt"}
+{"at": "2026-09-21T01:50:33.675610+00:00", "args": ["scrollintoview", "@e10"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:50:33.851470+00:00", "args": ["click", "@e10"], "exitCode": 0, "output": "browser-logs/034-click.txt"}
+{"at": "2026-09-21T01:50:34.072332+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/graph-workspace/mobile.png"], "exitCode": 0, "output": "browser-logs/035-screenshot.txt"}
+{"at": "2026-09-21T01:50:34.276979+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/036-set.txt"}
+{"at": "2026-09-21T01:50:34.484357+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/037-snapshot.txt"}
+{"at": "2026-09-21T01:50:41.520218+00:00", "args": ["scrollintoview", "@e78"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:50:41.702101+00:00", "args": ["click", "@e78"], "exitCode": 0, "output": "browser-logs/038-click.txt"}
+{"at": "2026-09-21T01:50:41.924208+00:00", "args": ["find", "role", "button", "click", "--name", "Open project details"], "exitCode": 0, "output": "browser-logs/039-find.txt"}
+{"at": "2026-09-21T01:50:42.124917+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/040-snapshot.txt"}
+{"at": "2026-09-21T01:50:52.924217+00:00", "args": ["scrollintoview", "@e14"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:50:53.097634+00:00", "args": ["click", "@e14"], "exitCode": 0, "output": "browser-logs/041-click.txt"}
+{"at": "2026-09-21T01:50:53.306103+00:00", "args": ["find", "role", "button", "click", "--name", "View in map"], "exitCode": 0, "output": "browser-logs/042-find.txt"}
+{"at": "2026-09-21T01:50:53.498570+00:00", "args": ["get", "text", ".graph-workspace-nav"], "exitCode": 0, "output": "browser-logs/043-get.txt"}
+{"at": "2026-09-21T01:50:53.695674+00:00", "args": ["get", "text", ".map-inspector h3"], "exitCode": 0, "output": "browser-logs/044-get.txt"}
+{"at": "2026-09-21T01:50:53.982671+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/graph-workspace/desktop.png"], "exitCode": 0, "output": "browser-logs/045-screenshot.txt"}
+{"at": "2026-09-21T01:50:54.161641+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/046-errors.txt"}
+{"at": "2026-09-21T01:51:05.947435+00:00", "args": ["find", "role", "button", "click", "--name", "Expand map"], "exitCode": 0, "output": "browser-logs/047-find.txt"}
+{"at": "2026-09-21T01:51:06.139296+00:00", "args": ["scrollintoview", ".graph-workspace-tools summary"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T01:51:06.300983+00:00", "args": ["click", ".graph-workspace-tools summary"], "exitCode": 0, "output": "browser-logs/048-click.txt"}
+{"at": "2026-09-21T01:51:06.502812+00:00", "args": ["find", "role", "button", "click", "--name", "Overview"], "exitCode": 0, "output": "browser-logs/049-find.txt"}
+{"at": "2026-09-21T01:51:06.694919+00:00", "args": ["eval", "JSON.stringify({title:document.querySelector(\"h1\").textContent,bodyOverflow:document.body.style.overflow,expanded:document.querySelectorAll(\".map-expanded\").length})"], "exitCode": 0, "output": "browser-logs/050-eval.txt"}
+{"at": "2026-09-21T01:51:06.903551+00:00", "args": ["find", "role", "button", "click", "--name", "Back to graph"], "exitCode": 0, "output": "browser-logs/051-find.txt"}
+{"at": "2026-09-21T01:51:07.100433+00:00", "args": ["get", "text", ".graph-workspace-nav"], "exitCode": 0, "output": "browser-logs/052-get.txt"}
+{"at": "2026-09-21T01:51:31.400311+00:00", "args": ["find", "role", "button", "click", "--name", "Standard workspace"], "exitCode": 0, "output": "browser-logs/053-find.txt"}
+{"at": "2026-09-21T01:51:31.588404+00:00", "args": ["eval", "JSON.stringify({title:document.querySelector(\"h1\").textContent,url:location.search,nav:document.querySelector(\"nav[aria-label=\\\"Main navigation\\\"]\").innerText})"], "exitCode": 0, "output": "browser-logs/054-eval.txt"}
+{"at": "2026-09-21T01:51:31.781472+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/055-errors.txt"}
+{"at": "2026-09-21T01:51:32.042405+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/056-close.txt"}

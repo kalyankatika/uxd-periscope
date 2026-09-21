@@ -10,6 +10,7 @@ import {
 } from "react";
 import type { Initiative, Plan } from "@/lib/domain";
 import WorkGrid from "./work-grid";
+import { graphTrail, visitGraphNode } from "@/lib/graph-navigation";
 import { layoutReportingGraph } from "@/lib/reporting-layout";
 import UiIcon from "./ui-icon";
 import { graphGridItems, type GridSort } from "@/lib/graph-grid";
@@ -80,6 +81,9 @@ function labelLines(text: string): string[] {
   return [line, rest.length > 25 ? rest.slice(0, 23) + "…" : rest];
 }
 
+export type WorkspaceTool =
+  "overview" | "teams" | "compare" | "capacity" | "cutline" | "people";
+
 export default function WorkMap({
   plan,
   start,
@@ -87,8 +91,11 @@ export default function WorkMap({
   initialProjectId,
   onProject,
   onPerson,
+  onAddReport,
   onCompare,
   onExport,
+  graphWorkspace = false,
+  onWorkspaceTool,
 }: {
   plan: Plan;
   start: string;
@@ -96,12 +103,20 @@ export default function WorkMap({
   initialProjectId?: string;
   onProject: (p: Initiative) => void;
   onPerson: (id: string) => void;
+  onAddReport?: (id: string) => void;
   onCompare: () => void;
   onExport: () => void;
+  graphWorkspace?: boolean;
+  onWorkspaceTool?: (view: WorkspaceTool) => void;
 }) {
   const [selectedId, setSelectedId] = useState<string | null>(() =>
     initialProjectId ? graphId("project", initialProjectId) : null,
   );
+  const [trail, setTrail] = useState<string[]>(() =>
+    initialProjectId ? [graphId("project", initialProjectId)] : [],
+  );
+  const [lastProjectRequest, setLastProjectRequest] =
+    useState(initialProjectId);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [preset, setPreset] = useState<GraphPreset>("all");
@@ -133,7 +148,37 @@ export default function WorkMap({
   } | null>(null);
   const dotsId = useId().replaceAll(":", "");
   const graph = useMemo(() => buildGraph(plan, start, end), [plan, start, end]);
-  const selected = graph.nodes.find((n) => n.id === selectedId);
+  const graphIds = useMemo(
+    () => new Set(graph.nodes.map((node) => node.id)),
+    [graph],
+  );
+  // Consume an explicit drawer navigation request without remounting the map.
+  // Guarding on the previous prop prevents effects from reselecting after edits.
+  if (graphWorkspace && initialProjectId !== lastProjectRequest) {
+    setLastProjectRequest(initialProjectId);
+    const id = initialProjectId ? graphId("project", initialProjectId) : null;
+    if (id && graphIds.has(id)) {
+      setSelectedId(id);
+      setTrail((previous) => visitGraphNode(previous, id, graphIds));
+      setLocal(true);
+      setDepth(1);
+      setPreset("all");
+      setVisibleKinds(kinds);
+      setQuery("");
+      setHoveredId(null);
+      setCamera(null);
+      setViewMode("map");
+    }
+  }
+  const currentTrail = graphTrail(trail, graphIds);
+  const effectiveSelectedId = graphWorkspace
+    ? (currentTrail.at(-1) ?? null)
+    : selectedId;
+  const selected = graph.nodes.find((node) => node.id === effectiveSelectedId);
+  const breadcrumbs = currentTrail.flatMap((id) => {
+    const node = graph.nodes.find((item) => item.id === id);
+    return node ? [node] : [];
+  });
   const visible = useMemo(
     () =>
       filterGraph(graph, {
@@ -247,11 +292,15 @@ export default function WorkMap({
   useEffect(() => {
     const element = wrapper.current;
     if (!element) return;
+    let lastWidth = 0;
+    let lastHeight = 0;
     const observer = new ResizeObserver(([entry]) => {
-      setSize({
-        width: entry.contentRect.width,
-        height: entry.contentRect.height,
-      });
+      const { width, height } = entry.contentRect;
+      if (!width || !height) return;
+      if (width === lastWidth && height === lastHeight) return;
+      lastWidth = width;
+      lastHeight = height;
+      setSize({ width, height });
       setCamera(null);
     });
     observer.observe(element);
@@ -292,7 +341,11 @@ export default function WorkMap({
   }, [expanded]);
 
   function selectNode(id: string, reveal = false) {
+    if (!allNodeMap.has(id)) return;
     setSelectedId(id);
+    if (graphWorkspace) {
+      setTrail((previous) => visitGraphNode(previous, id, graphIds));
+    }
     setHoveredId(null);
     if (!local) setDepth(allNodeMap.get(id)?.kind === "leader" ? 2 : 1);
     if (reveal) {
@@ -306,11 +359,19 @@ export default function WorkMap({
       }
       setVisibleKinds(kinds);
     }
-    if (local || reveal) setCamera(null);
+    if (graphWorkspace) {
+      setLocal(true);
+      setDepth(1);
+      setPreset("all");
+      setVisibleKinds(kinds);
+      setQuery("");
+    }
+    if (local || reveal || graphWorkspace) setCamera(null);
     if (preset === "reporting") setPositions({});
   }
   function reset() {
     setSelectedId(null);
+    setTrail([]);
     setHoveredId(null);
     setQuery("");
     setPreset("all");
@@ -325,6 +386,7 @@ export default function WorkMap({
     setPositions({});
     setLocal(false);
     setSelectedId(null);
+    setTrail([]);
     setHoveredId(null);
     setQuery("");
     setCamera(null);
@@ -383,6 +445,7 @@ export default function WorkMap({
       if (d.nodeId) selectNode(d.nodeId);
       else {
         setSelectedId(null);
+        setTrail([]);
         setLocal(false);
         setHoveredId(null);
       }
@@ -421,13 +484,13 @@ export default function WorkMap({
   return (
     <section
       ref={panel}
-      className={`work-map ${expanded ? "map-expanded" : ""}`}
+      className={`work-map ${graphWorkspace ? "graph-workspace-map" : ""} ${expanded ? "map-expanded" : ""}`}
       aria-label="Interactive work map"
       onKeyDown={(e) => {
         if (!expanded || e.key !== "Tab") return;
         const focusable = [
           ...(panel.current?.querySelectorAll<HTMLElement>(
-            'button:not(:disabled), input, select, [tabindex="0"]',
+            'button:not(:disabled), input, select, summary, [tabindex="0"]',
           ) || []),
         ].filter((el) => el.getClientRects().length);
         const first = focusable[0],
@@ -441,16 +504,98 @@ export default function WorkMap({
         }
       }}
     >
+      {graphWorkspace && (
+        <div className="graph-workspace-nav">
+          <nav aria-label="Graph navigation">
+            <button
+              aria-label="Back in graph"
+              disabled={!breadcrumbs.length}
+              onClick={() =>
+                breadcrumbs.length > 1
+                  ? selectNode(breadcrumbs[breadcrumbs.length - 2].id, true)
+                  : reset()
+              }
+            >
+              <UiIcon name="arrowLeft" className="action-icon" />
+            </button>
+            <ol>
+              <li>
+                <button
+                  onClick={reset}
+                  aria-current={!selected ? "page" : undefined}
+                >
+                  Work map
+                </button>
+              </li>
+              {breadcrumbs.map((node, index) => (
+                <li key={node.id}>
+                  <UiIcon name="arrowRight" className="action-icon" />
+                  <button
+                    title={node.label}
+                    aria-current={
+                      index === breadcrumbs.length - 1 && selected
+                        ? "page"
+                        : undefined
+                    }
+                    onClick={() => selectNode(node.id, true)}
+                  >
+                    {node.label}
+                  </button>
+                </li>
+              ))}
+            </ol>
+          </nav>
+          {onWorkspaceTool && (
+            <details className="graph-workspace-tools">
+              <summary>
+                Workspace tools{" "}
+                <UiIcon name="arrowDown" className="action-icon" />
+              </summary>
+              <div>
+                <p>Entire workspace</p>
+                {(
+                  [
+                    ["overview", "Overview"],
+                    ["capacity", "Capacity"],
+                    ["cutline", "Project plan"],
+                    ["people", "People & imports"],
+                    ["compare", "Projects"],
+                    ["teams", "Teams & reporting"],
+                  ] as const
+                ).map(([view, label]) => (
+                  <button
+                    key={view}
+                    onClick={(event) => {
+                      event.currentTarget
+                        .closest("details")
+                        ?.removeAttribute("open");
+                      setExpanded(false);
+                      onWorkspaceTool(view);
+                    }}
+                  >
+                    {label}
+                    <UiIcon name="arrowUpRight" className="action-icon" />
+                  </button>
+                ))}
+              </div>
+            </details>
+          )}
+        </div>
+      )}
       <div className="map-heading">
         <div>
-          <p className="section-kicker">RELATIONSHIPS</p>
-          <h2>
-            {preset === "reporting"
-              ? "Reporting hierarchy"
-              : viewMode === "map"
-                ? "Organization graph"
-                : "Organization grid"}
-          </h2>
+          {!graphWorkspace && (
+            <>
+              <p className="section-kicker">RELATIONSHIPS</p>
+              <h2>
+                {preset === "reporting"
+                  ? "Reporting hierarchy"
+                  : viewMode === "map"
+                    ? "Organization graph"
+                    : "Organization grid"}
+              </h2>
+            </>
+          )}
           <p>
             {projectCount} projects <span>·</span> {plan.people.length} people{" "}
             <span>·</span>{" "}
@@ -472,12 +617,14 @@ export default function WorkMap({
               <UiIcon name="compare" className="map-view-icon" /> Grid
             </button>
           </div>
-          <button onClick={onCompare}>
-            Compare projects{" "}
-            <span aria-hidden="true">
-              <UiIcon name="arrowUpRight" className="action-icon" />
-            </span>
-          </button>
+          {!graphWorkspace && (
+            <button onClick={onCompare}>
+              Compare projects{" "}
+              <span aria-hidden="true">
+                <UiIcon name="arrowUpRight" className="action-icon" />
+              </span>
+            </button>
+          )}
           <button
             aria-label="Export connected data"
             title="Export connected data"
@@ -597,7 +744,7 @@ export default function WorkMap({
             <WorkGrid
               items={gridItems}
               total={visible.nodes.length}
-              selectedId={selectedId}
+              selectedId={effectiveSelectedId}
               sort={gridSort}
               onSort={setGridSort}
               onSelect={selectNode}
@@ -668,6 +815,7 @@ export default function WorkMap({
                   if (e.key === "0") setCamera(null);
                   if (e.key === "Escape") {
                     setSelectedId(null);
+                    setTrail([]);
                     setLocal(false);
                   }
                 }}
@@ -786,7 +934,7 @@ export default function WorkMap({
                         role="button"
                         tabIndex={0}
                         aria-label={`${singular[node.kind]}: ${node.label}${node.attention ? ", needs attention" : ""}. Show connections.`}
-                        aria-pressed={selectedId === node.id}
+                        aria-pressed={effectiveSelectedId === node.id}
                         className={`map-node ${node.kind} ${active ? "is-active" : ""}`}
                         style={{ opacity: dim ? 0.16 : 1 }}
                         onMouseEnter={() => {
@@ -1005,6 +1153,7 @@ export default function WorkMap({
                   aria-label="Clear selected item"
                   onClick={() => {
                     setSelectedId(null);
+                    setTrail([]);
                     setLocal(false);
                     setHoveredId(null);
                     setCamera(null);
@@ -1148,11 +1297,23 @@ export default function WorkMap({
                       onPerson(person.id);
                     }}
                   >
-                    View team projects{" "}
+                    {graphWorkspace ? "Edit person" : "View team projects"}{" "}
                     <span aria-hidden="true">
                       <UiIcon name="arrowUpRight" className="action-icon" />
                     </span>
                   </button>
+                  {graphWorkspace && onAddReport && (
+                    <button
+                      className="map-open-button"
+                      onClick={() => {
+                        setExpanded(false);
+                        onAddReport(person.id);
+                      }}
+                    >
+                      <UiIcon name="plus" className="action-icon" /> Add direct
+                      report
+                    </button>
+                  )}
                 </>
               )}
               {selected.kind === "priority" && (

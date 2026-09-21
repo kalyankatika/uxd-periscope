@@ -82,6 +82,7 @@ export default function Planner({ initial }: { initial: Plan }) {
     [quarter, setQuarter] = useState("2026-10-01"),
     [whatIf, setWhatIf] = useState(false),
     [homeVersion, setHomeVersion] = useState(0),
+    [graphWorkspace, setGraphWorkspace] = useState(false),
     [view, setView] = useState<
       | "overview"
       | "teams"
@@ -101,6 +102,24 @@ export default function Planner({ initial }: { initial: Plan }) {
       replace: boolean;
       inspection: CsvInspection;
     } | null>(null);
+  useEffect(() => {
+    setGraphWorkspace(
+      new URLSearchParams(window.location.search).get("view") === "graph",
+    );
+  }, []);
+  function switchExperience(enabled: boolean) {
+    setGraphWorkspace(enabled);
+    setView("connections");
+    const url = new URL(window.location.href);
+    if (enabled) url.searchParams.set("view", "graph");
+    else url.searchParams.delete("view");
+    window.history.replaceState(null, "", url);
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+  function openWorkspaceTool(next: keyof typeof viewLabels) {
+    setView(next);
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
   const plan = useExample ? example : workspace;
   const navigation = useRef<HTMLElement>(null);
   const pageHeader = useRef<HTMLElement>(null);
@@ -298,22 +317,36 @@ export default function Planner({ initial }: { initial: Plan }) {
               "cutline",
               "people",
             ] as const
-          ).map((v) => (
-            <button
-              key={v}
-              onClick={() => {
-                setView(v);
-                window.scrollTo({ top: 0, behavior: "auto" });
-              }}
-              title={viewLabels[v]}
-              className={view === v ? "nav active" : "nav"}
-              aria-current={view === v ? "page" : undefined}
-            >
-              <UiIcon name={v} />
-              <span className="nav-label">{viewLabels[v]}</span>
-            </button>
-          ))}
+          )
+            .filter((v) => !graphWorkspace || v === "connections")
+            .map((v) => (
+              <button
+                key={v}
+                onClick={() => {
+                  setView(v);
+                  window.scrollTo({ top: 0, behavior: "auto" });
+                }}
+                title={graphWorkspace ? "Graph workspace" : viewLabels[v]}
+                className={view === v ? "nav active" : "nav"}
+                aria-current={view === v ? "page" : undefined}
+              >
+                <UiIcon name={v} />
+                <span className="nav-label">
+                  {graphWorkspace ? "Graph workspace" : viewLabels[v]}
+                </span>
+              </button>
+            ))}
         </nav>
+        <button
+          className="nav experience-switch"
+          onClick={() => switchExperience(!graphWorkspace)}
+          title={graphWorkspace ? "Standard workspace" : "Graph workspace"}
+        >
+          <UiIcon name="connections" />
+          <span className="nav-label">
+            {graphWorkspace ? "Standard workspace" : "Graph workspace"}
+          </span>
+        </button>
         <div className="rail-note">
           <span className="live-dot" /> Leadership workspace
           <p>UXD · {plan.people.length} people</p>
@@ -346,10 +379,32 @@ export default function Planner({ initial }: { initial: Plan }) {
               </button>
             </div>
           </header>
+          {graphWorkspace && view !== "connections" && (
+            <nav className="graph-return" aria-label="Workspace breadcrumb">
+              <button
+                onClick={() => {
+                  setView("connections");
+                  window.scrollTo({ top: 0, behavior: "auto" });
+                }}
+              >
+                <UiIcon name="arrowLeft" className="action-icon" /> Back to
+                graph
+              </button>
+              <span>{viewLabels[view]} · Whole workspace</span>
+            </nav>
+          )}
           <div className="title-row">
             <div>
-              <h1>{viewLabels[view]}</h1>
-              <p className="subtitle">{viewDescriptions[view]}</p>
+              <h1>
+                {graphWorkspace && view === "connections"
+                  ? "Graph workspace"
+                  : viewLabels[view]}
+              </h1>
+              <p className="subtitle">
+                {graphWorkspace && view === "connections"
+                  ? "Select a person, project, or priority to explore connected work."
+                  : viewDescriptions[view]}
+              </p>
             </div>
             <div className="actions">
               {(view === "capacity" ||
@@ -463,19 +518,37 @@ export default function Planner({ initial }: { initial: Plan }) {
               </article>
             </section>
           )}
-          {["overview", "teams", "compare", "connections"].includes(view) && (
-            <Leadership
-              key={`${useExample}:${homeVersion}`}
-              plan={plan}
-              start={quarter}
-              end={end}
-              mode={view as "overview" | "teams" | "compare" | "connections"}
-              onEdit={edit}
-              onSave={persist}
-              onMode={setView}
-              busy={busy}
-            />
+          {graphWorkspace && (
+            <div hidden={view !== "connections"}>
+              <Leadership
+                key={`graph:${useExample}:${homeVersion}`}
+                plan={plan}
+                start={quarter}
+                end={end}
+                mode="connections"
+                graphWorkspace
+                onWorkspaceTool={openWorkspaceTool}
+                onEdit={edit}
+                onSave={persist}
+                onMode={setView}
+                busy={busy}
+              />
+            </div>
           )}
+          {["overview", "teams", "compare", "connections"].includes(view) &&
+            !(graphWorkspace && view === "connections") && (
+              <Leadership
+                key={`${useExample}:${homeVersion}`}
+                plan={plan}
+                start={quarter}
+                end={end}
+                mode={view as "overview" | "teams" | "compare" | "connections"}
+                onEdit={edit}
+                onSave={persist}
+                onMode={setView}
+                busy={busy}
+              />
+            )}
           {view === "capacity" && (
             <>
               <section className="panel">

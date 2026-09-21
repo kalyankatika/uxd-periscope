@@ -2825,3 +2825,24 @@ button > .action-icon:not(:only-child):last-child {
 .planning-period input {
   border-color: #dce4d7;
 }
+
+/* Alternative graph workspace: preserve the map while opening existing tools. */
+.experience-switch {
+  margin-top: 18px;
+}
+.graph-return {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+.graph-return button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.graph-return span {
+  color: var(--muted, #66736a);
+  font-size: 13px;
+}

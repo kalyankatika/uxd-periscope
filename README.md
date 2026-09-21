@@ -84,3 +84,7 @@ The current [40-second silent demo](artifacts/platform-demo/periscope-overview-d
 ## Enterprise distribution
 
 Review the [handoff gates](docs/enterprise-handoff.md#enterprise-release-gates) before shared enterprise use. The current application has no sign-in or record-level authorization. The bundled Fidelity fonts have permission-restricted embedded notices; confirm the intended usage and distribution rights. No root repository license is currently supplied. Saved databases, credentials and real source exports should stay outside source control.
+
+### Graph workspace alternative
+
+Open **Graph workspace** in the left navigation, or visit `/?view=graph`, to navigate from the original knowledge graph. Existing planning tools return to the same graph context. [Usage and scope](docs/graph-workspace.md).

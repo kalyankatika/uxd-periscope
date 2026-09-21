@@ -1213,3 +1213,126 @@ button.map-open-button {
 .map-presets {
   flex-wrap: wrap;
 }
+
+/* The alternative workspace keeps the original graph as its navigation surface. */
+.graph-workspace-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #dce4d8;
+  background: #f7faf5;
+}
+.graph-workspace-nav nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.graph-workspace-nav ol {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  gap: 4px;
+}
+.graph-workspace-nav li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.graph-workspace-nav button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+}
+.graph-workspace-nav li button {
+  max-width: 220px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-color: transparent;
+  background: transparent;
+}
+.graph-workspace-nav [aria-current="page"] {
+  font-weight: 700;
+  color: #285f20;
+}
+.graph-workspace-tools {
+  flex-shrink: 0;
+  position: relative;
+}
+.graph-workspace-tools summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d8e1d1;
+  border-radius: 999px;
+  background: white;
+  font-size: 0.82rem;
+}
+.graph-workspace-tools summary::-webkit-details-marker {
+  display: none;
+}
+.graph-workspace-tools > div {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 230px;
+  z-index: 25;
+  padding: 8px;
+  border: 1px solid #d8e1d1;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px #20352b20;
+  background: white;
+}
+.graph-workspace-tools p {
+  margin: 4px 10px 8px;
+  font-size: 0.75rem;
+  color: #66715f;
+}
+.graph-workspace-tools button {
+  width: 100%;
+  min-height: 44px;
+  justify-content: space-between;
+  border-color: transparent;
+  background: transparent;
+}
+.graph-workspace-tools button:hover {
+  background: #edf5e8;
+}
+@media (max-width: 650px) {
+  .graph-workspace-nav {
+    padding: 8px 12px;
+    flex-wrap: wrap;
+  }
+  .graph-workspace-nav nav {
+    width: 100%;
+  }
+  .graph-workspace-nav button {
+    min-height: 44px;
+  }
+  .graph-workspace-tools {
+    margin-left: auto;
+  }
+}
+
+.graph-workspace-map .map-heading {
+  padding: 12px 24px;
+}
+.graph-workspace-map .map-heading p {
+  margin: 0;
+}
+.graph-workspace-nav {
+  flex-shrink: 0;
+}
