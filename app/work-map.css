@@ -112,7 +112,13 @@
 .map-search > span {
   position: absolute;
   left: 12px;
-  font-size: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  line-height: 1;
   color: #687e5c;
   pointer-events: none;
 }
@@ -132,6 +138,10 @@
 .map-search > button {
   position: absolute;
   right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
   border: 0;
   min-height: 30px;
   width: 30px;
@@ -673,12 +683,16 @@ button.map-related-item:hover:not(:disabled) {
   margin-bottom: 5px;
 }
 button.map-open-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   width: 100%;
   margin: 8px 0 16px;
   font-size: 0.8rem;
 }
 .map-open-button span {
-  margin-left: 12px;
+  margin-left: 0;
 }
 .map-focus-controls {
   display: flex;

@@ -2795,21 +2795,32 @@ html {
   overflow-x: clip;
 }
 
-/* Shared outline icons align optically with adjacent labels. */
+/* Give icons fixed boxes; center simple icon/label actions without altering cards. */
 .action-icon {
   display: inline-block;
   width: 18px;
   height: 18px;
   flex: 0 0 18px;
-  vertical-align: -0.22em;
+  vertical-align: middle;
 }
-button > .action-icon:not(:only-child):first-child {
-  margin-right: 6px;
+button:has(> .action-icon):not(:has(> :not(svg))) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
-button > .action-icon:not(:only-child):last-child {
-  margin-left: 6px;
+button.project-title-button:has(> .action-icon) {
+  justify-content: flex-start;
+}
+button > span[aria-hidden="true"]:has(> .action-icon) {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1;
+  flex-shrink: 0;
 }
 .map-mini-node .action-icon {
+  display: block;
   width: 16px;
   height: 16px;
 }
