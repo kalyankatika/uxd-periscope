@@ -2826,10 +2826,7 @@ button > .action-icon:not(:only-child):last-child {
   border-color: #dce4d7;
 }
 
-/* Alternative graph workspace: preserve the map while opening existing tools. */
-.experience-switch {
-  margin-top: 18px;
-}
+/* Preserve map context while opening whole-organization views. */
 .graph-return {
   display: flex;
   align-items: center;

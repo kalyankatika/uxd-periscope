@@ -1,4 +1,6 @@
-# Graph workspace verification
+# Graph workspace verification — historical
+
+The separate workspace was subsequently consolidated into the original Work map. These artifacts describe revision `0ec9906`.
 
 September 20, 2026. AI-assisted browser walkthrough using fictional, session-only data. Not a human usability study.
 

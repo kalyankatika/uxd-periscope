@@ -1,0 +1,44 @@
+{"at": "2026-09-21T02:00:06.009620+00:00", "args": ["open", "http://127.0.0.1:3000/?view=graph"], "exitCode": 0, "output": "browser-logs/001-open.txt"}
+{"at": "2026-09-21T02:00:06.203343+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/002-set.txt"}
+{"at": "2026-09-21T02:00:06.415092+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/003-snapshot.txt"}
+{"at": "2026-09-21T02:00:15.921332+00:00", "args": ["scrollintoview", "@e41"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:00:16.095286+00:00", "args": ["click", "@e41"], "exitCode": 0, "output": "browser-logs/004-click.txt"}
+{"at": "2026-09-21T02:00:16.286365+00:00", "args": ["eval", "JSON.stringify({scope:document.querySelector(\".map-context\").innerText,counts:document.querySelector(\".map-heading\").innerText,projects:[...document.querySelectorAll(\"svg [role=button]\")].map(e=>e.getAttribute(\"aria-label\")).filter(x=>x&&x.startsWith(\"Project:\"))})"], "exitCode": 0, "output": "browser-logs/005-eval.txt"}
+{"at": "2026-09-21T02:00:16.487459+00:00", "args": ["find", "role", "button", "click", "--name", "Grid"], "exitCode": 0, "output": "browser-logs/006-find.txt"}
+{"at": "2026-09-21T02:00:16.700613+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/007-snapshot.txt"}
+{"at": "2026-09-21T02:00:32.278075+00:00", "args": ["scrollintoview", "@e10"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:00:32.464521+00:00", "args": ["click", "@e10"], "exitCode": 0, "output": "browser-logs/008-click.txt"}
+{"at": "2026-09-21T02:00:32.670417+00:00", "args": ["find", "role", "button", "click", "--name", "Back to Work map"], "exitCode": 0, "output": "browser-logs/009-find.txt"}
+{"at": "2026-09-21T02:00:32.863579+00:00", "args": ["eval", "JSON.stringify({scope:document.querySelector(\".map-context\").innerText,grid:!!document.querySelector(\"[aria-label=\\\"Work grid\\\"]\")})"], "exitCode": 0, "output": "browser-logs/010-eval.txt"}
+{"at": "2026-09-21T02:00:33.072310+00:00", "args": ["find", "role", "button", "click", "--name", "Map"], "exitCode": 0, "output": "browser-logs/011-find.txt"}
+{"at": "2026-09-21T02:00:33.356316+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/work-map-context/desktop.png"], "exitCode": 0, "output": "browser-logs/012-screenshot.txt"}
+{"at": "2026-09-21T02:01:16.436426+00:00", "args": ["scrollintoview", "nav[aria-label=\"Main navigation\"] button[title=\"Projects\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:01:16.618172+00:00", "args": ["click", "nav[aria-label=\"Main navigation\"] button[title=\"Projects\"]"], "exitCode": 0, "output": "browser-logs/013-click.txt"}
+{"at": "2026-09-21T02:01:16.827473+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/014-snapshot.txt"}
+{"at": "2026-09-21T02:01:27.604766+00:00", "args": ["scrollintoview", "@e145"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:01:27.783736+00:00", "args": ["click", "@e145"], "exitCode": 0, "output": "browser-logs/015-click.txt"}
+{"at": "2026-09-21T02:01:27.994053+00:00", "args": ["find", "role", "button", "click", "--name", "View in map"], "exitCode": 0, "output": "browser-logs/016-find.txt"}
+{"at": "2026-09-21T02:01:28.186428+00:00", "args": ["get", "text", ".map-context"], "exitCode": 0, "output": "browser-logs/017-get.txt"}
+{"at": "2026-09-21T02:01:28.392070+00:00", "args": ["find", "role", "button", "click", "--name", "Back in work map"], "exitCode": 0, "output": "browser-logs/018-find.txt"}
+{"at": "2026-09-21T02:01:28.584713+00:00", "args": ["get", "text", ".map-context"], "exitCode": 0, "output": "browser-logs/019-get.txt"}
+{"at": "2026-09-21T02:01:28.770842+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/020-errors.txt"}
+{"at": "2026-09-21T02:02:14.848061+00:00", "args": ["open", "http://127.0.0.1:3000/"], "exitCode": 0, "output": "browser-logs/021-open.txt"}
+{"at": "2026-09-21T02:02:15.046932+00:00", "args": ["find", "role", "button", "click", "--name", "Leader: Elena Brooks. Show connections."], "exitCode": 0, "output": "browser-logs/022-find.txt"}
+{"at": "2026-09-21T02:02:15.233856+00:00", "args": ["eval", "JSON.stringify({counts:document.querySelector(\".map-heading\").innerText,filters:document.querySelector(\".map-presets\").innerText,dimmed:[...document.querySelectorAll(\"svg [role=button]\")].filter(n=>n.style.opacity===\"0.16\").length})"], "exitCode": 0, "output": "browser-logs/023-eval.txt"}
+{"at": "2026-09-21T02:02:15.526879+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/work-map-context/desktop.png"], "exitCode": 0, "output": "browser-logs/024-screenshot.txt"}
+{"at": "2026-09-21T02:02:15.721131+00:00", "args": ["set", "viewport", "390", "844"], "exitCode": 0, "output": "browser-logs/025-set.txt"}
+{"at": "2026-09-21T02:02:27.038285+00:00", "args": ["find", "role", "button", "click", "--name", "Grid"], "exitCode": 0, "output": "browser-logs/026-find.txt"}
+{"at": "2026-09-21T02:02:27.230872+00:00", "args": ["eval", "JSON.stringify({viewport:innerWidth,width:document.documentElement.scrollWidth,context:document.querySelector(\".map-context\").innerText,gridProjects:document.querySelectorAll(\"[aria-label=\\\"Work grid\\\"] button[aria-label^=\\\"Project:\\\"]\").length})"], "exitCode": 0, "output": "browser-logs/027-eval.txt"}
+{"at": "2026-09-21T02:02:27.455758+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/work-map-context/mobile.png"], "exitCode": 0, "output": "browser-logs/028-screenshot.txt"}
+{"at": "2026-09-21T02:02:27.652156+00:00", "args": ["find", "role", "button", "click", "--name", "Show reporting group"], "exitCode": 0, "output": "browser-logs/029-find.txt"}
+{"at": "2026-09-21T02:02:27.843456+00:00", "args": ["get", "text", ".map-context"], "exitCode": 0, "output": "browser-logs/030-get.txt"}
+{"at": "2026-09-21T02:02:28.040775+00:00", "args": ["get", "text", ".map-heading"], "exitCode": 0, "output": "browser-logs/031-get.txt"}
+{"at": "2026-09-21T02:02:28.231454+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/032-errors.txt"}
+{"at": "2026-09-21T02:02:42.464128+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/033-snapshot.txt"}
+{"at": "2026-09-21T02:02:52.998893+00:00", "args": ["scrollintoview", "@e34"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:02:53.172283+00:00", "args": ["click", "@e34"], "exitCode": 0, "output": "browser-logs/034-click.txt"}
+{"at": "2026-09-21T02:02:53.365431+00:00", "args": ["get", "text", ".map-context"], "exitCode": 0, "output": "browser-logs/035-get.txt"}
+{"at": "2026-09-21T02:02:53.566190+00:00", "args": ["get", "text", ".map-heading"], "exitCode": 0, "output": "browser-logs/036-get.txt"}
+{"at": "2026-09-21T02:02:53.766934+00:00", "args": ["eval", "JSON.stringify({width:document.documentElement.scrollWidth,viewport:innerWidth})"], "exitCode": 0, "output": "browser-logs/037-eval.txt"}
+{"at": "2026-09-21T02:02:53.964131+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/038-errors.txt"}
+{"at": "2026-09-21T02:02:54.296472+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/039-close.txt"}

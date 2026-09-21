@@ -20,7 +20,7 @@ import {
   importanceOrder,
 } from "@/lib/work-graph";
 import { exportCsv } from "@/lib/csv";
-import WorkMap, { type WorkspaceTool } from "./work-map";
+import WorkMap from "./work-map";
 import PeopleDialog, { type PeopleRequest } from "./people-dialog";
 type Mode = "overview" | "teams" | "compare" | "connections";
 const initials = (name: string) =>
@@ -88,8 +88,8 @@ export default function Leadership({
   onSave,
   onMode,
   busy,
-  graphWorkspace = false,
-  onWorkspaceTool,
+  mapProjectId,
+  onMapProject,
 }: {
   plan: Plan;
   start: string;
@@ -99,8 +99,8 @@ export default function Leadership({
   onSave: (p: Plan) => Promise<boolean>;
   onMode: (m: Mode) => void;
   busy: boolean;
-  graphWorkspace?: boolean;
-  onWorkspaceTool?: (view: WorkspaceTool) => void;
+  mapProjectId: string;
+  onMapProject: (id: string) => void;
 }) {
   const [leaderId, setLeaderId] = useState<string | null>(null),
     [projectId, setProjectId] = useState<string | null>(null),
@@ -110,7 +110,6 @@ export default function Leadership({
       "importance" | "health" | "name" | "end" | "effort" | "lead"
     >("importance"),
     [ascending, setAscending] = useState(true),
-    [connectionId, setConnectionId] = useState(""),
     [peopleRequest, setPeopleRequest] = useState<PeopleRequest | null>(null),
     [draggedId, setDraggedId] = useState<string | null>(null),
     [dropTarget, setDropTarget] = useState<string | null>(null);
@@ -180,12 +179,12 @@ export default function Leadership({
     return (ascending ? 1 : -1) * n || a.name.localeCompare(b.name);
   });
   function openProject(p: Initiative) {
-    if (graphWorkspace) setConnectionId("");
+    onMapProject("");
     setProjectId(p.id);
     projectDialog.current?.showModal();
   }
   function openLeader(id: string) {
-    if (graphWorkspace) {
+    if (mode === "connections") {
       const person = peopleById.get(id);
       if (person) openPerson(person);
       return;
@@ -848,16 +847,10 @@ export default function Leadership({
           plan={plan}
           start={start}
           end={end}
-          graphWorkspace={graphWorkspace}
-          onWorkspaceTool={onWorkspaceTool}
-          initialProjectId={connectionId}
+          initialProjectId={mapProjectId}
           onProject={openProject}
           onPerson={openLeader}
           onAddReport={(id) => openPerson(undefined, id)}
-          onCompare={() => {
-            setLeaderId(null);
-            onMode("compare");
-          }}
           onExport={() =>
             saveFile(
               "uxd-work-graph.jsonld",
@@ -1032,7 +1025,7 @@ export default function Leadership({
             <div className="drawer-footer">
               <button
                 onClick={() => {
-                  setConnectionId(selected.id);
+                  onMapProject(selected.id);
                   projectDialog.current?.close();
                   onMode("connections");
                 }}

@@ -85,6 +85,6 @@ The current [40-second silent demo](artifacts/platform-demo/periscope-overview-d
 
 Review the [handoff gates](docs/enterprise-handoff.md#enterprise-release-gates) before shared enterprise use. The current application has no sign-in or record-level authorization. The bundled Fidelity fonts have permission-restricted embedded notices; confirm the intended usage and distribution rights. No root repository license is currently supplied. Saved databases, credentials and real source exports should stay outside source control.
 
-### Graph workspace alternative
+### Work map navigation
 
-Open **Graph workspace** in the left navigation, or visit `/?view=graph`, to navigate from the original knowledge graph. Existing planning tools return to the same graph context. [Usage and scope](docs/graph-workspace.md).
+Select a person, project, or priority to review connected work. A person's context includes their reporting group and its projects. Map and Grid share the same scope. Back returns to the previous selection; Whole organization clears the scope. The sidebar opens organization-wide views without losing your place in the map. [Usage and boundaries](docs/work-map-navigation.md).
