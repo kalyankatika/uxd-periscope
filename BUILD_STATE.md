@@ -131,3 +131,7 @@ Aligned team panel heights within each row, centered incomplete node rows, place
 ## Layout chips and sort alignment — September 20, 2026
 
 Replaced Layout dropdown with Network/By team pressed-state chips. Grid sort now uses a centered shared chevron. Browser confirmed By team activates with47nodes, name sorting updates, arrow vertical center delta0px, mobile width390 without overflow, and Map/Grid return retains layout. Production build passed; no data/model behavior changed. Current preview port3000/session94556.
+
+## Team zoom navigation research — September 20, 2026
+
+Captured industry evidence and proposed return behavior in docs/graph-zoom-navigation.md. Current team-header zoom changes camera only, so selection Back may not appear; Fit is available but unclear. Recommended visible Back to teams for camera return, Fit view for current content, and separate Whole organization for scope reset. Includes mobile fit distinction, keyboard behavior and acceptance checks. Documentation only; implementation pending.
