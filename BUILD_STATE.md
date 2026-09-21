@@ -161,3 +161,7 @@ Team and priority overview geometry fills available canvas width with16px side m
 ## Link-style Back — September 20, 2026
 
 Back and Back to Work map use arrow/text styling without an outline. Removed Whole organization action from context and filtered canvas; retained footer Reset view. Browser confirmed0px Back border, no Whole organization buttons, Back restores parent/root and Reset view clears filter. Production build passed. Preview port3000/session79234.
+
+## Compact pan guidance — September 20, 2026
+
+Moved Drag to pan beside zoom controls, removing separate guidance row. Bottom toolbar now sits12px from desktop edge; mobile uses a compact wrapping solid-background toolbar. Browser verified guidance center aligned,28px clearance below fitted team cells,390px width without overflow and no errors. Production build passed. Preview port3000/session61678.

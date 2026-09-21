@@ -1366,3 +1366,12 @@ button.map-open-button {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* Keep navigation and its guidance in one compact bottom toolbar. */
+.map-canvas-bottom { bottom: 12px; }
+.map-navigation-controls { display: flex; align-items: center; gap: 10px; }
+.map-navigation-controls .map-help { position: static; margin: 0; white-space: nowrap; }
+@media (max-width: 650px) {
+  .map-canvas-bottom { bottom: 0; left: 0; right: 0; padding: 10px 12px; background: #18271f; }
+  .map-navigation-controls { gap: 8px; }
+}

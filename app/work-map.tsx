@@ -1158,6 +1158,7 @@ export default function WorkMap({
 
               </div>
               <div className="map-canvas-bottom">
+                <div className="map-navigation-controls">
                 <div className="map-view-controls">
                   <button
                     title="Zoom in (+)"
@@ -1177,6 +1178,10 @@ export default function WorkMap({
                     Fit
                   </button>
                   <span>{Math.round(camera.k * 100)}%</span>
+                </div>
+                <p id={`${dotsId}-help`} className="map-help" title="Drag to pan · Scroll to zoom · Select an item for details">
+                  Drag to pan
+                </p>
                 </div>
                 <div className="map-display-controls">
                   <button
@@ -1214,9 +1219,6 @@ export default function WorkMap({
                   <div>{visible.nodes.map((n) => nodeButton(n))}</div>
                 </div>
               )}
-              <p id={`${dotsId}-help`} className="map-help">
-                Drag to pan · Scroll to zoom · Select an item for details
-              </p>
             </>
           )}
         </div>
