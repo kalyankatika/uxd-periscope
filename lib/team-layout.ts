@@ -11,6 +11,7 @@ export type TeamGroup = {
   y: number;
   width: number;
   height: number;
+  projectY?: number;
   projectCount: number;
   peopleCount: number;
 };
@@ -92,11 +93,17 @@ export function layoutTeamGraph(
   let y = 0;
   for (let row = 0; row < entries.length; row += columns) {
     const rowEntries = entries.slice(row, row + columns);
-    let rowHeight = 0;
+    const peopleRows = Math.max(...rowEntries.map(([, b]) =>
+      Math.ceil(b.nodes.filter(n => n.kind !== "project").length / 3)));
+    const projectRows = Math.max(...rowEntries.map(([, b]) =>
+      Math.ceil(b.nodes.filter(n => n.kind === "project").length / 3)));
+    const projectOffset = 130 + peopleRows * cellHeight + 35;
+    const rowHeight = projectRows
+      ? projectOffset + projectRows * cellHeight
+      : 130 + peopleRows * cellHeight;
     rowEntries.forEach(([id, bucket], column) => {
-      const x = column * (width + 40);
-      const height = 105 + Math.ceil(bucket.nodes.length / 3) * cellHeight;
-      rowHeight = Math.max(rowHeight, height);
+      const x = column * (width + 56);
+      const height = rowHeight;
       const leader = bucket.leaderId ? people.get(bucket.leaderId) : undefined;
       groups.push({
         id,
@@ -114,29 +121,34 @@ export function layoutTeamGraph(
         y,
         width,
         height,
+        ...(bucket.nodes.some(n => n.kind === "project")
+          ? { projectY: y + projectOffset - 35 } : {}),
         projectCount: bucket.nodes.filter((n) => n.kind === "project").length,
         peopleCount: bucket.nodes.filter(
           (n) => n.kind === "leader" || n.kind === "person",
         ).length,
       });
-      bucket.nodes.forEach((node, index) =>
+      const sections = [
+        bucket.nodes.filter(n => n.kind !== "project").sort((a, b) =>
+          Number(b.recordId === bucket.leaderId) - Number(a.recordId === bucket.leaderId)
+          || Number(b.kind === "leader") - Number(a.kind === "leader")
+          || compare(a.id, b.id)),
+        bucket.nodes.filter(n => n.kind === "project"),
+      ];
+      sections.forEach((section, sectionIndex) => section.forEach((node, index) => {
+        const rowStart = Math.floor(index / 3) * 3;
+        const rowCount = Math.min(3, section.length - rowStart);
         nodes.push({
           ...node,
           groupId: id,
-          x: x + 100 + (index % 3) * cellWidth,
-          y: y + 110 + Math.floor(index / 3) * cellHeight,
-          radius:
-            node.kind === "project"
-              ? 12
-              : node.kind === "priority"
-                ? 13
-                : node.kind === "leader"
-                  ? 11
-                  : 8,
-        }),
-      );
+          x: x + width / 2 + ((index % 3) - (rowCount - 1) / 2) * cellWidth,
+          y: y + (sectionIndex ? projectOffset : 130) + Math.floor(index / 3) * cellHeight,
+          radius: node.kind === "project" ? 12 : node.kind === "priority" ? 13 : node.kind === "leader" ? 11 : 8,
+        });
+      }));
+
     });
-    y += rowHeight + 40;
+    y += rowHeight + 56;
   }
   return { nodes, groups };
 }

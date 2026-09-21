@@ -235,11 +235,11 @@ export default function WorkMap({
                 ])
               : nodes,
             size.width,
-            size.height,
+            byTeam ? Math.max(200, size.height - 50) : size.height,
           ),
     [nodes, size, byTeam, teamLayout],
   );
-  const camera = cameraOverride || fitted;
+  const camera = cameraOverride || (byTeam && size.width >= 550 ? { ...fitted, y: fitted.y + 40 } : fitted);
   const cameraRef = useRef(camera);
   useEffect(() => {
     cameraRef.current = camera;
@@ -841,6 +841,15 @@ export default function WorkMap({
                             strokeWidth="1"
                             vectorEffect="non-scaling-stroke"
                           />
+                          {group.projectY !== undefined && (
+                            <g pointerEvents="none">
+                              <line x1={group.x + 24} x2={group.x + group.width - 24}
+                                y1={group.projectY - 18} y2={group.projectY - 18}
+                                stroke="#587c5e" strokeOpacity="0.5" />
+                              <text x={group.x + 24} y={group.projectY - 1}
+                                fill="#bdd0bc" fontSize={14}>Projects</text>
+                            </g>
+                          )}
                           <g
                             role="button"
                             tabIndex={0}
@@ -1020,7 +1029,7 @@ export default function WorkMap({
                       >
                         <title>{`${node.label} · ${singular[node.kind]}`}</title>
                         <circle
-                          r={Math.max(node.radius + 10, 22 / camera.k)}
+                          r={byTeam ? Math.max(node.radius + 6, Math.min(32, 22 / camera.k)) : Math.max(node.radius + 10, 22 / camera.k)}
                           fill="transparent"
                         />
                         {(active || node.top) && (

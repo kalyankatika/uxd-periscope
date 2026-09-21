@@ -151,3 +151,20 @@ test("empty graph, missing owners, broken managers, and reporting cycles remain 
     result.nodes.every((n) => Number.isFinite(n.x) && Number.isFinite(n.y)),
   );
 });
+
+test("team rows align and projects occupy a separate band below people", () => {
+  const plan = fixture();
+  for (const columns of [1, 3] as const) {
+    const result = layoutTeamGraph(graphFor(plan), plan, columns);
+    for (const group of result.groups) {
+      const peers = result.groups.filter(g => g.y === group.y);
+      assert.ok(peers.every(g => g.height === group.height));
+      const members = result.nodes.filter(n => n.groupId === group.id);
+      const work = members.filter(n => n.kind === "project");
+      const people = members.filter(n => n.kind !== "project");
+      if (work.length && people.length)
+        assert.ok(Math.min(...work.map(n => n.y)) > Math.max(...people.map(n => n.y)) + 100);
+      assert.ok(members.every(n => n.x > group.x && n.x < group.x + group.width));
+    }
+  }
+});

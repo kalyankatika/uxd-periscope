@@ -123,3 +123,7 @@ Browse list now opens a scrollable panel over the graph instead of below the ent
 ## Team node visibility correction — September 20, 2026
 
 Removed the overview zoom threshold that hid team nodes and links. By team now always renders its people, projects, priorities and within-group connections; group headers still zoom into details. Browser verified47/47 example nodes visible across10groups on desktop and mobile, with390px document width and no runtime errors. All71tests and production build pass. Current app running port3000/session46244. Saved data unchanged.
+
+## Team layout alignment — September 20, 2026
+
+Aligned team panel heights within each row, centered incomplete node rows, placed group leaders first, and separated projects into a consistently aligned lower band. Reserved overview space for graph controls. Limited team node hit areas so they do not cover group headers at overview zoom. Browser confirmed group-header zoom preserves all47nodes and whole-organization scope, readable detail spacing, mobile width390, no runtime errors.72tests including row/band invariants and production build pass. Current preview port3000/session41489. Saved data unchanged.
