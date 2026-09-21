@@ -8,7 +8,7 @@ The original Work map is the single graph entry. The former Graph workspace/Stan
 - Select a project to inspect its owner, contributors, priority and dependencies.
 - Select a priority to review supporting projects.
 - Switch Map/Grid without changing the selected scope. Grid is the readable comparison alternative to the network.
-- Back returns to a previous selection. Whole organization clears the selection and filters. These controls describe exploration; they do not claim the click path is an organizational hierarchy. Actual hierarchy remains in Reports to and reporting lines.
+- Back returns to a previous selection. Reset view in the map footer clears the selection and filters. These controls describe exploration; they do not claim the click path is an organizational hierarchy. Actual hierarchy remains in Reports to and reporting lines.
 - Edit a person or add a direct report from the inspector. Open project details to review/edit work.
 
 ## Other views

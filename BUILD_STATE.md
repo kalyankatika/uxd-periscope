@@ -157,3 +157,7 @@ Delivered and verified By priority graph, Team × priority matrix inside Grid, O
 ## Full-width grouped maps — September 20, 2026
 
 Team and priority overview geometry fills available canvas width with16px side margins while retaining desktop vertical fit. By team shared Priorities now spans its own final row, matching the People footer in By priority. Browser measured804px content in836px canvas,47nodes retained,390px mobile without overflow, no errors.87tests and production build passed. Preview port3000/session20391.
+
+## Link-style Back — September 20, 2026
+
+Back and Back to Work map use arrow/text styling without an outline. Removed Whole organization action from context and filtered canvas; retained footer Reset view. Browser confirmed0px Back border, no Whole organization buttons, Back restores parent/root and Reset view clears filter. Production build passed. Preview port3000/session79234.

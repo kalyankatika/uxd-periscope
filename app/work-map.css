@@ -1351,3 +1351,18 @@ button.map-open-button {
   .map-layout-chips > span { display: none; }
   .map-layout-chips button { white-space: nowrap; font-size: .75rem; }
 }
+
+.work-map .map-context button,
+.graph-return button {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #2e6725;
+  border-radius: 4px;
+}
+.work-map .map-context button:hover,
+.graph-return button:hover {
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

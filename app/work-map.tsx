@@ -597,7 +597,6 @@ export default function WorkMap({
           <span title={scopeLabel}>
             <strong>{selected.label}</strong>
           </span>
-          <button onClick={reset}>Whole organization</button>
         </nav>
       )}
 
@@ -1156,12 +1155,7 @@ export default function WorkMap({
                             ? "Projects requiring attention"
                             : "All relationships"}
                 </span>
-                {!selected && preset !== "all" && (
-                  <button onClick={reset}>
-                    Whole organization{" "}
-                    <UiIcon name="close" className="action-icon" />
-                  </button>
-                )}
+
               </div>
               <div className="map-canvas-bottom">
                 <div className="map-view-controls">
