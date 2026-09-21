@@ -1,0 +1,57 @@
+{"at": "2026-09-21T02:19:12.216634+00:00", "args": ["open", "http://127.0.0.1:3000/"], "exitCode": 0, "output": "browser-logs/001-open.txt"}
+{"at": "2026-09-21T02:19:12.415821+00:00", "args": ["set", "viewport", "1440", "1000"], "exitCode": 0, "output": "browser-logs/002-set.txt"}
+{"at": "2026-09-21T02:19:12.606680+00:00", "args": ["scrollintoview", "select[aria-label=\"Map layout\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:19:12.778239+00:00", "args": ["select", "select[aria-label=\"Map layout\"]", "team"], "exitCode": 0, "output": "browser-logs/003-select.txt"}
+{"at": "2026-09-21T02:19:13.071705+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/desktop.png"], "exitCode": 0, "output": "browser-logs/004-screenshot.txt"}
+{"at": "2026-09-21T02:19:13.274563+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/005-snapshot.txt"}
+{"at": "2026-09-21T02:21:36.819653+00:00", "args": ["open", "http://127.0.0.1:3000/"], "exitCode": 0, "output": "browser-logs/006-open.txt"}
+{"at": "2026-09-21T02:21:37.002511+00:00", "args": ["scrollintoview", "select[aria-label=\"Map layout\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:21:37.170814+00:00", "args": ["select", "select[aria-label=\"Map layout\"]", "team"], "exitCode": 0, "output": "browser-logs/007-select.txt"}
+{"at": "2026-09-21T02:21:37.441141+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/desktop.png"], "exitCode": 0, "output": "browser-logs/008-screenshot.txt"}
+{"at": "2026-09-21T02:21:37.623711+00:00", "args": ["scrollintoview", "[aria-label=\"Zoom to group: Elena Brooks\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:21:37.797819+00:00", "args": ["click", "[aria-label=\"Zoom to group: Elena Brooks\"]"], "exitCode": 0, "output": "browser-logs/009-click.txt"}
+{"at": "2026-09-21T02:21:38.030243+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/group.png"], "exitCode": 0, "output": "browser-logs/010-screenshot.txt"}
+{"at": "2026-09-21T02:21:38.209422+00:00", "args": ["scrollintoview", "[aria-label=\"Project: Account opening redesign, needs attention. Show connections.\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:21:38.392039+00:00", "args": ["click", "[aria-label=\"Project: Account opening redesign, needs attention. Show connections.\"]"], "exitCode": 0, "output": "browser-logs/011-click.txt"}
+{"at": "2026-09-21T02:21:38.584735+00:00", "args": ["scrollintoview", "select[aria-label=\"Map layout\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:21:38.751080+00:00", "args": ["select", "select[aria-label=\"Map layout\"]", "network"], "exitCode": 0, "output": "browser-logs/012-select.txt"}
+{"at": "2026-09-21T02:21:38.950398+00:00", "args": ["get", "text", ".map-context"], "exitCode": 0, "output": "browser-logs/013-get.txt"}
+{"at": "2026-09-21T02:22:55.096262+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/014-snapshot.txt"}
+{"at": "2026-09-21T02:23:11.054358+00:00", "args": ["scrollintoview", "[aria-label=\"Map layout\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:11.220176+00:00", "args": ["select", "[aria-label=\"Map layout\"]", "team"], "exitCode": 0, "output": "browser-logs/015-select.txt"}
+{"at": "2026-09-21T02:23:11.421545+00:00", "args": ["scrollintoview", "[aria-label=\"Zoom in\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:11.592075+00:00", "args": ["click", "[aria-label=\"Zoom in\"]"], "exitCode": 0, "output": "browser-logs/016-click.txt"}
+{"at": "2026-09-21T02:23:11.788452+00:00", "args": ["scrollintoview", "button:has-text(\"Grid\")"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:11.951451+00:00", "args": ["click", "button:has-text(\"Grid\")"], "exitCode": 1, "output": "browser-logs/017-click.txt"}
+{"at": "2026-09-21T02:23:12.162991+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/018-snapshot.txt"}
+{"at": "2026-09-21T02:23:12.354607+00:00", "args": ["scrollintoview", "button:has-text(\"Map\"):text-is(\"Map\")"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:12.515862+00:00", "args": ["click", "button:has-text(\"Map\"):text-is(\"Map\")"], "exitCode": 1, "output": "browser-logs/019-click.txt"}
+{"at": "2026-09-21T02:23:12.698957+00:00", "args": ["get", "value", "[aria-label=\"Map layout\"]"], "exitCode": 0, "output": "browser-logs/020-get.txt"}
+{"at": "2026-09-21T02:23:12.893229+00:00", "args": ["scrollintoview", "button:text-is(\"Whole organization\")"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:13.059893+00:00", "args": ["click", "button:text-is(\"Whole organization\")"], "exitCode": 1, "output": "browser-logs/021-click.txt"}
+{"at": "2026-09-21T02:23:13.280350+00:00", "args": ["set", "viewport", "390", "844"], "exitCode": 0, "output": "browser-logs/022-set.txt"}
+{"at": "2026-09-21T02:23:13.501705+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/mobile.png"], "exitCode": 0, "output": "browser-logs/023-screenshot.txt"}
+{"at": "2026-09-21T02:23:13.687352+00:00", "args": ["eval", "JSON.stringify({width:innerWidth,documentWidth:document.documentElement.scrollWidth})"], "exitCode": 0, "output": "browser-logs/024-eval.txt"}
+{"at": "2026-09-21T02:23:13.871514+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/025-errors.txt"}
+{"at": "2026-09-21T02:23:24.462476+00:00", "args": ["scrollintoview", "@e23"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:24.628609+00:00", "args": ["click", "@e23"], "exitCode": 0, "output": "browser-logs/026-click.txt"}
+{"at": "2026-09-21T02:23:24.829675+00:00", "args": ["snapshot", "-i"], "exitCode": 0, "output": "browser-logs/027-snapshot.txt"}
+{"at": "2026-09-21T02:23:34.851607+00:00", "args": ["scrollintoview", "@e21"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:35.026595+00:00", "args": ["click", "@e21"], "exitCode": 0, "output": "browser-logs/028-click.txt"}
+{"at": "2026-09-21T02:23:35.220796+00:00", "args": ["get", "value", "[aria-label=\"Map layout\"]"], "exitCode": 0, "output": "browser-logs/029-get.txt"}
+{"at": "2026-09-21T02:23:35.418104+00:00", "args": ["scrollintoview", "@e20"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:35.603869+00:00", "args": ["click", "@e20"], "exitCode": 0, "output": "browser-logs/030-click.txt"}
+{"at": "2026-09-21T02:23:35.824934+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/mobile.png"], "exitCode": 0, "output": "browser-logs/031-screenshot.txt"}
+{"at": "2026-09-21T02:23:36.014910+00:00", "args": ["scrollintoview", "[aria-label=\"Zoom to group: Daniel Kim\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:23:36.179899+00:00", "args": ["click", "[aria-label=\"Zoom to group: Daniel Kim\"]"], "exitCode": 0, "output": "browser-logs/032-click.txt"}
+{"at": "2026-09-21T02:23:36.394750+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/mobile-group.png"], "exitCode": 0, "output": "browser-logs/033-screenshot.txt"}
+{"at": "2026-09-21T02:23:36.582260+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/034-errors.txt"}
+{"at": "2026-09-21T02:24:32.194719+00:00", "args": ["open", "http://127.0.0.1:3000/"], "exitCode": 0, "output": "browser-logs/035-open.txt"}
+{"at": "2026-09-21T02:24:32.379718+00:00", "args": ["scrollintoview", "[aria-label=\"Map layout\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:24:32.545605+00:00", "args": ["select", "[aria-label=\"Map layout\"]", "team"], "exitCode": 0, "output": "browser-logs/036-select.txt"}
+{"at": "2026-09-21T02:24:32.766252+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/mobile.png"], "exitCode": 0, "output": "browser-logs/037-screenshot.txt"}
+{"at": "2026-09-21T02:24:32.949808+00:00", "args": ["scrollintoview", "[aria-label=\"Zoom to group: Daniel Kim\"]"], "exitCode": 0, "automaticPreparation": true, "outputText": "\u2713 Done\n"}
+{"at": "2026-09-21T02:24:33.124562+00:00", "args": ["click", "[aria-label=\"Zoom to group: Daniel Kim\"]"], "exitCode": 0, "output": "browser-logs/038-click.txt"}
+{"at": "2026-09-21T02:24:33.349770+00:00", "args": ["screenshot", "/Users/kalyankatika/Documents/GitHub/uxd-periscope/artifacts/team-layout/mobile-group.png"], "exitCode": 0, "output": "browser-logs/039-screenshot.txt"}
+{"at": "2026-09-21T02:24:33.529013+00:00", "args": ["errors"], "exitCode": 0, "output": "browser-logs/040-errors.txt"}
+{"at": "2026-09-21T02:24:33.785964+00:00", "args": ["close"], "exitCode": 0, "output": "browser-logs/041-close.txt"}

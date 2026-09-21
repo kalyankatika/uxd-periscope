@@ -1,0 +1,448 @@
+
+> uxd-periscope@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+TAP version 13
+# (node:83740) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: API validates writes, enforces origin, persists changes, and reports revision conflicts
+ok 1 - API validates writes, enforces origin, persists changes, and reports revision conflicts
+  ---
+  duration_ms: 102.173833
+  type: 'test'
+  ...
+# Subtest: 12 people provide 9.6 net FTE, research 1.6
+ok 2 - 12 people provide 9.6 net FTE, research 1.6
+  ---
+  duration_ms: 9.326584
+  type: 'test'
+  ...
+# Subtest: committed October research is 120%; proposed adds demand without mutating plan
+ok 3 - committed October research is 120%; proposed adds demand without mutating plan
+  ---
+  duration_ms: 0.864791
+  type: 'test'
+  ...
+# Subtest: thresholds and zero capacity
+ok 4 - thresholds and zero capacity
+  ---
+  duration_ms: 0.092917
+  type: 'test'
+  ...
+# Subtest: inclusive dates, weekday prorating, no demand outside dates
+ok 5 - inclusive dates, weekday prorating, no demand outside dates
+  ---
+  duration_ms: 0.787917
+  type: 'test'
+  ...
+# Subtest: CSV round trips quoted names; rejects invalid and duplicate rows
+ok 6 - CSV round trips quoted names; rejects invalid and duplicate rows
+  ---
+  duration_ms: 1.472917
+  type: 'test'
+  ...
+# Subtest: Checked-in UXD fixtures are deterministic and match the session-only example
+ok 7 - Checked-in UXD fixtures are deterministic and match the session-only example
+  ---
+  duration_ms: 11.475542
+  type: 'test'
+  ...
+# Subtest: Both readable CSV files import as the complete JSON workspace without ignored fields
+ok 8 - Both readable CSV files import as the complete JSON workspace without ignored fields
+  ---
+  duration_ms: 3.225292
+  type: 'test'
+  ...
+# Subtest: Demo counts and the cross-team Research rollup retain the documented showcase
+ok 9 - Demo counts and the cross-team Research rollup retain the documented showcase
+  ---
+  duration_ms: 0.710042
+  type: 'test'
+  ...
+# Subtest: Operations VP reports to the head without adding delivery capacity
+ok 10 - Operations VP reports to the head without adding delivery capacity
+  ---
+  duration_ms: 0.580584
+  type: 'test'
+  ...
+# Subtest: Grid cards preserve graph identities, filtered connections and search scope
+ok 11 - Grid cards preserve graph identities, filtered connections and search scope
+  ---
+  duration_ms: 19.478042
+  type: 'test'
+  ...
+# Subtest: Grid owner labels use IDs and team project counts respect the selected period
+ok 12 - Grid owner labels use IDs and team project counts respect the selected period
+  ---
+  duration_ms: 1.434541
+  type: 'test'
+  ...
+# Subtest: The visual map shares export identities and shows only recorded relationships
+ok 13 - The visual map shares export identities and shows only recorded relationships
+  ---
+  duration_ms: 1.058416
+  type: 'test'
+  ...
+# Subtest: Attention and top-priority spotlights retain contributors and their reporting chains
+ok 14 - Attention and top-priority spotlights retain contributors and their reporting chains
+  ---
+  duration_ms: 0.755708
+  type: 'test'
+  ...
+# Subtest: Local graph depth follows both directions, and explains each relationship from the selected item
+ok 15 - Local graph depth follows both directions, and explains each relationship from the selected item
+  ---
+  duration_ms: 0.214
+  type: 'test'
+  ...
+# Subtest: Quarter boundaries omit inactive projects without dangling dependencies
+ok 16 - Quarter boundaries omit inactive projects without dangling dependencies
+  ---
+  duration_ms: 0.164083
+  type: 'test'
+  ...
+# Subtest: Force layout stays deterministic, separated and immutable; fit contains all nodes
+ok 17 - Force layout stays deterministic, separated and immutable; fit contains all nodes
+  ---
+  duration_ms: 96.715208
+  type: 'test'
+  ...
+# Subtest: Zoom preserves the location under the pointer and clamps extreme input
+ok 18 - Zoom preserves the location under the pointer and clamps extreme input
+  ---
+  duration_ms: 0.096125
+  type: 'test'
+  ...
+# Subtest: Reporting view includes every descendant and excludes project connections and ancestors
+ok 19 - Reporting view includes every descendant and excludes project connections and ancestors
+  ---
+  duration_ms: 0.366125
+  type: 'test'
+  ...
+# Subtest: graph navigation follows IDs and truncates when returning to an earlier node
+ok 20 - graph navigation follows IDs and truncates when returning to an earlier node
+  ---
+  duration_ms: 0.911584
+  type: 'test'
+  ...
+# Subtest: graph navigation removes deleted nodes and rejects unknown destinations
+ok 21 - graph navigation removes deleted nodes and rejects unknown destinations
+  ---
+  duration_ms: 0.088375
+  type: 'test'
+  ...
+# Subtest: Person context includes all descendants and their projects using IDs
+ok 22 - Person context includes all descendants and their projects using IDs
+  ---
+  duration_ms: 1.924292
+  type: 'test'
+  ...
+# Subtest: Person context honors graph period and excludes external dependency projects
+ok 23 - Person context honors graph period and excludes external dependency projects
+  ---
+  duration_ms: 0.401334
+  type: 'test'
+  ...
+# Subtest: Project and priority contexts retain linked people and reporting remains descendants only
+ok 24 - Project and priority contexts retain linked people and reporting remains descendants only
+  ---
+  duration_ms: 0.304667
+  type: 'test'
+  ...
+# Subtest: Friendly source headers and explicit label aliases map without changing identity
+ok 25 - Friendly source headers and explicit label aliases map without changing identity
+  ---
+  duration_ms: 2.663583
+  type: 'test'
+  ...
+# Subtest: All exported project labels can be reviewed, including backlog and health aliases
+ok 26 - All exported project labels can be reviewed, including backlog and health aliases
+  ---
+  duration_ms: 9.678875
+  type: 'test'
+  ...
+# Subtest: Import review blocks missing relationships and inconsistent taxonomy without mutating the workspace
+ok 27 - Import review blocks missing relationships and inconsistent taxonomy without mutating the workspace
+  ---
+  duration_ms: 2.22775
+  type: 'test'
+  ...
+# (node:83748) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Legacy SQLite plans migrate without losing data; project context survives saves
+ok 28 - Legacy SQLite plans migrate without losing data; project context survives saves
+  ---
+  duration_ms: 25.687791
+  type: 'test'
+  ...
+# Subtest: Project context round trips through CSV; legacy imports retain safe defaults
+ok 29 - Project context round trips through CSV; legacy imports retain safe defaults
+  ---
+  duration_ms: 0.940333
+  type: 'test'
+  ...
+# Subtest: People can be added and edited by ID despite identical names
+ok 30 - People can be added and edited by ID despite identical names
+  ---
+  duration_ms: 10.114083
+  type: 'test'
+  ...
+# Subtest: Moves retain nested reporting lines, person fields, and every project relationship
+ok 31 - Moves retain nested reporting lines, person fields, and every project relationship
+  ---
+  duration_ms: 0.936083
+  type: 'test'
+  ...
+# Subtest: Moving to the manager's team includes all descendants but preserves their reporting lines
+ok 32 - Moving to the manager's team includes all descendants but preserves their reporting lines
+  ---
+  duration_ms: 0.557292
+  type: 'test'
+  ...
+# Subtest: A hierarchy can move to the top level without losing its team or descendants
+ok 33 - A hierarchy can move to the top level without losing its team or descendants
+  ---
+  duration_ms: 0.560583
+  type: 'test'
+  ...
+# Subtest: Moves and edits reject cycles, self-reporting, and unknown IDs without mutation
+ok 34 - Moves and edits reject cycles, self-reporting, and unknown IDs without mutation
+  ---
+  duration_ms: 1.665292
+  type: 'test'
+  ...
+# Subtest: Removal impact resolves direct reports, owners, and contributors only by ID
+ok 35 - Removal impact resolves direct reports, owners, and contributors only by ID
+  ---
+  duration_ms: 0.580459
+  type: 'test'
+  ...
+# Subtest: Removing a leader reparents direct reports, reassigns ownership, and retains all project details
+ok 36 - Removing a leader reparents direct reports, reassigns ownership, and retains all project details
+  ---
+  duration_ms: 0.583
+  type: 'test'
+  ...
+# Subtest: Removing without replacements clears the legacy owner and promotes only direct reports
+ok 37 - Removing without replacements clears the legacy owner and promotes only direct reports
+  ---
+  duration_ms: 0.46925
+  type: 'test'
+  ...
+# Subtest: A surviving descendant can own projects after its leader is removed
+ok 38 - A surviving descendant can own projects after its leader is removed
+  ---
+  duration_ms: 0.571167
+  type: 'test'
+  ...
+# Subtest: Removal rejects missing, deleted, and cyclic replacement IDs even with no affected records
+ok 39 - Removal rejects missing, deleted, and cyclic replacement IDs even with no affected records
+  ---
+  duration_ms: 1.442416
+  type: 'test'
+  ...
+# Subtest: Operations validate the whole workspace, including unrelated project references
+ok 40 - Operations validate the whole workspace, including unrelated project references
+  ---
+  duration_ms: 0.665666
+  type: 'test'
+  ...
+# Subtest: Returned plans and impact records do not share mutable records with their inputs
+ok 41 - Returned plans and impact records do not share mutable records with their inputs
+  ---
+  duration_ms: 0.736084
+  type: 'test'
+  ...
+# (node:83750) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: SQLite saves, rejects stale revisions and invalid writes without changing the plan
+ok 42 - SQLite saves, rejects stale revisions and invalid writes without changing the plan
+  ---
+  duration_ms: 95.232959
+  type: 'test'
+  ...
+# Subtest: reporting forest preserves four levels, separates siblings, and fits the viewport
+ok 43 - reporting forest preserves four levels, separates siblings, and fits the viewport
+  ---
+  duration_ms: 1.2895
+  type: 'test'
+  ...
+# Subtest: layout uses IDs despite duplicate names, is deterministic, and never mutates inputs
+ok 44 - layout uses IDs despite duplicate names, is deterministic, and never mutates inputs
+  ---
+  duration_ms: 2.299959
+  type: 'test'
+  ...
+# Subtest: empty, irrelevant, missing-endpoint and cyclic relationships are handled safely
+ok 45 - empty, irrelevant, missing-endpoint and cyclic relationships are handled safely
+  ---
+  duration_ms: 0.118458
+  type: 'test'
+  ...
+# Subtest: groups by stable ownership IDs, preserving shared contributors without duplicate projects
+ok 46 - groups by stable ownership IDs, preserving shared contributors without duplicate projects
+  ---
+  duration_ms: 4.156834
+  type: 'test'
+  ...
+# Subtest: scoped graphs use full hierarchy without adding hidden people or projects
+ok 47 - scoped graphs use full hierarchy without adding hidden people or projects
+  ---
+  duration_ms: 0.524916
+  type: 'test'
+  ...
+# Subtest: reordering inputs and renaming people preserves positions without mutations
+ok 48 - reordering inputs and renaming people preserves positions without mutations
+  ---
+  duration_ms: 1.799708
+  type: 'test'
+  ...
+# Subtest: empty graph, missing owners, broken managers, and reporting cycles remain safe and explicit
+ok 49 - empty graph, missing owners, broken managers, and reporting cycles remain safe and explicit
+  ---
+  duration_ms: 0.381
+  type: 'test'
+  ...
+# Subtest: A leader sees work owned by reports and shared work, each project once
+ok 50 - A leader sees work owned by reports and shared work, each project once
+  ---
+  duration_ms: 5.946375
+  type: 'test'
+  ...
+# Subtest: Reporting validation rejects cycles, missing managers and broken project links
+ok 51 - Reporting validation rejects cycles, missing managers and broken project links
+  ---
+  duration_ms: 2.296334
+  type: 'test'
+  ...
+# Subtest: Reporting reassignment updates leader rollups without changing project ownership
+ok 52 - Reporting reassignment updates leader rollups without changing project ownership
+  ---
+  duration_ms: 0.860583
+  type: 'test'
+  ...
+# Subtest: Graph export contains stable, resolvable identity and relationship links
+ok 53 - Graph export contains stable, resolvable identity and relationship links
+  ---
+  duration_ms: 0.946666
+  type: 'test'
+  ...
+# Subtest: Organization and project relationships round trip through CSV
+ok 54 - Organization and project relationships round trip through CSV
+  ---
+  duration_ms: 2.747917
+  type: 'test'
+  ...
+# Subtest: Related projects keep all direct dependencies first without truncating or mutating the plan
+ok 55 - Related projects keep all direct dependencies first without truncating or mutating the plan
+  ---
+  duration_ms: 0.48525
+  type: 'test'
+  ...
+# Subtest: Related projects agree with all seven exported dependency edges in both directions
+ok 56 - Related projects agree with all seven exported dependency edges in both directions
+  ---
+  duration_ms: 0.927833
+  type: 'test'
+  ...
+# Subtest: Shared people include opposite lead and contributor roles symmetrically
+ok 57 - Shared people include opposite lead and contributor roles symmetrically
+  ---
+  duration_ms: 0.560375
+  type: 'test'
+  ...
+# Subtest: A person present as both lead and contributor contributes one relationship reason
+ok 58 - A person present as both lead and contributor contributes one relationship reason
+  ---
+  duration_ms: 0.813
+  type: 'test'
+  ...
+# Subtest: Matching display names do not connect different person IDs
+ok 59 - Matching display names do not connect different person IDs
+  ---
+  duration_ms: 0.669458
+  type: 'test'
+  ...
+# Subtest: Renaming people and projects preserves ID-based relationships
+ok 60 - Renaming people and projects preserves ID-based relationships
+  ---
+  duration_ms: 0.717625
+  type: 'test'
+  ...
+# (node:83754) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Combined import saves both datasets once, resolves graph identities, and rejects stale or invalid replacements without partial writes
+ok 61 - Combined import saves both datasets once, resolves graph identities, and rejects stale or invalid replacements without partial writes
+  ---
+  duration_ms: 38.961416
+  type: 'test'
+  ...
+# Subtest: A complete new organization replaces both files without an invalid intermediate roster
+ok 62 - A complete new organization replaces both files without an invalid intermediate roster
+  ---
+  duration_ms: 12.210042
+  type: 'test'
+  ...
+# Subtest: Merge keeps omitted records and reports each dataset's changes without mutating inputs or revision
+ok 63 - Merge keeps omitted records and reports each dataset's changes without mutating inputs or revision
+  ---
+  duration_ms: 0.875875
+  type: 'test'
+  ...
+# Subtest: Replace counts retained IDs as updates and removes both omitted datasets
+ok 64 - Replace counts retained IDs as updates and removes both omitted datasets
+  ---
+  duration_ms: 0.390833
+  type: 'test'
+  ...
+# Subtest: Leading zeros and case-sensitive IDs remain distinct even when names match
+ok 65 - Leading zeros and case-sensitive IDs remain distinct even when names match
+  ---
+  duration_ms: 1.024375
+  type: 'test'
+  ...
+# Subtest: Combined validation blocks missing managers, owners, contributors and dependencies
+ok 66 - Combined validation blocks missing managers, owners, contributors and dependencies
+  ---
+  duration_ms: 2.211709
+  type: 'test'
+  ...
+# Subtest: Reporting cycles and inconsistent team or priority labels block the combined plan
+ok 67 - Reporting cycles and inconsistent team or priority labels block the combined plan
+  ---
+  duration_ms: 0.556667
+  type: 'test'
+  ...
+# Subtest: Merge validates taxonomy against omitted existing records
+ok 68 - Merge validates taxonomy against omitted existing records
+  ---
+  duration_ms: 0.326875
+  type: 'test'
+  ...
+# Subtest: Schema validation rejects malformed inspected rows and duplicate IDs without throwing
+ok 69 - Schema validation rejects malformed inspected rows and duplicate IDs without throwing
+  ---
+  duration_ms: 1.305084
+  type: 'test'
+  ...
+# Subtest: The combined preview blocks plans over the UTF-8 save limit even when each file is smaller
+ok 70 - The combined preview blocks plans over the UTF-8 save limit even when each file is smaller
+  ---
+  duration_ms: 14.967375
+  type: 'test'
+  ...
+# Subtest: The exact save-size boundary is accepted and one extra byte is blocked
+ok 71 - The exact save-size boundary is accepted and one extra byte is blocked
+  ---
+  duration_ms: 12.873625
+  type: 'test'
+  ...
+1..71
+# tests 71
+# suites 0
+# pass 71
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 336.137334

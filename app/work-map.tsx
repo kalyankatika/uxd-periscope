@@ -11,6 +11,7 @@ import {
 import type { Initiative, Plan } from "@/lib/domain";
 import WorkGrid from "./work-grid";
 import { scopeGraph } from "@/lib/graph-scope";
+import { layoutTeamGraph } from "@/lib/team-layout";
 import { graphTrail, visitGraphNode } from "@/lib/graph-navigation";
 import { layoutReportingGraph } from "@/lib/reporting-layout";
 import UiIcon from "./ui-icon";
@@ -114,6 +115,7 @@ export default function WorkMap({
   const [labels, setLabels] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [viewMode, setViewMode] = useState<"map" | "grid">("map");
+  const [mapLayout, setMapLayout] = useState<"network" | "team">("network");
   const [gridSort, setGridSort] = useState<GridSort>("type");
   const [cameraOverride, setCamera] = useState<Camera | null>(null);
   const [size, setSize] = useState({ width: 900, height: 650 });
@@ -178,9 +180,23 @@ export default function WorkMap({
     [scopedGraph, preset, visibleKinds],
   );
   const workLayout = useMemo(() => layoutGraph(graph), [graph]);
+  const teamLayout = useMemo(
+    () => layoutTeamGraph(visible, plan, size.width < 550 ? 1 : 3),
+    [visible, plan, size.width],
+  );
+  const byTeam = mapLayout === "team" && preset !== "reporting";
   const layout = useMemo(
-    () => (preset === "reporting" ? layoutReportingGraph(visible) : workLayout),
-    [preset, visible, workLayout],
+    () =>
+      preset === "reporting"
+        ? layoutReportingGraph(visible)
+        : byTeam
+          ? teamLayout.nodes
+          : workLayout,
+    [preset, visible, byTeam, teamLayout, workLayout],
+  );
+  const teamByNode = useMemo(
+    () => new Map(teamLayout.nodes.map((n) => [n.id, n.groupId])),
+    [teamLayout],
   );
   const visibleIds = useMemo(
     () => new Set(visible.nodes.map((n) => n.id)),
@@ -190,8 +206,8 @@ export default function WorkMap({
     () =>
       layout
         .filter((n) => visibleIds.has(n.id))
-        .map((n) => ({ ...n, ...positions[n.id] })),
-    [layout, visibleIds, positions],
+        .map((n) => ({ ...n, ...(!byTeam ? positions[n.id] : {}) })),
+    [layout, visibleIds, positions, byTeam],
   );
   const nodeMap = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
   const allNodeMap = useMemo(
@@ -199,8 +215,20 @@ export default function WorkMap({
     [graph.nodes],
   );
   const fitted = useMemo(
-    () => fitGraph(nodes, size.width, size.height),
-    [nodes, size],
+    () =>
+      byTeam && size.width < 550
+        ? { x: 20, y: 110, k: Math.max(0.2, (size.width - 40) / 500) }
+        : fitGraph(
+            byTeam
+              ? teamLayout.groups.flatMap((g) => [
+                  { x: g.x, y: g.y, radius: 0 },
+                  { x: g.x + g.width, y: g.y + g.height, radius: 0 },
+                ])
+              : nodes,
+            size.width,
+            size.height,
+          ),
+    [nodes, size, byTeam, teamLayout],
   );
   const camera = cameraOverride || fitted;
   const cameraRef = useRef(camera);
@@ -411,7 +439,7 @@ export default function WorkMap({
     if (Math.abs(dx) + Math.abs(dy) > 4) d.moved = true;
     if (!d.moved) return;
     setHoveredId(null);
-    if (d.nodeId)
+    if (d.nodeId && !byTeam)
       setPositions((previous) => ({
         ...previous,
         [d.nodeId!]: {
@@ -515,6 +543,24 @@ export default function WorkMap({
           </p>
         </div>
         <div className="map-heading-actions">
+          {viewMode === "map" && preset !== "reporting" && (
+            <label className="map-layout-select">
+              Layout
+              <select
+                aria-label="Map layout"
+                value={mapLayout}
+                onChange={(e) => {
+                  setMapLayout(e.target.value as "network" | "team");
+                  setCamera(null);
+                  setHoveredId(null);
+                  setPositions({});
+                }}
+              >
+                <option value="network">Network</option>
+                <option value="team">By team</option>
+              </select>
+            </label>
+          )}
           <div className="map-view-switch" role="group" aria-label="Work view">
             <button
               aria-pressed={viewMode === "map"}
@@ -742,65 +788,182 @@ export default function WorkMap({
                 <g
                   transform={`translate(${camera.x},${camera.y}) scale(${camera.k})`}
                 >
-                  {visible.links.map((edge) => {
-                    const source = nodeMap.get(edge.source),
-                      target = nodeMap.get(edge.target);
-                    if (!source || !target) return null;
-                    const active =
-                      highlighted === edge.source ||
-                      highlighted === edge.target;
-                    const opacity =
-                      preset === "reporting"
-                        ? active
-                          ? 0.95
-                          : 0.65
-                        : hoveredId
+                  {byTeam &&
+                    teamLayout.groups.map((group) => {
+                      const compact = camera.k < 0.6;
+                      const count =
+                        group.id === "priorities"
+                          ? `${teamLayout.nodes.filter((n) => n.groupId === group.id).length} shared priorities`
+                          : `${group.projectCount} ${group.projectCount === 1 ? "project" : "projects"} · ${group.peopleCount} ${group.peopleCount === 1 ? "person" : "people"}`;
+                      const zoomGroup = () => {
+                        const fit = fitGraph(
+                          [
+                            { x: group.x, y: group.y, radius: 0 },
+                            {
+                              x: group.x + group.width,
+                              y: group.y + group.height,
+                              radius: 0,
+                            },
+                          ],
+                          size.width,
+                          size.height,
+                        );
+                        const k = Math.max(0.6, fit.k);
+                        setCamera({
+                          k,
+                          x: size.width / 2 - (group.x + group.width / 2) * k,
+                          y: size.height / 2 - (group.y + group.height / 2) * k,
+                        });
+                      };
+                      const title = compact
+                        ? group.label.slice(
+                            0,
+                            Math.max(
+                              8,
+                              Math.floor((group.width * camera.k) / 7) - 3,
+                            ),
+                          ) +
+                          (group.label.length >
+                          Math.max(
+                            8,
+                            Math.floor((group.width * camera.k) / 7) - 3,
+                          )
+                            ? "…"
+                            : "")
+                        : group.label;
+                      return (
+                        <g key={group.id} className="map-team-group">
+                          <rect
+                            x={group.x}
+                            y={group.y}
+                            width={group.width}
+                            height={group.height}
+                            rx="18"
+                            fill="#203b2b"
+                            fillOpacity="0.75"
+                            stroke="#587c5e"
+                            strokeWidth="1"
+                            vectorEffect="non-scaling-stroke"
+                          />
+                          <g
+                            role="button"
+                            tabIndex={0}
+                            aria-label={`Zoom to group: ${group.label}`}
+                            onPointerDown={(e) => e.stopPropagation()}
+                            onClick={zoomGroup}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                e.preventDefault();
+                                zoomGroup();
+                              }
+                            }}
+                          >
+                            <title>
+                              {group.label} · {group.subtitle} · {count}. Zoom
+                              to group.
+                            </title>
+                            <rect
+                              x={group.x}
+                              y={group.y}
+                              width={group.width}
+                              height={compact ? group.height : 76}
+                              rx="18"
+                              fill="#294633"
+                            />
+                            <text
+                              x={group.x + (compact ? 10 / camera.k : 18)}
+                              y={group.y + (compact ? 24 / camera.k : 29)}
+                              fill="#f1f7ef"
+                              fontSize={compact ? 12 / camera.k : 22}
+                              fontWeight="700"
+                            >
+                              {title}
+                            </text>
+                            <text
+                              x={group.x + (compact ? 10 / camera.k : 18)}
+                              y={group.y + (compact ? 42 / camera.k : 55)}
+                              fill="#bdd0bc"
+                              fontSize={compact ? 10 / camera.k : 17}
+                            >
+                              {count}
+                            </text>
+                          </g>
+                        </g>
+                      );
+                    })}
+                  {!(byTeam && camera.k < 0.6) &&
+                    visible.links.map((edge) => {
+                      const source = nodeMap.get(edge.source),
+                        target = nodeMap.get(edge.target);
+                      if (!source || !target) return null;
+                      const crossTeam =
+                        byTeam &&
+                        teamByNode.get(edge.source) !==
+                          teamByNode.get(edge.target);
+                      if (
+                        crossTeam &&
+                        ![edge.source, edge.target].includes(highlighted || "")
+                      )
+                        return null;
+                      const active =
+                        highlighted === edge.source ||
+                        highlighted === edge.target;
+                      const opacity =
+                        preset === "reporting"
                           ? active
-                            ? 0.9
-                            : 0.08
-                          : query.trim()
-                            ? matchIds.has(edge.source) ||
-                              matchIds.has(edge.target)
-                              ? 0.85
+                            ? 0.95
+                            : 0.65
+                          : hoveredId
+                            ? active
+                              ? 0.9
                               : 0.08
-                            : 0.4;
-                    return (
-                      <line
-                        key={edge.id}
-                        x1={source.x}
-                        y1={source.y}
-                        x2={target.x}
-                        y2={target.y}
-                        className={`map-edge ${active ? "active" : ""}`}
-                        stroke={
-                          active
-                            ? colors[
-                                (highlighted === source.id ? target : source)
-                                  .kind
-                              ]
-                            : edge.kind === "depends"
-                              ? "#b69ca1"
-                              : "#678174"
-                        }
-                        strokeWidth={
-                          active ? 1.8 : edge.kind === "contributes" ? 0.8 : 1.1
-                        }
-                        strokeDasharray={
-                          edge.kind === "reports"
-                            ? preset === "reporting"
-                              ? undefined
-                              : "3 5"
-                            : edge.kind === "depends"
-                              ? "7 4"
-                              : undefined
-                        }
-                        opacity={opacity}
-                        vectorEffect="non-scaling-stroke"
-                      >
-                        <title>{`${source.label} — ${connectionLabel(edge, source.id).toLowerCase()} — ${target.label}`}</title>
-                      </line>
-                    );
-                  })}
+                            : query.trim()
+                              ? matchIds.has(edge.source) ||
+                                matchIds.has(edge.target)
+                                ? 0.85
+                                : 0.08
+                              : 0.4;
+                      return (
+                        <line
+                          key={edge.id}
+                          x1={source.x}
+                          y1={source.y}
+                          x2={target.x}
+                          y2={target.y}
+                          className={`map-edge ${active ? "active" : ""}`}
+                          stroke={
+                            active
+                              ? colors[
+                                  (highlighted === source.id ? target : source)
+                                    .kind
+                                ]
+                              : edge.kind === "depends"
+                                ? "#b69ca1"
+                                : "#678174"
+                          }
+                          strokeWidth={
+                            active
+                              ? 1.8
+                              : edge.kind === "contributes"
+                                ? 0.8
+                                : 1.1
+                          }
+                          strokeDasharray={
+                            edge.kind === "reports"
+                              ? preset === "reporting"
+                                ? undefined
+                                : "3 5"
+                              : edge.kind === "depends"
+                                ? "7 4"
+                                : undefined
+                          }
+                          opacity={opacity}
+                          vectorEffect="non-scaling-stroke"
+                        >
+                          <title>{`${source.label} — ${connectionLabel(edge, source.id).toLowerCase()} — ${target.label}`}</title>
+                        </line>
+                      );
+                    })}
                   {nodes.map((positionedNode) => {
                     const node =
                       preset === "reporting"
@@ -821,6 +984,7 @@ export default function WorkMap({
                           ? !connected
                           : !!query.trim() && !matchIds.has(node.id);
                     const showLabel =
+                      (byTeam && camera.k > 0.6) ||
                       (preset === "reporting" && nodes.length <= 12) ||
                       labels ||
                       active ||
@@ -839,7 +1003,11 @@ export default function WorkMap({
                         aria-label={`${singular[node.kind]}: ${node.label}${node.attention ? ", needs attention" : ""}. Show connections.`}
                         aria-pressed={effectiveSelectedId === node.id}
                         className={`map-node ${node.kind} ${active ? "is-active" : ""}`}
-                        style={{ opacity: dim ? 0.16 : 1 }}
+                        style={{
+                          opacity: dim ? 0.16 : 1,
+                          visibility:
+                            byTeam && camera.k < 0.6 ? "hidden" : "visible",
+                        }}
                         onMouseEnter={() => {
                           if (!drag.current) setHoveredId(node.id);
                         }}
@@ -927,7 +1095,7 @@ export default function WorkMap({
                         )}
                         {showLabel && (
                           <g
-                            transform={`translate(0,${node.radius + 16 / camera.k}) scale(${1 / camera.k})`}
+                            transform={`translate(0,${node.radius + 16 / camera.k}) scale(${byTeam ? Math.min(1 / camera.k, 1.35) : 1 / camera.k})`}
                             pointerEvents="none"
                           >
                             <text
@@ -980,17 +1148,19 @@ export default function WorkMap({
               )}
               <div className="map-canvas-topline">
                 <span>
-                  {preset === "reporting"
-                    ? local && selected
-                      ? `Reporting group: ${selected.label}`
-                      : "Reporting lines · Select a leader to inspect their reports"
-                    : local && selected
-                      ? scopeLabel
-                      : preset === "top"
-                        ? "Top-priority projects"
-                        : preset === "attention"
-                          ? "Projects requiring attention"
-                          : "All relationships"}
+                  {byTeam
+                    ? "By accountable leader · Select group to zoom"
+                    : preset === "reporting"
+                      ? local && selected
+                        ? `Reporting group: ${selected.label}`
+                        : "Reporting lines · Select a leader to inspect their reports"
+                      : local && selected
+                        ? scopeLabel
+                        : preset === "top"
+                          ? "Top-priority projects"
+                          : preset === "attention"
+                            ? "Projects requiring attention"
+                            : "All relationships"}
                 </span>
                 {!selected && preset !== "all" && (
                   <button onClick={reset}>

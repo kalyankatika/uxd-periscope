@@ -18,3 +18,11 @@ The familiar sidebar remains visible. Overview, Projects, Teams & reporting, Cap
 Capacity remains discipline-level forecasting. The interface does not invent individual or group allocation from project membership. Session-only example data and the saved SQLite workspace retain their existing separation. Graph scope follows stable person/project IDs, and changing data mode resets the map.
 
 Navigation is not persisted across reloads. Priority identity, source freshness, enterprise permissions and integrations require separate data-contract work. This focused change adds no AI execution or live synchronization.
+
+## Map layouts
+
+Use **Layout → By team** to review work grouped under accountable leaders. **Network** remains the default relationship view. This changes arrangement only: selection, period, filters, inspector and Grid use the same underlying scope.
+
+Each project appears once, grouped by its owner's reporting chain. Contributors can span groups without duplicating projects. Missing owners or invalid reporting chains appear under Unassigned; shared priorities have a separate group. Group project counts mean accountable ownership, not all work involving that team's members or capacity allocation.
+
+At overview scale, group summaries keep names and counts readable. Select a group to zoom into its people and projects; this does not filter the scope. Select a node to inspect its connections and reveal cross-group links. Narrow screens stack the groups; pan to explore and use Grid for comparison. Reporting lines retain their existing hierarchy layout. Layout choice is session-only.

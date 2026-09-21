@@ -948,7 +948,7 @@ button.map-open-button {
   }
   .map-canvas-topline {
     left: 15px;
-    top: 58px;
+    top: 86px;
   }
   .map-canvas-bottom {
     bottom: 55px;
@@ -1281,5 +1281,34 @@ button.map-open-button {
   }
   .work-map .map-presets button {
     padding: 7px 10px;
+  }
+}
+
+.map-layout-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #52634b;
+}
+.map-layout-select select {
+  width: auto;
+  border-radius: 999px;
+  min-height: 40px;
+  padding: 6px 28px 6px 12px;
+}
+.map-team-group [role="button"] {
+  cursor: pointer;
+}
+.map-team-group [role="button"]:focus-visible > rect {
+  stroke: #bce6ab;
+  stroke-width: 3;
+}
+@media (max-width: 650px) {
+  .work-map .map-heading-actions {
+    flex-wrap: wrap;
+  }
+  .map-layout-select {
+    margin-right: auto;
   }
 }
