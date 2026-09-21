@@ -1,13 +1,33 @@
 {
+  "recordedDate": "2026-09-21",
+  "sourceCommit": "dbc61a5",
+  "runtime": "Static read-only JSON build at http://127.0.0.1:3001",
   "durationSeconds": 40,
   "width": 1920,
   "height": 1080,
+  "fps": 30,
+  "videoCodec": "H.264",
   "audioTracks": 0,
-  "bytes": 4208312,
+  "bytes": 3618129,
   "fullDecode": "passed",
-  "opening": "Platform overview, then navigation into Work map",
+  "visualReview": "Scene screenshots and final MP4 frames sampled every 2 seconds; poster checked at full size",
+  "browserErrors": [],
+  "opening": "Platform overview, then fullscreen Work map",
+  "scenes": [
+    "Overview and team cards",
+    "Network project connections",
+    "By team and Elena group zoom",
+    "By priority and Responsible AI group zoom",
+    "Team \u00d7 priority and project list",
+    "Project timeline grouped by priority"
+  ],
   "fictionalData": true,
-  "recordedDate": "2026-09-13",
   "people": 27,
-  "projects": 13
+  "projects": 13,
+  "priorities": 7,
+  "tools": {
+    "agent-browser": "0.27.0",
+    "ffmpeg": "6.0"
+  },
+  "limitations": "Recorded fictional snapshot only. No live API synchronization or source editing demonstrated."
 }

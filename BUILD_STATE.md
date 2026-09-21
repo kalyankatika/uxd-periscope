@@ -175,3 +175,7 @@ Delivered isolated build:static and preview:static, exported static-site, runtim
 ## Technical landscape documentation — September 21, 2026
 
 Created docs/technical-landscape.md from current implementation and linked README. Covers source-to-graph pipeline, identity/edge direction, scoping versus layout, D3/SVG interaction, matrix/timeline/capacity boundaries, static/local deployment, JSON-LD scope and future enterprise contracts. Explicitly records label-derived priority IDs, full-workspace graph export and current scaling/security limits. Local document links checked; documentation-only, no app changes or tests rerun.
+
+## Updated static demo reel — September 21, 2026
+
+Re-recorded the 40-second silent overview-first reel from the current read-only static JSON build at source dbc61a5. Shows network project connections, By team/By priority group zoom, Team × priority cell drilldown and delivery timeline. Preserved Fidelity styling, captions, fictional disclosure and closing card. Updated recorder, playbook, poster, scene manifest and validation. All six scene screenshots and final video frames sampled every two seconds checked; full decode passed, H.264 1920×1080/30fps/40seconds, zero audio streams, no browser errors. Python syntax checked. No app changes; builds/tests not rerun. Raw takes remain outside repo. Static preview remains on3001.

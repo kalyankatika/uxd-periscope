@@ -1,6 +1,6 @@
 # Periscope demo reel playbook
 
-Repeatable production reference for the silent reel the Head of UXD liked. Captured September 18, 2026; reference footage recorded September 13 at commit `34b3547`.
+Repeatable production reference for the silent reel the Head of UXD liked. Style captured September 18, 2026. Latest footage recorded September 21 from the static JSON build at source commit `dbc61a5`.
 
 ## Reference assets
 
@@ -25,7 +25,7 @@ Start with the platform overview: branding, navigation, priorities and teams. Th
 | Closing card | Periscope / UXD / Projects · People · Priorities |
 | Disclosure | Visible `FICTIONAL DATA` throughout the footage |
 
-Keep the current product conventions visible: persistent left navigation, compact workspace-status header, planning period left of Add project, consistent outline icons and rounded green action buttons. Avoid unrelated product changes during a recording run.
+Keep the current product conventions visible: persistent left navigation, compact workspace-status header, planning period in the page toolbar, consistent outline icons and rounded green action buttons. Avoid unrelated product changes during a recording run.
 
 ## Storyboard and observable outcomes
 
@@ -33,12 +33,12 @@ Start times include transition overlap. The script trims setup activity before e
 
 | Start | Scene | Required visible outcome |
 | --- | --- | --- |
-| 0.00s | Platform overview | Overview with priorities and health; scroll to team cards |
-| 8.25s | Work map | Navigate from Overview to Work map, expand, show connected organization |
-| 14.50s | Project connections | UX AI interaction standards → Focus connections → distance 2 → project details |
-| 20.25s | Grid view | Search `AI`, select UX AI interaction standards, show its inspector |
-| 26.00s | Reporting lines | Elena Brooks → Show reporting group; direct and indirect reports visible |
-| 31.75s | Capacity | Include proposed; reveal discipline allocation heatmap |
+| 0.00s | Platform overview | Priorities, health and decisions; scroll to team cards |
+| 8.25s | Work map | Fullscreen network; select UX AI interaction standards |
+| 14.50s | By team | Switch layout; zoom to Elena Brooks’s group |
+| 20.25s | By priority | Switch layout; zoom to Responsible AI experiences |
+| 26.00s | Team × priority | Select Elena × Advisor productivity; reveal related project |
+| 31.75s | Project timeline | Delivery bars grouped by priority; scroll through projects |
 | 37.50s | Closing card | Periscope branding; finish at 40 seconds |
 
 The reference fixture has 27 people, 13 projects and seven priorities: 47 map nodes. Planning period is October 2026. Elena has two direct reports, one indirect report and nine related projects. The hierarchy includes Elena → Maya → Nina. Capacity is discipline-level forecast effort, not individual time tracking or actual expenses.
@@ -47,14 +47,13 @@ The reference fixture has 27 people, 13 projects and seven priorities: 47 map no
 
 Run from the repository root. Prerequisites: the repository's supported Node version, Python 3, an installed agent-browser CLI with its browser runtime, and ffmpeg with libx264, drawtext and xfade support. Tool binaries are local prerequisites; they are not bundled in this repo. Use your own installed executable paths, not paths copied from another developer's machine.
 
-Use a fresh shell for recording. The current recorder targets `http://127.0.0.1:3000`; reuse a verified current preview there or start an isolated instance below. Do not start a second process on an occupied port or stop another person's server. An isolated checkout is useful when another app build is running.
+Use a fresh shell for recording. The current recorder targets `http://127.0.0.1:3001` (override with `DEMO_URL`); reuse a verified current preview there or start an isolated instance below. Do not start a second process on an occupied port or stop another person's server. An isolated checkout is useful when another app build is running.
 
 ```sh
 npm ci
 npm run demo:check
-export DATABASE_PATH="$(mktemp -d)/periscope-demo.sqlite"
-npm run build
-npm start -- --port 3000
+npm run build:static
+npm run preview:static
 ```
 
 Leave that terminal running. In another terminal, from the same repository root:
@@ -69,20 +68,20 @@ python3 scripts/make-short-demo.py record
 python3 scripts/make-short-demo.py render
 ```
 
-Use the built-in **Example data** session, with no manual edits. No import or saved-workspace write is needed. The script checks the fictional banner and waits for fonts and 47 map nodes. Each scene starts from a fresh page. Raw WebM takes, screenshots and `takes.json` stay in `DEMO_WORK_DIR`; the renderer overwrites the committed MP4, cover and scene manifest under `artifacts/platform-demo`.
+Use the default fictional JSON source in the read-only static build. No import or saved-workspace write is needed. The script checks the fictional banner and waits for fonts and 47 map nodes. Each scene starts from a fresh page. Raw WebM takes, screenshots and `takes.json` stay in `DEMO_WORK_DIR`; the renderer overwrites the committed MP4, cover and scene manifest under `artifacts/platform-demo`.
 
 Keep the same `DEMO_WORK_DIR` to retake a scene, then render again. Indexes are zero-based; the stop index is exclusive:
 
 ```sh
-# Retake only reporting lines (scene 4).
-python3 scripts/make-short-demo.py record 4 5
+# Retake only By team (scene 2).
+python3 scripts/make-short-demo.py record 2 3
 python3 scripts/make-short-demo.py render
 ```
 
 ## Review before sharing
 
 1. Watch the whole MP4. Confirm the opening is Overview, every storyboard outcome is actually shown, captions are legible, and transitions contain no loading screens, accidental menus or abrupt empty frames. A successful click command alone does not prove the destination appeared.
-2. Inspect the reporting scene for direct and indirect reports, the project detail panel, and the capacity scenario change. Keep the fictional disclosure visible. Do not imply live enterprise integrations, AI execution, person-level bookings or other unimplemented capabilities.
+2. Inspect both grouped layouts, the selected project inspector, the matrix project list and the timeline bars. Keep the fictional disclosure visible. Do not imply live enterprise integrations, AI execution, person-level bookings or other unimplemented capabilities.
 3. Confirm the recording reports no browser errors. If labels change, inspect a fresh accessibility snapshot and update script selectors. Do not guess replacement controls. If the fixture changes, reconcile counts, expected outcomes and the node wait together; never silently reuse stale footage.
 4. Decode the complete output and inspect its streams:
 

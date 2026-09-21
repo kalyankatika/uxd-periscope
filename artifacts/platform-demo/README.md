@@ -4,11 +4,11 @@
 
 **Short silent cut: [periscope-overview-demo.mp4](periscope-overview-demo.mp4) · 40 seconds · 1920 × 1080**
 
-Opens with the full platform overview, visible branding and navigation, priorities, and team cards. The next scene navigates into Work map and expands it, followed by project connections, Grid view, reporting hierarchy, and capacity. Brief on-screen captions, quarter-second dissolves, and a closing title replace narration. The MP4 contains no audio track. All footage was recorded from the running app with fictional data. Complete decode and visual spot checks passed; recording reported no browser errors. The earlier map-first cut remains at `periscope-short-silent.mp4`.
+Recorded September 21, 2026 from the static, read-only JSON build at source commit `dbc61a5`: 27 fictional people, 13 projects and seven priorities. Opens with the platform overview, then shows network project connections, By team and By priority graph layouts, the Team × priority comparison grid and project timeline. Concise captions, quarter-second dissolves and a closing title replace narration. No audio track. No live enterprise connections are implied.
 
-`overview-demo-scenes.json` records the scene timings and `overview-demo-validation.json` records the media checks. `overview-demo-poster.png` is the cover frame. Regenerate with `scripts/make-short-demo.py` using `AGENT_BROWSER_BIN`, `FFMPEG_BIN`, and ffmpeg on PATH; optional `record` and `render` arguments run those stages separately. Recording accepts start and exclusive stop indexes for retakes and retains the other scenes.
+`overview-demo-scenes.json` records scene timings; `overview-demo-validation.json` records the actual media checks. `overview-demo-poster.png` is the cover. Regenerate with `scripts/make-short-demo.py` and the playbook above. `DEMO_URL` defaults to port 3001. Raw recordings stay outside the repository.
 
-Latest silent reel re-recorded September 13, 2026 from the current build: 27 fictional people, updated icons and compact planning controls. The reporting scene focuses on Elena Brooks and her direct and indirect reports.
+The earlier map-first silent cut remains at `periscope-short-silent.mp4`. The narrated walkthrough and its validation below are historical assets, not recordings of the current static build.
 
 ## Full walkthrough
 

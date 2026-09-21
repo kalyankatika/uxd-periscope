@@ -16,15 +16,15 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "artifacts/platform-demo"
 WORK = Path(os.environ.get("DEMO_WORK_DIR", "/tmp/periscope-short-demo"))
 WORK.mkdir(parents=True, exist_ok=True)
-SESSION = "periscope-short-demo"
-URL = "http://127.0.0.1:3000"
+SESSION = "periscope-static-demo"
+URL = os.environ.get("DEMO_URL", "http://127.0.0.1:3001")
 SCENES = [
-    ("overview", "PLATFORM OVERVIEW", "Projects, priorities and teams", 8.5),
-    ("map", "WORK MAP", "Open the map and explore connections", 6.5),
-    ("connections", "PROJECT CONNECTIONS", "Owners, contributors and dependencies", 6),
-    ("grid", "GRID VIEW", "Review the same work in cards", 6),
-    ("teams", "REPORTING LINES", "Explore leaders and their reports", 6),
-    ("capacity", "CAPACITY", "Compare project demand with available time", 6),
+    ("overview", "PLATFORM OVERVIEW", "Projects, priorities and decisions", 8.5),
+    ("map", "WORK MAP", "Explore projects and their connections", 6.5),
+    ("teams", "BY TEAM", "See ownership across design leaders", 6),
+    ("priorities", "BY PRIORITY", "Group work by strategic priority", 6),
+    ("matrix", "TEAM × PRIORITY", "Compare teams and drill into projects", 6),
+    ("timeline", "PROJECT TIMELINE", "Review delivery dates by priority", 6),
 ]
 
 
@@ -50,6 +50,8 @@ def ref(name, role="button", contains=False):
 
 
 def click(name, contains=False):
+    target = ref(name, contains=contains)
+    browser("scrollintoview", target)
     browser("click", ref(name, contains=contains))
     time.sleep(0.35)
 
@@ -73,63 +75,48 @@ def record(start=0, stop=None):
             browser("wait", "--fn", 'document.fonts.status === "loaded" && document.querySelectorAll(".map-node").length === 47')
             if "Fictional organization" not in browser("get", "text", ".example-banner"):
                 raise RuntimeError("Recording requires the fictional example")
-            if name in ("connections", "grid", "teams"):
-                click("Expand map")
-            if name == "connections":
-                click("Project: UX AI interaction standards", contains=True)
-            if name == "grid":
-                click("Grid")
-            if name == "teams":
-                click("Reporting lines")
-                click("Leader: Elena Brooks", contains=True)
-            if name in ("overview", "map"):
+            if name == "overview":
                 click("Overview")
-            if name == "capacity":
-                click("Capacity")
-            browser("mouse", "move", "20", "20")
-            time.sleep(0.25)
-            trim = time.monotonic() - began
-            if name == "map":
-                time.sleep(0.6)
-                click("Work map")
-                time.sleep(1.0)
+            elif name == "timeline":
+                click("Project plan")
+                click("Timeline")
+                browser("scrollintoview", ".project-timeline")
+            elif name == "matrix":
+                click("Grid")
+                click("Team × priority")
+                click("Expand grid")
+            else:
                 click("Expand map")
-                time.sleep(1.2)
-                target = '[data-node-id="urn:periscope:project:experience-strategy"] > circle:first-of-type'
-                box = {k: float(v) for k, v in re.findall(r'(x|y|width|height):\s*([\d.-]+)', browser("get", "box", target))}
-                browser("mouse", "move", box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
-                time.sleep(1.2)
-                browser("mouse", "move", "20", "20")
-                time.sleep(1.0)
-            elif name == "connections":
-                time.sleep(1.0)
-                click("Focus connections")
-                time.sleep(1.2)
-                select("Connection distance", "2")
-                time.sleep(0.8)
-                click("Open project details")
-                time.sleep(1.5)
-            elif name == "grid":
-                time.sleep(1.4)
-                browser("fill", ref("Search people, projects or priorities", "textbox"), "AI")
-                time.sleep(1.2)
-                click("Project: UX AI interaction standards. View details.")
-                browser("mouse", "move", "20", "20")
-                time.sleep(2.1)
-            elif name == "teams":
-                time.sleep(1.0)
-                click("Show reporting group")
-                time.sleep(3.5)
-            elif name == "overview":
-                time.sleep(4.5)
+            browser("mouse", "move", "20", "20")
+            time.sleep(0.6)
+            trim = time.monotonic() - began
+            if name == "overview":
+                time.sleep(4)
                 browser("scrollintoview", ".teams-section")
                 time.sleep(2.5)
-            elif name == "capacity":
-                time.sleep(1.5)
-                browser("check", ref("Include proposed", "checkbox", contains=True))
-                time.sleep(1.6)
-                browser("scroll", "down", "200")
-                time.sleep(1.4)
+            elif name == "map":
+                time.sleep(2)
+                click("Project: UX AI interaction standards", contains=True)
+                time.sleep(2.5)
+            elif name == "teams":
+                click("By team")
+                time.sleep(2.2)
+                click("Zoom to group: Elena Brooks")
+                time.sleep(2.2)
+            elif name == "priorities":
+                click("By priority")
+                time.sleep(2.2)
+                click("Zoom to group: Responsible AI experiences")
+                time.sleep(2.2)
+            elif name == "matrix":
+                time.sleep(2)
+                click("Elena Brooks, Advisor productivity: 1 projects. View projects.")
+                time.sleep(2.5)
+            elif name == "timeline":
+                time.sleep(2.5)
+                browser("scroll", "down", "350")
+                time.sleep(2.5)
+            browser("mouse", "move", "20", "20")
             browser("screenshot", WORK / (name + ".png"))
             time.sleep(0.3)
         finally:

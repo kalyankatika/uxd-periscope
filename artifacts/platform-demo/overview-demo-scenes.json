@@ -2,31 +2,31 @@
   {
     "startSeconds": 0,
     "label": "PLATFORM OVERVIEW",
-    "caption": "Projects, priorities and teams"
+    "caption": "Projects, priorities and decisions"
   },
   {
     "startSeconds": 8.25,
     "label": "WORK MAP",
-    "caption": "Open the map and explore connections"
+    "caption": "Explore projects and their connections"
   },
   {
     "startSeconds": 14.5,
-    "label": "PROJECT CONNECTIONS",
-    "caption": "Owners, contributors and dependencies"
+    "label": "BY TEAM",
+    "caption": "See ownership across design leaders"
   },
   {
     "startSeconds": 20.25,
-    "label": "GRID VIEW",
-    "caption": "Review the same work in cards"
+    "label": "BY PRIORITY",
+    "caption": "Group work by strategic priority"
   },
   {
     "startSeconds": 26.0,
-    "label": "REPORTING LINES",
-    "caption": "Explore leaders and their reports"
+    "label": "TEAM \u00d7 PRIORITY",
+    "caption": "Compare teams and drill into projects"
   },
   {
     "startSeconds": 31.75,
-    "label": "CAPACITY",
-    "caption": "Compare project demand with available time"
+    "label": "PROJECT TIMELINE",
+    "caption": "Review delivery dates by priority"
   }
 ]
