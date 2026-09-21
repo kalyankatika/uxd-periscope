@@ -1328,3 +1328,20 @@ button.map-open-button {
 .map-select-input { position: relative; display: inline-flex; align-items: center; }
 .work-grid-toolbar .map-select-input select { appearance: none; padding-right: 34px; }
 .map-select-arrow { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; pointer-events: none; }
+
+/* Compact navigation stays in the search/filter row; small screens wrap in order. */
+.work-map .map-title-summary { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; min-width: 0; }
+.work-map .map-title-summary h2 { font-size: 1rem; font-weight: 700; white-space: nowrap; }
+.work-map .map-toolbar { flex-wrap: wrap; gap: 8px 12px; }
+.work-map .map-toolbar .map-context { flex: 1 1 280px; min-width: 0; padding: 0; border: 0; background: transparent; gap: 8px; }
+.work-map .map-context > span { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.work-map .map-context button { padding: 6px 10px; min-height: 36px; font-size: 0.75rem; }
+.work-map .map-toolbar .map-search { flex: 0 1 230px; min-width: 180px; max-width: 300px; margin-left: auto; }
+.work-map .map-toolbar .map-presets { flex: 0 1 auto; }
+@media (max-width: 650px) {
+  .work-map .map-toolbar .map-context { flex: 1 1 100%; }
+  .work-map .map-context > span { flex: 1 1 70px; white-space: nowrap; }
+  .work-map .map-context > button:last-child { margin-left: 0; }
+  .work-map .map-toolbar .map-search { flex: 1 1 100%; max-width: none; margin-left: 0; }
+  .work-map .map-toolbar .map-presets { width: 100%; justify-content: flex-start; }
+}

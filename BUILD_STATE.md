@@ -139,3 +139,7 @@ Captured industry evidence and proposed return behavior in docs/graph-zoom-navig
 ## Future source authority requirement — September 20, 2026
 
 User requests potential enterprise read-only viewing, with modifications performed in originating platforms. Captured in docs/enterprise-data-mapping.md: source links/identity/freshness, API-enforced viewer restrictions, separate authorized ingestion, and explicit separation from fictional/manual modes. Documentation only; current local editing unchanged and no read-only enforcement or connector claimed.
+
+## Compact graph toolbar — September 20, 2026
+
+Moved Back/current selection/Whole organization into the search-and-filter toolbar, left aligned, with search immediately before All work on the right when space permits. Compact selection name retains full scope in its tooltip and graph label. Added Work map before entity counts so fullscreen retains its title. Responsive wrapping keeps390px fullscreen context to one36px row; no document overflow. Browser verified fullscreen title and Back clearing selection, no errors. Production build passed. Current preview port3000/session89530. Saved data unchanged.

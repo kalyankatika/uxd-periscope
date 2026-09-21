@@ -519,26 +519,9 @@ export default function WorkMap({
         }
       }}
     >
-      {selected && (
-        <nav className="map-context" aria-label="Work map context">
-          <button
-            aria-label="Back in work map"
-            onClick={() =>
-              currentTrail.length > 1
-                ? selectNode(currentTrail[currentTrail.length - 2])
-                : reset()
-            }
-          >
-            <UiIcon name="arrowLeft" className="action-icon" /> Back
-          </button>
-          <span>
-            Viewing: <strong>{scopeLabel}</strong>
-          </span>
-          <button onClick={reset}>Whole organization</button>
-        </nav>
-      )}
       <div className="map-heading">
-        <div>
+        <div className="map-title-summary">
+          <h2>Work map</h2>
           <p>
             {projectCount} projects <span>·</span>{" "}
             {
@@ -607,13 +590,32 @@ export default function WorkMap({
         </div>
       </div>
       <div className="map-toolbar">
+      {selected && (
+        <nav className="map-context" aria-label="Work map context">
+          <button
+            aria-label="Back in work map"
+            onClick={() =>
+              currentTrail.length > 1
+                ? selectNode(currentTrail[currentTrail.length - 2])
+                : reset()
+            }
+          >
+            <UiIcon name="arrowLeft" className="action-icon" /> Back
+          </button>
+          <span title={scopeLabel}>
+            <strong>{selected.label}</strong>
+          </span>
+          <button onClick={reset}>Whole organization</button>
+        </nav>
+      )}
+
         <div className="map-search">
           <span aria-hidden="true">
             <UiIcon name="search" className="action-icon" />
           </span>
           <input
             aria-label="Search people, projects or priorities"
-            placeholder="Search people, projects or priorities…"
+            placeholder="Search work or people…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => {
